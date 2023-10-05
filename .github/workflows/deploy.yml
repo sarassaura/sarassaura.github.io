@@ -31,7 +31,6 @@ jobs:
           BASE_PATH: '/sarassaura.github.io'
         run: |
           npm run build
-          touch docs/.nojekyll
 
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v1
