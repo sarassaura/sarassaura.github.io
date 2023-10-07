@@ -4,7 +4,7 @@
 	import { AppShell } from '@skeletonlabs/skeleton';
 </script>
 
-<AppShell slotPageFooter="flex justify-center py-5">
+<AppShell slotPageFooter="flex justify-center py-5 bg-secondary-500">
 	<Hero />
 	<Navbar />
 	<slot />
