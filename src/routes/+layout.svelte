@@ -1,11 +1,14 @@
 <script>
+	import { Hero, Navbar, Footer } from '$lib';
 	import '../app.postcss';
-	import { AppBar, AppShell } from '@skeletonlabs/skeleton';
+	import { AppShell } from '@skeletonlabs/skeleton';
 </script>
 
-<AppShell slotPageFooter="flex justify-center py-5 bg-surface-500">
-	<div class="h-screen bg-surface-500" />
-	<AppBar class="sticky top-0">Page Header</AppBar>
+<AppShell slotPageFooter="flex justify-center py-5">
+	<Hero />
+	<Navbar />
 	<slot />
-	<svelte:fragment slot="pageFooter">Footer</svelte:fragment>
+	<svelte:fragment slot="pageFooter">
+		<Footer />
+	</svelte:fragment>
 </AppShell>
