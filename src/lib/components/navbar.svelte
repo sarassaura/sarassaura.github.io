@@ -1,10 +1,13 @@
 <script>
 	import { Tabs } from '$lib';
 	import { AppBar } from '@skeletonlabs/skeleton';
+	import Logo from './logo.svelte';
 </script>
 
-<AppBar class="navbar sticky top-0 h-20" background="bg-secondary-500">
-	<svelte:fragment slot="lead">icon</svelte:fragment>
+<AppBar class="navbar sticky top-0" background="bg-transparent">
+	<svelte:fragment slot="lead">
+		<Logo />
+	</svelte:fragment>
 	<svelte:fragment slot="trail">
 		<Tabs />
 	</svelte:fragment>
