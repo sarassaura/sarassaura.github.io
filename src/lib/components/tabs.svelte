@@ -15,6 +15,7 @@
 		links.forEach((element, id) => {
 			'#' + element == $page.url.hash && change(id);
 		});
+		$page.url.hash == '' && change(0);
 	}
 
 	function change(id: number) {
