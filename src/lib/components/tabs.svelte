@@ -1,12 +1,16 @@
 <script lang="ts">
 	import { TabGroup, TabAnchor } from '@skeletonlabs/skeleton';
 	import { onMount } from 'svelte';
+	import { page } from '$app/stores';
 
 	const links = ['about', 'skills', 'projects', 'services', 'contact-me'];
 	let TabList: HTMLElement;
 
 	onMount(() => {
 		TabList = document.querySelector('.tab-list')!;
+		links.forEach((element, id) => {
+			'#' + element == $page.url.hash && change(id);
+		});
 	});
 
 	function change(id: number) {
