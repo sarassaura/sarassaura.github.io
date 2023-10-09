@@ -1,8 +1,8 @@
 <script lang="ts">
 	// import { afterNavigate } from '$app/navigation';
-	import { Navbar, Footer } from '$lib';
+	import { Navbar, Footer, Menu } from '$lib';
 	import '../app.postcss';
-	import { AppShell } from '@skeletonlabs/skeleton';
+	import { AppShell, Drawer } from '@skeletonlabs/skeleton';
 	import { initializeStores } from '@skeletonlabs/skeleton';
 
 	initializeStores();
@@ -17,9 +17,9 @@
 	// });
 </script>
 
-<!-- <Drawer>
+<Drawer>
 	<Menu />
-</Drawer> -->
+</Drawer>
 
 <AppShell slotPageFooter="flex justify-center py-5 bg-secondary-500" regionPage="scroll-smooth">
 	<svelte:fragment slot="header">
