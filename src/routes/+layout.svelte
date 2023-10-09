@@ -21,7 +21,7 @@
 	<Menu />
 </Drawer>
 
-<AppShell slotPageFooter="flex justify-center py-5 bg-secondary-500" regionPage="scroll-smooth">
+<AppShell slotPageFooter="flex justify-center py-5" regionPage="scroll-smooth">
 	<svelte:fragment slot="header">
 		<Navbar />
 	</svelte:fragment>
