@@ -1,10 +1,12 @@
 <script lang="ts">
-	import { ListBox, ListBoxItem } from '@skeletonlabs/skeleton';
+	import { ListBox, ListBoxItem, getDrawerStore } from '@skeletonlabs/skeleton';
 	import { page } from '$app/stores';
 	import { goto } from '$app/navigation';
 
 	let valueSingle: string = $page.url.hash.slice(1) || 'about';
 	const links = ['about', 'skills', 'projects', 'services', 'contact-me'];
+
+	const drawerStore = getDrawerStore();
 </script>
 
 <div class="flex w-full p-4 md:px-16 flex-row-reverse pt-20">
@@ -15,6 +17,7 @@
 				name={link}
 				value={link}
 				on:click={() => {
+					drawerStore.close();
 					goto(`#${link}`);
 				}}>{link.toLocaleUpperCase().replace('-', ' ')}</ListBoxItem
 			>
