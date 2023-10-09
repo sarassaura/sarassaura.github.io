@@ -6,5 +6,6 @@ import Tabs from "./components/tabs.svelte";
 import Logo from './components/logo.svelte'
 import Burguer from './components/burguer.svelte'
 import Menu from './components/menu.svelte'
+import HamburguerIcon from "./components/hamburguer_icon.svelte";
 
-export { Hero, Navbar, Footer, Tabs, Logo, Burguer, Menu };
+export { Hero, Navbar, Footer, Tabs, Logo, Burguer, Menu, HamburguerIcon };

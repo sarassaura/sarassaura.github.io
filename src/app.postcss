@@ -35,3 +35,23 @@
         height: 0px;
     }
 }
+
+@layer components {
+    .line {
+        transition: 1s;
+        transform-origin: center;
+    }
+    .open .top {
+        transform: translateY(20px);
+        rotate: -45deg;
+    }
+
+    .open .bottom {
+        transform: translateY(-20px);
+        rotate: 45deg
+    }
+
+    .open .middle {
+        opacity: 0;
+    }
+}
