@@ -17,7 +17,7 @@
 	// });
 </script>
 
-<Drawer>
+<Drawer zIndex="z-10">
 	<Menu />
 </Drawer>
 
