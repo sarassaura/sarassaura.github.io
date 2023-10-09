@@ -1,5 +1,5 @@
 <script>
-	import { Tabs } from '$lib';
+	import { Burguer, Tabs } from '$lib';
 	import { AppBar } from '@skeletonlabs/skeleton';
 	import Logo from './logo.svelte';
 </script>
@@ -10,5 +10,6 @@
 	</svelte:fragment>
 	<svelte:fragment slot="trail">
 		<Tabs />
+		<Burguer />
 	</svelte:fragment>
 </AppBar>

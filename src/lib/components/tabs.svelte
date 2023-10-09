@@ -26,10 +26,7 @@
 	}
 </script>
 
-<TabGroup
-	border="border-none"
-	class="translate-x-[574px] lg:translate-x-0 transition-all duration-500"
->
+<TabGroup border="border-none" class="hidden lg:flex">
 	{#each links as link, id}
 		<TabAnchor
 			name={`tab${id + 1}`}

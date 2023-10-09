@@ -4,5 +4,7 @@ import Navbar from "./components/navbar.svelte";
 import Footer from "./components/footer.svelte";
 import Tabs from "./components/tabs.svelte";
 import Logo from './components/logo.svelte'
+import Burguer from './components/burguer.svelte'
+import Menu from './components/menu.svelte'
 
-export { Hero, Navbar, Footer, Tabs, Logo };
+export { Hero, Navbar, Footer, Tabs, Logo, Burguer, Menu };
