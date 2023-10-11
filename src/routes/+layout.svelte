@@ -18,7 +18,7 @@
 
 	let lastScroll = 0;
 	let timer: unknown;
-	let style = '';
+	let style = false;
 
 	const throttle = function (func: () => void, delay: number) {
 		if (timer) {
@@ -35,11 +35,7 @@
 	function direction(e: UIEvent) {
 		const target = e.target as HTMLElement;
 
-		if (target.scrollTop > lastScroll) {
-			style = 'hide-nav';
-		} else {
-			style = 'show-nav';
-		}
+		style = target.scrollTop > lastScroll ? true : false;
 
 		lastScroll = target.scrollTop <= 0 ? 0 : target.scrollTop;
 	}
@@ -50,12 +46,13 @@
 </Drawer>
 
 <AppShell
+	slotHeader={`relative block ${style ? 'hide-nav' : 'show-nav'}`}
 	slotPageFooter="flex justify-center py-5"
 	regionPage="scroll-smooth"
 	on:scroll={(e) => throttle(() => direction(e), 100)}
 >
 	<svelte:fragment slot="header">
-		<Navbar {style} />
+		<Navbar />
 	</svelte:fragment>
 	<slot />
 	<svelte:fragment slot="pageFooter">
