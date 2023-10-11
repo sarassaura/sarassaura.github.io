@@ -38,8 +38,13 @@
 
 @layer components {
     .line {
-        transition: 1s;
         transform-origin: center;
+    }
+    .open .line {
+        transition: transform 300ms, rotate 300ms 300ms, scale 300ms 300ms;
+    }
+    .closed .line {
+        transition: transform 300ms 300ms, rotate 300ms, scale 300ms;
     }
     .open .top {
         transform: translateY(20px);
@@ -52,6 +57,6 @@
     }
 
     .open .middle {
-        opacity: 0;
+        scale: 0 1;
     }
 }

@@ -17,7 +17,7 @@
 	// });
 </script>
 
-<Drawer zIndex="z-10">
+<Drawer zIndex="" class="lg:hidden">
 	<Menu />
 </Drawer>
 
