@@ -15,15 +15,47 @@
 	// 		elemPage.scrollTop = 0;
 	// 	}
 	// });
+
+	let lastScroll = 0;
+	let timer: unknown;
+	let style = '';
+
+	const throttle = function (func: () => void, delay: number) {
+		if (timer) {
+			return;
+		}
+
+		timer = setTimeout(function () {
+			func();
+
+			timer = undefined;
+		}, delay);
+	};
+
+	function direction(e: UIEvent) {
+		const target = e.target as HTMLElement;
+
+		if (target.scrollTop > lastScroll) {
+			style = 'hide-nav';
+		} else {
+			style = 'show-nav';
+		}
+
+		lastScroll = target.scrollTop <= 0 ? 0 : target.scrollTop;
+	}
 </script>
 
 <Drawer zIndex="" class="lg:hidden">
 	<Menu />
 </Drawer>
 
-<AppShell slotPageFooter="flex justify-center py-5" regionPage="scroll-smooth">
+<AppShell
+	slotPageFooter="flex justify-center py-5"
+	regionPage="scroll-smooth"
+	on:scroll={(e) => throttle(() => direction(e), 100)}
+>
 	<svelte:fragment slot="header">
-		<Navbar />
+		<Navbar {style} />
 	</svelte:fragment>
 	<slot />
 	<svelte:fragment slot="pageFooter">
