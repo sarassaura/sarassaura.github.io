@@ -5,10 +5,27 @@
 
 	const links = ['about', 'skills', 'projects', 'services', 'contact-me'];
 	let TabList: HTMLElement;
+	let PageRef;
 
 	onMount(() => {
 		TabList = document.querySelector('.tab-list')!;
-		unchange();
+		PageRef = document.querySelectorAll('.section');
+
+		let observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						change(links.indexOf(entry.target.id));
+						const url = $page.url;
+						url.hash = links[links.indexOf(entry.target.id)];
+					}
+				});
+			},
+			{ threshold: 0.8 }
+		);
+		PageRef.forEach((element) => {
+			observer.observe(element);
+		});
 	});
 
 	function unchange() {

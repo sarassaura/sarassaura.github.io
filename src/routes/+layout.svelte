@@ -46,7 +46,7 @@
 </Drawer>
 
 <AppShell
-	slotHeader={`relative block ${style ? 'hide-nav' : 'show-nav'}`}
+	slotHeader={`relative ${style ? 'hide-nav' : 'show-nav'}`}
 	slotPageFooter="flex justify-center py-5"
 	regionPage="scroll-smooth"
 	on:scroll={(e) => throttle(() => direction(e), 100)}
