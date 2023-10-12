@@ -3,6 +3,7 @@
 	import { Navbar, Footer, Menu } from '$lib';
 	import type { AfterNavigate } from '@sveltejs/kit';
 	import '../app.postcss';
+	import 'iconify-icon';
 	import { AppShell, Drawer } from '@skeletonlabs/skeleton';
 	import { initializeStores } from '@skeletonlabs/skeleton';
 
