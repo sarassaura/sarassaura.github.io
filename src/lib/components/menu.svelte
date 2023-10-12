@@ -9,7 +9,7 @@
 	const drawerStore = getDrawerStore();
 </script>
 
-<div class="flex w-full p-4 md:px-16 flex-row-reverse pt-20">
+<div class="flex w-full p-4 md:px-16 flex-row-reverse pt-20 h6">
 	<ListBox class="w-full">
 		{#each links as link}
 			<ListBoxItem
@@ -19,7 +19,7 @@
 				on:click={() => {
 					drawerStore.close();
 					goto(`#${link}`);
-				}}>{link.toLocaleUpperCase().replace('-', ' ')}</ListBoxItem
+				}}>{link.toUpperCase().replace('-', ' ')}</ListBoxItem
 			>
 		{/each}
 	</ListBox>

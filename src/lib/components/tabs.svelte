@@ -48,7 +48,7 @@
 		<TabAnchor
 			name={`tab${id + 1}`}
 			href={`#${link}`}
-			class="uppercase"
+			class="capitalize"
 			on:mouseover={() => change(id)}
 			on:mouseleave={unchange}
 			>{link.replace('-', ' ')}
