@@ -1,20 +1,21 @@
 <script lang="ts">
-	// import { afterNavigate } from '$app/navigation';
+	import { afterNavigate } from '$app/navigation';
 	import { Navbar, Footer, Menu } from '$lib';
+	import type { AfterNavigate } from '@sveltejs/kit';
 	import '../app.postcss';
 	import { AppShell, Drawer } from '@skeletonlabs/skeleton';
 	import { initializeStores } from '@skeletonlabs/skeleton';
 
 	initializeStores();
 
-	// afterNavigate((params: any) => {
-	// 	const isNewPage: boolean =
-	// 		params.from && params.to && params.from.route.id !== params.to.route.id;
-	// 	const elemPage = document.querySelector('#page');
-	// 	if (isNewPage && elemPage !== null) {
-	// 		elemPage.scrollTop = 0;
-	// 	}
-	// });
+	afterNavigate((params: AfterNavigate) => {
+		const isNewPage: boolean | null =
+			params.from && params.to && params.from.route.id !== params.to.route.id;
+		const elemPage = document.querySelector('#page');
+		if (isNewPage && elemPage !== null) {
+			elemPage.scrollTop = 0;
+		}
+	});
 
 	let lastScroll = 0;
 	let timer: unknown;
