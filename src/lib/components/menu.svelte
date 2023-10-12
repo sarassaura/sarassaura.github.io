@@ -4,7 +4,7 @@
 	import { goto } from '$app/navigation';
 
 	let valueSingle: string = $page.url.hash.slice(1) || 'about';
-	const links = ['about', 'skills', 'projects', 'services', 'contact-me'];
+	const links = ['about', 'skills', 'projects', 'qualifications', 'contact-me'];
 
 	const drawerStore = getDrawerStore();
 </script>

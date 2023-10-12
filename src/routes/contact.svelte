@@ -1,1 +1,1 @@
-<div class="section" id="contact-me">Contact</div>
+<div class="section contact" id="contact-me">Contact</div>

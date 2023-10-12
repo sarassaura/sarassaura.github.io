@@ -2,7 +2,7 @@
 	import About from './about.svelte';
 	import Contact from './contact.svelte';
 	import Projects from './projects.svelte';
-	import Services from './services.svelte';
+	import Qualifications from './qualifications.svelte';
 	import Skills from './skills.svelte';
 </script>
 
@@ -10,6 +10,6 @@
 	<About />
 	<Skills />
 	<Projects />
-	<Services />
+	<Qualifications />
 	<Contact />
 </div>

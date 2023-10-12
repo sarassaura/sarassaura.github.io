@@ -1,1 +1,1 @@
-<div class="section" id="skills">Skills</div>
+<div class="section skills" id="skills">Skills</div>

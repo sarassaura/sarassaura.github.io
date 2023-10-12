@@ -3,7 +3,7 @@
 	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
 
-	const links = ['about', 'skills', 'projects', 'services', 'contact-me'];
+	const links = ['about', 'skills', 'projects', 'qualifications', 'contact-me'];
 	let TabList: HTMLElement;
 	let PageRef;
 

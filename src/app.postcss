@@ -8,13 +8,13 @@
         @apply h-full overflow-hidden;
     }
     .section {
-        @apply h-screen bg-surface-500 w-full;
+        @apply h-screen w-full;
+    }
+    .about {
+        height: calc(100vh - 72px);
     }
     .navbar, #page-footer {
         @apply md:px-16 !important;
-    }
-    .navbar {
-        @apply top-0;
     }
     .hide-nav {
         transition: transform 195ms cubic-bezier(.4,0,1,1);
