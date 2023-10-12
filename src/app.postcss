@@ -3,7 +3,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+	font-family: 'Open-sans';
+	src: url('/fonts/OpenSans-VariableFont_wdth,wght.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto-mono';
+    src: url('/fonts/RobotoMono-VariableFont_wght.ttf');
+}
+
 @layer base {
+    :root [data-theme='skeleton'] {
+        --theme-font-family-base: 'Roboto-mono', sans-serif;
+        --theme-font-family-heading: 'Open-sans', sans-serif;
+    }
     html,body {
         @apply h-full overflow-hidden;
     }
@@ -32,7 +46,7 @@
     .tab-list::before {
         content: '';
         position: absolute;
-        height: 2px;
+        height: 3px;
         bottom: 0px;
         left: 0px;
         right: 0px;
