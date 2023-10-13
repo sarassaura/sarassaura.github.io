@@ -26,7 +26,30 @@
         min-height: 100svh;
     }
     .about {
-        height: calc(100vh - 72px);
+        min-height: calc(100svh - 72px);
+        display: inline-grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    @media only screen and (max-width: 1024px) {
+        .about {
+           grid-template-columns: 1fr;
+           grid-template-rows: 1fr 1fr;
+        }
+        .presentation {
+            order: 2;
+        }
+        .presentation > p {
+            @apply text-xl;
+        }
+        .presentation button {
+            @apply text-sm;
+        }
+      }
+    .about > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
     .navbar, #page-footer {
         @apply md:px-16 !important;
