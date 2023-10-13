@@ -37,9 +37,10 @@
 	function direction(e: UIEvent) {
 		const target = e.target as HTMLElement;
 
-		style = target.scrollTop > lastScroll - 73 ? true : false;
+		style = target.scrollTop > lastScroll ? true : false;
 
 		lastScroll = target.scrollTop <= 0 ? 0 : target.scrollTop;
+		lastScroll = style ? lastScroll - 73 : lastScroll;
 	}
 </script>
 
