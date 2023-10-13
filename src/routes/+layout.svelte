@@ -51,7 +51,7 @@
 <AppShell
 	slotHeader={`relative nav ${style ? 'hide-nav' : 'show-nav'}`}
 	slotPageFooter="flex justify-center py-5"
-	regionPage="scroll-smooth relative"
+	regionPage="scroll-smooth"
 	on:scroll={(e) => throttle(() => direction(e), 230)}
 >
 	<svelte:fragment slot="header">
