@@ -37,10 +37,7 @@
 	function direction(e: UIEvent) {
 		const target = e.target as HTMLElement;
 
-		style = target.scrollTop > lastScroll ? true : false;
-
-		console.log('now: ' + target.scrollTop);
-		console.log('before ' + lastScroll);
+		style = target.scrollTop > lastScroll - 73 ? true : false;
 
 		lastScroll = target.scrollTop <= 0 ? 0 : target.scrollTop;
 	}
@@ -53,7 +50,7 @@
 <AppShell
 	slotHeader={`relative nav ${style ? 'hide-nav' : 'show-nav'}`}
 	slotPageFooter="flex justify-center py-5"
-	regionPage="scroll-smooth"
+	regionPage="scroll-smooth relative"
 	on:scroll={(e) => throttle(() => direction(e), 230)}
 >
 	<svelte:fragment slot="header">
