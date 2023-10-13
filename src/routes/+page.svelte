@@ -6,14 +6,31 @@
 	import Skills from './skills.svelte';
 
 	/** @type {import('./$types').PageData} */
-	export let data;
-	let { data: info } = data;
+	export let data: {
+		data: {
+			viewer: {
+				pinnedItems: {
+					totalCount: number;
+					edges: Array<{
+						node: {
+							name: string;
+							description: string;
+							openGraphImageUrl: string;
+							createdAt: string;
+							homepageUrl: string;
+							repositoryTopics: { totalCount: number; nodes: Array<{ topic: { name: string } }> };
+						};
+					}>;
+				};
+			};
+		};
+	};
 </script>
 
 <div class="content flex items-center flex-col">
 	<About />
 	<Skills />
-	<Projects data={info} />
+	<Projects {data} />
 	<Qualifications />
 	<Contact />
 </div>
