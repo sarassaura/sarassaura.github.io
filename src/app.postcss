@@ -40,6 +40,24 @@
     .presentation {
         order: 1;
     }
+    .contact {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+    }
+    form {
+        order: 1;
+        display: grid;
+        gap: 10px;
+        grid-template-rows: 0fr 0.2fr 0.2fr 0.6fr 0.1fr 0fr;
+        grid-template-columns: 0.1fr 1fr 0.1fr;
+    }
+    .label {
+        @apply col-start-2;
+    }
+    .phone {
+        border: solid 1px black;
+    }
     @media only screen and (min-width: 1024px) {
         .about {
             grid-template-columns: 1fr 1fr;
@@ -50,6 +68,17 @@
         }
         .presentation {
             order: 0;
+        }
+        .contact {
+            grid-template-rows: 1fr;
+            grid-template-columns: 0.8fr 1fr;
+        }
+        .phone {
+            border: solid 1px black;
+        }
+        form {
+            grid-template-rows: 0.7fr 0.3fr 0.3fr 0.8fr 0.2fr 0.7fr;
+            grid-template-columns: 0.3fr 1fr 0.3fr;
         }
       }
     .about > div {
