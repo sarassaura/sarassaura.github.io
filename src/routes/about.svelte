@@ -2,8 +2,8 @@
 </script>
 
 <div class="section about" id="about">
-	<div class="presentation overflow-hidden md:px-16">
-		<p class="text-4xl pb-8 w-fit">Hi, I'm Sarah a Web Developer</p>
+	<div class="presentation overflow-hidden md:px-16 gap-y-28 md:gap-y-40">
+		<p class="text-4xl w-fit">Hi, I'm Sarah a <br class="break" />Web Developer</p>
 		<div>
 			<a class="btn variant-filled" href="https://rxresu.me/sarahyukino/sarah-nakada">Resume</a>
 			<a class="btn variant-ghost-tertiary" href="mailto:sarahyukinonakada@gmail.com">Email me</a>

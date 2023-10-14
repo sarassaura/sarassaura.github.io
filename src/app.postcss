@@ -42,6 +42,9 @@
     .presentation button {
         @apply text-sm;
     }
+    p {
+        width: fit-content;
+    }
     .presentation {
         order: 1;
     }
@@ -80,6 +83,9 @@
         height: auto;
         width: 640px;
     }
+    .break {
+        display: none;
+    }
     @media only screen and (min-width: 430px) {
         .image img {
             height: auto;
@@ -95,6 +101,9 @@
         }
     }
     @media only screen and (min-width: 1024px) {
+        .break {
+            display: block;
+        }
         .image img {
             height: auto;
             width: 640px;
