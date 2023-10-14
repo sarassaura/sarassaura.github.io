@@ -20,6 +20,8 @@
     }
     html,body {
         @apply h-full overflow-hidden;
+        max-width: 1280px;
+        margin: 0 auto;
     }
     .section {
         @apply w-full;
@@ -58,6 +60,15 @@
     .phone {
         border: solid 1px black;
     }
+    .projects {
+        column-count: 1;
+        column-gap: 10px;
+    }
+    @media only screen and (min-width: 768px) {
+        .projects {
+            column-count: 2;
+        }
+    }
     @media only screen and (min-width: 1024px) {
         .about {
             grid-template-columns: 1fr 1fr;
@@ -80,17 +91,15 @@
             grid-template-rows: 0.7fr 0.3fr 0.3fr 0.8fr 0.2fr 0.7fr;
             grid-template-columns: 0.3fr 1fr 0.3fr;
         }
+        .projects {
+            column-count: 3;
+        }
       }
     .about > div {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-    }
-    .projects {
-        border: solid 1px black;
-        column-count: 3;
-        column-gap: 10px;
     }
     figure {
         margin: 0px;
@@ -103,7 +112,6 @@
         margin-top: 20px;
     }
     .work {
-        border: solid 1px red;
         width: 100%;
     }
     .navbar, #page-footer {
