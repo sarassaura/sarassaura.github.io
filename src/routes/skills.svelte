@@ -1,1 +1,1 @@
-<div class="section skills" id="skills">Skills</div>
+<div class="section skills md:px-16" id="skills">Skills</div>

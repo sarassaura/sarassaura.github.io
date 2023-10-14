@@ -1,5 +1,5 @@
-<div class="section contact" id="contact-me">
-	<form class="p-4">
+<div class="section contact md:px-16" id="contact-me">
+	<form class="">
 		<label class="label row-start-2">
 			<span>Name</span>
 			<input class="input" type="text" />

@@ -21,7 +21,7 @@
 	};
 </script>
 
-<div class="section projects" id="projects">
+<div class="section projects md:px-16" id="projects">
 	{#each data.data.viewer.pinnedItems.edges as item}
 		<figure>
 			<img class="work" src={item.node.openGraphImageUrl} alt={item.node.name} />

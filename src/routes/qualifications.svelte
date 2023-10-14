@@ -1,1 +1,1 @@
-<div class="section qualifications" id="qualifications">Qualifications</div>
+<div class="section qualifications md:px-16" id="qualifications">Qualifications</div>
