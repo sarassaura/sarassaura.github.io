@@ -13,7 +13,7 @@
 			<textarea class="textarea" rows="5" />
 		</label>
 		<label class="label row-start-5 flex justify-center">
-			<button class="btn variant-filled">Send</button>
+			<button class="btn variant-filled" type="button">Send</button>
 		</label>
 	</form>
 	<div class="informations">
