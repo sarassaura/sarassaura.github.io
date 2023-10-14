@@ -9,5 +9,7 @@
 			<button class="btn variant-ghost-tertiary">Email me</button>
 		</div>
 	</div>
-	<div class="image" />
+	<div class="image">
+		<img src="/iphone.webp" alt="iphone" />
+	</div>
 </div>
