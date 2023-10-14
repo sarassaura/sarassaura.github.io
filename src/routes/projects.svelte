@@ -23,14 +23,18 @@
 
 <div class="section projects" id="projects">
 	{#each data.data.viewer.pinnedItems.edges as item}
-		<div class="work" style={`background-image: url(${item.node.openGraphImageUrl})`}>
-			<p>{item.node.name}</p>
-			<p>{item.node.description}</p>
-			<p>{item.node.createdAt}</p>
-			<p>{item.node.homepageUrl}</p>
-			{#each item.node.repositoryTopics.nodes as topics}
-				<p>{topics.topic.name}</p>
-			{/each}
-		</div>
+		<figure>
+			<img class="work" src={item.node.openGraphImageUrl} alt={item.node.name} />
+			<figcaption>
+				<p>{item.node.name}</p>
+				<p>{item.node.description}</p>
+			</figcaption>
+		</figure>
+		<!--
+		<p>{item.node.createdAt}</p>
+		<p>{item.node.homepageUrl}</p>
+		{#each item.node.repositoryTopics.nodes as topics}
+			<p>{topics.topic.name}</p>
+		{/each} -->
 	{/each}
 </div>

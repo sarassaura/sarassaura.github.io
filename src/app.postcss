@@ -59,13 +59,23 @@
         flex-direction: column;
     }
     .projects {
-        display: grid;
         border: solid 1px black;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: masonry;
+        column-count: 3;
+        column-gap: 10px;
+    }
+    figure {
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+        break-inside: avoid;
+    }
+    figcaption {
+        margin-top: 20px;
     }
     .work {
-        border: solid 1px white;
+        border: solid 1px red;
+        width: 100%;
     }
     .navbar, #page-footer {
         @apply md:px-16 !important;
