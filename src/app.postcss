@@ -28,21 +28,28 @@
     .about {
         min-height: calc(100svh - 72px);
         display: inline-grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
     }
-    @media only screen and (max-width: 1024px) {
+    .presentation > p {
+        @apply text-xl;
+    }
+    .presentation button {
+        @apply text-sm;
+    }
+    .presentation {
+        order: 1;
+    }
+    @media only screen and (min-width: 1024px) {
         .about {
-           grid-template-columns: 1fr;
-           grid-template-rows: 1fr 1fr;
-        }
-        .presentation {
-            order: 2;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
         }
         .presentation > p {
-            @apply text-xl;
+            @apply text-4xl;
         }
-        .presentation button {
-            @apply text-sm;
+        .presentation {
+            order: 0;
         }
       }
     .about > div {
@@ -50,6 +57,15 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
+    }
+    .projects {
+        display: grid;
+        border: solid 1px black;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: masonry;
+    }
+    .work {
+        border: solid 1px white;
     }
     .navbar, #page-footer {
         @apply md:px-16 !important;
