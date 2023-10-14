@@ -1,5 +1,5 @@
 <div class="section contact md:px-16" id="contact-me">
-	<form class="">
+	<form on:input|preventDefault|stopPropagation>
 		<label class="label row-start-2">
 			<span>Name</span>
 			<input class="input" type="text" />
@@ -16,5 +16,10 @@
 			<button class="btn variant-filled">Send</button>
 		</label>
 	</form>
-	<div class="phone" />
+	<div class="informations">
+		<p>Sarah Yukino Nakada</p>
+		<p>sarahyukinonakada@gmail.com</p>
+		<p>(+55) 11 99146-4391</p>
+		<p>Brazil, SP/SP</p>
+	</div>
 </div>
