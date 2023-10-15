@@ -20,7 +20,7 @@
 	});
 </script>
 
-<div class="showoff">
+<div class="showoff" data-direction="left" data-speed="fast">
 	<ul class="list">
 		<li>React</li>
 		<li>Next</li>
@@ -36,7 +36,7 @@
 	</ul>
 </div>
 
-<div class="showoff">
+<div class="showoff" data-direction="left" data-speed="fast">
 	<ul class="list">
 		<li>Github</li>
 		<li>Docker</li>
