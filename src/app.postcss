@@ -9,14 +9,39 @@
 }
 
 @font-face {
+	font-family: 'Open-sans';
+	src: url('/fonts/OpenSans-Italic-VariableFont_wdth,wght.ttf');
+    font-style: italic;
+}
+
+@font-face {
+	font-family: 'Open-sans';
+	src: url('/fonts/static/OpenSans-Bold.ttf');
+    font-weight: bold;
+}
+
+@font-face {
+	font-family: 'Open-sans';
+	src: url('/fonts/static/OpenSans-BoldItalic.ttf');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
     font-family: 'Roboto-mono';
     src: url('/fonts/RobotoMono-VariableFont_wght.ttf');
 }
 
+@font-face {
+    font-family: 'Roboto-mono';
+    src: url('/fonts/RobotoMono-Italic-VariableFont_wght.ttf');
+    font-style: italic;
+}
+
 @layer base {
     :root [data-theme='skeleton'] {
-        --theme-font-family-base: 'Roboto-mono', sans-serif;
-        --theme-font-family-heading: 'Open-sans', sans-serif;
+        --theme-font-family-base: 'Open-sans', sans-serif;
+        --theme-font-family-heading: 'Roboto-mono', sans-serif;
     }
     html,body {
         @apply h-full overflow-hidden;

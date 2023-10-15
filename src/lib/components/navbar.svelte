@@ -4,7 +4,7 @@
 	import Logo from './logo.svelte';
 </script>
 
-<AppBar class="navbar relative h6" background="bg-transparent">
+<AppBar class="navbar relative" background="bg-transparent">
 	<svelte:fragment slot="lead">
 		<Logo />
 	</svelte:fragment>

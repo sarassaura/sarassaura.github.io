@@ -1,1 +1,1 @@
-<a href="#about" class="h5 font-bold">Sarah Yukino</a>
+<a href="#about" class="font-bold text-lg">Sarah Yukino</a>
