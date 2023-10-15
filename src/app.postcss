@@ -112,7 +112,8 @@
         display: none;
     }
     .showoff {
-        max-width: 1024px;
+        max-width: 300px;
+        z-index: -1;
     }
     .showoff[data-animated="true"] {
         overflow: hidden;
@@ -140,20 +141,31 @@
         padding: 1rem;
     }
     @media only screen and (min-width: 430px) {
+        .showoff {
+            max-width: 430px;
+        }
         .image img {
             height: auto;
             width: 320px;
         }
     }
     @media only screen and (min-width: 640px) {
-
+        .showoff {
+            max-width: 640px;
+        }
     }
     @media only screen and (min-width: 768px) {
+        .showoff {
+            max-width: 768px;
+        }
         .projects {
             column-count: 2;
         }
     }
     @media only screen and (min-width: 1024px) {
+        .showoff {
+            max-width: 1024px;
+        }
         .break {
             display: block;
         }
