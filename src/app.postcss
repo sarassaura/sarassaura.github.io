@@ -86,6 +86,34 @@
     .break {
         display: none;
     }
+    .showoff {
+        max-width: 1024px;
+    }
+    .showoff[data-animated="true"] {
+        overflow: hidden;
+        -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+        mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+    }
+    .showoff[data-animated="true"] .list {
+        flex-wrap: nowrap;
+        animation: scroll 20s linear infinite;
+        width: max-content;
+    }
+    @keyframes scroll {
+        to {
+            transform: translate(calc(-50% - 0.5rem));
+        }
+    }
+    .list {
+        display: flex;
+        gap: 1rem;
+        padding-block: 1rem;
+        flex-wrap: wrap;
+    }
+    .list li {
+        @apply bg-surface-700;
+        padding: 1rem;
+    }
     @media only screen and (min-width: 430px) {
         .image img {
             height: auto;
