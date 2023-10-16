@@ -1,4 +1,4 @@
-<div class="section contact md:px-16" id="contact-me">
+<div class="section contact md:px-16 px-4" id="contact-me">
 	<form on:input|preventDefault|stopPropagation>
 		<label class="label row-start-2">
 			<span>Name</span>

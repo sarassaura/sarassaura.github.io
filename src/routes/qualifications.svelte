@@ -1,5 +1,5 @@
 <div
-	class="section qualifications md:px-16 flex gap-8 flex-col md:flex-row justify-center items-center"
+	class="section qualifications md:px-16 px-4 flex gap-8 flex-col md:flex-row justify-center items-center"
 	id="qualifications"
 >
 	<div class="flex gap-y-2 flex-col justify-center items-center">

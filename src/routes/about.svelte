@@ -2,7 +2,7 @@
 </script>
 
 <div class="section about" id="about">
-	<div class="presentation overflow-hidden md:px-16 gap-y-10 md:gap-y-20">
+	<div class="presentation overflow-hidden md:px-16 px-4 gap-y-5 md:gap-y-20">
 		<p class="h6 w-fit title">
 			Hi, I'm Sarah a <br class="break" />
 			<span class="typewrite">Web Developer</span>
