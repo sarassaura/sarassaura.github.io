@@ -36,7 +36,7 @@
 	}
 </script>
 
-<Drawer zIndex="" class="lg:hidden">
+<Drawer class="lg:hidden z-[8]" zIndex="">
 	<Menu />
 </Drawer>
 
