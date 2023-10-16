@@ -272,7 +272,33 @@
         mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
         @apply bg-tertiary-500;
     }
-
+    .title {
+        line-height: 2.8rem !important;
+    }
+    .typewrite {
+        position: relative;
+    }
+    .typewrite::before {
+        position: absolute;
+        content: '';
+        inset: 0;
+        @apply bg-surface-900;
+        animation: type 4s steps(13) forwards;
+    }
+    .typewrite::after {
+        position: absolute;
+        content: '';
+        inset: 0px;
+        height: 100%;
+        @apply bg-surface-900;
+        animation: type 4s steps(13) forwards;
+        border-left: solid white 2px;
+    }
+    @keyframes type {
+        to {
+            left: 100%;
+        }
+    }
     ::-webkit-scrollbar {
         display: none !important;
         width: 0px;
