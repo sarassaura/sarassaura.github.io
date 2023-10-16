@@ -30,7 +30,6 @@
 
 		if (dir != target.scrollTop > lastScroll) {
 			change(target.scrollTop > lastScroll);
-			console.log(dir);
 		}
 
 		lastScroll = target.scrollTop <= 0 ? 0 : target.scrollTop;
@@ -42,7 +41,6 @@
 </Drawer>
 
 <AppShell
-	slotHeader={`nav ${dir ? 'hide-nav' : 'show-nav'}`}
 	slotPageFooter="flex justify-center py-5"
 	regionPage="scroll-smooth"
 	on:scroll={(e) => throttle(() => direction(e), 230)}

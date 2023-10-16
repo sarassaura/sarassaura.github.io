@@ -242,19 +242,6 @@
     .navbar, #page-footer {
         @apply md:px-16 !important;
     }
-    .nav {
-        margin-top: 0px;
-    }
-    .hide-nav {
-        transition: transform 195ms cubic-bezier(.4,0,1,1);
-        margin-top: -72px;
-        transition-property: all;
-    }
-    .show-nav {
-        transition: transform 225ms cubic-bezier(0,0,.2,1);
-        margin-top: 0px;
-        transition-property: all;
-    }
     .tab-list {
         position: relative;
     }
@@ -291,12 +278,17 @@
         inset: 0px;
         height: 100%;
         @apply bg-surface-900;
-        animation: type 4s steps(13) forwards;
+        animation: type 4s steps(13) forwards, blinks 1.2s steps(5, start) 4s infinite;
         border-left: solid white 2px;
     }
     @keyframes type {
         to {
             left: 100%;
+        }
+    }
+    @keyframes blinks {
+        to {
+            visibility: hidden;
         }
     }
     ::-webkit-scrollbar {

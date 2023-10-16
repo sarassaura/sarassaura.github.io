@@ -21,7 +21,7 @@
 					}
 				});
 			},
-			{ threshold: 0.8 }
+			{ threshold: 0.2 }
 		);
 		PageRef.forEach((element) => {
 			observer.observe(element);
@@ -36,8 +36,8 @@
 	}
 
 	function change(id: number) {
-		const offsetLeft = TabList.querySelectorAll('a')[id].offsetLeft;
-		const width = TabList.querySelectorAll('a')[id].offsetWidth / TabList.offsetWidth;
+		const offsetLeft = TabList.querySelectorAll('a')[id]?.offsetLeft;
+		const width = TabList.querySelectorAll('a')[id]?.offsetWidth / TabList.offsetWidth;
 		TabList.style.setProperty('--_left', offsetLeft + 'px');
 		TabList.style.setProperty('--_width', width.toString());
 	}
