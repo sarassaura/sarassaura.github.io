@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { afterNavigate } from '$app/navigation';
-	import { Navbar, Footer, Menu, scroll_dir, change, throttle } from '$lib';
+	import { Navbar, Footer, Menu, scroll_dir, change_dir, throttle } from '$lib';
 	import type { AfterNavigate } from '@sveltejs/kit';
 	import '../app.postcss';
 	import 'iconify-icon';
@@ -29,7 +29,7 @@
 		const target = e.target as HTMLElement;
 
 		if (dir != target.scrollTop > lastScroll) {
-			change(target.scrollTop > lastScroll);
+			change_dir(target.scrollTop > lastScroll);
 		}
 
 		lastScroll = target.scrollTop <= 0 ? 0 : target.scrollTop;
