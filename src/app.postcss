@@ -288,6 +288,14 @@
         animation: type 4s steps(13) forwards, blinks 1.2s steps(5, start) 4s infinite;
         border-left: solid white 2px;
     }
+    .pseudo {
+        position: absolute;
+        content:'';
+        inset:0px;
+        width: 100%;
+        height: 100%;
+        @apply bg-surface-900;
+    }
     @keyframes type {
         to {
             left: 100%;

@@ -12,7 +12,7 @@
 <div class="section about" id="about">
 	{#if now == 'about' || now == ''}
 		<div class="presentation overflow-hidden md:px-16 px-4 gap-y-5 md:gap-y-20">
-			<p class="h6 w-fit title" transition:fade={{ duration: 500, delay: 250 }}>
+			<p class="h6 w-fit title" transition:fade={{ duration: 500, delay: 500 }}>
 				Hi, I'm Sarah a <br class="break" />
 				<span class="typewrite">Web Developer</span>
 			</p>

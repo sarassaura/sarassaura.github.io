@@ -18,8 +18,8 @@
 		{/if}
 	</svelte:fragment>
 	<svelte:fragment slot="trail">
+		<Tabs />
 		{#if now !== 'bla'}
-			<Tabs />
 			<Burguer />
 		{/if}
 	</svelte:fragment>
