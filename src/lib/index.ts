@@ -8,5 +8,7 @@ import Burguer from './components/burguer.svelte'
 import Menu from './components/menu.svelte'
 import HamburguerIcon from "./components/hamburguer_icon.svelte";
 import ShowOff from "./components/showoff.svelte";
+import { scroll_dir, change } from "./store/scroll";
+import { throttle } from "./functions/throttle";
 
-export { Hero, Navbar, Footer, Tabs, Logo, Burguer, Menu, HamburguerIcon, ShowOff };
+export { Hero, Navbar, Footer, Tabs, Logo, Burguer, Menu, HamburguerIcon, ShowOff, scroll_dir, change, throttle };

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { afterNavigate } from '$app/navigation';
-	import { Navbar, Footer, Menu } from '$lib';
+	import { Navbar, Footer, Menu, scroll_dir, change, throttle } from '$lib';
 	import type { AfterNavigate } from '@sveltejs/kit';
 	import '../app.postcss';
 	import 'iconify-icon';
@@ -19,28 +19,21 @@
 	});
 
 	let lastScroll = 0;
-	let timer: unknown;
-	let style = false;
+	let dir: boolean;
 
-	const throttle = function (func: () => void, delay: number) {
-		if (timer) {
-			return;
-		}
+	scroll_dir.subscribe((value) => {
+		dir = value;
+	});
 
-		timer = setTimeout(function () {
-			func();
-
-			timer = undefined;
-		}, delay);
-	};
-
-	function direction(e: UIEvent) {
+	function direction(e: Event) {
 		const target = e.target as HTMLElement;
 
-		style = target.scrollTop > lastScroll ? true : false;
+		if (dir != target.scrollTop > lastScroll) {
+			change(target.scrollTop > lastScroll);
+			console.log(dir);
+		}
 
 		lastScroll = target.scrollTop <= 0 ? 0 : target.scrollTop;
-		lastScroll = style ? lastScroll - 73 : lastScroll;
 	}
 </script>
 
@@ -49,7 +42,7 @@
 </Drawer>
 
 <AppShell
-	slotHeader={`nav ${style ? 'hide-nav' : 'show-nav'}`}
+	slotHeader={`nav ${dir ? 'hide-nav' : 'show-nav'}`}
 	slotPageFooter="flex justify-center py-5"
 	regionPage="scroll-smooth"
 	on:scroll={(e) => throttle(() => direction(e), 230)}
