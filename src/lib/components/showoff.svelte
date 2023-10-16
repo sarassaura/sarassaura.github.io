@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { fade } from 'svelte/transition';
 
 	onMount(() => {
 		const show = document.querySelectorAll('.showoff');
@@ -20,7 +21,12 @@
 	});
 </script>
 
-<div class="showoff" data-direction="left" data-speed="fast">
+<div
+	class="showoff"
+	data-direction="left"
+	data-speed="fast"
+	transition:fade={{ duration: 500, delay: 250 }}
+>
 	<ul class="list">
 		<li>React</li>
 		<li>Next</li>
@@ -36,7 +42,12 @@
 	</ul>
 </div>
 
-<div class="showoff" data-direction="left" data-speed="fast">
+<div
+	class="showoff"
+	data-direction="left"
+	data-speed="fast"
+	transition:fade={{ duration: 500, delay: 350 }}
+>
 	<ul class="list">
 		<li>Github</li>
 		<li>Docker</li>

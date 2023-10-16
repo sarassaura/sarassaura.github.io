@@ -1,4 +1,13 @@
 <script lang="ts">
+	import { section } from '$lib';
+	import { fade } from 'svelte/transition';
+
+	let now: string;
+
+	section.subscribe((value) => {
+		now = value;
+	});
+
 	/** @type {import('./$types').PageData} */
 	export let data: {
 		data: {
@@ -23,8 +32,16 @@
 
 <div class="section projects md:px-16 px-4" id="projects">
 	{#each data.data.viewer.pinnedItems.edges as item}
-		<figure>
-			<img class="work" src={item.node.openGraphImageUrl} alt={item.node.name} />
+		<figure class="relative">
+			{#if now != 'projects'}
+				<div class="pseudo" transition:fade={{ duration: 500, delay: 250 }} />
+			{/if}
+			<img
+				class="work"
+				src={item.node.openGraphImageUrl}
+				alt={item.node.name}
+				transition:fade={{ duration: 500, delay: 500 }}
+			/>
 			<figcaption>
 				<p>{item.node.name}</p>
 				<p>{item.node.description}</p>
