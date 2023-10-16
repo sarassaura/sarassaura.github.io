@@ -2,6 +2,7 @@
 	import { TabGroup, TabAnchor } from '@skeletonlabs/skeleton';
 	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
+	import { change_id } from '$lib/store/section';
 
 	const links = ['about', 'skills', 'projects', 'qualifications', 'contact-me'];
 	let TabList: HTMLElement;
@@ -16,6 +17,7 @@
 				entries.forEach((entry) => {
 					if (entry.isIntersecting) {
 						change(links.indexOf(entry.target.id));
+						change_id(entry.target.id);
 						const url = $page.url;
 						url.hash = links[links.indexOf(entry.target.id)];
 					}
