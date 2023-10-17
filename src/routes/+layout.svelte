@@ -4,7 +4,7 @@
 	import type { AfterNavigate } from '@sveltejs/kit';
 	import '../app.postcss';
 	import 'iconify-icon';
-	import { AppShell, Drawer } from '@skeletonlabs/skeleton';
+	import { Drawer } from '@skeletonlabs/skeleton';
 	import { initializeStores } from '@skeletonlabs/skeleton';
 
 	initializeStores();
@@ -40,16 +40,8 @@
 	<Menu />
 </Drawer>
 
-<AppShell
-	slotPageFooter="flex justify-center py-5"
-	regionPage="scroll-smooth"
-	on:scroll={(e) => throttle(() => direction(e), 230)}
->
-	<svelte:fragment slot="header">
-		<Navbar />
-	</svelte:fragment>
+<div on:scroll={(e) => throttle(() => direction(e), 230)} class="hello">
+	<Navbar />
 	<slot />
-	<svelte:fragment slot="pageFooter">
-		<Footer />
-	</svelte:fragment>
-</AppShell>
+	<Footer />
+</div>

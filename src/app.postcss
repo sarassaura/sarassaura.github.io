@@ -43,12 +43,11 @@
         --theme-font-family-base: 'Open-sans', sans-serif;
         --theme-font-family-heading: 'Roboto-mono', sans-serif;
     }
-    html,body {
-        @apply h-full overflow-x-hidden;
+    html, body {
+        @apply h-full overflow-x-hidden relative;
         max-width: 1280px;
         margin: 0 auto;
-    }
-    #page {
+        scroll-behavior: smooth;
         scrollbar-width: none !important;
     }
     .section {
