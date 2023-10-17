@@ -44,7 +44,7 @@
         --theme-font-family-heading: 'Roboto-mono', sans-serif;
     }
     html,body {
-        @apply h-full overflow-hidden;
+        @apply h-full overflow-x-hidden;
         max-width: 1280px;
         margin: 0 auto;
     }
@@ -92,9 +92,9 @@
         display: inline-block;
         font-size: 1rem;
     }
-    .label input:valid ~ span,
+    .label input:not(:placeholder-shown) ~ span,
     .label input:focus ~ span,
-    .label textarea:valid ~ span,
+    .label textarea:not(:placeholder-shown) ~ span,
     .label textarea:focus ~ span
     {
         @apply text-tertiary-500 bg-surface-900 leading-3;
@@ -224,10 +224,6 @@
         }
         .phone {
             border: solid 1px black;
-        }
-        form {
-            grid-template-rows: 0.7fr 0.3fr 0.3fr 0.8fr 0.2fr 0.7fr;
-            grid-template-columns: 0.3fr 1fr 0.3fr;
         }
         .projects {
             column-count: 3;
