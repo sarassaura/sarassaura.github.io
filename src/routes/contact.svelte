@@ -11,7 +11,11 @@
 
 <div class="section contact md:px-16 px-4" id="contact-me">
 	{#if now == 'contact-me'}
-		<form on:input|preventDefault|stopPropagation transition:fade={{ duration: 500, delay: 500 }}>
+		<form
+			on:input|preventDefault|stopPropagation
+			transition:fade={{ duration: 500, delay: 500 }}
+			class="space-y-6 px-8 md:px-0 flex items-center justify-center flex-col"
+		>
 			<label class="label row-start-2">
 				<span>Name</span>
 				<input class="input" type="text" />

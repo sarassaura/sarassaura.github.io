@@ -78,15 +78,8 @@
         grid-template-rows: 1fr 1fr;
         grid-template-columns: 1fr;
     }
-    form {
-        order: 1;
-        display: grid;
-        gap: 10px;
-        grid-template-rows: 0fr 0.2fr 0.2fr 0.6fr 0.1fr 0fr;
-        grid-template-columns: 0.1fr 1fr 0.1fr;
-    }
     .label {
-        @apply col-start-2;
+        @apply col-start-2 w-full h6;
     }
     .phone {
         border: solid 1px black;
@@ -94,6 +87,9 @@
     .projects {
         column-count: 1;
         column-gap: 10px;
+    }
+    .input, .textarea {
+        @apply focus:outline-none focus:border-tertiary-500 py-1 px-2 rounded-none !important;
     }
     .about > div {
         display: flex;
