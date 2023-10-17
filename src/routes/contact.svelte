@@ -17,16 +17,16 @@
 			class="space-y-6 px-8 md:px-0 flex items-center justify-center flex-col"
 		>
 			<label class="label row-start-2">
+				<input class="input" type="text" required />
 				<span>Name</span>
-				<input class="input" type="text" />
 			</label>
 			<label class="label row-start-3">
+				<input class="input" type="email" required />
 				<span>Email</span>
-				<input class="input" type="email" />
 			</label>
 			<label class="label row-start-4">
+				<textarea class="textarea" rows="5" required />
 				<span>Message</span>
-				<textarea class="textarea" rows="5" />
 			</label>
 			<label class="label row-start-5 flex justify-center">
 				<button class="btn variant-filled" type="button">Send</button>

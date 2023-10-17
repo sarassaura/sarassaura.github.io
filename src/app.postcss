@@ -79,7 +79,33 @@
         grid-template-columns: 1fr;
     }
     .label {
-        @apply col-start-2 w-full h6;
+        @apply col-start-2 w-full h6 relative;
+    }
+    .label > span {
+        position: absolute;
+        left: 10px;
+        pointer-events: none;
+        color: #808cb1;
+        padding: 5px;
+        transition: 500ms;
+        border: none;
+        display: inline-block;
+        font-size: 1rem;
+    }
+    .label input:valid ~ span,
+    .label input:focus ~ span,
+    .label textarea:valid ~ span,
+    .label textarea:focus ~ span
+    {
+        @apply text-tertiary-500 bg-surface-900 leading-3;
+        transform: translate(5px, -16px);
+        border-left: 1px solid #0EA5E9;
+        border-right: 1px solid #0EA5E9;
+        font-size: 0.9rem;
+        letter-spacing: 0.15rem;
+    }
+    .input, .textarea {
+        @apply focus:outline-none focus:border-tertiary-500 py-2.5 px-3 rounded bg-surface-900 !important;
     }
     .phone {
         border: solid 1px black;
@@ -87,9 +113,6 @@
     .projects {
         column-count: 1;
         column-gap: 10px;
-    }
-    .input, .textarea {
-        @apply focus:outline-none focus:border-tertiary-500 py-1 px-2 rounded-none !important;
     }
     .about > div {
         display: flex;
