@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { afterNavigate } from '$app/navigation';
-	import { Navbar, Footer, Menu, scroll_dir, change_dir, throttle } from '$lib';
+	import { Navbar, Menu, scroll_dir, change_dir, throttle } from '$lib';
 	import type { AfterNavigate } from '@sveltejs/kit';
 	import '../app.postcss';
 	import 'iconify-icon';
-	import { Drawer } from '@skeletonlabs/skeleton';
+	import { AppShell, Drawer } from '@skeletonlabs/skeleton';
 	import { initializeStores } from '@skeletonlabs/skeleton';
 
 	initializeStores();
@@ -40,8 +40,13 @@
 	<Menu />
 </Drawer>
 
-<div on:scroll={(e) => throttle(() => direction(e), 230)} class="hello">
-	<Navbar />
+<AppShell
+	on:scroll={(e) => throttle(() => direction(e), 230)}
+	class="h-full"
+	slotPageFooter="flex justify-center py-5"
+>
+	<svelte:fragment slot="header">
+		<Navbar />
+	</svelte:fragment>
 	<slot />
-	<Footer />
-</div>
+</AppShell>

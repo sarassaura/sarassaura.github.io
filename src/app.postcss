@@ -50,13 +50,20 @@
         scroll-behavior: smooth;
         scrollbar-width: none !important;
     }
+    main {
+        @apply h-full;
+    }
+    #page {
+        @apply scroll-smooth;
+        scrollbar-width: none !important;
+    }
     .section {
         @apply w-full;
-        min-height: 100svh;
+        min-height: 100%;
+        border: 1px solid black;
     }
     .about {
-        min-height: calc(100svh - 72px);
-        display: inline-grid;
+        display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
     }
@@ -71,6 +78,7 @@
     }
     .presentation {
         order: 1;
+        border: 1px solid red;
     }
     .contact {
         display: grid;
@@ -121,6 +129,9 @@
     }
     .image {
         object-fit: cover;
+    }
+    .image {
+        border: 1px solid white;
     }
     .image img {
         height: auto;

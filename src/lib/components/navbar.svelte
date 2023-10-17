@@ -11,7 +11,7 @@
 	});
 </script>
 
-<AppBar class="navbar relative nav" background="bg-transparent">
+<AppBar class="navbar nav" background="bg-transparent">
 	<svelte:fragment slot="lead">
 		{#if now !== 'bla'}
 			<Logo />

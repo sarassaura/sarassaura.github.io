@@ -5,7 +5,7 @@
 	import Projects from './projects.svelte';
 	import Qualifications from './qualifications.svelte';
 	import Skills from './skills.svelte';
-	import { change, change_id } from '$lib';
+	import { Footer, change, change_id } from '$lib';
 	import { page } from '$app/stores';
 
 	/** @type {import('./$types').PageData} */
@@ -57,10 +57,11 @@
 	});
 </script>
 
-<div class="content flex items-center flex-col">
+<div class="content h-full flex items-center flex-col">
 	<About />
 	<Skills />
 	<Projects {data} />
 	<Qualifications />
 	<Contact />
+	<Footer />
 </div>
