@@ -3,6 +3,10 @@
 	import { z } from 'zod';
 	import { createForm } from 'felte';
 	import { validator } from '@felte/validator-zod';
+	import { fade } from 'svelte/transition';
+
+	let visible: boolean = false;
+	let invisible: boolean = false;
 
 	const schema = z.object({
 		name: z.string().min(1).max(100).trim(),
@@ -21,15 +25,47 @@
 				reset();
 			});
 		},
-		onError(error) {
-			console.log('error: ', error);
+		onError() {
+			invisible = true;
+			setTimeout(() => {
+				invisible = false;
+			}, 8000);
 		},
 		onSuccess() {
-			console.log('success');
+			visible = true;
+			setTimeout(() => {
+				visible = false;
+			}, 2000);
 		},
 		extend: validator({ schema })
 	});
 </script>
+
+{#if visible}
+	<aside
+		class="alert flex flex-row items-center absolute z-[7] bg-gradient-to-br variant-gradient-secondary-tertiary"
+		transition:fade|local={{ duration: 200 }}
+	>
+		<iconify-icon icon="mingcute:check-fill" width="48" class="mr-2" />
+		<div class="alert-message m-0">
+			<h3 class="h3 italic">Thanks for contacting us!</h3>
+			<p>Message sent successfully</p>
+		</div>
+	</aside>
+{/if}
+
+{#if invisible}
+	<aside
+		class="alert flex flex-row items-center absolute z-[7] bg-gradient-to-br variant-gradient-error-warning"
+		transition:fade|local={{ duration: 200 }}
+	>
+		<iconify-icon icon="ph:x-bold" width="48" class="mr-2" />
+		<div class="alert-message m-0">
+			<h3 class="h3 italic">Sorry, something went wrong</h3>
+			<p>Try sending me an email at sarahyukinonakada@gmail.com</p>
+		</div>
+	</aside>
+{/if}
 
 <div class="section contact md:px-16 px-4 relative" id="contact-me">
 	<form use:form class="space-y-6 px-8 md:px-0 flex items-center justify-center flex-col relative">

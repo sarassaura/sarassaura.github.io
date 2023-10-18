@@ -54,7 +54,7 @@
 
 <AppShell
 	on:scroll={(e) => throttle(() => direction(e), 230)}
-	class="h-full"
+	class="h-full relative"
 	slotPageFooter="flex justify-center py-5"
 >
 	<svelte:fragment slot="header">
