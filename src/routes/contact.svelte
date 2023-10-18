@@ -7,19 +7,19 @@
 		class="space-y-6 px-8 md:px-0 flex items-center justify-center flex-col relative"
 		id="form"
 	>
-		<label class="label row-start-2">
+		<label class="label">
 			<input class="input" type="text" required placeholder=" " />
 			<span>Name</span>
 		</label>
-		<label class="label row-start-3">
+		<label class="label">
 			<input class="input" type="email" required placeholder=" " />
 			<span>Email</span>
 		</label>
-		<label class="label row-start-4">
+		<label class="label">
 			<textarea class="textarea" rows="5" required placeholder=" " />
 			<span>Message</span>
 		</label>
-		<label class="label row-start-5 flex justify-center">
+		<label class="label flex justify-center">
 			<button class="btn variant-filled" type="button">Send</button>
 		</label>
 	</form>

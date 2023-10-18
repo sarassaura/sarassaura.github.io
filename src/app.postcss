@@ -85,8 +85,14 @@
         grid-template-rows: 1fr 1fr;
         grid-template-columns: 1fr;
     }
+    input {
+        font-size: 1.125rem !important;
+    }
+    textarea {
+        font-size: 0.5625rem !important;
+    }
     .label {
-        @apply col-start-2 w-full h6 relative;
+        @apply w-full relative;
     }
     .label > span {
         position: absolute;
@@ -117,7 +123,7 @@
     .label textarea:focus {
         @apply border-tertiary-500;
     }
-    .input, .textarea {
+    .input, textarea {
         @apply focus:outline-none focus:border-tertiary-500 py-2.5 px-3 rounded bg-surface-900 !important;
     }
     .phone {
@@ -188,9 +194,6 @@
         padding: 1rem;
     }
     @media only screen and (min-width: 430px) {
-        input, textarea {
-            font-size: 0.9rem !important;
-        }
         .showoff {
             max-width: 430px;
         }
@@ -212,6 +215,9 @@
         }
     }
     @media only screen and (min-width: 768px) {
+        input, textarea {
+            font-size: 1.125rem !important;
+        }
         .showoff {
             max-width: 768px;
         }
