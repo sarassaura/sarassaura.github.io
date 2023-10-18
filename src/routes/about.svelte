@@ -25,7 +25,7 @@
 			Hi, I'm Sarah a <br class="break" />
 			<span class="typewrite">Web Developer</span>
 		</p>
-		<div transition:fade={{ duration: 500, delay: 500 }}>
+		<div transition:fade={{ duration: 500, delay: 500 }} class="flex gap-2 md:gap-4">
 			<a class="btn variant-filled" href="https://rxresu.me/sarahyukino/sarah-nakada">Resume</a>
 			<a class="btn variant-ghost-tertiary" href="mailto:sarahyukinonakada@gmail.com">Email me</a>
 		</div>
@@ -33,8 +33,8 @@
 	<div class="carousel" transition:fade={{ duration: 500, delay: 1000 }}>
 		<div class="slider" bind:this={SliderRef}>
 			<img src="/iphone.webp" alt="iphone" />
-			<img src="/iphone.webp" alt="iphone" />
-			<img src="/iphone.webp" alt="iphone" />
+			<img src="/pc.webp" alt="iphone" />
+			<img src="/tablet.webp" alt="iphone" />
 		</div>
 		<div class="controls">
 			<button class="prev btn variant-ghost" on:click={GoLeft}>
