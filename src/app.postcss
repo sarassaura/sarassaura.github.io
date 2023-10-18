@@ -63,9 +63,11 @@
         border: 1px solid black;
     }
     .about {
+        height: inherit !important;
+        max-height: 100% !important;
         display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
     }
     .presentation > p {
         @apply text-xl;
@@ -139,16 +141,6 @@
         align-items: center;
         flex-direction: column;
     }
-    .image {
-        object-fit: cover;
-    }
-    .image {
-        border: 1px solid white;
-    }
-    .image img {
-        height: auto;
-        width: 280px;
-    }
     .break {
         display: none;
     }
@@ -193,6 +185,45 @@
         @apply bg-surface-700;
         padding: 1rem;
     }
+    .carousel {
+        width: 100%;
+        max-height: 100%;
+        height: inherit;
+        position: relative;
+    }
+    .slider {
+        height: inherit;
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        border: 1px solid yellow;
+        height: 100%;
+        @apply snap-x snap-mandatory scroll-smooth;
+    }
+    .slider > img {
+        @apply snap-center;
+        border: 1px solid orange;
+        object-fit: scale-down;
+        display: block;
+        height: inherit;
+    }
+    .controls {
+        width: 100%;
+        position: absolute;
+        border: 1px solid purple;
+    }
+    .controls > button {
+        position: absolute;
+        height: 48px;
+        width: 48px;
+        translate: 0 -24px;
+    }
+    .prev {
+        left: 0;
+    }
+    .next {
+        right: 0;
+    }
     @media only screen and (min-width: 430px) {
         input, textarea {
             font-size: 1.125rem !important;
@@ -200,16 +231,8 @@
         .showoff {
             max-width: 430px;
         }
-        .image img {
-            height: auto;
-            width: 280px;
-        }
     }
     @media only screen and (min-width: 640px) {
-        .image img {
-            height: auto;
-            width: 280px;
-        }
         .showoff {
             max-width: 640px;
         }
@@ -229,13 +252,9 @@
         .break {
             display: block;
         }
-        .image img {
-            height: auto;
-            width: 640px;
-        }
         .about {
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr;
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+            grid-template-rows: minmax(0, 1fr);
         }
         .presentation > p {
             @apply text-4xl;
@@ -258,10 +277,6 @@
         }
       }
     @media only screen and (min-width: 1280px) {
-        .image img {
-            height: auto;
-            width: 600px;
-        }
     }
     @media only screen and (min-width: 1536px) {
 
