@@ -6,6 +6,7 @@
 	import 'iconify-icon';
 	import { AppShell, Drawer } from '@skeletonlabs/skeleton';
 	import { initializeStores } from '@skeletonlabs/skeleton';
+	import { onMount } from 'svelte';
 
 	initializeStores();
 
@@ -15,6 +16,17 @@
 		const elemPage = document.querySelector('#page');
 		if (isNewPage && elemPage !== null) {
 			elemPage.scrollTop = 0;
+		}
+	});
+
+	onMount(() => {
+		let chrome = document.querySelector('textarea');
+		if (navigator.userAgent.indexOf('Chrome') != -1) {
+			console.log('Chrome');
+			chrome?.classList.add('mobile-textarea');
+		}
+		if (navigator.userAgent.indexOf('Firefox') != -1) {
+			console.log('Firefox');
 		}
 	});
 

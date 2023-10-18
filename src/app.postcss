@@ -88,7 +88,7 @@
     input {
         font-size: 1.125rem !important;
     }
-    textarea {
+    .mobile-textarea {
         font-size: 0.5625rem !important;
     }
     .label {
@@ -194,6 +194,9 @@
         padding: 1rem;
     }
     @media only screen and (min-width: 430px) {
+        input, textarea {
+            font-size: 1.125rem !important;
+        }
         .showoff {
             max-width: 430px;
         }
@@ -215,9 +218,6 @@
         }
     }
     @media only screen and (min-width: 768px) {
-        input, textarea {
-            font-size: 1.125rem !important;
-        }
         .showoff {
             max-width: 768px;
         }
