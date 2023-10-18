@@ -111,6 +111,12 @@
         font-size: 0.9rem;
         letter-spacing: 0.15rem;
     }
+    .label input:not(:placeholder-shown),
+    .label input:focus,
+    .label textarea:not(:placeholder-shown),
+    .label textarea:focus {
+        @apply border-tertiary-500;
+    }
     .input, .textarea {
         @apply focus:outline-none focus:border-tertiary-500 py-2.5 px-3 rounded bg-surface-900 !important;
     }
@@ -182,6 +188,9 @@
         padding: 1rem;
     }
     @media only screen and (min-width: 430px) {
+        input, textarea {
+            font-size: 0.9rem !important;
+        }
         .showoff {
             max-width: 430px;
         }
