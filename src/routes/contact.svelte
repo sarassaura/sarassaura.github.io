@@ -1,5 +1,5 @@
 <script lang="ts">
-	// import axios from 'axios';
+	import axios from 'axios';
 	import { z } from 'zod';
 	import { createForm } from 'felte';
 	import { validator } from '@felte/validator-zod';
@@ -10,14 +10,25 @@
 		message: z.string().min(1).max(1500).trim()
 	});
 
-	const { form, errors } = createForm<z.infer<typeof schema>>({
-		onSubmit: (values) => {
-			console.log(values);
+	const { form, errors, reset, isSubmitting } = createForm<z.infer<typeof schema>>({
+		onSubmit: (values, { form }) => {
+			console.log(form);
+			axios({
+				method: 'POST',
+				url: 'https://formspree.io/f/xzblylrk',
+				data: new FormData(form)
+			}).then(() => {
+				reset();
+			});
+		},
+		onError(error) {
+			console.log('error: ', error);
+		},
+		onSuccess() {
+			console.log('success');
 		},
 		extend: validator({ schema })
 	});
-
-	let disabled = false;
 </script>
 
 <div class="section contact md:px-16 px-4 relative" id="contact-me">
@@ -43,7 +54,7 @@
 				<p class="text-error-400">{$errors.message && $errors.message[0]}</p>
 			{/if}
 		</label>
-		<button class="btn variant-filled" {disabled}>Send</button>
+		<button class="btn variant-filled" disabled={$isSubmitting}>Send</button>
 	</form>
 	<div class="informations relative">
 		<p>Sarah Yukino Nakada</p>
