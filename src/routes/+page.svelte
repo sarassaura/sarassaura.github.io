@@ -7,27 +7,10 @@
 	import Skills from './skills.svelte';
 	import { Footer, change, change_id } from '$lib';
 	import { page } from '$app/stores';
+	import type { PageData } from './$types';
 
-	/** @type {import('./$types').PageData} */
-	export let data: {
-		data: {
-			viewer: {
-				pinnedItems: {
-					totalCount: number;
-					edges: Array<{
-						node: {
-							name: string;
-							description: string;
-							openGraphImageUrl: string;
-							createdAt: string;
-							homepageUrl: string;
-							repositoryTopics: { totalCount: number; nodes: Array<{ topic: { name: string } }> };
-						};
-					}>;
-				};
-			};
-		};
-	};
+	export let data: PageData;
+	let { projects } = data;
 
 	const links = ['about', 'skills', 'projects', 'qualifications', 'contact-me'];
 	let TabList: HTMLElement | null;
@@ -60,7 +43,7 @@
 <div class="content h-full flex items-center flex-col">
 	<About />
 	<Skills />
-	<Projects {data} />
+	<Projects data={projects} />
 	<Qualifications />
 	<Contact />
 	<Footer />
