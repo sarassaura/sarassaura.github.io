@@ -11,9 +11,8 @@
 			<span class="typewrite">Web Developer</span>
 		</p>
 		<div class="flex gap-2 md:gap-4">
-			<!-- "https://rxresu.me/sarahyukino/sarah-nakada" -->
 			<a class="btn variant-filled" href={`${$page.url.origin}/resume`}>Resume</a>
-			<a class="btn variant-ghost-tertiary" href="mailto:sarahyukinonakada@gmail.com">Email me</a>
+			<a class="btn variant-ghost-tertiary" href={`${$page.url.origin}/#contact-me`}>Email me</a>
 		</div>
 	</div>
 	<div class="carousel">
