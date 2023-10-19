@@ -3,14 +3,6 @@
 	import { change, unchange } from '$lib';
 	import { TabGroup, TabAnchor } from '@skeletonlabs/skeleton';
 	import { onMount } from 'svelte';
-	import { fade } from 'svelte/transition';
-	import { section } from '$lib';
-
-	let now: string;
-
-	section.subscribe((value) => {
-		now = value;
-	});
 
 	const links = ['about', 'skills', 'projects', 'qualifications', 'contact-me'];
 
@@ -32,7 +24,4 @@
 			>{link.replace('-', ' ')}
 		</TabAnchor>
 	{/each}
-	{#if now == 'bla'}
-		<div transition:fade={{ duration: 500, delay: 250 }} class="pseudo" />
-	{/if}
 </TabGroup>
