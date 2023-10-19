@@ -202,6 +202,8 @@
         overflow-x: auto;
         border: 1px solid yellow;
         height: 100%;
+        align-items: center;
+        justify-content: center;
         @apply snap-x snap-mandatory scroll-smooth;
     }
     .slider > img {
@@ -211,23 +213,7 @@
         display: block;
         height: inherit;
     }
-    .controls {
-        width: 100%;
-        position: absolute;
-        border: 1px solid purple;
-    }
-    .controls > button {
-        position: absolute;
-        height: 48px;
-        width: 48px;
-        translate: 0 -24px;
-    }
-    .prev {
-        left: 1rem;
-    }
-    .next {
-        right: 1rem;
-    }
+
     @media only screen and (min-width: 430px) {
         input, textarea {
             font-size: 1.125rem !important;

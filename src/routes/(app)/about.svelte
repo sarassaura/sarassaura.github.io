@@ -2,21 +2,6 @@
 	import { page } from '$app/stores';
 
 	let SliderRef: HTMLDivElement;
-
-	function GoLeft() {
-		const x =
-			SliderRef.scrollLeft == 0
-				? SliderRef.clientWidth * SliderRef.childElementCount
-				: SliderRef.scrollLeft - SliderRef.clientWidth;
-		SliderRef.scroll(x, 0);
-	}
-	function GoRight() {
-		const x =
-			SliderRef.scrollLeft == SliderRef.scrollWidth - SliderRef.clientWidth
-				? 0
-				: SliderRef.scrollLeft + SliderRef.clientWidth;
-		SliderRef.scroll(x, 0);
-	}
 </script>
 
 <div class="section about" id="about">
@@ -34,16 +19,6 @@
 	<div class="carousel">
 		<div class="slider" bind:this={SliderRef}>
 			<img src="/iphone.webp" alt="iphone" />
-			<img src="/pc.webp" alt="iphone" />
-			<img src="/tablet.webp" alt="iphone" />
-		</div>
-		<div class="controls">
-			<button class="prev btn variant-ghost" on:click={GoLeft}>
-				<iconify-icon icon="uiw:left" height="36" />
-			</button>
-			<button class="next btn variant-ghost" on:click={GoRight}>
-				<iconify-icon icon="uiw:right" height="36" />
-			</button>
 		</div>
 	</div>
 </div>
