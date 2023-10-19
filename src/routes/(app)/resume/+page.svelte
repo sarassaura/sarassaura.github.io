@@ -2,11 +2,11 @@
 	<div class="flex w-full justify-around py-4">
 		<a class="btn variant-filled px-3 py-3" href="/">
 			<iconify-icon icon="mdi:arrow-left" height="28" width="28" />
-			<span class="break">&nbspGo back</span>
+			<span class="break">&nbspGo back&nbsp</span>
 		</a>
 		<select class="select">
-			<option value="1">pt-BR</option>
-			<option value="2">EN</option>
+			<option value="1"> BR </option>
+			<option value="2"> EN </option>
 		</select>
 		<a class="btn variant-filled" href="/resume.pdf" download="sarah_nakada">
 			<span class="break">Download&nbsp</span>PDF
@@ -29,7 +29,7 @@
 	}
 	.wrapper {
 		width: 100%;
-		height: calc(100% - 80px);
+		height: calc(100% - 85px);
 		padding: 1rem 1rem;
 	}
 	img {
