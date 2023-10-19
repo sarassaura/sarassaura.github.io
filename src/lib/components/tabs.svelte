@@ -17,7 +17,7 @@
 	{#each links as link, id}
 		<TabAnchor
 			name={`tab${id + 1}`}
-			href={`#${link}`}
+			href={`${$page.url.origin}/#${link}`}
 			class="capitalize"
 			on:mouseover={() => change(id, TabList)}
 			on:mouseleave={() => unchange(TabList, links, $page.url.hash)}

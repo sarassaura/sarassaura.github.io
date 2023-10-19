@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { page } from '$app/stores';
+
 	let SliderRef: HTMLDivElement;
 
 	function GoLeft() {
@@ -24,7 +26,8 @@
 			<span class="typewrite">Web Developer</span>
 		</p>
 		<div class="flex gap-2 md:gap-4">
-			<a class="btn variant-filled" href="https://rxresu.me/sarahyukino/sarah-nakada">Resume</a>
+			<!-- "https://rxresu.me/sarahyukino/sarah-nakada" -->
+			<a class="btn variant-filled" href={`${$page.url.origin}/resume`}>Resume</a>
 			<a class="btn variant-ghost-tertiary" href="mailto:sarahyukinonakada@gmail.com">Email me</a>
 		</div>
 	</div>

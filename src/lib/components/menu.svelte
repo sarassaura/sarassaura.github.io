@@ -18,7 +18,7 @@
 				value={link}
 				on:click={() => {
 					drawerStore.close();
-					goto(`#${link}`);
+					goto(`${$page.url.origin}/#${link}`);
 				}}>{link.toUpperCase().replace('-', ' ')}</ListBoxItem
 			>
 		{/each}
