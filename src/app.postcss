@@ -67,7 +67,6 @@
     }
     .about {
         height: inherit !important;
-        max-height: 100% !important;
         display: grid;
         grid-template-columns: minmax(0, 1fr);
         grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
@@ -86,7 +85,7 @@
         display: flex;
         justify-content: center;
     }
-    .presentation > p {
+    .presentation > .title {
         @apply text-xl;
     }
     .presentation button {
@@ -284,7 +283,7 @@
             grid-template-columns: repeat(auto-fit, 30%);
             grid-template-rows: 1fr;
         }
-        .presentation > p {
+        .presentation > .title {
             @apply text-4xl;
         }
         .presentation {
