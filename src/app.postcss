@@ -172,6 +172,12 @@
         animation: scroll var(--_animation-duration, 20s) var(--_animation-direction, forwards) linear infinite;
         width: max-content;
     }
+    .showoff[data-animated="true"] .list:hover {
+        -webkit-animation-play-state: paused;
+        -moz-animation-play-state: paused;
+        -o-animation-play-state: paused;
+        animation-play-state: paused;
+    }
     .showoff[data-direction="right"] {
         --_animation-direction: reverse;
     }

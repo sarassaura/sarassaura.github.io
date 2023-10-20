@@ -1,7 +1,11 @@
 <script lang="ts">
+	import { computePosition, autoUpdate, offset, shift, flip, arrow } from '@floating-ui/dom';
 	import { fly } from 'svelte/transition';
 	import '../app.postcss';
 	import 'iconify-icon';
+	import { storePopup } from '@skeletonlabs/skeleton';
+
+	storePopup.set({ computePosition, autoUpdate, offset, shift, flip, arrow });
 
 	export let data: { url: string };
 </script>

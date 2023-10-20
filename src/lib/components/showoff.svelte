@@ -74,6 +74,11 @@
 	</ul>
 </div>
 
+<div class="card p-4 w-72 shadow-xl" data-popup="0">
+	<div><p>Demo Content</p></div>
+	<div class="arrow bg-surface-100-800-token" />
+</div>
+
 <div
 	class="showoff"
 	data-direction="left"
