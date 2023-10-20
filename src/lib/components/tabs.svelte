@@ -4,7 +4,7 @@
 	import { TabGroup, TabAnchor } from '@skeletonlabs/skeleton';
 	import { onMount } from 'svelte';
 
-	const links = ['about', 'skills', 'projects', 'qualifications', 'contact-me'];
+	const links = ['about', 'skills', 'projects', 'contact-me'];
 
 	let TabList: HTMLElement | null;
 

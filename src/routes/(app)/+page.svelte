@@ -3,7 +3,6 @@
 	import About from './about.svelte';
 	import Contact from './contact.svelte';
 	import Projects from './projects.svelte';
-	import Qualifications from './qualifications.svelte';
 	import Skills from './skills.svelte';
 	import { Footer, change, change_id } from '$lib';
 	import { page } from '$app/stores';
@@ -12,7 +11,7 @@
 	export let data: PageData;
 	let { projects } = data;
 
-	const links = ['about', 'skills', 'projects', 'qualifications', 'contact-me'];
+	const links = ['about', 'skills', 'projects', 'contact-me'];
 	let TabList: HTMLElement | null;
 	let PageRef;
 
@@ -44,7 +43,6 @@
 	<About />
 	<Skills />
 	<Projects data={projects} />
-	<Qualifications />
 	<Contact />
 	<Footer />
 </div>

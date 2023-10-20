@@ -3,7 +3,7 @@
 </script>
 
 <div class="section skills md:px-16 px-4 flex flex-col items-center overflow-hidden" id="skills">
-	<div class="w-full flex flex-col items-center justify-center">
+	<div class="show-wrapper">
 		<ShowOff />
 	</div>
 	<div class="know grid md:gap-x-6 gap-y-4 shrink-none py-4 w-full h-full justify-center">
