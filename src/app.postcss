@@ -39,6 +39,9 @@
 }
 
 @layer base {
+    * {
+        
+    }
     :root [data-theme='skeleton'] {
         --theme-font-family-base: 'Open-sans', sans-serif;
         --theme-font-family-heading: 'Roboto-mono', sans-serif;
@@ -61,7 +64,6 @@
     .section {
         @apply w-full;
         min-height: 100%;
-        border: 1px solid black;
     }
     .about {
         height: inherit !important;
@@ -70,9 +72,19 @@
         grid-template-columns: minmax(0, 1fr);
         grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
     }
+    .skills {
+        flex-shrink: 0;
+    }
     .know {
-        grid-template-columns: minmax(0, 1fr);
-        grid-template-rows: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(auto-fit);
+    }
+    .card {
+        justify-self: center;
+    }
+    .card > * {
+        display: flex;
+        justify-content: center;
     }
     .presentation > p {
         @apply text-xl;
@@ -85,7 +97,6 @@
     }
     .presentation {
         order: 1;
-        border: 1px solid red;
     }
     .contact {
         display: grid;
@@ -133,12 +144,9 @@
     .input, textarea {
         @apply focus:outline-none focus:border-tertiary-500 py-2.5 px-3 rounded bg-surface-900 !important;
     }
-    .phone {
-        border: solid 1px black;
-    }
     .projects {
-        column-count: 1;
-        column-gap: 10px;
+        display: grid;
+        gap: 0.5rem;
     }
     .about > div {
         display: flex;
@@ -180,6 +188,15 @@
             transform: translate(calc(-50% - (var(--_gap) / 2 * 1rem)));
         }
     }
+    figure {
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        height: min-content;
+    }
+    figcaption {
+        padding-top: 1rem;
+    }
     .list {
         display: flex;
         gap: calc(var(--_gap) * 1rem);
@@ -201,7 +218,6 @@
         display: flex;
         flex-direction: row;
         overflow-x: auto;
-        border: 1px solid yellow;
         height: 100%;
         align-items: center;
         justify-content: center;
@@ -209,7 +225,6 @@
     }
     .slider > img {
         @apply snap-center;
-        border: 1px solid orange;
         object-fit: scale-down;
         display: block;
         height: inherit;
@@ -223,12 +238,20 @@
             max-width: 430px;
         }
     }
+    @media only screen and (min-width: 550px) {
+        figure {
+            break-inside: avoid;
+        }
+        figcaption {
+            padding-top: 0.5rem;
+        }
+    }
     @media only screen and (min-width: 640px) {
+        .projects {
+            grid-template-columns: 1fr 1fr;
+        }
         .showoff {
             max-width: 640px;
-        }
-        .projects {
-            column-count: 2;
         }
     }
     @media only screen and (min-width: 768px) {
@@ -237,6 +260,9 @@
         }
     }
     @media only screen and (min-width: 1024px) {
+        .card {
+            justify-self: auto;
+        }
         .showoff {
             max-width: 1024px;
         }
@@ -248,8 +274,8 @@
             grid-template-rows: minmax(0, 1fr);
         }
         .know {
-            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
-            grid-template-rows: minmax(0, 1fr);
+            grid-template-columns: repeat(auto-fit, 30%);
+            grid-template-rows: 1fr;
         }
         .presentation > p {
             @apply text-4xl;
@@ -261,11 +287,8 @@
             grid-template-rows: 1fr;
             grid-template-columns: 0.8fr 1fr;
         }
-        .phone {
-            border: solid 1px black;
-        }
         .projects {
-            column-count: 3;
+            grid-template-columns: 1fr 1fr 1fr;
         }
         .about > div {
             justify-content: center;
@@ -275,16 +298,6 @@
     }
     @media only screen and (min-width: 1536px) {
 
-    }
-    figure {
-        margin: 0px;
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 10px;
-        break-inside: avoid;
-    }
-    figcaption {
-        margin-top: 20px;
     }
     .work {
         width: 100%;
@@ -338,14 +351,6 @@
         animation: type 4s steps(13) forwards, blinks 1.2s steps(5, start) 4s infinite;
         border-left: solid white 2px;
     }
-    .pseudo {
-        position: absolute;
-        content:'';
-        inset: 0px;
-        width: 100%;
-        height: 100%;
-        @apply bg-surface-900;
-    }
     @keyframes type {
         to {
             left: 100%;
@@ -360,6 +365,12 @@
         display: none !important;
         width: 0px;
         height: 0px;
+    }
+    .listbox {
+        border-radius: unset !important;
+    }
+    .button-burguer {
+        margin-left: 0px !important;
     }
 }
 
