@@ -40,7 +40,7 @@
 
 @layer base {
     * {
-       
+       /*border: 1px solid purple;*/
     }
 
     :root [data-theme='skeleton'] {
@@ -92,7 +92,6 @@
         & > div {
             display: flex;
             justify-content: center;
-            align-items: center;
             flex-direction: column;
         }
 
@@ -104,11 +103,90 @@
         }
     }
 
-    .heading {
+    .hero-body {
+        @apply overflow-hidden px-4 gap-y-5;
+        align-items: center;
         order: 1;
 
-        & > .title {
-            @apply text-xl;
+        @media only screen and (width >= 768px) {
+            @apply px-16;
+        }
+
+        @media only screen and (width >= 1024px) {
+            @apply pl-16 pr-0;
+        }
+
+        & > .heading {
+            @apply h6 w-fit;
+            font-size: 0.4rem;
+            line-height: 1rem !important;
+
+            @media only screen and (width >= 190px) {
+                font-size: 0.5rem;
+            }
+
+            @media only screen and (width >= 220px) {
+                font-size: 0.6rem;
+            }
+
+            @media only screen and (width >= 280px) {
+                font-size: 0.8rem;
+                line-height: 2.8rem !important;
+            }
+
+            @media only screen and (width >= 303px) {
+                font-size: 0.9rem;
+            }
+
+            @media only screen and (width >= 330px) {
+                font-size: 1rem;
+            }
+
+            @media only screen and (width >= 360px) {
+                font-size: 1.1rem;
+            }
+
+            @media only screen and (width >= 400px) {
+                font-size: 1.25rem;
+            }
+        }
+
+        & > .subheading {
+            max-width: 100%;
+            font-size: 0.4rem;
+            line-height: 12px;
+
+            @media only screen and (width >= 230px) {
+                font-size: 0.5rem;
+                line-height: 16px;
+            }
+
+            @media only screen and (width >= 262px) {
+                font-size: 0.6rem;
+                line-height: 18px;
+            }
+
+            @media only screen and (width >= 300px) {
+                font-size: 0.7rem;
+                line-height: 20px;
+            }
+
+            @media only screen and (width >= 333px) {
+                font-size: 0.8rem;
+            }
+
+            @media only screen and (width >= 370px) {
+                font-size: 0.9rem;
+                line-height: 24px;
+            }
+
+            @media only screen and (width >= 405px) {
+                font-size: 1rem;
+            }
+
+            @media only screen and (width >= 1024px) {
+                max-width: 100%;
+            }
         }
 
         & button {
@@ -116,7 +194,9 @@
         }
 
         @media only screen and (width >= 1024px) {
-            & > .title {
+            align-items: flex-start;
+
+            & > .heading {
                 @apply text-4xl;
             }
 
@@ -124,10 +204,6 @@
                 order: 0;
             }
         }
-    }
-
-    .title {
-        line-height: 2.8rem !important;
     }
 
     .carousel {
