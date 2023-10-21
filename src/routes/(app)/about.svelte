@@ -5,12 +5,12 @@
 </script>
 
 <div class="section about shrink-none" id="about">
-	<div class="presentation overflow-hidden md:px-16 px-4 gap-y-5">
+	<div class="heading overflow-hidden md:px-16 px-4 gap-y-5">
 		<p class="h6 w-fit title text-center">
 			Hi, I'm Sarah a<br class="break" />
 			<span class="typewrite">Web Developer</span>
 		</p>
-		<div class="paragraph text-center text-base">
+		<div class="text-center text-base">
 			I am passionate about coding with a love for programming. I have a technical diploma in
 			computing for the internet and I'm currently studying computer science.
 		</div>
