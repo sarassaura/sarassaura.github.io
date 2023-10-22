@@ -13,7 +13,7 @@
 					<a href={item.node.homepageUrl} class="flex items-center">
 						<button class="chip btn variant-ghost gap-2"
 							>Live Demo
-							<iconify-icon icon="gridicons:popout" height="24px" />
+							<iconify-icon icon="iconoir:arrow-tr-circle" height="24px" />
 						</button>
 					</a>
 					<a href={`https://github.com/sarassaura/${item.node.name}`} class="flex items-center">

@@ -421,8 +421,16 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
         gap: 15px;
+        width: fit-content;
+        align-self: center;
+        justify-self: center;
+
+        & > p {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
     }
 
     /* Resume Page */
