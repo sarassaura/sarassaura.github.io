@@ -9,21 +9,18 @@
 		<figure class="relative mb-8">
 			<img class="work" src={item.node.openGraphImageUrl} alt={item.node.name} />
 			<figcaption class="sm:pt-2 md:pt-2">
-				<div class="flex justify-between">
-					<a href={item.node.homepageUrl} class="flex items-center">
-						<button class="chip btn variant-ghost gap-2"
-							>Live Demo
-							<iconify-icon icon="iconoir:arrow-tr-circle" height="24px" />
+				<div class="flex gap-4 items-center">
+					<a href={`https://github.com/sarassaura/${item.node.name}`} class="flex items-center">
+						<button class="gap-2">
+							<iconify-icon icon="mdi:github" height="32px" />
 						</button>
 					</a>
-					<a href={`https://github.com/sarassaura/${item.node.name}`} class="flex items-center">
-						<button class="chip btn variant-ghost gap-2"
-							>Code
-							<iconify-icon icon="mdi:github" height="24px" />
-						</button>
+					<a href={item.node.homepageUrl} class="flex items-center gap-1 links h-fit">
+						Website
+						<iconify-icon icon="ph:arrow-square-out-bold" height="20px" />
 					</a>
 				</div>
-				<p>{item.node.description}</p>
+				<!-- <p>{item.node.description}</p> -->
 				<div class="flex gap-2 py-2">
 					{#each item.node.repositoryTopics.nodes as topics}
 						<span class="badge variant-ghost-tertiary">{topics.topic.name}</span>

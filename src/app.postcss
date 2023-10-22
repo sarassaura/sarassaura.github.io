@@ -247,9 +247,9 @@
             content: '';
             inset: 0px;
             height: 100%;
-            @apply bg-surface-900;
+            @apply bg-surface-50 dark:bg-surface-900 border-black dark:border-white;
             animation: type 4s steps(13) forwards, blinks 1.2s steps(5, start) 4s infinite;
-            border-left: solid white 2px;
+            border-left: solid 2px;
         }
     }
 
@@ -349,6 +349,12 @@
         width: 100%;
     }
 
+    .links {
+        border-bottom: 1px solid;
+        @apply border-black dark:border-white;
+        padding: 2px;
+    }
+
     /* Contact Section */
 
     .contact {
@@ -369,12 +375,16 @@
     }
 
     .input, textarea {
-        @apply focus:outline-none focus:border-tertiary-500 py-2.5 px-3 rounded bg-surface-900 !important;
+        @apply focus:outline-none focus:border-tertiary-500 py-2.5 px-3 rounded bg-surface-50 dark:bg-surface-900 !important;
 
         @media only screen and (width >= 430px) {
             & {
                 font-size: 1.125rem !important;
             }
+        }
+
+        &:hover, &:focus {
+            @apply brightness-100 !important;
         }
     }
 
@@ -401,7 +411,7 @@
         & input:focus ~ span,
         & textarea:not(:placeholder-shown) ~ span,
         & textarea:focus ~ span {
-                @apply text-tertiary-500 bg-surface-900 leading-3;
+                @apply text-tertiary-500 bg-surface-50 dark:bg-surface-900 leading-3;
                 transform: translate(5px, -16px);
                 border-left: 1px solid #0EA5E9;
                 border-right: 1px solid #0EA5E9;
@@ -595,6 +605,7 @@
 
     .tab-list {
         position: relative;
+        overflow: visible !important;
 
         &::before {
             content: '';
