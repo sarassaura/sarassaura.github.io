@@ -4,11 +4,13 @@
 
 <div class="section about shrink-none" id="about">
 	<div class="hero-body">
-		<p class="heading">
-			Hi, I'm Sarah a<br class="break" />
+		<p class="heading mb-5 lg:mb-8">
+			Hi,
+			<span class="">I'm Sarah,</span>
+			<br class="break" />
 			<span class="typewrite">Web Developer</span>
 		</p>
-		<div class="subheading">
+		<div class="subheading mb-10 lg:mb-16">
 			I am passionate about coding, I have a technical diploma in computing for the internet and I'm
 			currently studying computer science.
 		</div>

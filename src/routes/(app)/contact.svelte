@@ -68,7 +68,8 @@
 {/if}
 
 <div class="section contact md:px-16 px-4 relative shrink-0 gap-8 py-8" id="contact-me">
-	<form use:form class="space-y-6 px-8 md:px-0 flex items-center justify-center flex-col relative">
+	<form use:form class="space-y-4 px-8 md:px-0 flex items-center justify-center flex-col relative">
+		<p class="h3 py-4">Send me a message</p>
 		<label class="label">
 			<input class="input" type="text" required placeholder=" " name="name" />
 			<span>Name</span>
@@ -94,10 +95,10 @@
 	</form>
 	<div class="informations relative gap-4 justify-center">
 		<p class="h3 py-4">Contact Info</p>
-		<p><iconify-icon icon="icon-park-twotone:edit-name" height="36px" />Sarah Yukino Nakada</p>
-		<p><iconify-icon icon="mdi:gmail" height="36px" />sarahyukinonakada@gmail.com</p>
+		<p><iconify-icon icon="icon-park-outline:edit-name" height="36px" />Sarah Yukino Nakada</p>
 		<p><iconify-icon icon="mdi:github" height="36px" />github.com/sarassaura</p>
-		<p><iconify-icon icon="ic:baseline-phone" height="36px" />(+55) 11 99146-4391</p>
+		<p><iconify-icon icon="mdi:gmail" height="36px" />sarahyukinonakada</p>
+		<p><iconify-icon icon="ic:baseline-phone" height="36px" />+55 11 99146-4391</p>
 		<p><iconify-icon icon="ic:baseline-place" height="36px" />Brazil, SP/SP</p>
 	</div>
 </div>

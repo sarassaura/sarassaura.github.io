@@ -104,7 +104,7 @@
     }
 
     .hero-body {
-        @apply overflow-hidden px-4 gap-y-5;
+        @apply overflow-hidden px-4;
         align-items: center;
         order: 1;
 
@@ -148,6 +148,16 @@
 
             @media only screen and (width >= 400px) {
                 font-size: 1.25rem;
+            }
+            @media only screen and (width >= 640px) {
+                @apply text-2xl;
+            }
+            @media only screen and (width >= 768px) {
+                @apply text-3xl;
+            }
+            @media only screen and (width >= 1024px) {
+                @apply text-5xl;
+                line-height: 3.6rem !important;
             }
         }
 
@@ -195,10 +205,6 @@
 
         @media only screen and (width >= 1024px) {
             align-items: flex-start;
-
-            & > .heading {
-                @apply text-4xl;
-            }
 
             & {
                 order: 0;
