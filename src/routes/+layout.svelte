@@ -12,7 +12,7 @@
 
 {#key data.url}
 	<div
-		class="w-full h-full"
+		class="w-full h-full flex flex-col"
 		in:fly={{ x: -200, duration: 400, delay: 400 }}
 		out:fly={{ duration: 400 }}
 	>

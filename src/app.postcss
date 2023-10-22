@@ -40,7 +40,7 @@
 
 @layer base {
     * {
-       /*border: 1px solid purple;*/
+       /* border: 1px solid purple; */
     }
 
     :root [data-theme='skeleton'] {
@@ -423,6 +423,43 @@
         justify-content: center;
         align-items: center;
         gap: 15px;
+    }
+
+    /* Resume Page */
+
+	.wrapper {
+		height: calc(100% - 89px);
+        width: fit-content;
+        align-self: center;
+		padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        
+	}
+
+	.imagine {
+		position: relative;
+		width: unset;
+		height: 100%;
+		object-fit: contain;
+        opacity: 1;
+	}
+    .zooming {
+        position: absolute;
+        top: var(--_top, 0);
+        left: var(--_left, 0);
+        height: 250px;
+        width: 250px;
+        background-image: url("resume1.webp");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: var(--_width, 600px) var(--_height, 600px);
+        background-position: var(--_x, 140px) var(--_y, 110px);
+        z-index: 2;
+        pointer-events: none;
+        border: 1px solid purple;
     }
 }
 

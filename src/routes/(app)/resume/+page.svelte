@@ -1,40 +1,49 @@
-<div class="container">
-	<div class="flex w-full justify-around py-4">
-		<a class="btn variant-filled px-3 py-3" href="/">
-			<iconify-icon icon="mdi:arrow-left" height="28" width="28" />
-			<span class="break">&nbspGo back&nbsp</span>
-		</a>
-		<select class="select">
-			<option value="1"> BR </option>
-			<option value="2"> EN </option>
-		</select>
-		<a class="btn variant-filled" href="/resume.pdf" download="sarah_nakada">
-			<span class="break">Download&nbsp</span>PDF
-			<iconify-icon icon="material-symbols:download-sharp" height="28" />
-		</a>
-	</div>
-	<div class="wrapper">
-		<img src="resume1.webp" alt="resume" />
-	</div>
-</div>
+<script lang="ts">
+	let wrapper: HTMLDivElement;
+	let zoomer: HTMLImageElement;
+	let eye: HTMLDivElement;
+	let rect: DOMRect;
 
-<style>
-	.select {
-		width: fit-content;
+	function lens(e: PointerEvent) {
+		zoomer = wrapper.firstElementChild as HTMLImageElement;
+		eye = wrapper.lastElementChild as HTMLDivElement;
+		rect = zoomer.getBoundingClientRect();
+
+		let y = e.pageY - rect.y - window.scrollY - 125;
+		let x = e.pageX - rect.x - window.scrollX - 125;
+		let width = (wrapper.clientWidth - window.scrollX) * 2;
+		let height = (wrapper.clientHeight - window.scrollY) * 2;
+		let magic_x = rect.x - wrapper.clientWidth / 2 - (x + 125 - wrapper.clientWidth / 2);
+		let magic_y = rect.y - wrapper.clientHeight / 2 - (y + 125 - wrapper.clientHeight / 2);
+
+		eye.style.setProperty('--_top', y.toString() + 'px');
+		eye.style.setProperty('--_left', x.toString() + 'px');
+		eye.style.setProperty('--_x', magic_x.toString() + 'px');
+		eye.style.setProperty('--_y', magic_y.toString() + 'px');
+		eye.style.setProperty('--_width', width.toString() + 'px');
+		eye.style.setProperty('--_height', height.toString() + 'px');
 	}
-	.container {
-		display: contents;
-		align-self: center;
-		align-content: center;
+
+	function resize() {
+		let width = (wrapper.clientWidth - window.scrollX) * 2;
+		let height = (wrapper.clientHeight - window.scrollY) * 2;
+
+		eye.style.setProperty('--_width', width.toString() + 'px');
+		eye.style.setProperty('--_height', height.toString() + 'px');
 	}
-	.wrapper {
-		width: 100%;
-		height: calc(100% - 85px);
-		padding: 1rem 1rem;
-	}
-	img {
-		width: 100%;
-		height: 100%;
-		object-fit: contain;
-	}
-</style>
+</script>
+
+<div class="flex w-full justify-around py-4">
+	<a class="btn variant-filled px-3 py-3" href="/">
+		<iconify-icon icon="mdi:arrow-left" height="28" width="28" />
+		<span class="break">&nbspGo back&nbsp</span>
+	</a>
+	<a class="btn variant-filled" href="/resume.pdf" download="sarah_nakada">
+		<span class="break">Download&nbsp</span>PDF
+		<iconify-icon icon="material-symbols:download-sharp" height="28" />
+	</a>
+</div>
+<div class="wrapper" bind:this={wrapper}>
+	<img src="resume1.webp" alt="resume" class="imagine" on:pointermove={lens} on:resize={resize} />
+	<div class="zooming" />
+</div>
