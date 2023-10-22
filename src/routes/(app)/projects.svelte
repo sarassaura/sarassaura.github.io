@@ -9,15 +9,27 @@
 		<figure class="relative mb-8">
 			<img class="work" src={item.node.openGraphImageUrl} alt={item.node.name} />
 			<figcaption class="sm:pt-2 md:pt-2">
-				<p>{item.node.name}</p>
+				<div class="flex justify-between">
+					<a href={item.node.homepageUrl} class="flex items-center">
+						<button class="chip btn variant-ghost gap-2"
+							>Live Demo
+							<iconify-icon icon="gridicons:popout" height="24px" />
+						</button>
+					</a>
+					<a href={`https://github.com/sarassaura/${item.node.name}`} class="flex items-center">
+						<button class="chip btn variant-ghost gap-2"
+							>Code
+							<iconify-icon icon="mdi:github" height="24px" />
+						</button>
+					</a>
+				</div>
 				<p>{item.node.description}</p>
+				<div class="flex gap-2 py-2">
+					{#each item.node.repositoryTopics.nodes as topics}
+						<span class="badge variant-ghost-tertiary">{topics.topic.name}</span>
+					{/each}
+				</div>
 			</figcaption>
 		</figure>
-		<!--
-		<p>{item.node.createdAt}</p>
-		<p>{item.node.homepageUrl}</p>
-		{#each item.node.repositoryTopics.nodes as topics}
-			<p>{topics.topic.name}</p>
-		{/each} -->
 	{/each}
 </div>
