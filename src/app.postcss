@@ -436,7 +436,7 @@
         align-items: center;
         justify-content: center;
         position: relative;
-        
+        overflow: hidden;
 	}
 
 	.imagine {
@@ -448,8 +448,8 @@
 	}
     .zooming {
         position: absolute;
-        top: var(--_top, 0);
-        left: var(--_left, 0);
+        top: var(--_top, 10000px);
+        left: var(--_left, 10000px);
         height: 250px;
         width: 250px;
         background-image: url("/resume1.webp");
@@ -460,6 +460,11 @@
         z-index: 2;
         pointer-events: none;
         border: 1px solid purple;
+        display: none;
+
+        @media only screen and (width >= 768px) {
+            display: block;
+        }
     }
 }
 

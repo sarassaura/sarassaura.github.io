@@ -31,6 +31,11 @@
 		eye.style.setProperty('--_width', width.toString() + 'px');
 		eye.style.setProperty('--_height', height.toString() + 'px');
 	}
+
+	function out() {
+		eye.style.setProperty('--_top', (10000).toString() + 'px');
+		eye.style.setProperty('--_left', (10000).toString() + 'px');
+	}
 </script>
 
 <div class="flex w-full justify-around py-4">
@@ -44,6 +49,13 @@
 	</a>
 </div>
 <div class="wrapper" bind:this={wrapper}>
-	<img src="resume1.webp" alt="resume" class="imagine" on:pointermove={lens} on:resize={resize} />
+	<img
+		src="resume1.webp"
+		alt="resume"
+		class="imagine"
+		on:pointermove={lens}
+		on:resize={resize}
+		on:pointerout={out}
+	/>
 	<div class="zooming" />
 </div>
