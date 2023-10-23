@@ -275,11 +275,11 @@
 
     .skills {
         flex-shrink: 0;
-    }
 
-    .show-wrapper {
-        @apply w-full flex flex-col items-center justify-center border-y-2 border-tertiary-500;
-        mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+        & > div:first-child {
+            @apply w-full flex flex-col items-center justify-center border-y-2 border-tertiary-500;
+            mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+        }
     }
 
     .know {
