@@ -95,10 +95,17 @@
 	</form>
 	<div class="informations relative gap-4 justify-center">
 		<p class="h3 py-4">Contact Info</p>
-		<p><iconify-icon icon="icon-park-outline:edit-name" height="36px" />Sarah Yukino Nakada</p>
-		<p><iconify-icon icon="mdi:github" height="36px" />github.com/sarassaura</p>
-		<p><iconify-icon icon="mdi:gmail" height="36px" />sarahyukinonakada</p>
-		<p><iconify-icon icon="ic:baseline-phone" height="36px" />+55 11 99146-4391</p>
-		<p><iconify-icon icon="ic:baseline-place" height="36px" />Brazil, SP/SP</p>
+		<p>
+			<iconify-icon icon="icon-park-outline:edit-name" height="36px" aria-hidden="true" />Sarah
+			Yukino Nakada
+		</p>
+		<p><iconify-icon icon="mdi:github" height="36px" aria-hidden="true" />github.com/sarassaura</p>
+		<p>
+			<iconify-icon icon="mdi:gmail" height="36px" aria-hidden="true" />Gmail: sarahyukinonakada
+		</p>
+		<p>
+			<iconify-icon icon="ic:baseline-phone" height="36px" aria-hidden="true" />+55 11 99146-4391
+		</p>
+		<p><iconify-icon icon="ic:baseline-place" height="36px" aria-hidden="true" />Brazil, SP/SP</p>
 	</div>
 </div>

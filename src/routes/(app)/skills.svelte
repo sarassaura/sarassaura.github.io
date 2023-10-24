@@ -9,7 +9,7 @@
 	<div class="know grid md:gap-x-6 gap-y-4 shrink-none py-16 w-full h-full justify-center">
 		<div class="flex flex-col card card-hover variant-ringed-tertiary p-28">
 			<header class="card-header">
-				<iconify-icon icon="mdi:code" height="52" />
+				<iconify-icon icon="mdi:code" height="52" aria-hidden="true" />
 			</header>
 			<section class="p-4 grow">
 				<p class="h6">Frontend</p>
@@ -17,7 +17,7 @@
 		</div>
 		<div class="flex flex-col card card-hover variant-ringed-tertiary p-28">
 			<header class="card-header">
-				<iconify-icon icon="material-symbols:draw-outline" height="52" />
+				<iconify-icon icon="material-symbols:draw-outline" height="52" aria-hidden="true" />
 			</header>
 			<section class="p-4 grow">
 				<p class="h6">Design</p>
@@ -25,7 +25,7 @@
 		</div>
 		<div class="flex flex-col card card-hover variant-ringed-tertiary p-28">
 			<header class="card-header">
-				<iconify-icon icon="grommet-icons:node" height="52" />
+				<iconify-icon icon="grommet-icons:node" height="52" aria-hidden="true" />
 			</header>
 			<section class="p-4 grow">
 				<p class="h6">Backend</p>

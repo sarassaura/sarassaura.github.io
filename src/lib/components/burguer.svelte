@@ -20,6 +20,10 @@
 	};
 </script>
 
-<button class="btn-icon dark:fill-white lg:hidden button-burguer" on:click={toggle}>
+<button
+	class="btn-icon dark:fill-white lg:hidden button-burguer"
+	on:click={toggle}
+	aria-label="hamburguer menu"
+>
 	<HamburguerIcon style={$drawerStore.open ? 'open' : 'closed'} />
 </button>

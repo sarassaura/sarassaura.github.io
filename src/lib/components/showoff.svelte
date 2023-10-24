@@ -29,46 +29,46 @@
 >
 	<ul class="list">
 		<li>
-			<iconify-icon icon="akar-icons:react-fill" height="36" />
+			<iconify-icon icon="akar-icons:react-fill" height="36" aria-hidden="true" />
 			&nbsp;React
 		</li>
 		<li>
-			<iconify-icon icon="file-icons:nextjs" height="36" fill="white" />
+			<iconify-icon icon="file-icons:nextjs" height="36" fill="white" aria-hidden="true" />
 			&nbsp;Next.js
 		</li>
 		<li>
-			<iconify-icon icon="cib:svelte" height="36" />
+			<iconify-icon icon="cib:svelte" height="36" aria-hidden="true" />
 			&nbsp;Svelte
 		</li>
 		<li>
-			<iconify-icon icon="nonicons:typescript-16" height="36" />
+			<iconify-icon icon="nonicons:typescript-16" height="36" aria-hidden="true" />
 			&nbsp;TypeScript
 		</li>
 		<li>
-			<iconify-icon icon="simple-icons:graphql" height="36" />
+			<iconify-icon icon="simple-icons:graphql" height="36" aria-hidden="true" />
 			&nbsp;GraphQl
 		</li>
 		<li>
-			<iconify-icon icon="simple-icons:socketdotio" height="36" fill="white" />
+			<iconify-icon icon="simple-icons:socketdotio" height="36" fill="white" aria-hidden="true" />
 			&nbsp;WebSocket
 		</li>
 		<li>
-			<iconify-icon icon="akar-icons:node-fill" height="36" fill="white" />
+			<iconify-icon icon="akar-icons:node-fill" height="36" fill="white" aria-hidden="true" />
 			&nbsp;Node
 		</li>
 		<li>
-			<iconify-icon icon="teenyicons:python-outline" height="36" fill="white" />
+			<iconify-icon icon="teenyicons:python-outline" height="36" fill="white" aria-hidden="true" />
 			&nbsp;Python
 		</li>
 		<li>
-			<iconify-icon icon="fa6-brands:rust" height="36" fill="white" />
+			<iconify-icon icon="fa6-brands:rust" height="36" fill="white" aria-hidden="true" />
 			&nbsp;Rust
 		</li>
 		<li>
-			<iconify-icon icon="nonicons:c-16" height="36" fill="white" />
+			<iconify-icon icon="nonicons:c-16" height="36" fill="white" aria-hidden="true" />
 		</li>
 		<li>
-			<iconify-icon icon="devicon-plain:mysql" height="36" fill="white" />
+			<iconify-icon icon="devicon-plain:mysql" height="36" fill="white" aria-hidden="true" />
 			&nbsp;MySQL
 		</li>
 	</ul>
@@ -87,43 +87,43 @@
 >
 	<ul class="list">
 		<li>
-			<iconify-icon icon="mdi:github" height="36" fill="white" />
+			<iconify-icon icon="mdi:github" height="36" fill="white" aria-hidden="true" />
 			&nbsp;GitHub
 		</li>
 		<li>
-			<iconify-icon icon="cib:docker" height="36" fill="white" />
+			<iconify-icon icon="cib:docker" height="36" fill="white" aria-hidden="true" />
 			&nbsp;Docker
 		</li>
 		<li>
-			<iconify-icon icon="simple-icons:mongodb" height="36" fill="white" />
+			<iconify-icon icon="simple-icons:mongodb" height="36" fill="white" aria-hidden="true" />
 			&nbsp;MongoDB
 		</li>
 		<li>
-			<iconify-icon icon="mdi:firebase" height="36" fill="white" />
+			<iconify-icon icon="mdi:firebase" height="36" fill="white" aria-hidden="true" />
 			&nbsp;Firebase
 		</li>
 		<li>
-			<iconify-icon icon="simple-icons:jest" height="36" fill="white" />
+			<iconify-icon icon="simple-icons:jest" height="36" fill="white" aria-hidden="true" />
 			&nbsp;Jest
 		</li>
 		<li>
-			<iconify-icon icon="tabler:brand-cypress" height="36" fill="white" />
+			<iconify-icon icon="tabler:brand-cypress" height="36" fill="white" aria-hidden="true" />
 			&nbsp;Cypress
 		</li>
 		<li>
-			<iconify-icon icon="simple-icons:playwright" height="36" fill="white" />
+			<iconify-icon icon="simple-icons:playwright" height="36" fill="white" aria-hidden="true" />
 			&nbsp;Playwright
 		</li>
 		<li>
-			<iconify-icon icon="cib:storybook" height="36" fill="white" />
+			<iconify-icon icon="cib:storybook" height="36" fill="white" aria-hidden="true" />
 			&nbsp;Storybook
 		</li>
 		<li>
-			<iconify-icon icon="teenyicons:figma-outline" height="36" fill="white" />
+			<iconify-icon icon="teenyicons:figma-outline" height="36" fill="white" aria-hidden="true" />
 			&nbsp;Figma
 		</li>
 		<li>
-			<iconify-icon icon="mdi:tailwind" height="36" fill="white" />
+			<iconify-icon icon="mdi:tailwind" height="36" fill="white" aria-hidden="true" />
 			&nbsp;Tailwind
 		</li>
 	</ul>

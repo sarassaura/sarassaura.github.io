@@ -24,14 +24,16 @@
 			/>
 			<figcaption class="sm:pt-2 md:pt-2">
 				<div class="flex gap-4 items-center">
-					<a href={`https://github.com/sarassaura/${item.node.name}`} class="flex items-center">
-						<button class="gap-2">
-							<iconify-icon icon="mdi:github" height="32px" />
-						</button>
+					<a
+						href={`https://github.com/sarassaura/${item.node.name}`}
+						class="flex items-center"
+						aria-label="Code on Github"
+					>
+						<iconify-icon icon="mdi:github" height="32px" aria-hidden="true" />
 					</a>
 					<a href={item.node.homepageUrl} class="flex items-center gap-1 links h-fit">
 						Website
-						<iconify-icon icon="ph:arrow-square-out-bold" height="20px" />
+						<iconify-icon icon="ph:arrow-square-out-bold" height="20px" aria-hidden="true" />
 					</a>
 				</div>
 				<div class="flex gap-2 py-2">
