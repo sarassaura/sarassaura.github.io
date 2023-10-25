@@ -13,7 +13,20 @@
 	<div class="flex justify-between gap-x-5 my-3 items-center">
 		<p>Color</p>
 		<div class="rounded-full" style="background-color: {colorValue};">
-			<input class="input opacity-0" type="color" bind:value={colorValue} />
+			<input
+				class="input opacity-0"
+				type="color"
+				bind:value={colorValue}
+				on:change={() => {
+					let root = document.getElementsByTagName('body')[0];
+					const color = colorValue;
+					const r = parseInt(color.slice(1, 3), 16);
+					const g = parseInt(color.slice(3, 5), 16);
+					const b = parseInt(color.slice(5, 7), 16);
+
+					root.style.setProperty('--color-tertiary-500', `${r} ${g} ${b}`);
+				}}
+			/>
 		</div>
 	</div>
 	<div class="arrow variant-glass-tertiary" />
