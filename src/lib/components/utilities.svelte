@@ -1,8 +1,14 @@
 <script lang="ts">
 	import { LightSwitch } from '@skeletonlabs/skeleton';
 	import { popup } from '@skeletonlabs/skeleton';
+	import { onMount } from 'svelte';
 
 	let colorValue: string = '#0EA5E9';
+	let root: HTMLBodyElement;
+
+	onMount(() => {
+		root = document.getElementsByTagName('body')[0];
+	});
 </script>
 
 <div class="card p-4 variant-glass-tertiary rounded-md" data-popup="config">
@@ -18,7 +24,6 @@
 				type="color"
 				bind:value={colorValue}
 				on:change={() => {
-					let root = document.getElementsByTagName('body')[0];
 					const color = colorValue;
 					const r = parseInt(color.slice(1, 3), 16);
 					const g = parseInt(color.slice(3, 5), 16);
@@ -28,6 +33,15 @@
 				}}
 			/>
 		</div>
+	</div>
+	<div class="flex justify-center gap-x-5 my-3 items-center">
+		<button
+			class="btn variant-outline-tertiary"
+			on:click={() => {
+				colorValue = '#0EA5E9';
+				root.style.setProperty('--color-tertiary-500', `14 165 233`);
+			}}>Reset</button
+		>
 	</div>
 	<div class="arrow variant-glass-tertiary" />
 </div>
