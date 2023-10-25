@@ -36,7 +36,7 @@
 				</ListBoxItem>
 			{/each}
 		</ListBox>
-		<div class="flex justify-between flex-row-reverse px-4 grow items-end">
+		<div class="flex justify-between flex-row px-4 grow items-end">
 			<Utilities />
 		</div>
 	</div>
