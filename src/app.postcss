@@ -54,6 +54,11 @@
         width: 100%;
         margin: 0 auto;
         scrollbar-width: none !important;
+
+        @media (prefers-reduced-motion) {
+            transition-property: none !important;
+            animation: none !important;
+        }
     }
 
     main {
@@ -65,7 +70,7 @@
         scrollbar-width: none !important;
 
         @media (prefers-reduced-motion) {
-            scroll-behavior: auto;
+            scroll-behavior: auto !important;
         }
           
     }
