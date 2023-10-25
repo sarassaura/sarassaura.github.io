@@ -55,9 +55,12 @@
         margin: 0 auto;
         scrollbar-width: none !important;
 
+
         @media (prefers-reduced-motion) {
-            transition-property: none !important;
-            animation: none !important;
+            * {
+                transition-property: none !important;
+                animation: none !important;
+            }
         }
     }
 
@@ -72,7 +75,6 @@
         @media (prefers-reduced-motion) {
             scroll-behavior: auto !important;
         }
-          
     }
 
     ::-webkit-scrollbar {
@@ -255,6 +257,11 @@
             inset: 0;
             @apply bg-surface-900;
             animation: type 4s steps(13) forwards;
+
+            @media (prefers-reduced-motion) {
+                animation: none !important;
+                left: 100% !important;
+            }
         }
 
         &::after {
@@ -265,6 +272,12 @@
             @apply bg-surface-50 dark:bg-surface-900 border-black dark:border-white;
             animation: type 4s steps(13) forwards, blinks 1.2s steps(5, start) 4s infinite;
             border-left: solid 2px;
+
+            @media (prefers-reduced-motion) {
+                animation: none !important;
+                left: 100% !important;
+                border-left: none;
+            }
         }
     }
 
@@ -426,10 +439,10 @@
         & input:focus ~ span,
         & textarea:not(:placeholder-shown) ~ span,
         & textarea:focus ~ span {
-                @apply text-tertiary-500 bg-surface-50 dark:bg-surface-900 leading-3;
+                @apply text-tertiary-500 bg-surface-50 dark:bg-surface-900 leading-3 border-tertiary-500;
                 transform: translate(5px, -16px);
-                border-left: 1px solid #0EA5E9;
-                border-right: 1px solid #0EA5E9;
+                border-left: 1px solid;
+                border-right: 1px solid;
                 font-size: 0.9rem;
                 letter-spacing: 0.15rem;
             }
@@ -636,6 +649,10 @@
             transition: 200ms;
             mask: linear-gradient(90deg, transparent, white 40%, white 60%, transparent);
             @apply bg-tertiary-500;
+
+            @media (prefers-reduced-motion) {
+                transition: 0ms;
+            }
         }
     }
 
