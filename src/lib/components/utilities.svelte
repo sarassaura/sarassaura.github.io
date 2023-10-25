@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { localStorageStore } from '@skeletonlabs/skeleton';
+	import type { Writable } from 'svelte/store';
 	import { LightSwitch } from '@skeletonlabs/skeleton';
 	import { popup } from '@skeletonlabs/skeleton';
 	import { onMount } from 'svelte';
@@ -6,9 +8,15 @@
 	let colorValue: string;
 	let root: HTMLBodyElement;
 
+	interface Config {
+		color: string;
+	}
+
+	const colorStore: Writable<Config> = localStorageStore('config', { color: '#0EA5E9' });
+
 	onMount(() => {
 		root = document.getElementsByTagName('body')[0];
-		colorValue = window.localStorage.getItem('color') || '#0EA5E9';
+		colorValue = $colorStore.color;
 		root.style.setProperty('--color-tertiary-500', rgb(colorValue));
 	});
 
@@ -35,7 +43,7 @@
 				bind:value={colorValue}
 				on:change={() => {
 					root.style.setProperty('--color-tertiary-500', rgb(colorValue));
-					window.localStorage.setItem('color', colorValue);
+					$colorStore = { color: colorValue };
 				}}
 			/>
 		</div>
@@ -45,7 +53,7 @@
 			class="btn variant-outline-tertiary"
 			on:click={() => {
 				colorValue = '#0EA5E9';
-				window.localStorage.setItem('color', colorValue);
+				$colorStore = { color: colorValue };
 				root.style.setProperty('--color-tertiary-500', `14 165 233`);
 			}}>Reset</button
 		>
