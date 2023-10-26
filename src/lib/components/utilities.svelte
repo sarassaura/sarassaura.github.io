@@ -61,13 +61,20 @@
 	<div class="arrow variant-glass-tertiary" />
 </div>
 
-<a class="flex items-center gap-1" href="/blog">
+<a
+	class="flex items-center gap-1 hover:backdrop-brightness-75 rounded-full p-1 px-3 duration-300"
+	href="/blog"
+>
 	<p>Blog</p>
 	<iconify-icon icon="ph:arrow-square-out-bold" height="20" />
 </a>
 
-<a class="flex items-center gap-1" href="https://github.com/sarassaura/">
-	<iconify-icon icon="mdi:github" height="28" />
+<a class="flex items-center gap-1 rounded-full" href="https://github.com/sarassaura/">
+	<iconify-icon
+		icon="mdi:github"
+		height="28"
+		class="rounded-full p-1 hover:backdrop-brightness-75 duration-300"
+	/>
 </a>
 
 <iconify-icon
@@ -75,7 +82,7 @@
 	height="24"
 	fill="white"
 	aria-label="config"
-	class="cursor-pointer"
+	class="cursor-pointer p-1.5 rounded-full hover:backdrop-brightness-75 duration-300"
 	use:popup={{
 		event: 'click',
 		target: 'config',

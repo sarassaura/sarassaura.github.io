@@ -13,7 +13,7 @@
 				<div class="arrow variant-glass-tertiary" />
 			</div>
 			<img
-				class="work rounded-md [&>*]:pointer-events-none"
+				class="work rounded-md [&>*]:pointer-events-none grayscale hover:grayscale-0"
 				use:popup={{
 					event: 'hover',
 					target: item.node.name,
@@ -29,9 +29,17 @@
 						class="flex items-center"
 						aria-label="Code on Github"
 					>
-						<iconify-icon icon="mdi:github" height="32px" aria-hidden="true" />
+						<iconify-icon
+							icon="mdi:github"
+							height="32px"
+							aria-hidden="true"
+							class="rounded-full p-1 hover:backdrop-brightness-75 duration-300"
+						/>
 					</a>
-					<a href={item.node.homepageUrl} class="flex items-center gap-1 links h-fit">
+					<a
+						href={item.node.homepageUrl}
+						class="flex items-center gap-1 links h-fit rounded-t-md hover:backdrop-brightness-75 duration-300"
+					>
 						Website
 						<iconify-icon icon="ph:arrow-square-out-bold" height="20px" aria-hidden="true" />
 					</a>
