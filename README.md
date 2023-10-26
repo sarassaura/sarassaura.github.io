@@ -9,8 +9,9 @@ A `personal portfolio + blog` with svelte, github graphql api and markdown
 ## Features
 
 - Beautiful UI with _tailwind_ and _skeleton_
-- Form Validation with _zod_
+- Email service with _formspree_
 - Markdown support with _mdsvex_
+- Form Validation with _zod_
 
 ## Meta
 
