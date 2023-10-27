@@ -12,16 +12,18 @@
 				<p>{item.node.description}</p>
 				<div class="arrow variant-glass-tertiary" />
 			</div>
-			<img
-				class="work rounded-md [&>*]:pointer-events-none grayscale hover:grayscale-0"
-				use:popup={{
-					event: 'hover',
-					target: item.node.name,
-					placement: 'bottom'
-				}}
-				src={item.node.openGraphImageUrl}
-				alt={item.node.description}
-			/>
+			<a href={`/projects/${item.node.name}`}>
+				<img
+					class="work rounded-md [&>*]:pointer-events-none grayscale hover:grayscale-0"
+					use:popup={{
+						event: 'hover',
+						target: item.node.name,
+						placement: 'bottom'
+					}}
+					src={item.node.openGraphImageUrl}
+					alt={item.node.description}
+				/>
+			</a>
 			<figcaption class="sm:pt-2 md:pt-2">
 				<div class="flex gap-4 items-center">
 					<a

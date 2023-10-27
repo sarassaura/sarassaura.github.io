@@ -1,3 +1,5 @@
+export const prerender = true;
+
 import { GITHUB } from '$env/static/private';
 import { request, gql } from 'graphql-request';
 
@@ -11,6 +13,11 @@ export async function load() {
 					edges {
 						node {
 							... on Repository {
+								object(expression: "main:README.md") {
+									... on Blob {
+										text
+									}
+								}
 								name
 								description
 								openGraphImageUrl
@@ -38,6 +45,9 @@ export async function load() {
 				totalCount: number;
 				edges: Array<{
 					node: {
+						object: {
+							text: string;
+						};
 						name: string;
 						description: string;
 						openGraphImageUrl: string;
