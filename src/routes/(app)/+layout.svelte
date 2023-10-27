@@ -1,21 +1,10 @@
 <script lang="ts">
-	import { afterNavigate } from '$app/navigation';
 	import { Navbar, Menu, scroll_dir, change_dir, throttle } from '$lib';
-	import type { AfterNavigate } from '@sveltejs/kit';
 	import { AppShell, Drawer } from '@skeletonlabs/skeleton';
 	import { initializeStores } from '@skeletonlabs/skeleton';
 	import { onMount } from 'svelte';
 
 	initializeStores();
-
-	afterNavigate((params: AfterNavigate) => {
-		const isNewPage: boolean | null =
-			params.from && params.to && params.from.route.id !== params.to.route.id;
-		const elemPage = document.querySelector('#page');
-		if (isNewPage && elemPage !== null) {
-			elemPage.scrollTop = 0;
-		}
-	});
 
 	onMount(() => {
 		let chrome = document.querySelector('textarea');
