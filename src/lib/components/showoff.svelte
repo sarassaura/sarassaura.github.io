@@ -7,7 +7,6 @@
 
 		if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
 			show.forEach((one) => {
-				one.setAttribute('data-animated', 'true');
 				const list = one.querySelector('.list')!;
 				const content = Array.from(list.children);
 
@@ -16,6 +15,8 @@
 					doubled.setAttribute('aria-hidden', 'true');
 					list.appendChild(doubled);
 				});
+
+				one.setAttribute('data-animated', 'true');
 			});
 		}
 	});
