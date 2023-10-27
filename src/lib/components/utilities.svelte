@@ -17,7 +17,6 @@
 	onMount(() => {
 		root = document.getElementsByTagName('body')[0];
 		colorValue = $colorStore.color;
-		root.style.setProperty('--color-tertiary-500', rgb(colorValue));
 	});
 
 	function rgb(hex: string) {
