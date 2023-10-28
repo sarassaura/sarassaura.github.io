@@ -71,16 +71,12 @@
 	<Out height="20" width="20" />
 </a>
 
-<a class="flex items-center gap-1 rounded-full" href="https://github.com/sarassaura/">
-	<Github
-		height="36"
-		width="36"
-		style="rounded-full p-1 hover:backdrop-brightness-75 duration-300"
-	/>
+<a class="flex items-center rounded-full hover:pulse" href="https://github.com/sarassaura/">
+	<Github height="36" width="36" style="rounded-full duration-300 p-1" />
 </a>
 
 <div
-	class="cursor-pointer rounded-full hover:backdrop-brightness-75 duration-300 h-[36px] w-[36px]"
+	class="cursor-pointer rounded-full rotate h-[36px] w-[36px]"
 	use:popup={{
 		event: 'click',
 		target: 'config',

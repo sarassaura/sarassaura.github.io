@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { popup } from '@skeletonlabs/skeleton';
 	import type { PageData } from './$types';
+	import Github from '$lib/Icons/github.svelte';
 
 	export let data: PageData['projects'];
 </script>
@@ -28,15 +29,10 @@
 				<div class="flex gap-4 items-center">
 					<a
 						href={`https://github.com/sarassaura/${item.node.name}`}
-						class="flex items-center"
+						class="flex items-center hover:pulse"
 						aria-label="Code on Github"
 					>
-						<iconify-icon
-							icon="mdi:github"
-							height="32px"
-							aria-hidden="true"
-							class="rounded-full p-1 hover:backdrop-brightness-75 duration-300"
-						/>
+						<Github height="40" width="40" style="rounded-full p-1 duration-300" />
 					</a>
 					<a
 						href={item.node.homepageUrl}
