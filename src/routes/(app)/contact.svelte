@@ -9,9 +9,22 @@
 	let invisible: boolean = false;
 
 	const schema = z.object({
-		name: z.string().min(1).max(100).trim(),
-		email: z.string().email().min(5).max(100).trim(),
-		message: z.string().min(1).max(1500).trim()
+		name: z
+			.string()
+			.min(1, { message: 'Name must have more than 1 character' })
+			.max(100, { message: 'Name must have less than 100 characters' })
+			.trim(),
+		email: z
+			.string()
+			.email({ message: 'Email must be valid' })
+			.min(5, { message: 'Email must have more than 5 characters' })
+			.max(100, { message: 'Email must have less than 100 characters' })
+			.trim(),
+		message: z
+			.string()
+			.min(1, { message: 'Message must have more than 1 character' })
+			.max(1500, { message: 'Message must have less than 1500 characters' })
+			.trim()
 	});
 
 	const { form, errors, reset, isSubmitting } = createForm<z.infer<typeof schema>>({
