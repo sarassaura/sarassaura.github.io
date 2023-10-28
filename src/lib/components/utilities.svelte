@@ -4,6 +4,9 @@
 	import { LightSwitch } from '@skeletonlabs/skeleton';
 	import { popup } from '@skeletonlabs/skeleton';
 	import { onMount } from 'svelte';
+	import Out from '$lib/Icons/out.svelte';
+	import Github from '$lib/Icons/github.svelte';
+	import Gear from '$lib/Icons/gear.svelte';
 
 	let colorValue: string;
 	let root: HTMLBodyElement;
@@ -65,26 +68,24 @@
 	href="/blog"
 >
 	<p>Blog</p>
-	<iconify-icon icon="ph:arrow-square-out-bold" height="20" />
+	<Out height="20" width="20" />
 </a>
 
 <a class="flex items-center gap-1 rounded-full" href="https://github.com/sarassaura/">
-	<iconify-icon
-		icon="mdi:github"
-		height="28"
-		class="rounded-full p-1 hover:backdrop-brightness-75 duration-300"
+	<Github
+		height="36"
+		width="36"
+		style="rounded-full p-1 hover:backdrop-brightness-75 duration-300"
 	/>
 </a>
 
-<iconify-icon
-	icon="bi:gear-fill"
-	height="24"
-	fill="white"
-	aria-label="config"
-	class="cursor-pointer p-1.5 rounded-full hover:backdrop-brightness-75 duration-300"
+<div
+	class="cursor-pointer rounded-full hover:backdrop-brightness-75 duration-300 h-[36px] w-[36px]"
 	use:popup={{
 		event: 'click',
 		target: 'config',
 		placement: 'bottom'
 	}}
-/>
+>
+	<Gear height="36" width="36" style="p-1.5" />
+</div>

@@ -1,1 +1,0 @@
-function c(t,e,o){e.forEach((f,r)=>{"#"+f==o&&l(r,t)}),o==""&&l(0,t)}function l(t,e){if(e!=null&&e.querySelectorAll("a")!=null){const o=e.querySelectorAll("a")[t].offsetLeft,f=e.querySelectorAll("a")[t].offsetWidth/e.offsetWidth;e.style.setProperty("--_left",o+"px"),e.style.setProperty("--_width",f.toString())}}export{l as c,c as u};

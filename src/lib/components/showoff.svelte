@@ -116,7 +116,7 @@
 >
 	<ul class={`list ${here == 'skills' && 'potato'}`}>
 		<li>
-			<Github height="36" width="36" />
+			<Github height="36" width="36" style="" />
 			&nbsp;GitHub
 		</li>
 		<li>
