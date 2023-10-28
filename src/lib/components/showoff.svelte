@@ -2,6 +2,27 @@
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
 	import { section } from '$lib/store/section';
+	import React from '$lib/Icons/react.svelte';
+	import Next from '$lib/Icons/next.svelte';
+	import Svelte from '$lib/Icons/svelte.svelte';
+	import Typescript from '$lib/Icons/typescript.svelte';
+	import Graphql from '$lib/Icons/graphql.svelte';
+	import Websocket from '$lib/Icons/websocket.svelte';
+	import Node from '$lib/Icons/node.svelte';
+	import Python from '$lib/Icons/python.svelte';
+	import Rust from '$lib/Icons/rust.svelte';
+	import C from '$lib/Icons/c.svelte';
+	import Mysql from '$lib/Icons/mysql.svelte';
+	import Github from '$lib/Icons/github.svelte';
+	import Docker from '$lib/Icons/docker.svelte';
+	import Mongodb from '$lib/Icons/mongodb.svelte';
+	import Firebase from '$lib/Icons/firebase.svelte';
+	import Jest from '$lib/Icons/jest.svelte';
+	import Cypress from '$lib/Icons/cypress.svelte';
+	import Playwright from '$lib/Icons/playwright.svelte';
+	import Storybook from '$lib/Icons/storybook.svelte';
+	import Figma from '$lib/Icons/figma.svelte';
+	import Tailwind from '$lib/Icons/tailwind.svelte';
 
 	let here: string;
 
@@ -37,46 +58,46 @@
 >
 	<ul class={`list ${here == 'skills' && 'potato'}`}>
 		<li>
-			<!-- <iconify-icon icon="akar-icons:react-fill" height="36" aria-hidden="true" /> -->
+			<React height="36" width="36" />
 			&nbsp;React
 		</li>
 		<li>
-			<!-- <iconify-icon icon="file-icons:nextjs" height="36" fill="white" aria-hidden="true" /> -->
+			<Next height="36" width="36" />
 			&nbsp;Next.js
 		</li>
 		<li>
-			<!-- <iconify-icon icon="cib:svelte" height="36" aria-hidden="true" /> -->
+			<Svelte height="36" width="36" />
 			&nbsp;Svelte
 		</li>
 		<li>
-			<!-- <iconify-icon icon="nonicons:typescript-16" height="36" aria-hidden="true" /> -->
+			<Typescript height="36" width="36" />
 			&nbsp;TypeScript
 		</li>
 		<li>
-			<!-- <iconify-icon icon="simple-icons:graphql" height="36" aria-hidden="true" /> -->
+			<Graphql height="36" width="36" />
 			&nbsp;GraphQl
 		</li>
 		<li>
-			<!-- <iconify-icon icon="simple-icons:socketdotio" height="36" fill="white" aria-hidden="true" /> -->
+			<Websocket height="36" width="36" />
 			&nbsp;WebSocket
 		</li>
 		<li>
-			<!-- <iconify-icon icon="akar-icons:node-fill" height="36" fill="white" aria-hidden="true" /> -->
+			<Node height="36" width="36" />
 			&nbsp;Node
 		</li>
 		<li>
-			<!-- <iconify-icon icon="teenyicons:python-outline" height="36" fill="white" aria-hidden="true" /> -->
+			<Python height="36" width="36" />
 			&nbsp;Python
 		</li>
 		<li>
-			<!-- <iconify-icon icon="fa6-brands:rust" height="36" fill="white" aria-hidden="true" /> -->
+			<Rust height="36" width="36" />
 			&nbsp;Rust
 		</li>
 		<li>
-			<!-- <iconify-icon icon="nonicons:c-16" height="36" fill="white" aria-hidden="true" /> -->
+			<C height="36" width="36" />
 		</li>
 		<li>
-			<!-- <iconify-icon icon="devicon-plain:mysql" height="36" fill="white" aria-hidden="true" /> -->
+			<Mysql height="36" width="36" />
 			&nbsp;MySQL
 		</li>
 	</ul>
@@ -95,43 +116,43 @@
 >
 	<ul class={`list ${here == 'skills' && 'potato'}`}>
 		<li>
-			<!-- <iconify-icon icon="mdi:github" height="36" fill="white" aria-hidden="true" /> -->
+			<Github height="36" width="36" />
 			&nbsp;GitHub
 		</li>
 		<li>
-			<!-- <iconify-icon icon="cib:docker" height="36" fill="white" aria-hidden="true" /> -->
+			<Docker height="36" width="36" />
 			&nbsp;Docker
 		</li>
 		<li>
-			<!-- <iconify-icon icon="simple-icons:mongodb" height="36" fill="white" aria-hidden="true" /> -->
+			<Mongodb height="36" width="36" />
 			&nbsp;MongoDB
 		</li>
 		<li>
-			<!-- <iconify-icon icon="mdi:firebase" height="36" fill="white" aria-hidden="true" /> -->
+			<Firebase height="36" width="36" />
 			&nbsp;Firebase
 		</li>
 		<li>
-			<!-- <iconify-icon icon="simple-icons:jest" height="36" fill="white" aria-hidden="true" /> -->
+			<Jest height="36" width="36" />
 			&nbsp;Jest
 		</li>
 		<li>
-			<!-- <iconify-icon icon="tabler:brand-cypress" height="36" fill="white" aria-hidden="true" /> -->
+			<Cypress height="36" width="36" />
 			&nbsp;Cypress
 		</li>
 		<li>
-			<!-- <iconify-icon icon="simple-icons:playwright" height="36" fill="white" aria-hidden="true" /> -->
+			<Playwright height="36" width="36" />
 			&nbsp;Playwright
 		</li>
 		<li>
-			<!-- <iconify-icon icon="cib:storybook" height="36" fill="white" aria-hidden="true" /> -->
+			<Storybook height="36" width="36" />
 			&nbsp;Storybook
 		</li>
 		<li>
-			<!-- <iconify-icon icon="teenyicons:figma-outline" height="36" fill="white" aria-hidden="true" /> -->
+			<Figma height="36" width="36" />
 			&nbsp;Figma
 		</li>
 		<li>
-			<!-- <iconify-icon icon="mdi:tailwind" height="36" fill="white" aria-hidden="true" /> -->
+			<Tailwind height="36" width="36" />
 			&nbsp;Tailwind
 		</li>
 	</ul>
