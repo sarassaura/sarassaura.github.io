@@ -1,6 +1,13 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
+	import { section } from '$lib/store/section';
+
+	let here: string;
+
+	section.subscribe((value) => {
+		here = value;
+	});
 
 	onMount(() => {
 		const show = document.querySelectorAll('.showoff');
@@ -28,7 +35,7 @@
 	data-speed="fast"
 	transition:fade={{ duration: 500, delay: 250 }}
 >
-	<ul class="list">
+	<ul class={`list ${here == 'skills' && 'potato'}`}>
 		<li>
 			<iconify-icon icon="akar-icons:react-fill" height="36" aria-hidden="true" />
 			&nbsp;React
@@ -86,7 +93,7 @@
 	data-speed="fast"
 	transition:fade={{ duration: 500, delay: 350 }}
 >
-	<ul class="list">
+	<ul class={`list ${here == 'skills' && 'potato'}`}>
 		<li>
 			<iconify-icon icon="mdi:github" height="36" fill="white" aria-hidden="true" />
 			&nbsp;GitHub
@@ -131,11 +138,10 @@
 </div>
 
 <style>
-	li {
-		background: none;
-	}
-	.list {
-		padding-top: 0px;
-		padding-bottom: 0.5rem;
+	.potato {
+		-webkit-animation-play-state: running !important;
+		-moz-animation-play-state: running !important;
+		-o-animation-play-state: running !important;
+		animation-play-state: running !important;
 	}
 </style>

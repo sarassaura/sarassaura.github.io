@@ -552,11 +552,17 @@
         display: flex;
         gap: calc(var(--_gap) * 1rem);
         padding-block: 1rem;
-        flex-wrap: wrap;
+        padding-top: 0px;
+		padding-bottom: 0.5rem;
+
+        @media (prefers-reduced-motion) {
+            flex-wrap: wrap;
+        }
 
         & li {
             @apply bg-surface-700;
             padding: 1rem;
+            background: none;
         }
     }
 
@@ -580,15 +586,14 @@
         &[data-animated="true"] .list {
             flex-wrap: nowrap;
             animation: scroll var(--_animation-duration, 20s) var(--_animation-direction, forwards) linear infinite;
-            animation-delay: 300ms;
             width: max-content;
         }
 
         &[data-animated="true"] .list:hover {
-            -webkit-animation-play-state: paused;
-            -moz-animation-play-state: paused;
-            -o-animation-play-state: paused;
-            animation-play-state: paused;
+            -webkit-animation-play-state: paused !important;
+            -moz-animation-play-state: paused !important;
+            -o-animation-play-state: paused !important;
+            animation-play-state: paused !important;
         }
 
         &[data-direction="right"] {
