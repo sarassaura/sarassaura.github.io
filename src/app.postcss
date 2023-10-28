@@ -255,8 +255,8 @@
             position: absolute;
             content: '';
             inset: 0;
-            @apply bg-surface-900;
-            animation: type 4s steps(13) forwards;
+            @apply dark:bg-surface-900 bg-surface-50;
+            animation: type 4s steps(13) forwards 200ms;
             opacity: 0.5;
 
             @media (prefers-reduced-motion) {
@@ -270,10 +270,10 @@
             content: '';
             inset: 0px;
             height: 100%;
-            @apply bg-surface-50 dark:bg-surface-900 border-black dark:border-white;
-            animation: type 4s steps(13) forwards, blinks 1.2s steps(5, start) 4s infinite;
+            @apply border-black dark:border-white;
+            animation: type 4s steps(13) forwards 200ms, blinks 1.2s steps(5, start) 4.2s infinite;
             border-left: solid 2px;
-            opacity: 0.5;
+            background-color: transparent;
 
             @media (prefers-reduced-motion) {
                 animation: none !important;
