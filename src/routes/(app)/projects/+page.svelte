@@ -2,7 +2,7 @@
 	/** @type {import('./$types').PageData} */
 	export let data;
 
-	const result = data.projects.viewer.pinnedItems.edges;
+	const result = data?.projects?.viewer?.pinnedItems?.edges;
 </script>
 
 {#each result as project}
