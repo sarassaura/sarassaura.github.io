@@ -14,9 +14,9 @@
 
 	const themeChoices = [
 		{ name: 'skeleton', initial: '#0EA5E9' },
-		{ name: 'crimson', initial: '#C0B6B4' },
-		{ name: 'wintry', initial: '#6366F1' },
-		{ name: 'gold-nouveau', initial: '#7F78DD' }
+		{ name: 'crimson', initial: '#d4163c' },
+		{ name: 'wintry', initial: '#3b82f6' },
+		{ name: 'gold-nouveau', initial: '#e6c833' }
 	];
 
 	interface Config {
@@ -65,8 +65,8 @@
 	</div>
 	<div class="flex justify-between gap-x-5 my-3 items-center">
 		<p>Theme</p>
-		<div
-			class="cursor-pointer backdrop-brightness-75 rounded-full p-1 px-3"
+		<button
+			class="btn variant-ghost-tertiary p-1 px-3"
 			use:popup={{
 				event: 'click',
 				target: 'popupCombobox',
@@ -75,7 +75,7 @@
 			}}
 		>
 			{theme}
-		</div>
+		</button>
 		<div class="sub p-4 variant-glass-tertiary rounded-md space-y-3" data-popup="popupCombobox">
 			{#each themeChoices as choice}
 				<button
