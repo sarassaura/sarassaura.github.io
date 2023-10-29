@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { localStorageStore } from '@skeletonlabs/skeleton';
+	import { ListBox, ListBoxItem, localStorageStore } from '@skeletonlabs/skeleton';
 	import type { Writable } from 'svelte/store';
 	import { LightSwitch } from '@skeletonlabs/skeleton';
 	import { popup } from '@skeletonlabs/skeleton';
@@ -10,6 +10,9 @@
 
 	let colorValue: string;
 	let root: HTMLBodyElement;
+	let comboboxValue: string = 'skeleton';
+
+	const themeChoices = ['skeleton', 'crimson', 'wintry', 'gold-nouveau'];
 
 	interface Config {
 		color: string;
@@ -50,6 +53,35 @@
 			/>
 		</div>
 	</div>
+	<div class="flex justify-between gap-x-5 my-3 items-center">
+		<p>Theme</p>
+		<div
+			class="cursor-pointer"
+			use:popup={{
+				event: 'click',
+				target: 'popupCombobox',
+				placement: 'bottom'
+				//closeQuery: '.listbox-item'
+			}}
+		>
+			{comboboxValue}
+		</div>
+		<div class="sub p-4 variant-glass-tertiary rounded-md" data-popup="popupCombobox">
+			<ListBox rounded="rounded-lg">
+				{#each themeChoices as theme}
+					<ListBoxItem
+						bind:group={comboboxValue}
+						name="medium"
+						value={theme}
+						class="capitalize"
+						on:click={() => {
+							root.dataset.theme = comboboxValue;
+						}}>{theme}</ListBoxItem
+					>
+				{/each}
+			</ListBox>
+		</div>
+	</div>
 	<div class="flex justify-center gap-x-5 my-3 items-center">
 		<button
 			class="btn variant-outline-tertiary"
@@ -80,7 +112,8 @@
 	use:popup={{
 		event: 'click',
 		target: 'config',
-		placement: 'bottom'
+		placement: 'bottom',
+		closeQuery: ''
 	}}
 >
 	<Gear height="36" width="36" style="p-1.5" />
