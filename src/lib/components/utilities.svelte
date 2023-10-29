@@ -66,7 +66,7 @@
 	<div class="flex justify-between gap-x-5 my-3 items-center">
 		<p>Theme</p>
 		<div
-			class="cursor-pointer"
+			class="cursor-pointer backdrop-brightness-75 rounded-full p-1 px-3"
 			use:popup={{
 				event: 'click',
 				target: 'popupCombobox',
