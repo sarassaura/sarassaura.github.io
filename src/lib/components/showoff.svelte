@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
-	import { section } from '$lib/store/section';
 	import React from '$lib/Icons/react.svelte';
 	import Next from '$lib/Icons/next.svelte';
 	import Svelte from '$lib/Icons/svelte.svelte';
@@ -24,30 +23,114 @@
 	import Figma from '$lib/Icons/figma.svelte';
 	import Tailwind from '$lib/Icons/tailwind.svelte';
 
-	let here: string;
-
-	section.subscribe((value) => {
-		here = value;
-	});
-
 	onMount(() => {
 		const show = document.querySelectorAll('.showoff');
 
 		if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
 			show.forEach((one) => {
-				const list = one.querySelector('.list')!;
-				const content = Array.from(list.children);
+				// const list = one.querySelector('.list')!;
+				// const content = Array.from(list.children);
 
-				content.forEach((item) => {
-					const doubled = item.cloneNode(true) as Element;
-					doubled.setAttribute('aria-hidden', 'true');
-					list.appendChild(doubled);
-				});
+				// content.forEach((item) => {
+				// 	const doubled = item.cloneNode(true) as Element;
+				// 	doubled.setAttribute('aria-hidden', 'true');
+				// 	list.appendChild(doubled);
+				// });
 
 				one.setAttribute('data-animated', 'true');
 			});
 		}
 	});
+
+	let skills = [
+		{
+			name: '\xa0React',
+			icon: React
+		},
+		{
+			name: '\xa0Next.js',
+			icon: Next
+		},
+		{
+			name: '\xa0Svelte',
+			icon: Svelte
+		},
+		{
+			name: '\xa0TypeScript',
+			icon: Typescript
+		},
+		{
+			name: '\xa0GraphQl',
+			icon: Graphql
+		},
+		{
+			name: '\xa0WebSocket',
+			icon: Websocket
+		},
+		{
+			name: '\xa0Node',
+			icon: Node
+		},
+		{
+			name: '\xa0Python',
+			icon: Python
+		},
+		{
+			name: '\xa0Rust',
+			icon: Rust
+		},
+		{
+			name: '',
+			icon: C
+		},
+		{
+			name: '\xa0MySQL',
+			icon: Mysql
+		}
+	];
+
+	let skills2 = [
+		{
+			name: '\xa0GitHub',
+			icon: Github
+		},
+		{
+			name: '\xa0Docker',
+			icon: Docker
+		},
+		{
+			name: '\xa0MongoDB',
+			icon: Mongodb
+		},
+		{
+			name: '\xa0Firebase',
+			icon: Firebase
+		},
+		{
+			name: '\xa0Jest',
+			icon: Jest
+		},
+		{
+			name: '\xa0Cypress',
+			icon: Cypress
+		},
+		{
+			name: '\xa0Playwright',
+			icon: Playwright
+		},
+		{
+			name: '\xa0Storybook',
+			icon: Storybook
+		},
+		{
+			name: '\xa0Figma',
+			icon: Figma
+		},
+		{
+			name: '\xa0Tailwind',
+			icon: Tailwind
+		}
+	];
 </script>
 
 <div
@@ -56,56 +139,20 @@
 	data-speed="fast"
 	transition:fade={{ duration: 500, delay: 250 }}
 >
-	<ul class={`list ${here == 'skills' && 'potato'}`}>
-		<li>
-			<React height="36" width="36" />
-			&nbsp;React
-		</li>
-		<li>
-			<Next height="36" width="36" />
-			&nbsp;Next.js
-		</li>
-		<li>
-			<Svelte height="36" width="36" />
-			&nbsp;Svelte
-		</li>
-		<li>
-			<Typescript height="36" width="36" />
-			&nbsp;TypeScript
-		</li>
-		<li>
-			<Graphql height="36" width="36" />
-			&nbsp;GraphQl
-		</li>
-		<li>
-			<Websocket height="36" width="36" />
-			&nbsp;WebSocket
-		</li>
-		<li>
-			<Node height="36" width="36" />
-			&nbsp;Node
-		</li>
-		<li>
-			<Python height="36" width="36" />
-			&nbsp;Python
-		</li>
-		<li>
-			<Rust height="36" width="36" />
-			&nbsp;Rust
-		</li>
-		<li>
-			<C height="36" width="36" />
-		</li>
-		<li>
-			<Mysql height="36" width="36" />
-			&nbsp;MySQL
-		</li>
+	<ul class="list">
+		{#each skills as skill}
+			<li>
+				<svelte:component this={skill.icon} height="36" width="36" />
+				{skill.name}
+			</li>
+		{/each}
+		{#each skills as skill}
+			<li aria-hidden="true">
+				<svelte:component this={skill.icon} height="36" width="36" />
+				{skill.name}
+			</li>
+		{/each}
 	</ul>
-</div>
-
-<div class="card p-4 w-72 shadow-xl" data-popup="0">
-	<div><p>Demo Content</p></div>
-	<div class="arrow bg-surface-100-800-token" />
 </div>
 
 <div
@@ -114,55 +161,21 @@
 	data-speed="fast"
 	transition:fade={{ duration: 500, delay: 350 }}
 >
-	<ul class={`list ${here == 'skills' && 'potato'}`}>
-		<li>
-			<Github height="36" width="36" style="" />
-			&nbsp;GitHub
-		</li>
-		<li>
-			<Docker height="36" width="36" />
-			&nbsp;Docker
-		</li>
-		<li>
-			<Mongodb height="36" width="36" />
-			&nbsp;MongoDB
-		</li>
-		<li>
-			<Firebase height="36" width="36" />
-			&nbsp;Firebase
-		</li>
-		<li>
-			<Jest height="36" width="36" />
-			&nbsp;Jest
-		</li>
-		<li>
-			<Cypress height="36" width="36" />
-			&nbsp;Cypress
-		</li>
-		<li>
-			<Playwright height="36" width="36" />
-			&nbsp;Playwright
-		</li>
-		<li>
-			<Storybook height="36" width="36" />
-			&nbsp;Storybook
-		</li>
-		<li>
-			<Figma height="36" width="36" />
-			&nbsp;Figma
-		</li>
-		<li>
-			<Tailwind height="36" width="36" />
-			&nbsp;Tailwind
-		</li>
+	<ul class="list">
+		{#each skills2 as skill}
+			<li>
+				<svelte:component this={skill.icon} height="36" width="36" />
+				{skill.name}
+			</li>
+		{/each}
+		{#each skills2 as skill}
+			<li aria-hidden="true">
+				<svelte:component this={skill.icon} height="36" width="36" />
+				{skill.name}
+			</li>
+		{/each}
 	</ul>
 </div>
 
 <style>
-	.potato {
-		-webkit-animation-play-state: running !important;
-		-moz-animation-play-state: running !important;
-		-o-animation-play-state: running !important;
-		animation-play-state: running !important;
-	}
 </style>
