@@ -6,15 +6,15 @@
 		<title>Sarah Yukino</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		
-		<link href="../_app/immutable/assets/0.b49d64c5.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/0.2ef57225.css" rel="stylesheet">
 		<link href="../_app/immutable/assets/ProgressBar.4f1e9ba5.css" rel="stylesheet">
-		<link rel="modulepreload" href="../_app/immutable/entry/start.3ea97e53.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.2cb23ec8.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/scheduler.42e3d023.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.b7a9d844.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.700ade7f.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/index.099b01f6.js">
-		<link rel="modulepreload" href="../_app/immutable/entry/app.a5278a6d.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.a9e889a6.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/index.3c440747.js">
-		<link rel="modulepreload" href="../_app/immutable/nodes/0.370d831d.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/0.8ef5b9c0.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/ProgressBar.svelte_svelte_type_style_lang.b1d98cdc.js">
 		<link rel="modulepreload" href="../_app/immutable/nodes/4.425c43dd.js">
 		<link rel="modulepreload" href="../_app/immutable/nodes/9.ad78f262.js">
@@ -43,8 +43,13 @@
 			const color = localStorage.getItem('config');
 			if(color) {
 				let myColor = rgb(JSON.parse(color).color);
-				document.body.style.setProperty("--color-tertiary-500", myColor);
+				let myTheme = JSON.parse(color).theme;
+				myColor && document.body.style.setProperty("--color-tertiary-500", myColor);
+				if(myTheme) {
+					document.body.dataset.theme = myTheme;
+				}
 			}
+	
 		</script>
 	</head>
 	<body data-sveltekit-preload-data="hover" data-theme="skeleton">
@@ -70,7 +75,7 @@
 			
 			<script>
 				{
-					__sveltekit_obe6ph = {
+					__sveltekit_1lr3799 = {
 						base: new URL("..", location).pathname.slice(0, -1),
 						env: {}
 					};
@@ -80,8 +85,8 @@
 					const data = [null,null,{"type":"data","data":{data:"\n\u003Ch1>Personal Portfolio\u003C/h1>\n\u003Cdiv align=\"center\">\n\u003Cp>A \u003Ccode>personal portfolio + blog\u003C/code> with svelte, github graphql api and markdown\u003C/p>\n\u003C/div>\n\u003Ch2>Features\u003C/h2>\n\u003Cul>\n\u003Cli>Beautiful UI with \u003Cem>tailwind\u003C/em> and \u003Cem>skeleton\u003C/em>\u003C/li>\n\u003Cli>Email service with \u003Cem>formspree\u003C/em>\u003C/li>\n\u003Cli>Markdown support with \u003Cem>mdsvex\u003C/em>\u003C/li>\n\u003Cli>Form Validation with \u003Cem>zod\u003C/em>\u003C/li>\n\u003C/ul>\n\u003Ch2>Meta\u003C/h2>\n\u003Cp>Created By Sarassaura:\n\u003Ca\n  href=\"https://github.com/sarassaura\"\n  rel=\"nofollow\"\n>github.com/sarassaura\u003C/a>\u003C/p>\n"},"uses":{"params":["project"]}}];
 
 					Promise.all([
-						import("../_app/immutable/entry/start.3ea97e53.js"),
-						import("../_app/immutable/entry/app.a5278a6d.js")
+						import("../_app/immutable/entry/start.2cb23ec8.js"),
+						import("../_app/immutable/entry/app.a9e889a6.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 4, 9],

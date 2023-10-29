@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { ListBox, ListBoxItem, localStorageStore } from '@skeletonlabs/skeleton';
+	import { localStorageStore } from '@skeletonlabs/skeleton';
 	import type { Writable } from 'svelte/store';
 	import { LightSwitch } from '@skeletonlabs/skeleton';
 	import { popup } from '@skeletonlabs/skeleton';
@@ -10,19 +10,24 @@
 
 	let colorValue: string;
 	let root: HTMLBodyElement;
-	let comboboxValue: string = 'skeleton';
+	let theme: string;
 
 	const themeChoices = ['skeleton', 'crimson', 'wintry', 'gold-nouveau'];
 
 	interface Config {
 		color: string;
+		theme: string;
 	}
 
-	const colorStore: Writable<Config> = localStorageStore('config', { color: '#0EA5E9' });
+	const colorStore: Writable<Config> = localStorageStore('config', {
+		color: '#0EA5E9',
+		theme: 'skeleton'
+	});
 
 	onMount(() => {
 		root = document.getElementsByTagName('body')[0];
 		colorValue = $colorStore.color;
+		theme = $colorStore.theme;
 	});
 
 	function rgb(hex: string) {
@@ -48,7 +53,7 @@
 				bind:value={colorValue}
 				on:change={() => {
 					root.style.setProperty('--color-tertiary-500', rgb(colorValue));
-					$colorStore = { color: colorValue };
+					$colorStore = { color: colorValue, theme: theme };
 				}}
 			/>
 		</div>
@@ -60,26 +65,25 @@
 			use:popup={{
 				event: 'click',
 				target: 'popupCombobox',
-				placement: 'bottom'
-				//closeQuery: '.listbox-item'
+				placement: 'bottom',
+				closeQuery: ''
 			}}
 		>
-			{comboboxValue}
+			{theme}
 		</div>
-		<div class="sub p-4 variant-glass-tertiary rounded-md" data-popup="popupCombobox">
-			<ListBox rounded="rounded-lg">
-				{#each themeChoices as theme}
-					<ListBoxItem
-						bind:group={comboboxValue}
-						name="medium"
-						value={theme}
-						class="capitalize"
-						on:click={() => {
-							root.dataset.theme = comboboxValue;
-						}}>{theme}</ListBoxItem
-					>
-				{/each}
-			</ListBox>
+		<div class="sub p-4 variant-glass-tertiary rounded-md space-y-3" data-popup="popupCombobox">
+			{#each themeChoices as choice}
+				<button
+					on:click={() => {
+						root.dataset.theme = choice;
+						theme = choice;
+						$colorStore = { color: colorValue, theme: choice };
+					}}
+					class="capitalize btn variant-soft w-full"
+				>
+					{choice}
+				</button>
+			{/each}
 		</div>
 	</div>
 	<div class="flex justify-center gap-x-5 my-3 items-center">
@@ -87,7 +91,7 @@
 			class="btn variant-outline-tertiary"
 			on:click={() => {
 				colorValue = '#0EA5E9';
-				$colorStore = { color: colorValue };
+				$colorStore = { color: colorValue, theme: theme };
 				root.style.setProperty('--color-tertiary-500', `14 165 233`);
 			}}>Reset</button
 		>

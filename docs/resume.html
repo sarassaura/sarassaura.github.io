@@ -6,15 +6,15 @@
 		<title>Sarah Yukino</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		
-		<link href="./_app/immutable/assets/0.b49d64c5.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/0.2ef57225.css" rel="stylesheet">
 		<link href="./_app/immutable/assets/ProgressBar.4f1e9ba5.css" rel="stylesheet">
-		<link rel="modulepreload" href="./_app/immutable/entry/start.3ea97e53.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.2cb23ec8.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/scheduler.42e3d023.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.b7a9d844.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.700ade7f.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/index.099b01f6.js">
-		<link rel="modulepreload" href="./_app/immutable/entry/app.a5278a6d.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.a9e889a6.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/index.3c440747.js">
-		<link rel="modulepreload" href="./_app/immutable/nodes/0.370d831d.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/0.8ef5b9c0.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/ProgressBar.svelte_svelte_type_style_lang.b1d98cdc.js">
 		<link rel="modulepreload" href="./_app/immutable/nodes/5.425c43dd.js">
 		<link rel="modulepreload" href="./_app/immutable/nodes/10.23244001.js">
@@ -43,8 +43,13 @@
 			const color = localStorage.getItem('config');
 			if(color) {
 				let myColor = rgb(JSON.parse(color).color);
-				document.body.style.setProperty("--color-tertiary-500", myColor);
+				let myTheme = JSON.parse(color).theme;
+				myColor && document.body.style.setProperty("--color-tertiary-500", myColor);
+				if(myTheme) {
+					document.body.dataset.theme = myTheme;
+				}
 			}
+	
 		</script>
 	</head>
 	<body data-sveltekit-preload-data="hover" data-theme="skeleton">
@@ -53,7 +58,7 @@
 			
 			<script>
 				{
-					__sveltekit_obe6ph = {
+					__sveltekit_1lr3799 = {
 						base: new URL(".", location).pathname.slice(0, -1),
 						env: {}
 					};
@@ -63,8 +68,8 @@
 					const data = [null,null,null];
 
 					Promise.all([
-						import("./_app/immutable/entry/start.3ea97e53.js"),
-						import("./_app/immutable/entry/app.a5278a6d.js")
+						import("./_app/immutable/entry/start.2cb23ec8.js"),
+						import("./_app/immutable/entry/app.a9e889a6.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 5, 10],
