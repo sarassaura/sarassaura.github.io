@@ -6,15 +6,14 @@
 		<title>Sarah Yukino</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		%sveltekit.head%
+		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
 		<script>
-			var WebFont = require('webfontloader');
-
 			WebFont.load({
 			  custom: {
 				families: ['Open-sans', 'Roboto-mono']
 			  }
 			});
-		  </script> 
+		</script> 
 		<script type="module">
 			function rgb(hex) {
 				const color = hex;
