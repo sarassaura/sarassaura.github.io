@@ -12,7 +12,12 @@
 	let root: HTMLBodyElement;
 	let theme: string;
 
-	const themeChoices = ['skeleton', 'crimson', 'wintry', 'gold-nouveau'];
+	const themeChoices = [
+		{ name: 'skeleton', initial: '#0EA5E9' },
+		{ name: 'crimson', initial: '#C0B6B4' },
+		{ name: 'wintry', initial: '#6366F1' },
+		{ name: 'gold-nouveau', initial: '#7F78DD' }
+	];
 
 	interface Config {
 		color: string;
@@ -75,13 +80,15 @@
 			{#each themeChoices as choice}
 				<button
 					on:click={() => {
-						root.dataset.theme = choice;
-						theme = choice;
-						$colorStore = { color: colorValue, theme: choice };
+						root.style.setProperty('--color-tertiary-500', rgb(choice.initial));
+						root.dataset.theme = choice.name;
+						theme = choice.name;
+						colorValue = choice.initial;
+						$colorStore = { color: choice.initial, theme: choice.name };
 					}}
 					class="capitalize btn variant-soft w-full"
 				>
-					{choice}
+					{choice.name}
 				</button>
 			{/each}
 		</div>
@@ -91,6 +98,8 @@
 			class="btn variant-outline-tertiary"
 			on:click={() => {
 				colorValue = '#0EA5E9';
+				theme = 'skeleton';
+				root.dataset.theme = 'skeleton';
 				$colorStore = { color: colorValue, theme: theme };
 				root.style.setProperty('--color-tertiary-500', `14 165 233`);
 			}}>Reset</button
