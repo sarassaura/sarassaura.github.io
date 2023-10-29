@@ -47,6 +47,7 @@
 		"felte": "^1.2.12",
 		"graphql": "^16.8.1",
 		"graphql-request": "^6.1.0",
-		"iconify-icon": "^1.0.8"
+		"iconify-icon": "^1.0.8",
+		"webfontloader": "^1.6.28"
 	}
 }
