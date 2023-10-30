@@ -117,7 +117,7 @@
 </a>
 
 <a class="flex items-center rounded-full hover:pulse" href="https://github.com/sarassaura/">
-	<Github height="36" width="36" style="rounded-full duration-300 p-1" />
+	<Github height="28" width="28" style="rounded-full duration-300" />
 </a>
 
 <div

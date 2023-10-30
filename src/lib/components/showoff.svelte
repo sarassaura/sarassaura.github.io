@@ -12,7 +12,7 @@
 	import Rust from '$lib/Icons/rust.svelte';
 	import C from '$lib/Icons/c.svelte';
 	import Mysql from '$lib/Icons/mysql.svelte';
-	import Github from '$lib/Icons/github.svelte';
+	import Github from '$lib/Icons/github2.svelte';
 	import Docker from '$lib/Icons/docker.svelte';
 	import Mongodb from '$lib/Icons/mongodb.svelte';
 	import Firebase from '$lib/Icons/firebase.svelte';

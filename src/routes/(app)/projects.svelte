@@ -32,7 +32,7 @@
 						class="flex items-center hover:pulse"
 						aria-label="Code on Github"
 					>
-						<Github height="40" width="40" style="rounded-full p-1 duration-300" />
+						<Github height="28" width="28" style="rounded-full duration-300" />
 					</a>
 					<a
 						href={item.node.homepageUrl}
