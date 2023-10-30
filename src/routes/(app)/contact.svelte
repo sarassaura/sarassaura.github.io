@@ -4,6 +4,7 @@
 	import { createForm } from 'felte';
 	import { validator } from '@felte/validator-zod';
 	import { fade } from 'svelte/transition';
+	import Github from '$lib/Icons/github.svelte';
 
 	let visible: boolean = false;
 	let invisible: boolean = false;
@@ -11,7 +12,7 @@
 	const schema = z.object({
 		name: z
 			.string()
-			.min(1, { message: 'Name must have more than 1 character' })
+			.min(1, { message: 'Name is required' })
 			.max(100, { message: 'Name must have less than 100 characters' })
 			.trim(),
 		email: z
@@ -22,7 +23,7 @@
 			.trim(),
 		message: z
 			.string()
-			.min(1, { message: 'Message must have more than 1 character' })
+			.min(1, { message: 'Message is required' })
 			.max(1500, { message: 'Message must have less than 1500 characters' })
 			.trim()
 	});
@@ -87,21 +88,23 @@
 			<input class="input" type="text" required placeholder=" " name="name" />
 			<span>Name</span>
 			{#if $errors.name && $errors.name[0] != null}
-				<p class="text-error-400">{$errors.name && $errors.name[0]}</p>
+				<p class="dark:text-error-200 text-error-800">{$errors.name && $errors.name[0]}</p>
 			{/if}
 		</label>
 		<label class="label">
 			<input class="input" type="email" required placeholder=" " name="email" />
 			<span>Email</span>
 			{#if $errors.email && $errors.email[0] != null}
-				<p class="text-error-400">{$errors.email && $errors.email[0]}</p>
+				<p class="dark:text-error-200 text-error-800">{$errors.email && $errors.email[0]}</p>
 			{/if}
 		</label>
 		<label class="label">
 			<textarea class="textarea" rows="5" required placeholder=" " name="message" />
 			<span>Message</span>
 			{#if $errors.message && $errors.message[0] != null}
-				<p class="text-error-400">{$errors.message && $errors.message[0]}</p>
+				<p class="dark:text-error-200 text-error-800">
+					{$errors.message && $errors.message[0]}
+				</p>
 			{/if}
 		</label>
 		<button class="btn variant-filled" disabled={$isSubmitting}>Send</button>
@@ -112,7 +115,7 @@
 			<iconify-icon icon="icon-park-outline:edit-name" height="36px" aria-hidden="true" />Sarah
 			Yukino Nakada
 		</p>
-		<p><iconify-icon icon="mdi:github" height="36px" aria-hidden="true" />github.com/sarassaura</p>
+		<p><Github height="36" width="36" />github.com/sarassaura</p>
 		<p>
 			<iconify-icon icon="mdi:gmail" height="36px" aria-hidden="true" />Gmail: sarahyukinonakada
 		</p>
