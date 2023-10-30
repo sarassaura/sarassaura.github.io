@@ -15,10 +15,3 @@
 		stroke-width="3.5"
 	/>
 </svg>
-
-<style>
-	#logo {
-		stroke-dasharray: 702;
-		stroke-dashoffset: 0;
-	}
-</style>
