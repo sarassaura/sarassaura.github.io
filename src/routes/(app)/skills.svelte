@@ -18,24 +18,31 @@
 				<Html height="52" width="52" />
 			</header>
 			<section class="p-4">
-				<p class="h6">Frontend</p>
+				<p class="h5">Frontend</p>
 			</section>
+			<p>
+				I'm a professional <span class="italic">JavaScript</span> developer with expertise across various
+				frameworks, libraries, and services, including React. I build performing, accessible and seo
+				friendly websites who prioritizes user experience.
+			</p>
 		</div>
 		<div class="module">
 			<header class="card-header">
 				<Design height="52" width="52" />
 			</header>
 			<section class="p-4">
-				<p class="h6">Design</p>
+				<p class="h5">Design</p>
 			</section>
+			<p>Sketch, brainstorm, user flow, sitemaps, wireframe, prototyping.</p>
 		</div>
 		<div class="module">
 			<header class="card-header">
 				<Node height="52" width="52" />
 			</header>
 			<section class="p-4">
-				<p class="h6">Backend</p>
+				<p class="h5">Backend</p>
 			</section>
+			<p>My</p>
 		</div>
 	</div>
 </div>
