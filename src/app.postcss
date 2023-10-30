@@ -334,31 +334,36 @@
         }
     }
 
-    .know {
+    .special {
+        @apply grid md:gap-x-6 gap-y-4 shrink-0 py-16 w-full justify-center;
+        display: grid;
+        gap: 1.5rem;
+        justify-content: center;
+        align-items: center;
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(auto-fit);
+        grid-template-rows: 1fr 1fr 1fr;
+        max-width: 25rem;
+
+        @media only screen and (width >= 600px) {
+            & {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                max-width: 35rem;
+            }
+        }
 
         @media only screen and (width >= 1024px) {
             & {
-                grid-template-columns: repeat(auto-fit, 30%);
+                grid-template-columns: 1fr 1fr 1fr;
                 grid-template-rows: 1fr;
+                max-width: 70rem;
             }
         }
     }
 
-    .card {
-        justify-self: center;
-
-        & > * {
-            display: flex;
-            justify-content: center;
-        }
-
-        @media only screen and (width >= 1024px) {
-            & {
-                justify-self: auto;
-            }
-        }
+    .module {
+        @apply flex flex-col card card-hover variant-ringed-tertiary w-full items-center justify-center;
+        height: 25rem;
     }
 
     /* Projects Section */

@@ -1,33 +1,39 @@
 <script lang="ts">
 	import { ShowOff } from '$lib';
+	import Html from '$lib/Icons/html.svelte';
+	import Design from '$lib/Icons/design.svelte';
+	import Node from '$lib/Icons/node.svelte';
 </script>
 
-<div class="section skills md:px-16 px-4 flex flex-col items-center overflow-hidden" id="skills">
+<div
+	class="section skills md:px-16 px-4 flex flex-col items-center overflow-hidden shrink-0"
+	id="skills"
+>
 	<div>
 		<ShowOff />
 	</div>
-	<div class="know grid md:gap-x-6 gap-y-4 shrink-none py-16 w-full h-full justify-center">
-		<div class="flex flex-col card card-hover variant-ringed-tertiary p-28">
+	<div class="special">
+		<div class="module">
 			<header class="card-header">
-				<iconify-icon icon="mdi:code" height="52" aria-hidden="true" />
+				<Html height="52" width="52" />
 			</header>
-			<section class="p-4 grow">
+			<section class="p-4">
 				<p class="h6">Frontend</p>
 			</section>
 		</div>
-		<div class="flex flex-col card card-hover variant-ringed-tertiary p-28">
+		<div class="module">
 			<header class="card-header">
-				<iconify-icon icon="material-symbols:draw-outline" height="52" aria-hidden="true" />
+				<Design height="52" width="52" />
 			</header>
-			<section class="p-4 grow">
+			<section class="p-4">
 				<p class="h6">Design</p>
 			</section>
 		</div>
-		<div class="flex flex-col card card-hover variant-ringed-tertiary p-28">
+		<div class="module">
 			<header class="card-header">
-				<iconify-icon icon="grommet-icons:node" height="52" aria-hidden="true" />
+				<Node height="52" width="52" />
 			</header>
-			<section class="p-4 grow">
+			<section class="p-4">
 				<p class="h6">Backend</p>
 			</section>
 		</div>
