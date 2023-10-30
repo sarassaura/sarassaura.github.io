@@ -17,6 +17,7 @@
 	{#each links as link, id}
 		<TabAnchor
 			name={`tab${id + 1}`}
+			controls={`tab${id + 1}`}
 			href={`${$page.url.origin}/#${link}`}
 			class="capitalize"
 			on:mouseover={() => change(id, TabList)}

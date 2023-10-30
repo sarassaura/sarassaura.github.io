@@ -16,6 +16,7 @@
 			<a href={`/projects/${item.node.name}`}>
 				<img
 					class="work rounded-md [&>*]:pointer-events-none grayscale hover:grayscale-0"
+					loading="lazy"
 					use:popup={{
 						event: 'hover',
 						target: item.node.name,

@@ -85,14 +85,21 @@
 	<form use:form class="space-y-4 px-8 md:px-0 flex items-center justify-center flex-col relative">
 		<p class="h3 py-4">Send me a message</p>
 		<label class="label">
-			<input class="input" type="text" required placeholder=" " name="name" />
+			<input class="input" type="text" required placeholder=" " name="name" autocomplete="name" />
 			<span>Name</span>
 			{#if $errors.name && $errors.name[0] != null}
 				<p class="dark:text-error-300 text-error-700">{$errors.name && $errors.name[0]}</p>
 			{/if}
 		</label>
 		<label class="label">
-			<input class="input" type="email" required placeholder=" " name="email" />
+			<input
+				class="input"
+				type="email"
+				required
+				placeholder=" "
+				name="email"
+				autocomplete="email"
+			/>
 			<span>Email</span>
 			{#if $errors.email && $errors.email[0] != null}
 				<p class="dark:text-error-300 text-error-700">{$errors.email && $errors.email[0]}</p>

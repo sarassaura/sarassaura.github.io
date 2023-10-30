@@ -116,7 +116,11 @@
 	<Out height="20" width="20" />
 </a>
 
-<a class="flex items-center rounded-full hover:pulse" href="https://github.com/sarassaura/">
+<a
+	class="flex items-center rounded-full hover:pulse"
+	href="https://github.com/sarassaura/"
+	aria-label="Github"
+>
 	<Github height="28" width="28" style="rounded-full duration-300" />
 </a>
 
