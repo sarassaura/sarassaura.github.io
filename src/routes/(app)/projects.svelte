@@ -9,9 +9,9 @@
 <div class="section projects md:px-16 md:gap-4 px-4 shrink-0" id="projects">
 	{#each data.viewer.pinnedItems.edges as item}
 		<figure class="relative mb-8">
-			<div class="card p-4 variant-glass-tertiary" data-popup={item.node.name}>
+			<div class="card p-4 variant-glass-primary" data-popup={item.node.name}>
 				<p>{item.node.description}</p>
-				<div class="arrow variant-glass-tertiary" />
+				<div class="arrow variant-glass-primary" />
 			</div>
 			<a href={`/projects/${item.node.name}`}>
 				<img
@@ -44,7 +44,7 @@
 				</div>
 				<div class="flex gap-2 py-2">
 					{#each item.node.repositoryTopics.nodes as topics}
-						<span class="badge variant-ghost-tertiary">{topics.topic.name}</span>
+						<span class="badge variant-ghost-primary">{topics.topic.name}</span>
 					{/each}
 				</div>
 			</figcaption>

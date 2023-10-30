@@ -52,7 +52,7 @@
     }
 
     html, body {
-        @apply h-full overflow-x-hidden relative;
+        @apply h-full overflow-x-hidden relative dark:bg-surface-800 bg-surface-200;
         max-width: 1280px;
         width: 100%;
         margin: 0 auto;
@@ -285,7 +285,7 @@
             position: absolute;
             content: '';
             inset: 0;
-            @apply dark:bg-surface-900 bg-surface-50;
+            @apply dark:bg-surface-800 bg-surface-200;
             animation: type 4s steps(13) forwards 200ms;
             opacity: 0.5;
 
@@ -331,7 +331,7 @@
         flex-shrink: 0;
 
         & > div:first-child {
-            @apply w-full flex flex-col items-center justify-center border-y-2 border-tertiary-500;
+            @apply w-full flex flex-col items-center justify-center border-y-2 border-primary-500;
             mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
         }
     }
@@ -364,7 +364,7 @@
     }
 
     .module {
-        @apply flex flex-col card card-hover variant-ringed-tertiary w-full items-center justify-center px-10 pb-10;
+        @apply flex flex-col card card-hover variant-ringed-primary w-full items-center justify-center px-10 pb-10;
         height: 25rem;
     }
 
@@ -441,7 +441,7 @@
     }
 
     .input, textarea {
-        @apply focus:outline-none focus:border-tertiary-500 py-2.5 px-3 rounded bg-surface-50 dark:bg-surface-900 !important;
+        @apply focus:outline-none focus:border-primary-500 py-2.5 px-3 rounded bg-surface-200 dark:bg-surface-800 !important;
 
         @media only screen and (width >= 430px) {
             & {
@@ -477,7 +477,7 @@
         & input:focus ~ span,
         & textarea:not(:placeholder-shown) ~ span,
         & textarea:focus ~ span {
-                @apply text-tertiary-500 bg-surface-50 dark:bg-surface-900 leading-3 border-tertiary-500;
+                @apply text-primary-500 bg-surface-200 dark:bg-surface-800 leading-3 border-primary-500;
                 transform: translate(5px, -16px);
                 border-left: 1px solid;
                 border-right: 1px solid;
@@ -489,7 +489,7 @@
         & input:focus,
         & textarea:not(:placeholder-shown),
         & textarea:focus {
-            @apply border-tertiary-500;
+            @apply border-primary-500;
         }
     }
 
@@ -597,7 +597,7 @@
         }
 
         & li {
-            @apply bg-surface-700;
+            @apply bg-surface-800;
             padding: 1rem;
             background: none;
         }
@@ -692,7 +692,7 @@
             transform-origin: left;
             transition: 200ms;
             mask: linear-gradient(90deg, transparent, white 40%, white 60%, transparent);
-            @apply bg-tertiary-500;
+            @apply bg-primary-500;
 
             @media (prefers-reduced-motion) {
                 transition: 0ms;

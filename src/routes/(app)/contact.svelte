@@ -57,7 +57,7 @@
 
 {#if visible}
 	<aside
-		class="alert flex flex-row items-center absolute z-[7] bg-gradient-to-br variant-gradient-secondary-tertiary"
+		class="alert flex flex-row items-center absolute z-[7] bg-gradient-to-br variant-gradient-secondary-primary"
 		transition:fade|local={{ duration: 200 }}
 	>
 		<iconify-icon icon="mingcute:check-fill" width="48" class="mr-2" />
@@ -88,21 +88,21 @@
 			<input class="input" type="text" required placeholder=" " name="name" />
 			<span>Name</span>
 			{#if $errors.name && $errors.name[0] != null}
-				<p class="dark:text-error-200 text-error-800">{$errors.name && $errors.name[0]}</p>
+				<p class="dark:text-error-300 text-error-700">{$errors.name && $errors.name[0]}</p>
 			{/if}
 		</label>
 		<label class="label">
 			<input class="input" type="email" required placeholder=" " name="email" />
 			<span>Email</span>
 			{#if $errors.email && $errors.email[0] != null}
-				<p class="dark:text-error-200 text-error-800">{$errors.email && $errors.email[0]}</p>
+				<p class="dark:text-error-300 text-error-700">{$errors.email && $errors.email[0]}</p>
 			{/if}
 		</label>
 		<label class="label">
 			<textarea class="textarea" rows="5" required placeholder=" " name="message" />
 			<span>Message</span>
 			{#if $errors.message && $errors.message[0] != null}
-				<p class="dark:text-error-200 text-error-800">
+				<p class="dark:text-error-300 text-error-700">
 					{$errors.message && $errors.message[0]}
 				</p>
 			{/if}

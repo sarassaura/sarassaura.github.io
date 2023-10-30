@@ -44,7 +44,7 @@
 	}
 </script>
 
-<div class="dropdown p-4 variant-glass-tertiary rounded-md" data-popup="config">
+<div class="dropdown p-4 variant-glass-primary rounded-md" data-popup="config">
 	<div class="flex justify-between gap-x-5 my-3 items-center">
 		<p>Dark Mode</p>
 		<LightSwitch />
@@ -52,7 +52,7 @@
 	<div class="flex justify-between gap-x-5 my-3 items-center">
 		<p>Theme</p>
 		<button
-			class="btn variant-ghost-tertiary p-1 px-3"
+			class="btn variant-ghost-primary p-1 px-3"
 			use:popup={{
 				event: 'click',
 				target: 'popupCombobox',
@@ -62,11 +62,11 @@
 		>
 			{theme}
 		</button>
-		<div class="sub p-4 variant-glass-tertiary rounded-md space-y-3" data-popup="popupCombobox">
+		<div class="sub p-4 variant-glass-primary rounded-md space-y-3" data-popup="popupCombobox">
 			{#each themeChoices as choice}
 				<button
 					on:click={() => {
-						root.style.setProperty('--color-tertiary-500', rgb(choice.initial));
+						root.style.setProperty('--color-primary-500', rgb(choice.initial));
 						root.dataset.theme = choice.name;
 						theme = choice.name;
 						colorValue = choice.initial;
@@ -87,7 +87,7 @@
 				type="color"
 				bind:value={colorValue}
 				on:change={() => {
-					root.style.setProperty('--color-tertiary-500', rgb(colorValue));
+					root.style.setProperty('--color-primary-500', rgb(colorValue));
 					$colorStore = { color: colorValue, theme: theme };
 				}}
 			/>
@@ -95,17 +95,17 @@
 	</div>
 	<div class="flex justify-center gap-x-5 my-3 items-center">
 		<button
-			class="btn variant-outline-tertiary"
+			class="btn variant-outline-primary"
 			on:click={() => {
 				colorValue = '#0EA5E9';
 				theme = 'skeleton';
 				root.dataset.theme = 'skeleton';
 				$colorStore = { color: colorValue, theme: theme };
-				root.style.setProperty('--color-tertiary-500', `14 165 233`);
+				root.style.setProperty('--color-primary-500', `14 165 233`);
 			}}>Reset</button
 		>
 	</div>
-	<div class="arrow variant-glass-tertiary" />
+	<div class="arrow variant-glass-primary" />
 </div>
 
 <a

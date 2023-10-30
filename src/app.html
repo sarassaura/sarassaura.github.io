@@ -32,7 +32,7 @@
 			if(color) {
 				let myColor = rgb(JSON.parse(color).color);
 				let myTheme = JSON.parse(color).theme;
-				myColor && document.body.style.setProperty("--color-tertiary-500", myColor);
+				myColor && document.body.style.setProperty("--color-primary-500", myColor);
 				if(myTheme) {
 					document.body.dataset.theme = myTheme;
 				}
