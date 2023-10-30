@@ -50,20 +50,6 @@
 		<LightSwitch />
 	</div>
 	<div class="flex justify-between gap-x-5 my-3 items-center">
-		<p>Color</p>
-		<div class="rounded-full" style="background-color: {colorValue};">
-			<input
-				class="input opacity-0"
-				type="color"
-				bind:value={colorValue}
-				on:change={() => {
-					root.style.setProperty('--color-tertiary-500', rgb(colorValue));
-					$colorStore = { color: colorValue, theme: theme };
-				}}
-			/>
-		</div>
-	</div>
-	<div class="flex justify-between gap-x-5 my-3 items-center">
 		<p>Theme</p>
 		<button
 			class="btn variant-ghost-tertiary p-1 px-3"
@@ -91,6 +77,20 @@
 					{choice.name}
 				</button>
 			{/each}
+		</div>
+	</div>
+	<div class="flex justify-between gap-x-5 my-3 items-center">
+		<p>Color</p>
+		<div class="rounded-full" style="background-color: {colorValue};">
+			<input
+				class="input opacity-0"
+				type="color"
+				bind:value={colorValue}
+				on:change={() => {
+					root.style.setProperty('--color-tertiary-500', rgb(colorValue));
+					$colorStore = { color: colorValue, theme: theme };
+				}}
+			/>
 		</div>
 	</div>
 	<div class="flex justify-center gap-x-5 my-3 items-center">

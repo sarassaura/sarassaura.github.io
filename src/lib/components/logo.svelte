@@ -6,7 +6,7 @@
 
 <a
 	href={`${$page.url.origin}/#about`}
-	class="font-bold text-lg flex items-center"
+	class="font-bold text-lg flex items-center logo"
 	transition:fade={{ duration: 500, delay: 250 }}
 >
 	<Logo />

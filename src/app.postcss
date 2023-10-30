@@ -117,6 +117,19 @@
         }
     }
 
+    .logo:hover > svg > path {
+		animation: sign 2.5s linear;
+	}
+
+    @keyframes sign {
+        from {
+            stroke-dashoffset: 702;
+        }
+        to {
+            stroke-dashoffset: 0;
+        }
+    }
+
     .hero-body {
         @apply overflow-hidden px-4;
         align-items: center;
