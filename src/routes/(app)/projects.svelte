@@ -17,6 +17,8 @@
 				<img
 					class="work rounded-md [&>*]:pointer-events-none grayscale hover:grayscale-0"
 					loading="lazy"
+					width="inherit"
+					height="inherit"
 					use:popup={{
 						event: 'hover',
 						target: item.node.name,
