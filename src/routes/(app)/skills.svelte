@@ -33,7 +33,11 @@
 			<section class="p-4">
 				<p class="h5">Design</p>
 			</section>
-			<p>Sketch, brainstorm, user flow, sitemaps, wireframe, prototyping.</p>
+			<p>
+				Design is the key to converting users into clients. Using white space and hierarchy is the
+				difference between overwhelming and appealing. This involves sketching, user flows,
+				sitemaps, wireframes, and prototypes.
+			</p>
 		</div>
 		<div class="module">
 			<header class="card-header">
@@ -42,7 +46,11 @@
 			<section class="p-4">
 				<p class="h5">Backend</p>
 			</section>
-			<p>My</p>
+			<p>
+				I'm focused on node & express. Business logic isn't just about connecting with the database,
+				but about ensuring processing and data security, manage requests, and comunicate with
+				different services.
+			</p>
 		</div>
 	</div>
 </div>
