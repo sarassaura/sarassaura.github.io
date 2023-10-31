@@ -8,7 +8,7 @@
 	class="navbar nav"
 	background="bg-transparent"
 	slotDefault="place-self-end lg:place-self-center"
-	slotTrail="place-content-end hidden lg:flex gap-4"
+	slotTrail="place-content-end hidden lg:flex gap-5 space-x-0"
 	gridColumns="grid-cols-2 lg:grid-cols-3"
 >
 	<svelte:fragment slot="lead">

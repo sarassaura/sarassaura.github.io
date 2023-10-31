@@ -22,8 +22,8 @@
 			</section>
 			<p>
 				I'm a professional <span class="italic">JavaScript</span> developer with expertise across various
-				frameworks, libraries, and services, including React. I build performing, accessible and seo
-				friendly websites who prioritizes user experience.
+				frameworks, libraries, and services, especially React. I build performing, accessible and seo
+				friendly websites.
 			</p>
 		</div>
 		<div class="module">
@@ -35,8 +35,7 @@
 			</section>
 			<p>
 				Design is the key to converting users into clients. Using white space and hierarchy is the
-				difference between overwhelming and appealing. This involves sketching, user flows,
-				sitemaps, wireframes, and prototypes.
+				difference between overwhelming and appealing.
 			</p>
 		</div>
 		<div class="module">
@@ -47,9 +46,8 @@
 				<p class="h5">Backend</p>
 			</section>
 			<p>
-				I'm focused on node & express. Business logic isn't just about connecting with the database,
-				but about ensuring processing and data security, manage requests, and comunicate with
-				different services.
+				Business logic isn't just about connecting with the database, but about ensuring processing
+				and data security, manage requests, and comunicate with different services.
 			</p>
 		</div>
 	</div>

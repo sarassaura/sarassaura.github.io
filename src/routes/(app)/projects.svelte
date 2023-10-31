@@ -28,7 +28,7 @@
 					alt={item.node.description}
 				/>
 			</a>
-			<figcaption class="sm:pt-2 md:pt-2">
+			<figcaption>
 				<div class="flex gap-4 items-center">
 					<a
 						href={`https://github.com/sarassaura/${item.node.name}`}

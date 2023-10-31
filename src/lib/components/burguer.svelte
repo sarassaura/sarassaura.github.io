@@ -21,7 +21,7 @@
 </script>
 
 <button
-	class="btn-icon dark:fill-white lg:hidden button-burguer"
+	class="btn-icon dark:fill-white lg:hidden button-burguer flex items-center"
 	on:click={toggle}
 	aria-label="hamburguer menu"
 >

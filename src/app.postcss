@@ -40,7 +40,7 @@
 
 @layer base {
     * {
-       /* border: 1px solid purple; */
+       border: 1px solid purple;
     }
 
     :root [data-theme='skeleton'],
@@ -115,6 +115,18 @@
                 grid-template-rows: minmax(0, 1fr);
             }
         }
+    }
+
+    .app-bar-slot-trail {
+        justify-self: flex-end;
+    }
+
+    .app-bar-slot-default {
+        width: max-content;
+    }
+
+    .app-bar-slot-lead {
+        width: fit-content;
     }
 
     #logo {
@@ -364,8 +376,16 @@
     }
 
     .module {
-        @apply flex flex-col card card-hover variant-ringed-primary w-full items-center justify-center px-10 pb-10;
+        @apply flex flex-col card card-hover variant-ringed-primary w-full items-center justify-center px-10 py-10 shrink-0 hyphens-auto;
         height: 25rem;
+
+        @media only screen and (width >= 600px) {
+            @apply justify-start;
+        }
+    }
+
+    .space-x-4 > :not([hidden]) ~ :not([hidden]) {
+        margin: 0px !important;
     }
 
     /* Projects Section */
@@ -401,13 +421,7 @@
     }
 
     figcaption {
-        padding-top: 1rem;
-
-        @media only screen and (width >= 550px) {
-            & {
-                padding-top: 0.5rem;
-            }
-        }
+        padding-top: 0.5rem;
     }
 
     .work {
