@@ -6,6 +6,7 @@
 	import { fade } from 'svelte/transition';
 	import Github from '$lib/Icons/github.svelte';
 	import { Ripple } from '$lib/functions/ripple';
+	import Coil from '$lib/Icons/coil.svelte';
 
 	let visible: boolean = false;
 	let invisible: boolean = false;
@@ -117,19 +118,26 @@
 		</label>
 		<button class="btn variant-filled but" disabled={$isSubmitting} on:click={Ripple}>Send</button>
 	</form>
-	<div class="informations relative gap-4 justify-center">
-		<p class="h3 py-4">Contact Info</p>
-		<p>
-			<iconify-icon icon="icon-park-outline:edit-name" height="36px" aria-hidden="true" />Sarah
-			Yukino Nakada
-		</p>
-		<p><Github height="36" width="36" />github.com/sarassaura</p>
-		<p>
-			<iconify-icon icon="mdi:gmail" height="36px" aria-hidden="true" />Gmail: sarahyukinonakada
-		</p>
-		<p>
-			<iconify-icon icon="ic:baseline-phone" height="36px" aria-hidden="true" />+55 11 99146-4391
-		</p>
-		<p><iconify-icon icon="ic:baseline-place" height="36px" aria-hidden="true" />Brazil, SP/SP</p>
+	<div class="flex items-center justify-center">
+		<div class="pr-5 sm:pr-8 -mr-[65px] sm:-mr-[77px]">
+			<Coil />
+		</div>
+		<div
+			class="informations relative gap-4 justify-center border border-r-none border-tertiary-500 rounded-lg px-8 py-10 pl-16"
+		>
+			<p class="h3 py-4">Contact Info</p>
+			<p>
+				<iconify-icon icon="icon-park-outline:edit-name" height="36px" aria-hidden="true" />Sarah
+				Yukino Nakada
+			</p>
+			<p><Github height="36" width="36" />github.com/sarassaura</p>
+			<p>
+				<iconify-icon icon="mdi:gmail" height="36px" aria-hidden="true" />Gmail: sarahyukinonakada
+			</p>
+			<p>
+				<iconify-icon icon="ic:baseline-phone" height="36px" aria-hidden="true" />+55 11 99146-4391
+			</p>
+			<p><iconify-icon icon="ic:baseline-place" height="36px" aria-hidden="true" />Brazil, SP/SP</p>
+		</div>
 	</div>
 </div>
