@@ -708,6 +708,29 @@
 @layer utilities {
     /* Break me */
 
+    .but {
+		position: relative;
+        overflow: hidden;
+        outline: 0;
+	}
+    .variant-filled > .ripple {
+        @apply dark:bg-surface-900 bg-surface-50;
+    }
+	.ripple {
+		position: absolute;
+        inset: 0;
+        border-radius: 50%;
+        animation: ripple 600ms linear;
+        transform: scale(0);
+	}
+
+    @keyframes ripple {
+        to {
+          transform: scale(4);
+          opacity: 0;
+        }
+    }
+
     .dropdown {
         width: 15rem;
     }

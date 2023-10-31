@@ -5,6 +5,7 @@
 	import { validator } from '@felte/validator-zod';
 	import { fade } from 'svelte/transition';
 	import Github from '$lib/Icons/github.svelte';
+	import { Ripple } from '$lib/functions/ripple';
 
 	let visible: boolean = false;
 	let invisible: boolean = false;
@@ -114,7 +115,7 @@
 				</p>
 			{/if}
 		</label>
-		<button class="btn variant-filled" disabled={$isSubmitting}>Send</button>
+		<button class="btn variant-filled but" disabled={$isSubmitting} on:click={Ripple}>Send</button>
 	</form>
 	<div class="informations relative gap-4 justify-center">
 		<p class="h3 py-4">Contact Info</p>
