@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Hero from '$lib/components/hero.svelte';
+	import { Ripple } from '$lib/functions/ripple';
 </script>
 
 <div class="section about shrink-none" id="about">
@@ -15,8 +16,8 @@
 			currently studying computer science.
 		</div>
 		<div class="flex gap-2 md:gap-3 mt-4 w-fit">
-			<a class="btn variant-filled" href={`/resume`}>Resume</a>
-			<a class="btn variant-ghost-primary" href={`/#contact-me`}>Email me</a>
+			<a class="btn variant-filled but" href={`/resume`} on:click={Ripple}>Resume</a>
+			<a class="btn variant-ghost-primary but" href={`/#contact-me`} on:click={Ripple}>Email me</a>
 		</div>
 	</div>
 	<Hero />
