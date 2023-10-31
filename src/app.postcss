@@ -711,14 +711,17 @@
     .but {
 		position: relative;
         overflow: hidden;
-        outline: 0;
 	}
     .variant-filled > .ripple {
-        @apply dark:bg-surface-900 bg-surface-200;
+        background-color: rgba(255, 255, 255, 0.5);
     }
-    .variant-ghost-primary > .ripple {
-        @apply dark:bg-primary-500 bg-primary-500;
+
+    .dark body {
+        .variant-filled > .ripple {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
     }
+
 	.ripple {
 		position: absolute;
         inset: 0;
