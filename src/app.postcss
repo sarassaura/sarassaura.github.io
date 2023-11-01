@@ -425,8 +425,14 @@
     }
 
     .work {
+        @apply rounded-md [&>*]:pointer-events-none grayscale hover:grayscale-0;
+
+        @media (hover: none) {
+            @apply hover:grayscale-0;
+        }
+
         width: 100%;
-        transition: 500ms;
+        transition: filter 500ms;
     }
 
     .links {
@@ -481,7 +487,7 @@
             pointer-events: none;
             color: #808cb1;
             padding: 5px;
-            transition: 500ms;
+            transition: transform 500ms, border 500ms, font-size 500ms, letter-spacing 500ms, color 500ms;
             border: none;
             display: inline-block;
             font-size: 1rem;
@@ -705,12 +711,12 @@
             scale: var(--_width, 0.217184800165) 1;
             translate: var(--_left, 0px) 0;
             transform-origin: left;
-            transition: 200ms;
+            transition: scale 200ms, translate 200ms;
             mask: linear-gradient(90deg, transparent, white 40%, white 60%, transparent);
             @apply bg-primary-500;
 
             @media (prefers-reduced-motion) {
-                transition: 0ms;
+                transition: scale 0ms, translate 0ms;
             }
         }
     }
@@ -766,6 +772,12 @@
 
     p {
         width: fit-content;
+    }
+
+    .hidy {
+        @media (hover: none) {
+            display: none;
+        }
     }
 
     .break {

@@ -9,7 +9,7 @@
 <div class="section projects md:px-16 md:gap-4 px-4 shrink-0" id="projects">
 	{#each data.viewer.pinnedItems.edges as item}
 		<figure class="relative mb-8">
-			<div class="card p-4 variant-glass-primary" data-popup={item.node.name}>
+			<div class="card p-4 variant-glass-primary hidy" data-popup={item.node.name}>
 				<p>{item.node.description}</p>
 				<div class="arrow variant-glass-primary" />
 			</div>
