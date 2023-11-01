@@ -362,7 +362,8 @@
             & {
                 grid-template-columns: 1fr 1fr;
                 grid-template-rows: 1fr 1fr;
-                max-width: 35rem;
+                max-width: 70rem;
+                width: clamp(35rem, 100%, 70rem);
             }
         }
 
@@ -376,7 +377,7 @@
     }
 
     .module {
-        @apply flex flex-col card card-hover variant-ringed-primary w-full items-center justify-center px-10 py-10 shrink-0 hyphens-auto;
+        @apply flex flex-col card card-hover w-full items-center justify-center px-10 py-10 shrink-0 hyphens-auto;
         height: 25rem;
 
         @media only screen and (width >= 600px) {
