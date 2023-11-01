@@ -431,6 +431,10 @@
             @apply hover:grayscale-0;
         }
 
+        @media only screen and (width < 550px) {
+            @apply hover:grayscale-0;
+        }
+
         width: 100%;
         transition: filter 500ms;
     }
@@ -776,6 +780,10 @@
 
     .hidy {
         @media (hover: none) {
+            display: none;
+        }
+
+        @media only screen and (width < 550px) {
             display: none;
         }
     }
