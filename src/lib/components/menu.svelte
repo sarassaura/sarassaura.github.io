@@ -20,7 +20,7 @@
 		<ListBox class="w-full">
 			{#each links as { link, icon }}
 				<ListBoxItem
-					regionLead="flex"
+					regionLead="flex mr-1"
 					bind:group={valueSingle}
 					name={link}
 					value={link}
