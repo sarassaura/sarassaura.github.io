@@ -108,16 +108,13 @@
 	<div class="arrow variant-glass-primary" />
 </div>
 
-<a
-	class="flex items-center gap-1 hover:backdrop-brightness-75 rounded-full p-1 px-3 duration-300"
-	href="/blog"
->
+<a class="flex items-center gap-1 links duration-300 justify-self-start" href="/blog">
 	<p>Blog</p>
 	<Out height="20" width="20" />
 </a>
 
 <a
-	class="flex items-center rounded-full hover:pulse"
+	class="flex items-center rounded-full hover:pulse w-fit justify-self-center"
 	href="https://github.com/sarassaura/"
 	aria-label="Github"
 >
@@ -125,7 +122,7 @@
 </a>
 
 <div
-	class="cursor-pointer rounded-full rotate h-[36px] w-[36px]"
+	class="cursor-pointer rounded-full rotate h-[36px] w-[36px] justify-self-end"
 	use:popup={{
 		event: 'click',
 		target: 'config',

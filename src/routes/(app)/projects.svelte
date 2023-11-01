@@ -37,10 +37,7 @@
 					>
 						<Github height="28" width="28" style="rounded-full duration-300" />
 					</a>
-					<a
-						href={item.node.homepageUrl}
-						class="flex items-center gap-1 links h-fit rounded-t-md hover:backdrop-brightness-75 duration-300"
-					>
+					<a href={item.node.homepageUrl} class="flex items-center gap-1 links h-fit">
 						Website
 						<iconify-icon icon="ph:arrow-square-out-bold" height="20px" aria-hidden="true" />
 					</a>
