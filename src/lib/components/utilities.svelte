@@ -57,7 +57,7 @@
 				event: 'click',
 				target: 'popupCombobox',
 				placement: 'bottom',
-				closeQuery: ''
+				closeQuery: '#will-close'
 			}}
 		>
 			{theme}
@@ -127,7 +127,7 @@
 		event: 'click',
 		target: 'config',
 		placement: 'bottom',
-		closeQuery: ''
+		closeQuery: '#will-close'
 	}}
 >
 	<Gear height="36" width="36" style="p-1.5" />
