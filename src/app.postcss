@@ -432,10 +432,6 @@
             @apply grayscale-0 !important;
         }
 
-        @media only screen and (width < 550px) {
-            @apply grayscale-0 !important;
-        }
-
         width: 100%;
         transition: filter 500ms;
     }
@@ -536,9 +532,11 @@
     }
 
     .mobile-textarea {
-        @media only screen and (width <= 500px) {
-            font-size: var(--_font_size, 1.125rem) !important;
-            line-height: var(--_line_height, 1.5rem) !important;
+        @container (height > 120px) {
+            @media only screen and (width <= 500px) {
+                font-size: var(--_font_size, 1.125rem) !important;
+                line-height: var(--_line_height, 1.5rem) !important;
+            }
         }
     }
 

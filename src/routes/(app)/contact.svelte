@@ -7,7 +7,6 @@
 	import Github from '$lib/Icons/github.svelte';
 	import { Ripple } from '$lib/functions/ripple';
 	import Coil from '$lib/Icons/coil.svelte';
-	import { onMount } from 'svelte';
 
 	let visible: boolean = false;
 	let invisible: boolean = false;
@@ -55,19 +54,6 @@
 			}, 2000);
 		},
 		extend: validator({ schema })
-	});
-
-	let chrome = false;
-	let texto: Element;
-
-	onMount(() => {
-		const observer = new ResizeObserver((entries) => {
-			if (entries[0].contentRect.height > 130) {
-				chrome = true;
-			}
-		});
-
-		observer.observe(texto);
 	});
 </script>
 
@@ -123,12 +109,11 @@
 		</label>
 		<label class="label">
 			<textarea
-				class={`textarea ${chrome && 'mobile-textarea'}`}
+				class={`textarea mobile-textarea`}
 				rows="5"
 				required
 				placeholder=" "
 				name="message"
-				bind:this={texto}
 			/>
 			<span>Message</span>
 			{#if $errors.message && $errors.message[0] != null}
