@@ -7,6 +7,7 @@
 	import Github from '$lib/Icons/github.svelte';
 	import { Ripple } from '$lib/functions/ripple';
 	import Coil from '$lib/Icons/coil.svelte';
+	import { onMount } from 'svelte';
 
 	let visible: boolean = false;
 	let invisible: boolean = false;
@@ -57,6 +58,15 @@
 	});
 
 	let chrome = false;
+	let texto: Element;
+
+	onMount(() => {
+		const observer = new ResizeObserver(() => {
+			chrome = true;
+		});
+
+		observer.observe(texto);
+	});
 </script>
 
 {#if visible}
@@ -116,9 +126,7 @@
 				required
 				placeholder=" "
 				name="message"
-				on:resize={() => {
-					chrome = true;
-				}}
+				bind:this={texto}
 			/>
 			<span>Message</span>
 			{#if $errors.message && $errors.message[0] != null}
