@@ -7,10 +7,10 @@
 	initializeStores();
 
 	onMount(() => {
-		let chrome = document.querySelector('textarea');
+		// let chrome = document.querySelector('textarea');
 		if (navigator.userAgent.indexOf('Chrome') != -1) {
-			chrome?.setAttribute('--_font_size', '0.5625rem');
-			chrome?.setAttribute('--_line_height', '0.75rem');
+			// chrome?.setAttribute('--_font_size', '0.5625rem');
+			// chrome?.setAttribute('--_line_height', '0.75rem');
 		}
 		if (navigator.userAgent.indexOf('Firefox') != -1) {
 			// This is Firefox
