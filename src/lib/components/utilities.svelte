@@ -72,7 +72,7 @@
 						colorValue = choice.initial;
 						$colorStore = { color: choice.initial, theme: choice.name };
 					}}
-					class="capitalize btn variant-soft w-full"
+					class="capitalize btn dark:variant-soft variant-ringed w-full"
 				>
 					{choice.name}
 				</button>
