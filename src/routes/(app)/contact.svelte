@@ -61,8 +61,10 @@
 	let texto: Element;
 
 	onMount(() => {
-		const observer = new ResizeObserver(() => {
-			chrome = true;
+		const observer = new ResizeObserver((entries) => {
+			if (entries[0].contentRect.height > 130) {
+				chrome = true;
+			}
 		});
 
 		observer.observe(texto);

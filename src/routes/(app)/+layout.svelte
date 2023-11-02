@@ -9,9 +9,8 @@
 	onMount(() => {
 		let chrome = document.querySelector('textarea');
 		if (navigator.userAgent.indexOf('Chrome') != -1) {
-			// this is chrome
-		} else {
-			chrome?.setAttribute('--_font_size', (0).toString());
+			chrome?.setAttribute('--_font_size', '0.5625rem');
+			chrome?.setAttribute('--_line_height', '0.75rem');
 		}
 		if (navigator.userAgent.indexOf('Firefox') != -1) {
 			// This is Firefox
