@@ -55,6 +55,8 @@
 		},
 		extend: validator({ schema })
 	});
+
+	let chrome = false;
 </script>
 
 {#if visible}
@@ -108,7 +110,16 @@
 			{/if}
 		</label>
 		<label class="label">
-			<textarea class="textarea" rows="5" required placeholder=" " name="message" />
+			<textarea
+				class={`textarea ${chrome && 'mobile-textarea'}`}
+				rows="5"
+				required
+				placeholder=" "
+				name="message"
+				on:resize={() => {
+					chrome = true;
+				}}
+			/>
 			<span>Message</span>
 			{#if $errors.message && $errors.message[0] != null}
 				<p class="dark:text-error-300 text-error-700">

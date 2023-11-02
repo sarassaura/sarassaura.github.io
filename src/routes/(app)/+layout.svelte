@@ -9,11 +9,12 @@
 	onMount(() => {
 		let chrome = document.querySelector('textarea');
 		if (navigator.userAgent.indexOf('Chrome') != -1) {
-			console.log('Chrome');
-			chrome?.classList.add('mobile-textarea');
+			// this is chrome
+		} else {
+			chrome?.setAttribute('--_font_size', (0).toString());
 		}
 		if (navigator.userAgent.indexOf('Firefox') != -1) {
-			console.log('Firefox');
+			// This is Firefox
 		}
 	});
 
