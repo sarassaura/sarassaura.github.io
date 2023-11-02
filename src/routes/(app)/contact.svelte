@@ -124,7 +124,7 @@
 		</label>
 		<button class="btn variant-filled but" disabled={$isSubmitting} on:click={Ripple}>Send</button>
 	</form>
-	<div class="flex items-center justify-center">
+	<div class="flex items-center justify-center pow">
 		<div class="pr-5 sm:pr-8 -mr-[65px] sm:-mr-[77px]">
 			<Coil />
 		</div>
