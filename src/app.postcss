@@ -446,6 +446,62 @@
         padding: 2px; */
     }
 
+    .mdx :is(h1, h2, h3, h4, h5, h6) {
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid;
+        @apply dark:border-gray-500 border-gray-400;
+    }
+
+    .mdx :is(h2, h3, h4, h5, h6) {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .mdx :is(a) {
+        @apply anchor;
+        @apply text-secondary-900 dark:text-secondary-500 !important;
+    }
+
+    .mdx :is(code) {
+        @apply dark:bg-tertiary-700 bg-secondary-400 p-1 mx-1 rounded-md;
+    }
+
+    .mdx :is(ul, ol) {
+        list-style-type: disc;
+        padding-left: 2rem;
+    }
+
+    .mdx :is(ul, ol) li {
+        margin-block: 0.25rem;
+        padding-inline-start: 0.5rem;
+    }
+
+    .mdx :is(h1) {
+        @apply h2;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    .mdx :is(h2) {
+        @apply h3;
+    }
+
+    .mdx :is(h3) {
+        @apply h4;
+    }
+
+    .mdx :is(h4) {
+        @apply h5;
+    }
+
+    .mdx :is(h5) {
+        @apply h6;
+    }
+
+    .mdx :is(h6) {
+        @apply h6;
+    }
+
     /* Contact Section */
 
     .contact {
