@@ -44,7 +44,7 @@
 	}
 </script>
 
-<div class="dropdown p-4 variant-ghost-surface rounded-md backdrop-blur-none" data-popup="config">
+<div class="dropdown p-4 variant-ghost-surface rounded-md" data-popup="config">
 	<div class="flex justify-between gap-x-5 my-3 items-center">
 		<p>Dark Mode</p>
 		<LightSwitch />
