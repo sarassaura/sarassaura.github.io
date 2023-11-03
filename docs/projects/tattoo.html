@@ -10,19 +10,20 @@
 		<meta name="keywords" content="JavaScript, Portfolio, Web, Developer">
 		<meta name="author" content="Sarah Yukino Nakada">
 		
-		<link href="../_app/immutable/assets/0.c03ec9b5.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/0.132b8db2.css" rel="stylesheet">
 		<link href="../_app/immutable/assets/ProgressBar.4f1e9ba5.css" rel="stylesheet">
-		<link rel="modulepreload" href="../_app/immutable/entry/start.a72377eb.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.4bd4ec6c.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/scheduler.aa2b725c.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.8b4fe1f0.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.45ca2526.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/index.8d88110a.js">
-		<link rel="modulepreload" href="../_app/immutable/entry/app.62caff78.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.d0ec9954.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/index.255ea5fa.js">
-		<link rel="modulepreload" href="../_app/immutable/nodes/0.70e7d0e1.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/0.c1ecd0ce.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/ProgressBar.svelte_svelte_type_style_lang.0256517d.js">
 		<link rel="modulepreload" href="../_app/immutable/nodes/4.1249bc41.js">
-		<link rel="modulepreload" href="../_app/immutable/nodes/9.edcd7466.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/stores.70c4530f.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/9.b3efddb2.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/stores.566c6e79.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/footer.2ac4a570.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/ripple.510b20eb.js">
 		<link
 			rel="preload"
@@ -59,17 +60,17 @@
 		</script>
 	</head>
 	<body data-sveltekit-preload-data="hover" data-theme="skeleton">
-		<div style="display: contents" class="h-full w-full">  <div class="w-full h-full flex flex-col"><div class="flex w-full justify-around py-4"><a class="btn variant-filled px-3 py-3 but" href="http://sveltekit-prerender/#projects"><iconify-icon icon="mdi:arrow-left" height="28" width="28"></iconify-icon> <span class="break" data-svelte-h="svelte-glx8pn"> Go back </span></a></div> <div class="mdx px-4 md:px-16"><!-- HTML_TAG_START -->
+		<div style="display: contents" class="h-full w-full">  <div class="w-full h-full flex flex-col"><div class="flex w-full justify-around py-4"><a class="btn variant-filled px-3 py-3 but" href="http://sveltekit-prerender/#projects"><iconify-icon icon="mdi:arrow-left" height="28" width="28"></iconify-icon> <span class="break" data-svelte-h="svelte-glx8pn"> Go back </span></a></div> <div class="mdx px-4 md:px-16 pb-8"><!-- HTML_TAG_START -->
 <h1 id="tattoo-studio">Tattoo-Studio</h1>
 <div align="center">
-<p><img src="/public/Banner.png?raw=true" alt="Banner"></p>
+<img src="/public/Banner.png?raw=true" alt="Banner">
 <p><a href="#features">Features</a> •
 <a href="#installation">Installation</a> •
 <a href="#usage">Usage</a> •
 <a href="#environment-variables">Environment Variables</a></p>
-<p><img src="/public/Home.gif" alt="Home">
+<img src="/public/Home.gif" alt="Home">
 <img src="/public/Portfolio.gif" alt="Portfolio">
-<img src="/public/Contact.gif" alt="Contact"></p>
+<img src="/public/Contact.gif" alt="Contact">
 <p>A <code>Tattoo-Studio</code> portfolio with Cloudinary Image Gallery, On-Demand ISR, SSG, Static Paths</p>
 </div>
 <h2 id="features">Features</h2>
@@ -85,7 +86,7 @@
 <li>SEO with <em>next-seo</em></li>
 </ul>
 <h2 id="installation">Installation</h2>
-<pre class="language-sh">{@html `<code class="language-sh"><span class="token comment"># Clone this repository</span>
+<pre class="language-sh"><code class="language-sh"><span class="token comment"># Clone this repository</span>
 $ <span class="token function">git</span> clone git@github.com:florescente/tattoo.git
 
 <span class="token comment"># Go into the repository</span>
@@ -102,7 +103,7 @@ $ <span class="token function">yarn</span> dlx @yarnpkg/sdks vscode
 <span class="token comment"># Run the app</span>
 $ <span class="token function">npm</span> run dev
 OR
-$ <span class="token function">yarn</span> dev</code>`}</pre>
+$ <span class="token function">yarn</span> dev</code></pre>
 <h2 id="usage">Usage</h2>
 <ol>
 <li>Create a Cloudinary Account</li>
@@ -114,40 +115,40 @@ $ <span class="token function">yarn</span> dev</code>`}</pre>
 <li>run</li>
 </ol>
 <h2 id="environment-variables">Environment Variables</h2>
-<pre class="language-bash">{@html `<code class="language-bash">NEXT_PUBLIC_SITE_NAME
+<pre class="language-bash"><code class="language-bash">NEXT_PUBLIC_SITE_NAME
 NEXT_PUBLIC_SITE_URL
 CLOUDINARY_NAME
 CLOUDINARY_API_KEY
 CLOUDINARY_API_SECRET
 EMAIL - GMAIL
 PASSWORD - Generate APP password
-SECRET_TOKEN</code>`}</pre>
+SECRET_TOKEN</code></pre>
 <h2 id="cloudinary-configurations">Cloudinary Configurations</h2>
 <p>This is important for the ISR revalidation:</p>
 <p>Go to the cloudinary settings, under uploads tab, and put this in notifications:</p>
-<pre class="language-bash">{@html `<code class="language-bash">https://<span class="token operator">&lt;</span>NEXT_PUBLIC_SITE_URL<span class="token operator">></span>/api/revalidate?secret<span class="token operator">=</span><span class="token operator">&lt;</span>SECRET_TOKEN<span class="token operator">></span></code>`}</pre>
+<pre class="language-bash"><code class="language-bash">https://<span class="token operator">&lt;</span>NEXT_PUBLIC_SITE_URL<span class="token operator">></span>/api/revalidate?secret<span class="token operator">=</span><span class="token operator">&lt;</span>SECRET_TOKEN<span class="token operator">></span></code></pre>
 <h2 id="meta">Meta</h2>
 <p>Created By Florescente:
 <a
   href="https://github.com/florescente"
   rel="nofollow"
 >github.com/florescente</a></p>
-<!-- HTML_TAG_END --></div></div> 
+<!-- HTML_TAG_END --></div> <div class="flex justify-center py-5" data-svelte-h="svelte-171nkh">©sarassaura, 2023. All rights reserved.</div></div> 
 			
 			<script>
 				{
-					__sveltekit_14w0c1o = {
+					__sveltekit_17upuag = {
 						base: new URL("..", location).pathname.slice(0, -1),
 						env: {}
 					};
 
 					const element = document.currentScript.parentElement;
 
-					const data = [null,null,{"type":"data","data":{data:"\n\u003Ch1 id=\"tattoo-studio\">Tattoo-Studio\u003C/h1>\n\u003Cdiv align=\"center\">\n\u003Cp>\u003Cimg src=\"/public/Banner.png?raw=true\" alt=\"Banner\">\u003C/p>\n\u003Cp>\u003Ca href=\"#features\">Features\u003C/a> •\n\u003Ca href=\"#installation\">Installation\u003C/a> •\n\u003Ca href=\"#usage\">Usage\u003C/a> •\n\u003Ca href=\"#environment-variables\">Environment Variables\u003C/a>\u003C/p>\n\u003Cp>\u003Cimg src=\"/public/Home.gif\" alt=\"Home\">\n\u003Cimg src=\"/public/Portfolio.gif\" alt=\"Portfolio\">\n\u003Cimg src=\"/public/Contact.gif\" alt=\"Contact\">\u003C/p>\n\u003Cp>A \u003Ccode>Tattoo-Studio\u003C/code> portfolio with Cloudinary Image Gallery, On-Demand ISR, SSG, Static Paths\u003C/p>\n\u003C/div>\n\u003Ch2 id=\"features\">Features\u003C/h2>\n\u003Cul>\n\u003Cli>Image Gallery connected with \u003Cem>cloudinary\u003C/em> Account\u003C/li>\n\u003Cli>Automatic e-mails with \u003Cem>nodemailer\u003C/em>\u003C/li>\n\u003Cli>Form Validation with \u003Cem>react-hook-form\u003C/em>\u003C/li>\n\u003Cli>Internationalization with \u003Cem>GetStaticProps\u003C/em>\u003C/li>\n\u003Cli>Beautiful UI with \u003Cem>material-ui\u003C/em>\u003C/li>\n\u003Cli>Beautiful Page Animations with \u003Cem>framer-motion\u003C/em>\u003C/li>\n\u003Cli>Responsive 8-pt grid system with \u003Cem>figma\u003C/em>\u003C/li>\n\u003Cli>Sitemap with \u003Cem>next-sitemap\u003C/em>\u003C/li>\n\u003Cli>SEO with \u003Cem>next-seo\u003C/em>\u003C/li>\n\u003C/ul>\n\u003Ch2 id=\"installation\">Installation\u003C/h2>\n\u003Cpre class=\"language-sh\">{@html `\u003Ccode class=\"language-sh\">\u003Cspan class=\"token comment\"># Clone this repository\u003C/span>\n$ \u003Cspan class=\"token function\">git\u003C/span> clone git@github.com:florescente/tattoo.git\n\n\u003Cspan class=\"token comment\"># Go into the repository\u003C/span>\n$ \u003Cspan class=\"token builtin class-name\">cd\u003C/span> vitor-underground-tattoo\n\n\u003Cspan class=\"token comment\"># Install dependencies\u003C/span>\n$ \u003Cspan class=\"token function\">npm\u003C/span> \u003Cspan class=\"token function\">install\u003C/span>\nOR\n$ \u003Cspan class=\"token function\">yarn\u003C/span> \u003Cspan class=\"token builtin class-name\">set\u003C/span> version berry\n$ \u003Cspan class=\"token function\">yarn\u003C/span> \u003Cspan class=\"token function\">install\u003C/span>\n$ \u003Cspan class=\"token function\">yarn\u003C/span> dlx @yarnpkg/sdks vscode\n\n\n\u003Cspan class=\"token comment\"># Run the app\u003C/span>\n$ \u003Cspan class=\"token function\">npm\u003C/span> run dev\nOR\n$ \u003Cspan class=\"token function\">yarn\u003C/span> dev\u003C/code>`}\u003C/pre>\n\u003Ch2 id=\"usage\">Usage\u003C/h2>\n\u003Col>\n\u003Cli>Create a Cloudinary Account\u003C/li>\n\u003Cli>Create a Gmail Account\u003C/li>\n\u003Cli>Get Cloudinary Config Info\u003C/li>\n\u003Cli>Generate Gmail App password\u003C/li>\n\u003Cli>Create Folders with Images in Cloudinary\u003C/li>\n\u003Cli>Set the environment variables\u003C/li>\n\u003Cli>run\u003C/li>\n\u003C/ol>\n\u003Ch2 id=\"environment-variables\">Environment Variables\u003C/h2>\n\u003Cpre class=\"language-bash\">{@html `\u003Ccode class=\"language-bash\">NEXT_PUBLIC_SITE_NAME\nNEXT_PUBLIC_SITE_URL\nCLOUDINARY_NAME\nCLOUDINARY_API_KEY\nCLOUDINARY_API_SECRET\nEMAIL - GMAIL\nPASSWORD - Generate APP password\nSECRET_TOKEN\u003C/code>`}\u003C/pre>\n\u003Ch2 id=\"cloudinary-configurations\">Cloudinary Configurations\u003C/h2>\n\u003Cp>This is important for the ISR revalidation:\u003C/p>\n\u003Cp>Go to the cloudinary settings, under uploads tab, and put this in notifications:\u003C/p>\n\u003Cpre class=\"language-bash\">{@html `\u003Ccode class=\"language-bash\">https://\u003Cspan class=\"token operator\">&lt;\u003C/span>NEXT_PUBLIC_SITE_URL\u003Cspan class=\"token operator\">>\u003C/span>/api/revalidate?secret\u003Cspan class=\"token operator\">=\u003C/span>\u003Cspan class=\"token operator\">&lt;\u003C/span>SECRET_TOKEN\u003Cspan class=\"token operator\">>\u003C/span>\u003C/code>`}\u003C/pre>\n\u003Ch2 id=\"meta\">Meta\u003C/h2>\n\u003Cp>Created By Florescente:\n\u003Ca\n  href=\"https://github.com/florescente\"\n  rel=\"nofollow\"\n>github.com/florescente\u003C/a>\u003C/p>\n"},"uses":{"params":["project"]}}];
+					const data = [null,null,{"type":"data","data":{data:"\n\u003Ch1 id=\"tattoo-studio\">Tattoo-Studio\u003C/h1>\n\u003Cdiv align=\"center\">\n\u003Cimg src=\"/public/Banner.png?raw=true\" alt=\"Banner\">\n\u003Cp>\u003Ca href=\"#features\">Features\u003C/a> •\n\u003Ca href=\"#installation\">Installation\u003C/a> •\n\u003Ca href=\"#usage\">Usage\u003C/a> •\n\u003Ca href=\"#environment-variables\">Environment Variables\u003C/a>\u003C/p>\n\u003Cimg src=\"/public/Home.gif\" alt=\"Home\">\n\u003Cimg src=\"/public/Portfolio.gif\" alt=\"Portfolio\">\n\u003Cimg src=\"/public/Contact.gif\" alt=\"Contact\">\n\u003Cp>A \u003Ccode>Tattoo-Studio\u003C/code> portfolio with Cloudinary Image Gallery, On-Demand ISR, SSG, Static Paths\u003C/p>\n\u003C/div>\n\u003Ch2 id=\"features\">Features\u003C/h2>\n\u003Cul>\n\u003Cli>Image Gallery connected with \u003Cem>cloudinary\u003C/em> Account\u003C/li>\n\u003Cli>Automatic e-mails with \u003Cem>nodemailer\u003C/em>\u003C/li>\n\u003Cli>Form Validation with \u003Cem>react-hook-form\u003C/em>\u003C/li>\n\u003Cli>Internationalization with \u003Cem>GetStaticProps\u003C/em>\u003C/li>\n\u003Cli>Beautiful UI with \u003Cem>material-ui\u003C/em>\u003C/li>\n\u003Cli>Beautiful Page Animations with \u003Cem>framer-motion\u003C/em>\u003C/li>\n\u003Cli>Responsive 8-pt grid system with \u003Cem>figma\u003C/em>\u003C/li>\n\u003Cli>Sitemap with \u003Cem>next-sitemap\u003C/em>\u003C/li>\n\u003Cli>SEO with \u003Cem>next-seo\u003C/em>\u003C/li>\n\u003C/ul>\n\u003Ch2 id=\"installation\">Installation\u003C/h2>\n\u003Cpre class=\"language-sh\">\u003Ccode class=\"language-sh\">\u003Cspan class=\"token comment\"># Clone this repository\u003C/span>\n$ \u003Cspan class=\"token function\">git\u003C/span> clone git@github.com:florescente/tattoo.git\n\n\u003Cspan class=\"token comment\"># Go into the repository\u003C/span>\n$ \u003Cspan class=\"token builtin class-name\">cd\u003C/span> vitor-underground-tattoo\n\n\u003Cspan class=\"token comment\"># Install dependencies\u003C/span>\n$ \u003Cspan class=\"token function\">npm\u003C/span> \u003Cspan class=\"token function\">install\u003C/span>\nOR\n$ \u003Cspan class=\"token function\">yarn\u003C/span> \u003Cspan class=\"token builtin class-name\">set\u003C/span> version berry\n$ \u003Cspan class=\"token function\">yarn\u003C/span> \u003Cspan class=\"token function\">install\u003C/span>\n$ \u003Cspan class=\"token function\">yarn\u003C/span> dlx @yarnpkg/sdks vscode\n\n\n\u003Cspan class=\"token comment\"># Run the app\u003C/span>\n$ \u003Cspan class=\"token function\">npm\u003C/span> run dev\nOR\n$ \u003Cspan class=\"token function\">yarn\u003C/span> dev\u003C/code>\u003C/pre>\n\u003Ch2 id=\"usage\">Usage\u003C/h2>\n\u003Col>\n\u003Cli>Create a Cloudinary Account\u003C/li>\n\u003Cli>Create a Gmail Account\u003C/li>\n\u003Cli>Get Cloudinary Config Info\u003C/li>\n\u003Cli>Generate Gmail App password\u003C/li>\n\u003Cli>Create Folders with Images in Cloudinary\u003C/li>\n\u003Cli>Set the environment variables\u003C/li>\n\u003Cli>run\u003C/li>\n\u003C/ol>\n\u003Ch2 id=\"environment-variables\">Environment Variables\u003C/h2>\n\u003Cpre class=\"language-bash\">\u003Ccode class=\"language-bash\">NEXT_PUBLIC_SITE_NAME\nNEXT_PUBLIC_SITE_URL\nCLOUDINARY_NAME\nCLOUDINARY_API_KEY\nCLOUDINARY_API_SECRET\nEMAIL - GMAIL\nPASSWORD - Generate APP password\nSECRET_TOKEN\u003C/code>\u003C/pre>\n\u003Ch2 id=\"cloudinary-configurations\">Cloudinary Configurations\u003C/h2>\n\u003Cp>This is important for the ISR revalidation:\u003C/p>\n\u003Cp>Go to the cloudinary settings, under uploads tab, and put this in notifications:\u003C/p>\n\u003Cpre class=\"language-bash\">\u003Ccode class=\"language-bash\">https://\u003Cspan class=\"token operator\">&lt;\u003C/span>NEXT_PUBLIC_SITE_URL\u003Cspan class=\"token operator\">>\u003C/span>/api/revalidate?secret\u003Cspan class=\"token operator\">=\u003C/span>\u003Cspan class=\"token operator\">&lt;\u003C/span>SECRET_TOKEN\u003Cspan class=\"token operator\">>\u003C/span>\u003C/code>\u003C/pre>\n\u003Ch2 id=\"meta\">Meta\u003C/h2>\n\u003Cp>Created By Florescente:\n\u003Ca\n  href=\"https://github.com/florescente\"\n  rel=\"nofollow\"\n>github.com/florescente\u003C/a>\u003C/p>\n"},"uses":{"params":["project"]}}];
 
 					Promise.all([
-						import("../_app/immutable/entry/start.a72377eb.js"),
-						import("../_app/immutable/entry/app.62caff78.js")
+						import("../_app/immutable/entry/start.4bd4ec6c.js"),
+						import("../_app/immutable/entry/app.d0ec9954.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 4, 9],

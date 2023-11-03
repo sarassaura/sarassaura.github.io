@@ -1,5 +1,6 @@
 <script>
 	import { page } from '$app/stores';
+	import Footer from '$lib/components/footer.svelte';
 	import { Ripple } from '$lib/functions/ripple';
 
 	/** @type {import('./$types').PageData} */
@@ -17,6 +18,8 @@
 	</a>
 </div>
 
-<div class="mdx px-4 md:px-16">
+<div class="mdx px-4 md:px-16 pb-8">
 	{@html data.data}
 </div>
+
+<Footer />
