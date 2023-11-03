@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="../flower_light.svg" media="(prefers-color-scheme:dark)"/>
+		<link rel="icon" href="../flower.svg" media="(prefers-color-scheme:light)"/>
+		<title>Sarah Yukino</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="Sarah's Personal Portfolio">
+		<meta name="keywords" content="JavaScript, Portfolio, Web, Developer">
+		<meta name="author" content="Sarah Yukino Nakada">
+		
+		<link href="../_app/immutable/assets/0.c03ec9b5.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/ProgressBar.4f1e9ba5.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.a72377eb.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/scheduler.aa2b725c.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.8b4fe1f0.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.8d88110a.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.62caff78.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.255ea5fa.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/0.70e7d0e1.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/ProgressBar.svelte_svelte_type_style_lang.0256517d.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/4.1249bc41.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/9.edcd7466.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/stores.70c4530f.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/ripple.510b20eb.js">
+		<link
+			rel="preload"
+			href="../fonts/OpenSans-VariableFont_wdth,wght.ttf"
+			as="font"
+			type="font/ttf"
+			crossorigin
+		/>
+		<link
+			rel="preload"
+			href="../fonts/RobotoMono-VariableFont_wght.ttf"
+			as="font"
+			type="font/ttf"
+			crossorigin
+		/>
+		<script type="module">
+			function rgb(hex) {
+				const color = hex;
+				const r = parseInt(color.slice(1, 3), 16);
+				const g = parseInt(color.slice(3, 5), 16);
+				const b = parseInt(color.slice(5, 7), 16);
+				return `${r} ${g} ${b}`;
+			}
+			const color = localStorage.getItem('config');
+			if(color) {
+				let myColor = rgb(JSON.parse(color).color);
+				let myTheme = JSON.parse(color).theme;
+				myColor && document.body.style.setProperty("--color-primary-500", myColor);
+				if(myTheme) {
+					document.body.dataset.theme = myTheme;
+				}
+			}
+	
+		</script>
+	</head>
+	<body data-sveltekit-preload-data="hover" data-theme="skeleton">
+		<div style="display: contents" class="h-full w-full">  <div class="w-full h-full flex flex-col"><div class="flex w-full justify-around py-4"><a class="btn variant-filled px-3 py-3 but" href="http://sveltekit-prerender/#projects"><iconify-icon icon="mdi:arrow-left" height="28" width="28"></iconify-icon> <span class="break" data-svelte-h="svelte-glx8pn"> Go back </span></a></div> <div class="mdx px-4 md:px-16"><!-- HTML_TAG_START -->
+<p></p>
+<p align="center"><img alt="Lambda express Logo" height="100px" src="/logo.png"></p>
+<h1 align="center">Lambda Express Landing</h1>
+<p align="center"> The landing page for the Lambda Express team :)</p>
+<h2 id="design">Design</h2>
+<p>Click <a
+  href="https://www.figma.com/file/Z1WRcmXUHNp00NRRJ1nBkz/Lambda-Express?node-id=30%3A5&t=xv1YlWnsmdj6Jeqq-1"
+  rel="nofollow"
+>here</a> to look at the design made on Figma.</p>
+<h2 id="technologies">Technologies</h2>
+<ul>
+<li><a href="https://turbo.build/" rel="nofollow">Turbo</a>: A tool to create and manage monorepos.<ul>
+<li>It helps a lot when it comes to configuration. If you take a look at the <code>packages</code> folder, you will notice that <code>tsconfig</code> and <code>eslint-config-custom</code> are packages that are shared between apps.</li>
+</ul></li>
+<li><a href="https://nextjs.org/" rel="nofollow">Next.js</a>: A react framework that supports SSR.</li>
+<li><a href="https://www.npmjs.com/package/husky" rel="nofollow">Husky</a>: To improve commits.</li>
+</ul>
+<h2 id="to-start">To start</h2>
+<ul>
+<li>Minimum requirements:<ul>
+<li>node v18.13.0</li>
+<li>yarn 1.22.19</li>
+</ul></li>
+<li><code>yarn install</code></li>
+<li><code>yarn build</code></li>
+</ul>
+<!-- HTML_TAG_END --></div></div> 
+			
+			<script>
+				{
+					__sveltekit_14w0c1o = {
+						base: new URL("..", location).pathname.slice(0, -1),
+						env: {}
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [null,null,{"type":"data","data":{data:"\n\u003Cp>\u003C/p>\n\u003Cp align=\"center\">\u003Cimg alt=\"Lambda express Logo\" height=\"100px\" src=\"/logo.png\">\u003C/p>\n\u003Ch1 align=\"center\">Lambda Express Landing\u003C/h1>\n\u003Cp align=\"center\"> The landing page for the Lambda Express team :)\u003C/p>\n\u003Ch2 id=\"design\">Design\u003C/h2>\n\u003Cp>Click \u003Ca\n  href=\"https://www.figma.com/file/Z1WRcmXUHNp00NRRJ1nBkz/Lambda-Express?node-id=30%3A5&t=xv1YlWnsmdj6Jeqq-1\"\n  rel=\"nofollow\"\n>here\u003C/a> to look at the design made on Figma.\u003C/p>\n\u003Ch2 id=\"technologies\">Technologies\u003C/h2>\n\u003Cul>\n\u003Cli>\u003Ca href=\"https://turbo.build/\" rel=\"nofollow\">Turbo\u003C/a>: A tool to create and manage monorepos.\u003Cul>\n\u003Cli>It helps a lot when it comes to configuration. If you take a look at the \u003Ccode>packages\u003C/code> folder, you will notice that \u003Ccode>tsconfig\u003C/code> and \u003Ccode>eslint-config-custom\u003C/code> are packages that are shared between apps.\u003C/li>\n\u003C/ul>\u003C/li>\n\u003Cli>\u003Ca href=\"https://nextjs.org/\" rel=\"nofollow\">Next.js\u003C/a>: A react framework that supports SSR.\u003C/li>\n\u003Cli>\u003Ca href=\"https://www.npmjs.com/package/husky\" rel=\"nofollow\">Husky\u003C/a>: To improve commits.\u003C/li>\n\u003C/ul>\n\u003Ch2 id=\"to-start\">To start\u003C/h2>\n\u003Cul>\n\u003Cli>Minimum requirements:\u003Cul>\n\u003Cli>node v18.13.0\u003C/li>\n\u003Cli>yarn 1.22.19\u003C/li>\n\u003C/ul>\u003C/li>\n\u003Cli>\u003Ccode>yarn install\u003C/code>\u003C/li>\n\u003Cli>\u003Ccode>yarn build\u003C/code>\u003C/li>\n\u003C/ul>\n"},"uses":{"params":["project"]}}];
+
+					Promise.all([
+						import("../_app/immutable/entry/start.a72377eb.js"),
+						import("../_app/immutable/entry/app.62caff78.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 4, 9],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>
