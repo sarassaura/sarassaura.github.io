@@ -44,7 +44,7 @@
 	}
 </script>
 
-<div class="dropdown p-4 variant-glass-primary rounded-md" data-popup="config">
+<div class="dropdown p-4 variant-ghost-surface rounded-md backdrop-blur-none" data-popup="config">
 	<div class="flex justify-between gap-x-5 my-3 items-center">
 		<p>Dark Mode</p>
 		<LightSwitch />
@@ -62,7 +62,7 @@
 		>
 			{theme}
 		</button>
-		<div class="sub p-4 variant-glass-primary rounded-md space-y-3" data-popup="popupCombobox">
+		<div class="sub p-4 variant-glass-surface rounded-md space-y-3" data-popup="popupCombobox">
 			{#each themeChoices as choice}
 				<button
 					on:click={() => {
@@ -72,7 +72,7 @@
 						colorValue = choice.initial;
 						$colorStore = { color: choice.initial, theme: choice.name };
 					}}
-					class="capitalize btn dark:variant-soft variant-ringed w-full"
+					class="capitalize btn dark:variant-ghost-primary variant-ringed w-full"
 				>
 					{choice.name}
 				</button>
