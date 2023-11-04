@@ -9,19 +9,16 @@
 	import Websocket from '$lib/Icons/websocket.svelte';
 	import Node from '$lib/Icons/node.svelte';
 	import Python from '$lib/Icons/python.svelte';
-	import Rust from '$lib/Icons/rust.svelte';
-	import C from '$lib/Icons/c.svelte';
 	import Mysql from '$lib/Icons/mysql.svelte';
 	import Github from '$lib/Icons/github2.svelte';
 	import Docker from '$lib/Icons/docker.svelte';
 	import Mongodb from '$lib/Icons/mongodb.svelte';
 	import Firebase from '$lib/Icons/firebase.svelte';
 	import Jest from '$lib/Icons/jest.svelte';
-	import Cypress from '$lib/Icons/cypress.svelte';
-	import Playwright from '$lib/Icons/playwright.svelte';
 	import Storybook from '$lib/Icons/storybook.svelte';
 	import Figma from '$lib/Icons/figma.svelte';
 	import Tailwind from '$lib/Icons/tailwind.svelte';
+	import Redux from '$lib/Icons/redux.svelte';
 
 	onMount(() => {
 		const show = document.querySelectorAll('.showoff');
@@ -76,14 +73,6 @@
 			icon: Python
 		},
 		{
-			name: '\xa0Rust',
-			icon: Rust
-		},
-		{
-			name: '',
-			icon: C
-		},
-		{
 			name: '\xa0MySQL',
 			icon: Mysql
 		}
@@ -111,14 +100,6 @@
 			icon: Jest
 		},
 		{
-			name: '\xa0Cypress',
-			icon: Cypress
-		},
-		{
-			name: '\xa0Playwright',
-			icon: Playwright
-		},
-		{
 			name: '\xa0Storybook',
 			icon: Storybook
 		},
@@ -129,6 +110,10 @@
 		{
 			name: '\xa0Tailwind',
 			icon: Tailwind
+		},
+		{
+			name: '\xa0Redux',
+			icon: Redux
 		}
 	];
 </script>
