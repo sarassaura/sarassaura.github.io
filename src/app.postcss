@@ -321,7 +321,7 @@
             content: '';
             inset: 0px;
             height: 100%;
-            @apply border-black dark:border-white;
+            @apply border-[rgb(var(--theme-font-color-base))] dark:border-[rgb(var(--theme-font-color-dark))];
             animation: type 4s steps(13) forwards 200ms, blinks 1.2s steps(5, start) 4.2s infinite;
             border-left: solid 2px;
             background-color: transparent;
@@ -459,7 +459,7 @@
     .mdx :is(h1, h2, h3, h4, h5, h6) {
         padding-bottom: 0.5rem;
         border-bottom: 1px solid;
-        @apply dark:border-white/25 border-black/25;
+        @apply dark:border-[rgb(var(--theme-font-color-dark))]/25 border-[rgb(var(--theme-font-color-base))]/25;
     }
 
     .mdx :is(h2, h3, h4, h5, h6) {
@@ -729,7 +729,6 @@
             position: absolute;
             left: 10px;
             pointer-events: none;
-            color: #808cb1;
             padding: 5px;
             transition: transform 500ms, border 500ms, font-size 500ms, letter-spacing 500ms, color 500ms;
             border: none;
@@ -988,12 +987,14 @@
         overflow: hidden;
 	}
     .variant-filled > .ripple {
-        background-color: rgba(255, 255, 255, 0.5);
+        background-color: rgb(var(--color-surface-200));
+        opacity: 0.5;
     }
 
     .dark body {
         .variant-filled > .ripple {
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: rgb(var(--color-surface-800));
+            opacity: 0.7;
         }
     }
 
@@ -1058,7 +1059,7 @@
             width: 100%;
             height: 100%;
             border-radius: 50%;
-            @apply dark:bg-white bg-black;
+            background-color: rgb(var(--theme-font-color-base));
             z-index: -1;
             animation: pulse 2s ease-in infinite;
         }
@@ -1071,7 +1072,7 @@
             width: 100%;
             height: 100%;
             border-radius: 50%;
-            @apply dark:bg-white bg-black;
+            @apply bg-[rgb(var(--theme-font-color-base))] dark:bg-[rgb(var(--theme-font-color-dark))];
             z-index: -1;
             animation: pulse 2s ease-in 1s infinite;
         }
