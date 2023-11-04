@@ -19,7 +19,9 @@ export async function load({ params }) {
 		.catch(() => {
 			throw error(404, `Could not find ${params.project}`);
 		});
+
 	return {
-		data: data
+		data: data,
+		slug: params.project
 	};
 }
