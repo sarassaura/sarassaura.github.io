@@ -285,8 +285,15 @@
         & > img {
             @apply snap-center;
             object-fit: scale-down;
-            display: block;
-            height: inherit;
+
+            height: 368.4px;
+            width: 368.4px;
+
+            @media only screen and (width >= 1024px) {
+                height: 640px;
+                width: 640px;
+            }
+
         }
     }
 
