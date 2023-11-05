@@ -435,10 +435,10 @@
     }
 
     .work {
-        @apply rounded-md [&>*]:pointer-events-none grayscale hover:grayscale-0;
+        @apply rounded-md [&>*]:pointer-events-none;
 
         @media (hover: none) {
-            @apply grayscale-0 !important;
+            @apply hover:grayscale-0 !important;
         }
 
         width: 100%;
@@ -480,9 +480,10 @@
 
     .mdx :is(img) {
         @apply py-4 md:py-8;
-        max-height: 550px;
+        max-height: 1800px;
 
         &[height="100px"] {
+            max-height: 550px;
             height: 300px;
             align-self: center;
         }

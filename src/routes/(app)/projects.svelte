@@ -15,7 +15,7 @@
 			</div>
 			<a href={`/projects/${item.node.name}`}>
 				<img
-					class="work rounded-md [&>*]:pointer-events-none grayscale hover:grayscale-0"
+					class="work rounded-md [&>*]:pointer-events-none hover:grayscale grayscale-0"
 					loading="lazy"
 					width="inherit"
 					height="inherit"
