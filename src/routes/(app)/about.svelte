@@ -5,12 +5,12 @@
 
 <div class="section about shrink-none" id="about">
 	<div class="hero-body">
-		<p class="heading mb-5 lg:mb-8">
+		<h1 class="heading mb-5 lg:mb-8">
 			Hi,
 			<span class="">I'm Sarah,</span>
 			<br class="break" />
 			<span class="typewrite">Web Developer</span>
-		</p>
+		</h1>
 		<div class="subheading mb-10 lg:mb-16">
 			I am passionate about coding, I have a technical diploma in computing for the internet and I'm
 			currently studying computer science.
