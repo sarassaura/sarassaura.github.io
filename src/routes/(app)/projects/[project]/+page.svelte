@@ -22,7 +22,7 @@
 		on:click={Ripple}
 	>
 		<iconify-icon icon="mdi:arrow-left" height="28" width="28" />
-		<span class="break">&nbspPrevious&nbsp</span>
+		<span class="break !ml-0">&nbspPrevious&nbsp</span>
 	</a>
 	<a
 		class="btn variant-filled px-3 py-3 but"
