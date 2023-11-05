@@ -37,8 +37,8 @@
 		href={`${$page.url.origin}/projects/${all[next].node.name}`}
 		on:click={Ripple}
 	>
-		<iconify-icon icon="mdi:arrow-right" height="28" width="28" />
 		<span class="break">&nbspNext&nbsp</span>
+		<iconify-icon icon="mdi:arrow-right" height="28" width="28" class="!ml-0" />
 	</a>
 </div>
 
