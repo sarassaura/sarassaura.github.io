@@ -53,10 +53,8 @@
 
     html, body {
         @apply h-full overflow-x-hidden relative dark:bg-surface-800 bg-surface-200;
-        max-width: 1280px;
         width: 100%;
         margin: 0 auto;
-        scrollbar-width: none !important;
 
 
         @media (prefers-reduced-motion) {
@@ -69,6 +67,8 @@
 
     main {
         @apply h-full;
+        max-width: 1280px;
+        margin: auto;
     }
 
     #page {
@@ -88,6 +88,8 @@
 
     .navbar, #page-footer {
         @apply md:px-16 !important;
+        max-width: 1280px;
+        margin: auto;
     }
 
     .section {
