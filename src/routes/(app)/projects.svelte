@@ -17,8 +17,6 @@
 				<img
 					class="work rounded-md [&>*]:pointer-events-none hover:grayscale grayscale-0"
 					loading="lazy"
-					width="inherit"
-					height="inherit"
 					use:popup={{
 						event: 'hover',
 						target: item.node.name,
@@ -29,6 +27,11 @@
 				/>
 			</a>
 			<figcaption>
+				<div class="flex gap-2 py-2">
+					{#each item.node.repositoryTopics.nodes as topics}
+						<span class="badge variant-ghost-primary">{topics.topic.name}</span>
+					{/each}
+				</div>
 				<div class="flex gap-4 items-center">
 					<a
 						href={`https://github.com/sarassaura/${item.node.name}`}
@@ -41,11 +44,6 @@
 						Website
 						<iconify-icon icon="ph:arrow-square-out-bold" height="20px" aria-hidden="true" />
 					</a>
-				</div>
-				<div class="flex gap-2 py-2">
-					{#each item.node.repositoryTopics.nodes as topics}
-						<span class="badge variant-ghost-primary">{topics.topic.name}</span>
-					{/each}
 				</div>
 			</figcaption>
 		</figure>
