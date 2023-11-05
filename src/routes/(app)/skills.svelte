@@ -10,7 +10,6 @@
 	id="skills"
 >
 	<div>
-		<h2 class="sr-only">Skills</h2>
 		<ShowOff />
 	</div>
 	<div class="special">
