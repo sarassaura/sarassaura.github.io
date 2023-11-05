@@ -85,16 +85,19 @@
 
 <div class="section contact md:px-16 px-4 relative shrink-0 gap-8 py-8" id="contact-me">
 	<h2 class="sr-only">Contact</h2>
-	<form use:form class="space-y-4 md:px-0 flex items-center justify-center flex-col relative">
+	<form
+		use:form
+		class="space-y-4 md:px-0 flex items-center justify-center flex-col relative w-full"
+	>
 		<p class="h3 py-4">Send me a message</p>
-		<label class="label">
+		<label class="label max-w-lg">
 			<input class="input" type="text" required placeholder=" " name="name" autocomplete="name" />
 			<span>Name</span>
 			{#if $errors.name && $errors.name[0] != null}
 				<p class="dark:text-error-300 text-error-700">{$errors.name && $errors.name[0]}</p>
 			{/if}
 		</label>
-		<label class="label">
+		<label class="label max-w-lg">
 			<input
 				class="input"
 				type="email"
@@ -108,7 +111,7 @@
 				<p class="dark:text-error-300 text-error-700">{$errors.email && $errors.email[0]}</p>
 			{/if}
 		</label>
-		<label class="label">
+		<label class="label max-w-lg">
 			<textarea
 				class={`textarea mobile-textarea`}
 				rows="5"
