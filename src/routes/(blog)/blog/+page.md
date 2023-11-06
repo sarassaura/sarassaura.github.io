@@ -21,4 +21,4 @@ Hey friends! 👋
 
 Media inside the **static** folder is served from `/`.
 
-![Svelte](flower.svg)
+![Svelte](flower.ico)
