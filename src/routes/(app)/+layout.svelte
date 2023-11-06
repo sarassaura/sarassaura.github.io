@@ -43,8 +43,12 @@
 	on:scroll={(e) => throttle(() => direction(e), 230)}
 	class="h-full relative"
 	slotPageFooter="flex justify-center py-5"
+	slotHeader="relative"
 >
 	<svelte:fragment slot="header">
+		<div class="skip-navigation">
+			<a href="#main-content">Skip navigation</a>
+		</div>
 		<Navbar />
 	</svelte:fragment>
 	<slot />

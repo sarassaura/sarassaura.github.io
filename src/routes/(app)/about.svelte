@@ -5,7 +5,7 @@
 
 <div class="section about shrink-none" id="about">
 	<div class="hero-body">
-		<h1 class="heading mb-5 lg:mb-8">
+		<h1 class="heading mb-5 lg:mb-8" id="main-content">
 			Hi,
 			<span class="">I'm Sarah,</span>
 			<br class="break" />

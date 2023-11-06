@@ -1116,5 +1116,15 @@
             transform: rotate(45deg) !important;
         }
     }
+
+    .skip-navigation {
+        @apply absolute h-full w-full flex justify-center items-center dark:bg-surface-900 bg-surface-50 z-[2];
+        transform: translateY(-100%);
+        transition: transform 300ms ease;
+
+        &:focus-within {
+            transform: translateY(0);
+        }
+    }
       
 }
