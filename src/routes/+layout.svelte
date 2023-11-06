@@ -12,15 +12,20 @@
 	export let data: { url: string };
 
 	let mount = false;
+	let wait = true;
+
 	onMount(() => (mount = true));
+	setTimeout(() => {
+		wait = false;
+	}, 800);
 </script>
 
 {#key data.url}
-	<div class={`w-full h-full items-center justify-center ${mount ? 'hidden' : 'flex'}`}>
+	<div class={`w-full h-full items-center justify-center ${mount && !wait ? 'hidden' : 'flex'}`}>
 		Loading...
 	</div>
 	<div
-		class={`w-full h-full flex-col ${mount ? 'flex' : 'hidden'}`}
+		class={`w-full h-full flex-col ${mount && !wait ? 'flex' : 'hidden'}`}
 		in:fly={{ x: -100, duration: 500, delay: 500, easing: sineIn }}
 		out:fly={{ x: 100, duration: 500, easing: sineOut }}
 	>
