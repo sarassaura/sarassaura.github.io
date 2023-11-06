@@ -458,9 +458,17 @@
     }
 
     .links {
-        /* border-bottom: 1px solid;
-        @apply border-black dark:border-white;
-        padding: 2px; */
+        @apply bg-gradient-to-r from-transparent via-[rgb(var(--color-primary-500))] via-50% to-transparent;
+        background-size: 0% 2.5px;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        transition: background-size 200ms ease;
+        
+        padding: 8px 0px;
+
+        &:hover {
+            background-size: 100% 2.5px;
+        }
     }
 
     .mdx {

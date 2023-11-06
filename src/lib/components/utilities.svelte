@@ -108,7 +108,7 @@
 	<div class="arrow variant-glass-primary" />
 </div>
 
-<a class="flex items-center gap-1 links duration-300 justify-self-start" href="/blog">
+<a class="flex items-center gap-1 links justify-self-start" href="/blog">
 	<p>Blog</p>
 	<Out height="20" width="20" />
 </a>
