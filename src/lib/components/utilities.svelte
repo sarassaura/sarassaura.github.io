@@ -42,6 +42,9 @@
 		const b = parseInt(color.slice(5, 7), 16);
 		return `${r} ${g} ${b}`;
 	}
+
+	let gitRef: HTMLAnchorElement;
+	let play = true;
 </script>
 
 <div class="dropdown p-4 variant-ghost-surface rounded-md" data-popup="config">
@@ -114,11 +117,22 @@
 </a>
 
 <a
-	class="flex items-center rounded-full hover:pulse w-fit justify-self-center"
+	class="flex items-center rounded-full pulse w-fit justify-self-center"
 	href="https://github.com/sarassaura/"
 	aria-label="Github"
+	bind:this={gitRef}
+	on:mouseenter={() => {
+		if (play) {
+			gitRef.style.setProperty('--_anime', 'pulse 2s ease-in');
+			play = false;
+			setTimeout(() => {
+				gitRef.style.setProperty('--_anime', 'none');
+				play = true;
+			}, 3000);
+		}
+	}}
 >
-	<Github height="28" width="28" style="rounded-full duration-300" />
+	<Github height="28" width="28" style="rounded-full" />
 </a>
 
 <div

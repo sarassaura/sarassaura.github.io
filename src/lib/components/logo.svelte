@@ -1,11 +1,8 @@
-<script>
+<script lang="ts">
 	import { page } from '$app/stores';
 	import Logo from '$lib/Icons/logo.svelte';
 
-	/**
-	 * @type {HTMLAnchorElement}
-	 */
-	let logoRef;
+	let logoRef: HTMLAnchorElement;
 	let play = true;
 </script>
 

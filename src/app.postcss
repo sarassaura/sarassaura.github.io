@@ -1082,7 +1082,7 @@
             border-radius: 50%;
             @apply bg-[rgb(var(--theme-font-color-base))] dark:bg-[rgb(var(--theme-font-color-dark))];
             z-index: -1;
-            animation: pulse 2s ease-in infinite;
+            animation: var(--_anime);
         }
         &:after {
             content: '';
@@ -1095,7 +1095,7 @@
             border-radius: 50%;
             @apply bg-[rgb(var(--theme-font-color-base))] dark:bg-[rgb(var(--theme-font-color-dark))];
             z-index: -1;
-            animation: pulse 2s ease-in 1s infinite;
+            animation: var(--_anime) 1s;
         }
     }
 
