@@ -1081,7 +1081,7 @@
             height: 100%;
             border-radius: 50%;
             @apply bg-[rgb(var(--theme-font-color-base))] dark:bg-[rgb(var(--theme-font-color-dark))];
-            z-index: -1;
+            z-index: 9;
             animation: var(--_anime);
         }
         &:after {
@@ -1094,8 +1094,12 @@
             height: 100%;
             border-radius: 50%;
             @apply bg-[rgb(var(--theme-font-color-base))] dark:bg-[rgb(var(--theme-font-color-dark))];
-            z-index: -1;
+            z-index: 9;
             animation: var(--_anime) 1s;
+        }
+
+        & > svg {
+            z-index: 10;
         }
     }
 
