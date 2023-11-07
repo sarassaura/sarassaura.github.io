@@ -5,20 +5,12 @@
 	import type { PageData } from './$types';
 
 	export let data: PageData;
-
-	let all = data.projects.viewer.pinnedItems.edges;
-	let index = all.findIndex((el) => el.node.name == data.slug);
-	let total = data.projects.viewer.pinnedItems.totalCount;
-	let next = (index + 1) % total;
-	let previous = (index - 1) % total;
-
-	previous = previous < 0 ? total - 1 : previous;
 </script>
 
 <div class="flex w-full justify-around py-4">
 	<a
 		class="btn variant-filled px-3 py-3 but"
-		href={`${$page.url.origin}/projects/${all[previous].node.name}`}
+		href={`${$page.url.origin}/projects/${data.previous_link}`}
 		on:click={Ripple}
 	>
 		<iconify-icon icon="mdi:arrow-left" height="28" width="28" />
@@ -30,11 +22,11 @@
 		on:click={Ripple}
 	>
 		<iconify-icon icon="clarity:home-line" height="28" width="28" />
-		<span class="break">&nbspGo back&nbsp</span>
+		<span class="break !ml-0 pl-1">&nbspGo back&nbsp</span>
 	</a>
 	<a
 		class="btn variant-filled px-3 py-3 but"
-		href={`${$page.url.origin}/projects/${all[next].node.name}`}
+		href={`${$page.url.origin}/projects/${data.next_link}`}
 		on:click={Ripple}
 	>
 		<span class="break">&nbspNext&nbsp</span>

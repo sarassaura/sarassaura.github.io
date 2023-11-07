@@ -1,27 +1,43 @@
-import axios from 'axios';
 import { compile } from 'mdsvex';
 import { error } from '@sveltejs/kit';
 import rehypeSlug from 'rehype-slug';
 import remarkUnwrapImages from 'remark-unwrap-images';
 
 /** @type {import('./$types').PageLoad} */
-export async function load({ params }) {
-	const data = await axios
-		.get(`https://raw.githubusercontent.com/sarassaura/${params.project}/main/README.md`)
-		.then(
-			async (data) =>
-				await compile(data.data, {
-					rehypePlugins: [rehypeSlug],
-					remarkPlugins: [remarkUnwrapImages]
-				})
-		)
-		.then((data) => data?.code.replaceAll('{@html `', '').replaceAll('`}', ''))
-		.catch(() => {
-			throw error(404, `Could not find ${params.project}`);
-		});
+export async function load({ params, parent }) {
+	const {
+		projects: {
+			viewer: {
+				pinnedItems: { edges }
+			}
+		}
+	} = await parent();
+
+	const index = edges.findIndex((el) => el.node.name == params.project);
+
+	if (index == -1) {
+		throw error(404, `Could not find ${params.project}`);
+	}
+
+	const next = (index + 1) % edges.length;
+	let previous = (index - 1) % edges.length;
+	previous = previous < 0 ? edges.length - 1 : previous;
+
+	const next_link = edges[next].node.name;
+	const previous_link = edges[previous].node.name;
+
+	const mdx = edges[index].node.object.text;
+
+	const project = await compile(mdx, {
+		rehypePlugins: [rehypeSlug],
+		remarkPlugins: [remarkUnwrapImages]
+	});
+
+	const data = project?.code.replaceAll('{@html `', '').replaceAll('`}', '');
 
 	return {
-		data: data,
-		slug: params.project
+		data,
+		next_link,
+		previous_link
 	};
 }

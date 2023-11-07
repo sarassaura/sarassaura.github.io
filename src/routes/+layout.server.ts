@@ -13,6 +13,11 @@ export async function load({ url }) {
 					edges {
 						node {
 							... on Repository {
+								object(expression: "main:README.md") {
+									... on Blob {
+										text
+									}
+								}
 								name
 								description
 								openGraphImageUrl
@@ -40,6 +45,9 @@ export async function load({ url }) {
 				totalCount: number;
 				edges: Array<{
 					node: {
+						object: {
+							text: string;
+						};
 						name: string;
 						description: string;
 						openGraphImageUrl: string;
