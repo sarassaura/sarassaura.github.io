@@ -41,9 +41,9 @@
 
 <AppShell
 	on:scroll={(e) => throttle(() => direction(e), 230)}
-	class="h-full relative"
+	class="h-full"
 	slotPageFooter="flex justify-center py-5"
-	slotHeader="relative"
+	slotHeader="relative z-[8]"
 >
 	<svelte:fragment slot="header">
 		<div class="skip-navigation">
