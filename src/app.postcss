@@ -864,7 +864,20 @@
         gap: 0.5rem;
         width: 100%;
         @apply px-4;
-        grid-template-areas: "links testimonials testimonials testimonials" " links logo whatsapp back" "cookie copyright copyright privacy";
+        grid-template-areas:
+        "testimonials testimonials"
+        "links logo"
+        "links whatsapp"
+        "links back"
+        "cookie privacy"
+        "copyright copyright";
+
+        @media only screen and (width >= 680px) {
+            grid-template-areas:
+            "links testimonials testimonials testimonials"
+            "links logo whatsapp back"
+            "cookie copyright copyright privacy";
+        }
 
         & > * {
             @apply card dark:bg-surface-800 bg-surface-200 rounded-container-token p-6 w-full flex justify-center items-center;

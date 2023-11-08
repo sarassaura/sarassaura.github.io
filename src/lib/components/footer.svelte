@@ -8,20 +8,39 @@
 	onMount(() => {
 		scroller = document.querySelector('#page')!;
 	});
+
+	let logoRef: HTMLElement;
+	let play = true;
 </script>
 
 <div class="footer">
 	<div class="footer--links flex flex-col gap-y-4">
-		<p class="h6">Links</p>
+		<p class="h6 opacity-75">Links</p>
 		<a href="/#about">About</a>
 		<a href="/#skills">Skills</a>
 		<a href="/#projects">Projects</a>
 		<a href="/#contact-me">Contact me</a>
 	</div>
 	<div class="footer--testimonials">Testimonials</div>
-	<div class="footer--whatsapp">Whatsapp</div>
-	<div class="footer--logo">
-		<Logo />
+	<a class="footer--whatsapp btn" href="https://wa.me/5511991464391">
+		<iconify-icon icon="ic:baseline-whatsapp" aria-label="Whatsapp" height="42" />
+	</a>
+	<div
+		class="footer--logo logo"
+		bind:this={logoRef}
+		role="img"
+		on:mouseenter={() => {
+			if (play) {
+				logoRef.style.setProperty('--_anime', 'sign 2.5s linear');
+				play = false;
+				setTimeout(() => {
+					logoRef.style.setProperty('--_anime', 'none');
+					play = true;
+				}, 2500);
+			}
+		}}
+	>
+		<Logo height="42px" width="42px" />
 	</div>
 	<button
 		class="h-full w-full flex justify-center items-center footer--back btn"
