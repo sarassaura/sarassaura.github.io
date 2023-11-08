@@ -22,8 +22,12 @@
 		<a href="/#contact-me">Contact me</a>
 	</div>
 	<div class="footer--testimonials">Testimonials</div>
-	<a class="footer--whatsapp btn rounded-container-token" href="https://wa.me/5511991464391">
-		<iconify-icon icon="ic:baseline-whatsapp" aria-label="Whatsapp" height="42" />
+	<a
+		class="footer--whatsapp btn rounded-container-token"
+		href="https://wa.me/5511991464391"
+		aria-label="Whatsapp"
+	>
+		<iconify-icon icon="ic:baseline-whatsapp" aria-hidden="true" height="42" />
 	</a>
 	<div
 		class="footer--logo logo"
