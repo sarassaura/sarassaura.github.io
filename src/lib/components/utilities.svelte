@@ -13,7 +13,6 @@
 	let theme: string;
 
 	const themeChoices = [
-		{ name: 'skeleton', initial: '#0EA5E9' },
 		{ name: 'crimson', initial: '#d4163c' },
 		{ name: 'wintry', initial: '#3b82f6' },
 		{ name: 'gold-nouveau', initial: '#e6c833' }
@@ -25,8 +24,8 @@
 	}
 
 	const colorStore: Writable<Config> = localStorageStore('config', {
-		color: '#0EA5E9',
-		theme: 'skeleton'
+		color: '#d4163c',
+		theme: 'crimson'
 	});
 
 	onMount(() => {
@@ -100,11 +99,11 @@
 		<button
 			class="btn variant-outline-primary"
 			on:click={() => {
-				colorValue = '#0EA5E9';
-				theme = 'skeleton';
-				root.dataset.theme = 'skeleton';
+				colorValue = '#d4163c';
+				theme = 'crimson';
+				root.dataset.theme = 'crimson';
 				$colorStore = { color: colorValue, theme: theme };
-				root.style.setProperty('--color-primary-500', `14 165 233`);
+				root.style.setProperty('--color-primary-500', `212 22 60`);
 			}}>Reset</button
 		>
 	</div>
