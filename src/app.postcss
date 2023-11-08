@@ -391,7 +391,7 @@
     }
 
     .module {
-        @apply flex flex-col card card-hover w-full items-center justify-center px-10 py-10 shrink-0 hyphens-auto;
+        @apply flex flex-col card card-hover w-full items-center justify-center px-10 py-10 shrink-0 hyphens-auto dark:bg-surface-800 bg-surface-200;
         height: 25rem;
 
         @media only screen and (width >= 600px) {
@@ -867,7 +867,7 @@
         grid-template-areas: "links testimonials testimonials testimonials" " links logo whatsapp back" "cookie copyright copyright privacy";
 
         & > * {
-            @apply dark:bg-surface-900 bg-surface-50 rounded-container-token p-4 w-full flex justify-center items-center;
+            @apply card dark:bg-surface-800 bg-surface-200 rounded-container-token p-6 w-full flex justify-center items-center;
         }
 
         &--links {

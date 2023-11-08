@@ -2,7 +2,6 @@
 	import { ShowOff } from '$lib';
 	import Html from '$lib/Icons/html.svelte';
 	import Design from '$lib/Icons/design.svelte';
-	import Node from '$lib/Icons/node.svelte';
 </script>
 
 <div
@@ -40,7 +39,7 @@
 		</div>
 		<div class="module">
 			<header class="card-header">
-				<Node height="52" width="52" />
+				<iconify-icon icon="akar-icons:node-fill" height="52" width="52" aria-hidden="true" />
 			</header>
 			<section class="p-4">
 				<p class="h5">Backend</p>

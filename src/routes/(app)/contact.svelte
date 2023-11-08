@@ -4,7 +4,6 @@
 	import { createForm } from 'felte';
 	import { validator } from '@felte/validator-zod';
 	import { fade } from 'svelte/transition';
-	import Github from '$lib/Icons/github.svelte';
 	import { Ripple } from '$lib/functions/ripple';
 	import Coil from '$lib/Icons/coil.svelte';
 
@@ -139,7 +138,9 @@
 				<iconify-icon icon="icon-park-outline:edit-name" height="36px" aria-hidden="true" />Sarah
 				Yukino Nakada
 			</p>
-			<p><Github height="36" width="36" />github.com/sarassaura</p>
+			<p>
+				<iconify-icon icon="mdi:github" height="36px" aria-hidden="true" />github.com/sarassaura
+			</p>
 			<p>
 				<iconify-icon icon="mdi:gmail" height="36px" aria-hidden="true" />Gmail: sarahyukinonakada
 			</p>
