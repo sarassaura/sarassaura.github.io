@@ -25,15 +25,6 @@
 
 		if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
 			show.forEach((one) => {
-				// const list = one.querySelector('.list')!;
-				// const content = Array.from(list.children);
-
-				// content.forEach((item) => {
-				// 	const doubled = item.cloneNode(true) as Element;
-				// 	doubled.setAttribute('aria-hidden', 'true');
-				// 	list.appendChild(doubled);
-				// });
-
 				one.setAttribute('data-animated', 'true');
 			});
 		}
@@ -127,13 +118,13 @@
 	<ul class="list">
 		{#each skills as skill}
 			<li>
-				<svelte:component this={skill.icon} height="36" width="36" />
+				<svelte:component this={skill.icon} />
 				{skill.name}
 			</li>
 		{/each}
 		{#each skills as skill}
 			<li aria-hidden="true">
-				<svelte:component this={skill.icon} height="36" width="36" />
+				<svelte:component this={skill.icon} />
 				{skill.name}
 			</li>
 		{/each}
@@ -149,13 +140,13 @@
 	<ul class="list">
 		{#each skills2 as skill}
 			<li>
-				<svelte:component this={skill.icon} height="36" width="36" />
+				<svelte:component this={skill.icon} />
 				{skill.name}
 			</li>
 		{/each}
 		{#each skills2 as skill}
 			<li aria-hidden="true">
-				<svelte:component this={skill.icon} height="36" width="36" />
+				<svelte:component this={skill.icon} />
 				{skill.name}
 			</li>
 		{/each}

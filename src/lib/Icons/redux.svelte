@@ -1,9 +1,9 @@
-<script lang="ts">
-	export let height: string;
-	export let width: string;
-</script>
-
-<svg xmlns="http://www.w3.org/2000/svg" {width} {height} viewBox="0 0 24 24" aria-hidden="true"
+<svg
+	xmlns="http://www.w3.org/2000/svg"
+	width="36"
+	height="36"
+	viewBox="0 0 24 24"
+	aria-hidden="true"
 	><g fill="none"
 		><g clip-path="url(#akarIconsReduxFill0)"
 			><path
