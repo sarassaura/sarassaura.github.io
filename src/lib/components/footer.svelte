@@ -22,7 +22,7 @@
 		<a href="/#contact-me">Contact me</a>
 	</div>
 	<div class="footer--testimonials">Testimonials</div>
-	<a class="footer--whatsapp btn" href="https://wa.me/5511991464391">
+	<a class="footer--whatsapp btn rounded-container-token" href="https://wa.me/5511991464391">
 		<iconify-icon icon="ic:baseline-whatsapp" aria-label="Whatsapp" height="42" />
 	</a>
 	<div
@@ -43,7 +43,7 @@
 		<Logo height="42px" width="42px" />
 	</div>
 	<button
-		class="h-full w-full flex justify-center items-center footer--back btn"
+		class="h-full w-full flex justify-center items-center footer--back btn rounded-container-token"
 		on:click={() => {
 			scroller.scrollTo(0, 0);
 			goto('/');
