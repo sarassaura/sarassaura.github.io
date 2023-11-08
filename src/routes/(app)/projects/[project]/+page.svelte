@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import Footer from '$lib/components/footer.svelte';
 	import { Ripple } from '$lib/functions/ripple';
 	import type { PageData } from './$types';
+	import { goto } from '$app/navigation';
 
 	export let data: PageData;
 </script>
@@ -38,4 +38,13 @@
 	{@html data.data}
 </div>
 
-<Footer />
+<div class="footer">
+	<button
+		class="h-full w-full flex justify-center items-center"
+		on:click={() => {
+			document.body.scrollTo(0, 0);
+			goto($page.url.pathname);
+		}}>Back to Top</button
+	>
+	<div>©sarassaura, 2023. All rights reserved.</div>
+</div>
