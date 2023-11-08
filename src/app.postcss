@@ -846,15 +846,60 @@
 
     /* Footer */
 
-    .footer {
+    .footer-projects {
         display: grid;
-        padding: 1rem 0;
+        padding: 0 0 1rem 0;
         gap: 0.5rem;
         width: 100%;
         @apply px-4;
 
         & > * {
             @apply dark:bg-surface-900 bg-surface-50 rounded-container-token p-4 w-full flex justify-center items-center;
+        }
+    }
+
+    .footer {
+        display: grid;
+        padding: 0 0 1rem 0;
+        gap: 0.5rem;
+        width: 100%;
+        @apply px-4;
+        grid-template-areas: "links testimonials testimonials testimonials" " links logo whatsapp back" "cookie copyright copyright privacy";
+
+        & > * {
+            @apply dark:bg-surface-900 bg-surface-50 rounded-container-token p-4 w-full flex justify-center items-center;
+        }
+
+        &--links {
+            grid-area: links;
+        }
+
+        &--testimonials {
+            grid-area: testimonials;
+        }
+
+        &--whatsapp {
+            grid-area: whatsapp;
+        }
+
+        &--logo {
+            grid-area: logo;
+        }
+
+        &--back {
+            grid-area: back;
+        }
+
+        &--privacy {
+            grid-area: privacy;
+        }
+
+        &--cookie {
+            grid-area: cookie;
+        }
+
+        &--copyright {
+            grid-area: copyright;
         }
     }
 }
@@ -1145,11 +1190,6 @@
         &:focus-within {
             transform: translateY(0);
         }
-    }
-
-    #to-top {
-        @apply absolute h-full w-full flex justify-center items-center dark:bg-surface-900 bg-surface-50;
-        transform: translateY(-100%);
     }
       
 }

@@ -10,12 +10,18 @@
 </script>
 
 <div class="footer">
+	<div class="footer--links">Links</div>
+	<div class="footer--testimonials">Testimonials</div>
+	<div class="footer--whatsapp">Whatsapp</div>
+	<div class="footer--logo">Logo</div>
 	<button
-		class="h-full w-full flex justify-center items-center"
+		class="h-full w-full flex justify-center items-center footer--back btn"
 		on:click={() => {
 			scroller.scrollTo(0, 0);
 			goto('/');
 		}}>Back to Top</button
 	>
-	<div>©sarassaura, 2023. All rights reserved.</div>
+	<div class="footer--privacy">Privacy Policy</div>
+	<div class="footer--cookie">Cookie Policy</div>
+	<div class="footer--copyright">©sarassaura, 2023. All rights reserved.</div>
 </div>

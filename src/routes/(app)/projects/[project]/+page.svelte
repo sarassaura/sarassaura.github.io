@@ -38,7 +38,7 @@
 	{@html data.data}
 </div>
 
-<div class="footer">
+<div class="footer-projects">
 	<button
 		class="h-full w-full flex justify-center items-center"
 		on:click={() => {
