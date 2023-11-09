@@ -6,6 +6,9 @@
 	import { storePopup } from '@skeletonlabs/skeleton';
 	import { sineIn, sineOut } from 'svelte/easing';
 	import { onMount } from 'svelte';
+	import Roboto from '$lib/assets/fonts/static/RobotoMono-Regular.woff2';
+	import OpenSans from '$lib/assets/fonts/static/OpenSans-Regular.woff2';
+	import OpenSansBold from '$lib/assets/fonts/static/OpenSans-Bold.woff2';
 
 	storePopup.set({ computePosition, autoUpdate, offset, shift, flip, arrow });
 
@@ -19,6 +22,12 @@
 		wait = false;
 	}, 800);
 </script>
+
+<svelte:head>
+	<link rel="preload" href={Roboto} as="font" type="font/woff2" crossorigin="crossorigin" />
+	<link rel="preload" href={OpenSans} as="font" type="font/woff2" crossorigin="crossorigin" />
+	<link rel="preload" href={OpenSansBold} as="font" type="font/woff2" crossorigin="crossorigin" />
+</svelte:head>
 
 {#key data.url}
 	<div
