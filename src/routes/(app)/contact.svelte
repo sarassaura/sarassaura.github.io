@@ -82,10 +82,9 @@
 	</aside>
 {/if}
 
-<div class="section contact md:px-16 px-4 relative shrink-0 gap-8 py-8">
+<div class="section contact md:px-16 px-4 relative shrink-0 gap-8 py-8" id="contact-me">
 	<form
 		use:form
-		id="contact-me"
 		class="space-y-4 md:px-0 flex items-center justify-center flex-col relative w-full order-2 md:order-1"
 	>
 		<p class="h3 py-4">Send me a message</p>
