@@ -82,10 +82,11 @@
 	</aside>
 {/if}
 
-<div class="section contact md:px-16 px-4 relative shrink-0 gap-8 py-8" id="contact-me">
+<div class="section contact md:px-16 px-4 relative shrink-0 gap-8 py-8">
 	<form
 		use:form
-		class="space-y-4 md:px-0 flex items-center justify-center flex-col relative w-full"
+		id="contact-me"
+		class="space-y-4 md:px-0 flex items-center justify-center flex-col relative w-full order-2 md:order-1"
 	>
 		<p class="h3 py-4">Send me a message</p>
 		<label class="label max-w-lg">
@@ -126,7 +127,7 @@
 		</label>
 		<button class="btn variant-filled but" disabled={$isSubmitting} on:click={Ripple}>Send</button>
 	</form>
-	<div class="flex items-center justify-center pow">
+	<div class="flex items-center justify-center pow order-1 md:order-2">
 		<div class="pr-5 sm:pr-8 -mr-[65px] sm:-mr-[77px]">
 			<Coil />
 		</div>

@@ -80,7 +80,7 @@
         height: 0px;
     }
 
-    .navbar, .footer {
+    .navbar, .footer, .footer-projects {
         @apply md:px-16 !important;
         max-width: 1280px;
         margin: auto;
@@ -857,17 +857,19 @@
         @apply px-4;
         grid-template-areas:
         "testimonials testimonials"
-        "links logo"
         "links whatsapp"
+        "links logo"
         "links back"
         "cookie privacy"
         "copyright copyright";
+        grid-template-columns: 1fr 1fr;
 
         @media only screen and (width >= 680px) {
             grid-template-areas:
             "links testimonials testimonials testimonials"
-            "links logo whatsapp back"
+            "links whatsapp logo back"
             "cookie copyright copyright privacy";
+            grid-template-columns: 1fr 1fr 1fr 1fr;
         }
 
         & > * {
@@ -880,6 +882,21 @@
 
         &--testimonials {
             grid-area: testimonials;
+            display: flex;
+            flex-direction: column;
+            @apply p-8;
+            max-height: 100%;
+            max-width: 100%;
+            text-align: center;
+            text-wrap: balance;
+
+            & p:first-child {
+                @apply mb-1.5;
+            }
+
+            & p:nth-child(2) {
+                @apply mb-2;
+            }
         }
 
         &--whatsapp {

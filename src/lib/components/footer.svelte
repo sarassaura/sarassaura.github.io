@@ -21,7 +21,13 @@
 		<a href="/#projects">Projects</a>
 		<a href="/#contact-me">Contact me</a>
 	</div>
-	<div class="footer--testimonials">Testimonials</div>
+	<div class="footer--testimonials">
+		<p class="text-lg">Gabrielle Oliveira</p>
+		<p class="italic">
+			"Sarah is a person committed to solving problems and I admire this ability in her, besides
+			having high technical prowess, she possesses a lot of capability and professionalism."
+		</p>
+	</div>
 	<a
 		class="footer--whatsapp btn rounded-container-token"
 		href="https://wa.me/5511991464391"
