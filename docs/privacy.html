@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="./flower.ico"/>
+		<title>Sarah Yukino</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="Sarah's Personal Portfolio">
+		<meta name="keywords" content="JavaScript, Portfolio, Web, Developer">
+		<meta property="og:title" content="Sarah Yukino - Web developer &amp; Software Engineer" />
+		<meta property="og:url" content="https://sarassaura.github.io/" />
+		<meta property="og:description" content="Sarah's Personal Portfolio" />
+		<meta property="og:type" content="profile" />
+		<meta property="og:image" content="./flower.ico" />
+		<meta property="og:site_name" content="Sarah Yukino" />
+		<meta name="author" content="Sarah Yukino Nakada">
+		
+		<link href="./_app/immutable/assets/0.52c38535.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/ProgressBar.4f1e9ba5.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.45ca5ccd.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/scheduler.0d32b5e0.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.2448d83c.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.a672b784.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.d1ac41d3.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.3e42d8e6.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/0.477a3287.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/ProgressBar.svelte_svelte_type_style_lang.11bb91e8.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/4.eaa104c3.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/11.f20baf20.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/ripple.510b20eb.js"><!-- HEAD_svelte-1pfzvb7_START --><link rel="preload" href="/_app/immutable/assets/RobotoMono-Regular.9dd19d92.woff2" as="font" type="font/woff2" crossorigin="crossorigin"><link rel="preload" href="/_app/immutable/assets/OpenSans-Regular.0ffc6d3e.woff2" as="font" type="font/woff2" crossorigin="crossorigin"><link rel="preload" href="/_app/immutable/assets/OpenSans-Bold.c139d083.woff2" as="font" type="font/woff2" crossorigin="crossorigin"><!-- HEAD_svelte-1pfzvb7_END -->
+		<script type="module">
+			function rgb(hex) {
+				const color = hex;
+				const r = parseInt(color.slice(1, 3), 16);
+				const g = parseInt(color.slice(3, 5), 16);
+				const b = parseInt(color.slice(5, 7), 16);
+				return `${r} ${g} ${b}`;
+			}
+			const color = localStorage.getItem('config');
+			if(color) {
+				let myColor = rgb(JSON.parse(color).color);
+				let myTheme = JSON.parse(color).theme;
+				myColor && document.body.style.setProperty("--color-primary-500", myColor);
+				if(myTheme == "crimson" || myTheme == "wintry" || myTheme == "gold-nouveau") {
+					document.body.dataset.theme = myTheme;
+				} else {
+					document.body.dataset.theme = "crimson";
+					document.body.style.setProperty("--color-primary-500", rgb("#d4163c"));
+					localStorage.setItem('config', JSON.stringify({ "color": '#d4163c', "theme": 'crimson' }))
+				}
+			}
+	
+		</script>
+	</head>
+	<body data-sveltekit-preload-data="hover" data-theme="crimson">
+		<div style="display: contents" class="h-full w-full">   <div class="w-full h-full items-center justify-center relative flex svelte-1fj7oar"><div class="loading svelte-1fj7oar"></div> <div class="loading svelte-1fj7oar"></div> <div class="loading svelte-1fj7oar"></div> <span data-svelte-h="svelte-omrbt4">Loading...</span></div> <div class="w-full h-full flex-col hidden svelte-1fj7oar"><div class="flex w-full justify-around py-4"><a class="btn variant-filled px-3 py-3 but" href="/" data-svelte-h="svelte-dbtsf9"><iconify-icon icon="mdi:arrow-left" height="28" width="28"></iconify-icon> <span class="break"> Go back </span></a></div></div> 
+			
+			<script>
+				{
+					__sveltekit_ocqnnj = {
+						base: new URL(".", location).pathname.slice(0, -1),
+						env: {}
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [{"type":"data","data":{projects:{viewer:{pinnedItems:{totalCount:4,edges:[{node:{object:{text:"\u003Cp>\u003C/p>\n\u003Cp align=\"center\">\u003Cimg alt=\"Lambda express Logo\" height=\"100px\" src=\"/logo.png\">\u003C/p>\n\u003Ch1 align=\"center\">Lambda Express Landing\u003C/h1>\n\u003Cp align=\"center\"> The landing page for the Lambda Express team :)\u003C/p>\n\u003Cp align=\"center\">\u003Cimg alt=\"Lambda express\" src=\"/lambda_optimized.webp\">\u003C/p>\n\n## Design\n\nClick [here](https://www.figma.com/file/Z1WRcmXUHNp00NRRJ1nBkz/Lambda-Express?node-id=30%3A5&t=xv1YlWnsmdj6Jeqq-1) to look at the design made on Figma.\n\n## Technologies\n\n- [Turbo](https://turbo.build/): A tool to create and manage monorepos.\n    - It helps a lot when it comes to configuration. If you take a look at the `packages` folder, you will notice that `tsconfig` and `eslint-config-custom` are packages that are shared between apps.\n- [Next.js](https://nextjs.org/): A react framework that supports SSR.\n- [Husky](https://www.npmjs.com/package/husky): To improve commits.\n\n## To start\n\n- Minimum requirements:\n    - node v18.13.0\n    - yarn 1.22.19\n- `yarn install`\n- `yarn build`\n"},name:"landing",description:"💻 | Lambda Express landing pages",openGraphImageUrl:"https://repository-images.githubusercontent.com/588190854/2fb11dd3-59d7-4e43-9c42-95cfb22410f1",createdAt:"2023-01-12T14:41:41Z",homepageUrl:"https://landing-web-hazel.vercel.app",repositoryTopics:{totalCount:4,nodes:[{topic:{name:"storybook"}},{topic:{name:"nextjs"}},{topic:{name:"turbo"}},{topic:{name:"chakra-ui"}}]}}},{node:{object:{text:"# Tattoo-Studio\n\n\u003Cdiv align=\"center\">\n\n![Banner](/public/Banner.png?raw=true)\n\n[Features](#features) •\n[Installation](#installation) •\n[Usage](#usage) •\n[Environment Variables](#environment-variables)\n\n![Home](/public/Home.gif)\n![Portfolio](/public/Portfolio.gif)\n![Contact](/public/Contact.gif)\n\nA `Tattoo-Studio` portfolio with Cloudinary Image Gallery, On-Demand ISR, SSG, Static Paths\n\n\u003C/div>\n\n## Features\n\n- Image Gallery connected with _cloudinary_ Account\n- Automatic e-mails with _nodemailer_\n- Form Validation with _react-hook-form_\n- Internationalization with _GetStaticProps_\n- Beautiful UI with _material-ui_\n- Beautiful Page Animations with _framer-motion_\n- Responsive 8-pt grid system with _figma_\n- Sitemap with _next-sitemap_\n- SEO with _next-seo_\n\n## Installation\n\n```sh\n# Clone this repository\n$ git clone git@github.com:florescente/tattoo.git\n\n# Go into the repository\n$ cd vitor-underground-tattoo\n\n# Install dependencies\n$ npm install\nOR\n$ yarn set version berry\n$ yarn install\n$ yarn dlx @yarnpkg/sdks vscode\n\n\n# Run the app\n$ npm run dev\nOR\n$ yarn dev\n```\n\n## Usage\n\n1. Create a Cloudinary Account\n2. Create a Gmail Account\n3. Get Cloudinary Config Info\n4. Generate Gmail App password\n5. Create Folders with Images in Cloudinary\n6. Set the environment variables\n7. run\n\n## Environment Variables\n\n```bash\nNEXT_PUBLIC_SITE_NAME\nNEXT_PUBLIC_SITE_URL\nCLOUDINARY_NAME\nCLOUDINARY_API_KEY\nCLOUDINARY_API_SECRET\nEMAIL - GMAIL\nPASSWORD - Generate APP password\nSECRET_TOKEN\n```\n\n## Cloudinary Configurations\n\nThis is important for the ISR revalidation:\n\nGo to the cloudinary settings, under uploads tab, and put this in notifications:\n\n```bash\nhttps://\u003CNEXT_PUBLIC_SITE_URL>/api/revalidate?secret=\u003CSECRET_TOKEN>\n```\n\n## Meta\n\nCreated By Florescente:\n[github.com/florescente](https://github.com/florescente)\n"},name:"tattoo",description:"🦋 A simple tattoo-studio portfolio ➴♡",openGraphImageUrl:"https://repository-images.githubusercontent.com/505037828/3f102a4c-119e-4a45-b3ef-8a24d178ce7e",createdAt:"2022-06-19T07:11:42Z",homepageUrl:"https://vitor-underground-tattoo.vercel.app",repositoryTopics:{totalCount:4,nodes:[{topic:{name:"material-ui"}},{topic:{name:"nextjs"}},{topic:{name:"typescript"}},{topic:{name:"cloudinary"}}]}}},{node:{object:{text:"# Tattoo Portfolio\n\n\u003Cdiv align=\"center\">\n\n![Banner](/public/banner.png?raw=true)\n\n[Features](#features) •\n[Installation](#installation) •\n[Usage](#usage) •\n[Environment Variables](#environment-variables)\n\n![Home](/public/page.gif)\n![Portfolio](/public/portfolio.gif)\n![Contact](/public/contact.gif)\n\nA `tattoo-artist` personal portfolio with Unsplash Gallery.\n\n\u003C/div>\n\n## Features\n\n- Image Gallery connected with _unsplash_\n- Lazy loading images with _blurhash_\n- Automatic e-mails with _nodemailer_\n- Form Validation with _react-hook-form_\n- Beautiful UI and dark-mode with _chakra-ui_\n- Beautiful Page Animations with _framer-motion_\n- Responsive UI\n- Static Generated Pages with _nextjs_\n- Sitemap with _next-sitemap_\n- SEO with _next-seo_\n\n## Installation\n\n```sh\n# Clone this repository\n$ git@github.com:florescente/underground.git\n\n# Go into the repository\n$ cd underground\n\n# Install dependencies\n$ npm install\nOR\n$ yarn set version berry\n$ yarn install\n$ yarn dlx @yarnpkg/sdks vscode\n\n\n# Run the app\n$ npm run dev\nOR\n$ yarn dev\n```\n\n## Usage\n\n1. Create an Unsplash Account\n2. Create a Gmail Account\n3. Get Unsplash Config Info\n4. Generate Gmail App password\n5. Configure URL in trampos.tsx static props\n6. Set the environment variables\n7. run\n\n## Environment variables\n\n```bash\nNEXT_PUBLIC_API_KEY_UNSPLASH - Unsplash API\nLD_LIBRARY_PATH=/var/task/node_modules/canvas/build/Release - Canvas Bug\nEMAIL - GMAIL\nPASSWORD - Gerar senha de APP\n```\n\n## Meta\n\nCreated By Florescente:\n[github.com/florescente](https://github.com/florescente)\n\n"},name:"underground",description:"👨‍💼 A simple tattoo-artist portfolio 🧑‍🎨",openGraphImageUrl:"https://repository-images.githubusercontent.com/496977071/087e94d3-6c54-4d90-9a57-e6c1a092c788",createdAt:"2022-05-27T11:49:50Z",homepageUrl:"https://underground-navy.vercel.app",repositoryTopics:{totalCount:4,nodes:[{topic:{name:"chakra-ui"}},{topic:{name:"nextjs"}},{topic:{name:"tailwind"}},{topic:{name:"unsplash"}}]}}},{node:{object:{text:"# Personal Portfolio\n\n\u003Cdiv align=\"center\">\n\nA `personal portfolio + blog` with svelte, github graphql api and markdown\n\n\u003C/div>\n\n## Features\n\n- Beautiful UI with _tailwind_\n- Dark mode + 4 themes with _skeleton_\n- Email service with _formspree_\n- Markdown support with _mdsvex_\n- Form Validation with _zod_\n- Static Generated Pages with _sveltekit_\n- Sitemap with _svelte-sitemap_\n\n## Meta\n\nCreated By Sarassaura:\n[github.com/sarassaura](https://github.com/sarassaura)"},name:"sarassaura.github.io",description:"My Personal Portfolio",openGraphImageUrl:"https://repository-images.githubusercontent.com/699015716/33e80536-d4dc-49ac-9202-ed7e75b11b4d",createdAt:"2023-10-01T17:11:11Z",homepageUrl:"https://sarassaura.github.io/",repositoryTopics:{totalCount:2,nodes:[{topic:{name:"graphql"}},{topic:{name:"svelte"}}]}}}]}}},url:"/privacy"},"uses":{"url":1}},null,null];
+
+					Promise.all([
+						import("./_app/immutable/entry/start.45ca5ccd.js"),
+						import("./_app/immutable/entry/app.d1ac41d3.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 4, 11],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>

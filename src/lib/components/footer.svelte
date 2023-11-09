@@ -59,7 +59,7 @@
 			goto('/');
 		}}>Back to Top</button
 	>
-	<div class="footer--privacy">Privacy Policy</div>
-	<div class="footer--cookie">Cookie Policy</div>
+	<a class="footer--privacy btn py-6" href="/privacy">Privacy Policy</a>
+	<a class="footer--cookie btn py-6" href="/cookie">Cookie Policy</a>
 	<div class="footer--copyright">©sarassaura, 2023. All rights reserved.</div>
 </div>
