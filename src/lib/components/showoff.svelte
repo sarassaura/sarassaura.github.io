@@ -1,24 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
-	import React from '$lib/Icons/react.svelte';
-	import Next from '$lib/Icons/next.svelte';
-	import Svelte from '$lib/Icons/svelte.svelte';
-	import Typescript from '$lib/Icons/typescript.svelte';
-	import Graphql from '$lib/Icons/graphql.svelte';
-	import Websocket from '$lib/Icons/websocket.svelte';
-	import Node from '$lib/Icons/node.svelte';
-	import Python from '$lib/Icons/python.svelte';
-	import Mysql from '$lib/Icons/mysql.svelte';
-	import Github from '$lib/Icons/github2.svelte';
-	import Docker from '$lib/Icons/docker.svelte';
-	import Mongodb from '$lib/Icons/mongodb.svelte';
-	import Firebase from '$lib/Icons/firebase.svelte';
-	import Jest from '$lib/Icons/jest.svelte';
-	import Storybook from '$lib/Icons/storybook.svelte';
-	import Figma from '$lib/Icons/figma.svelte';
-	import Tailwind from '$lib/Icons/tailwind.svelte';
-	import Redux from '$lib/Icons/redux.svelte';
 
 	onMount(() => {
 		const show = document.querySelectorAll('.showoff');
@@ -33,78 +15,78 @@
 	let skills = [
 		{
 			name: '\xa0React',
-			icon: React
+			icon: 'akar-icons:react-fill'
 		},
 		{
 			name: '\xa0Next.js',
-			icon: Next
+			icon: 'file-icons:nextjs'
 		},
 		{
 			name: '\xa0Svelte',
-			icon: Svelte
+			icon: 'cib:svelte'
 		},
 		{
 			name: '\xa0TypeScript',
-			icon: Typescript
+			icon: 'nonicons:typescript-16'
 		},
 		{
 			name: '\xa0GraphQl',
-			icon: Graphql
+			icon: 'simple-icons:graphql'
 		},
 		{
 			name: '\xa0WebSocket',
-			icon: Websocket
+			icon: 'simple-icons:socketdotio'
 		},
 		{
 			name: '\xa0Node',
-			icon: Node
+			icon: 'akar-icons:node-fill'
 		},
 		{
 			name: '\xa0Python',
-			icon: Python
+			icon: 'teenyicons:python-outline'
 		},
 		{
 			name: '\xa0MySQL',
-			icon: Mysql
+			icon: 'devicon-plain:mysql'
 		}
 	];
 
 	let skills2 = [
 		{
 			name: '\xa0GitHub',
-			icon: Github
+			icon: 'mdi:github'
 		},
 		{
 			name: '\xa0Docker',
-			icon: Docker
+			icon: 'cib:docker'
 		},
 		{
 			name: '\xa0MongoDB',
-			icon: Mongodb
+			icon: 'simple-icons:mongodb'
 		},
 		{
 			name: '\xa0Firebase',
-			icon: Firebase
+			icon: 'mdi:firebase'
 		},
 		{
 			name: '\xa0Jest',
-			icon: Jest
+			icon: 'simple-icons:jest'
 		},
 		{
 			name: '\xa0Storybook',
-			icon: Storybook
+			icon: 'cib:storybook'
 		},
 		{
 			name: '\xa0Figma',
-			icon: Figma
+			icon: 'teenyicons:figma-outline'
 		},
 		{
 			name: '\xa0Tailwind',
-			icon: Tailwind
+			icon: 'mdi:tailwind'
 		},
 		{
 			name: '\xa0Redux',
-			icon: Redux
+			icon: 'akar-icons:redux-fill'
 		}
 	];
 </script>
@@ -118,13 +100,17 @@
 	<ul class="list">
 		{#each skills as skill}
 			<li>
-				<svelte:component this={skill.icon} />
+				<div class=" h-[36px] w-[36px] overflow-hidden">
+					<iconify-icon icon={skill.icon} aria-hidden="true" height="36" />
+				</div>
 				{skill.name}
 			</li>
 		{/each}
 		{#each skills as skill}
 			<li aria-hidden="true">
-				<svelte:component this={skill.icon} />
+				<div class="h-[36px] w-[36px] overflow-hidden">
+					<iconify-icon icon={skill.icon} aria-hidden="true" height="36" />
+				</div>
 				{skill.name}
 			</li>
 		{/each}
@@ -140,13 +126,17 @@
 	<ul class="list">
 		{#each skills2 as skill}
 			<li>
-				<svelte:component this={skill.icon} />
+				<div class="h-[36px] w-[36px] overflow-hidden">
+					<iconify-icon icon={skill.icon} aria-hidden="true" height="36" />
+				</div>
 				{skill.name}
 			</li>
 		{/each}
 		{#each skills2 as skill}
 			<li aria-hidden="true">
-				<svelte:component this={skill.icon} />
+				<div class="h-[36px] w-[36px] overflow-hidden">
+					<iconify-icon icon={skill.icon} aria-hidden="true" height="36" />
+				</div>
 				{skill.name}
 			</li>
 		{/each}
