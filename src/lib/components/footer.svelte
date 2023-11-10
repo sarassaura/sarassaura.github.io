@@ -4,6 +4,9 @@
 
 	let logoRef: HTMLElement;
 	let play = true;
+
+	let text = '******************';
+	let textArray = text.split('');
 </script>
 
 <div class="footer">
@@ -50,8 +53,22 @@
 		on:click={() => {
 			document.querySelector('#page')?.scrollTo(0, 0);
 			goto('/');
-		}}>Back to Top</button
+		}}
 	>
+		<div class="circular">
+			<iconify-icon
+				icon="octicon:chevron-up-24"
+				height="42"
+				aria-hidden="true"
+				class="circular-icon"
+			/>
+			<div class="circular-text h6">
+				{#each textArray as char, id}
+					<span style="--i:{id + 1}">{char}</span>
+				{/each}
+			</div>
+		</div>
+	</button>
 	<a class="footer--privacy btn rounded-container-token py-6" href="/privacy">Privacy Policy</a>
 	<a class="footer--cookie btn rounded-container-token py-6" href="/cookie">Cookie Policy</a>
 	<div class="footer--copyright">©sarassaura, 2023. All rights reserved.</div>
