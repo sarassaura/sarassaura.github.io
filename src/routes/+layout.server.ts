@@ -2,6 +2,9 @@ export const prerender = true;
 
 import { GITHUB } from '$env/static/private';
 import { request, gql } from 'graphql-request';
+import fs from 'fs';
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
 
 /** @type {import('./$types').PageServerLoad} */
 export async function load({ url }) {
@@ -64,6 +67,14 @@ export async function load({ url }) {
 		{},
 		{ authorization: `Bearer ${GITHUB}` }
 	);
+
+	const dev = process.argv.includes('dev');
+
+	if (!dev) {
+		const __filename = fileURLToPath(import.meta.url);
+		const __dirname = dirname(__filename);
+		fs.writeFileSync(`${__dirname}/../../../client/file.txt`, 'Hello Motto');
+	}
 
 	return {
 		projects,
