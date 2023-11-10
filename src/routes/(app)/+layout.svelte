@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Navbar, Menu, scroll_dir, change_dir, throttle } from '$lib';
+	import { Navbar, Menu } from '$lib';
 	import { AppShell, Drawer } from '@skeletonlabs/skeleton';
 	import { initializeStores } from '@skeletonlabs/skeleton';
 	import { onMount } from 'svelte';
@@ -16,35 +16,13 @@
 			// This is Firefox
 		}
 	});
-
-	let lastScroll = 0;
-	let dir: boolean;
-
-	scroll_dir.subscribe((value) => {
-		dir = value;
-	});
-
-	function direction(e: Event) {
-		const target = e.target as HTMLElement;
-
-		if (dir != target.scrollTop > lastScroll) {
-			change_dir(target.scrollTop > lastScroll);
-		}
-
-		lastScroll = target.scrollTop <= 0 ? 0 : target.scrollTop;
-	}
 </script>
 
 <Drawer class="lg:hidden z-[8]" zIndex="">
 	<Menu />
 </Drawer>
 
-<AppShell
-	on:scroll={(e) => throttle(() => direction(e), 230)}
-	class="h-full"
-	slotPageFooter="flex justify-center py-5"
-	slotHeader="relative z-[8]"
->
+<AppShell class="h-full" slotPageFooter="flex justify-center py-5" slotHeader="relative z-[8]">
 	<svelte:fragment slot="header">
 		<div class="skip-navigation">
 			<a href="#main-content">Skip navigation</a>

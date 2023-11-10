@@ -9,7 +9,6 @@ import Menu from './components/menu.svelte';
 import HamburguerIcon from './components/hamburguer_icon.svelte';
 import ShowOff from './components/showoff.svelte';
 import Utilities from './components/utilities.svelte';
-import { scroll_dir, change_dir } from './store/scroll';
 import { throttle } from './functions/throttle';
 import { change_id, section } from './store/section';
 import { change, unchange } from './functions/tabs';
@@ -25,8 +24,6 @@ export {
 	HamburguerIcon,
 	ShowOff,
 	Utilities,
-	scroll_dir,
-	change_dir,
 	throttle,
 	change_id,
 	section,
