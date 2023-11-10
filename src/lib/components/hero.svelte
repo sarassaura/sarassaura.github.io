@@ -1,5 +1,5 @@
 <script>
-	import Image from '$lib/assets/images/iphone.webp?w=640&imagetools';
+	import Image from '$lib/assets/images/iphone.webp';
 </script>
 
 <div class="carousel">
