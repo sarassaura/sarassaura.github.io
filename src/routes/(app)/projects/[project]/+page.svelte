@@ -4,8 +4,16 @@
 	import type { PageData } from './$types';
 	import { goto } from '$app/navigation';
 	import { AppShell } from '@skeletonlabs/skeleton';
+	// import type { ComponentType } from 'svelte';
 
 	export let data: PageData;
+
+	// const projects: Record<string, { default: ComponentType }> = import.meta.glob(
+	// 	`/src/markdown/*.md`,
+	// 	{ eager: true }
+	// );
+
+	// const mdx = projects[`/src/markdown/${data.slug}.md`];
 </script>
 
 <AppShell class="h-full" slotPageFooter="flex justify-center py-5" slotHeader="relative z-[8]">
@@ -40,7 +48,11 @@
 	</div>
 
 	<div class="mdx px-4 md:px-16 pb-8">
-		{@html data.data}
+		{#await import(`./../../../../markdown/${data.slug}.md`)}
+			Loading...
+		{:then data}
+			<svelte:component this={data.default} />
+		{/await}
 	</div>
 
 	<div class="footer-projects">
