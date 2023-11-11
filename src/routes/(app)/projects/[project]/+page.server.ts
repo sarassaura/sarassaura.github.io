@@ -29,6 +29,7 @@ export async function load({ params, parent }) {
 	const mdx = edges[index].node.object.text;
 
 	const project = await compile(mdx, {
+		// layout: { _: '/src/mdsvex.svelte' },
 		rehypePlugins: [rehypeSlug],
 		remarkPlugins: [remarkUnwrapImages]
 	});
