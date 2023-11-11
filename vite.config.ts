@@ -4,5 +4,20 @@ import { defineConfig } from 'vite';
 import Webp from './vite-plugin-webp';
 
 export default defineConfig({
-	plugins: [sveltekit(), Webp(), purgeCss()]
+	plugins: [
+		sveltekit(),
+		Webp(),
+		{
+			name: 'cache',
+			configureServer(server) {
+				server.middlewares.use((req, res, next) => {
+					if (req.url?.endsWith('.woff2')) {
+						res.setHeader('Cache-Control', 'public, max-age=604800, immutable');
+					}
+					next();
+				});
+			}
+		},
+		purgeCss()
+	]
 });
