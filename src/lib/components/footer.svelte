@@ -4,9 +4,6 @@
 
 	let logoRef: HTMLElement;
 	let play = true;
-
-	let text = '******************';
-	let textArray = text.split('');
 </script>
 
 <div class="footer">
@@ -55,18 +52,13 @@
 			goto('/');
 		}}
 	>
-		<div class="circular">
+		<div class="circular animate-bounce my-4">
 			<iconify-icon
-				icon="octicon:chevron-up-24"
-				height="42"
+				icon="system-uicons:chevron-up-circle"
+				height="52"
 				aria-hidden="true"
 				class="circular-icon"
 			/>
-			<div class="circular-text h6">
-				{#each textArray as char, id}
-					<span style="--i:{id + 1}">{char}</span>
-				{/each}
-			</div>
 		</div>
 	</button>
 	<a class="footer--privacy btn rounded-container-token py-6" href="/privacy">Privacy Policy</a>
