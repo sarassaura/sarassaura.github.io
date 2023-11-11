@@ -14,6 +14,7 @@
 			class="btn variant-filled px-3 py-3 but"
 			href={`${$page.url.origin}/projects/${data.previous_link}`}
 			on:click={Ripple}
+			aria-label="Previous"
 		>
 			<iconify-icon icon="mdi:arrow-left" height="28" width="28" />
 			<span class="break !ml-0">&nbspPrevious&nbsp</span>
@@ -22,6 +23,7 @@
 			class="btn variant-filled px-3 py-3 but"
 			href={`${$page.url.origin}/#projects`}
 			on:click={Ripple}
+			aria-label="Go back"
 		>
 			<iconify-icon icon="clarity:home-line" height="28" width="28" />
 			<span class="break !ml-0 pl-1">&nbspGo back&nbsp</span>
@@ -30,6 +32,7 @@
 			class="btn variant-filled px-3 py-3 but"
 			href={`${$page.url.origin}/projects/${data.next_link}`}
 			on:click={Ripple}
+			aria-label="Next"
 		>
 			<span class="break">&nbspNext&nbsp</span>
 			<iconify-icon icon="mdi:arrow-right" height="28" width="28" class="!ml-0" />
