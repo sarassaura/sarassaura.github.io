@@ -51,6 +51,7 @@
 			document.querySelector('#page')?.scrollTo(0, 0);
 			goto('/');
 		}}
+		aria-label="To the top"
 	>
 		<div class="circular animate-bounce my-4">
 			<iconify-icon
