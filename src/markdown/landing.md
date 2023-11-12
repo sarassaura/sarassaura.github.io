@@ -1,8 +1,14 @@
-<p></p>
-<p align="center"><img alt="Lambda express Logo" height="100px" src="/logo.png"></p>
-<h1 align="center">Lambda Express Landing</h1>
-<p align="center"> The landing page for the Lambda Express team :)</p>
-<p align="center"><img alt="Lambda express" src="/lambda_optimized.webp"></p>
+<div align="center" justify="center">
+
+![Logo](/logo1.png?raw=true)
+
+# Lambda Express Landing
+
+<p>The landing page for the Lambda Express team :)</p>
+
+![Lambda Express](/lambda_optimized.webp?raw=true)
+
+</div>
 
 ## Design
 

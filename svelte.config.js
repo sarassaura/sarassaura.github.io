@@ -8,7 +8,10 @@ import remarkUnwrapImages from 'remark-unwrap-images';
 const mdsvexOptions = {
 	extensions: ['.md'],
 	rehypePlugins: [rehypeSlug],
-	remarkPlugins: [remarkUnwrapImages]
+	remarkPlugins: [remarkUnwrapImages],
+	layout: {
+		_: '/src/mdsvex.svelte'
+	}
 };
 
 const dev = process.argv.includes('dev');

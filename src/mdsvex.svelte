@@ -3,5 +3,4 @@
 	export { img };
 </script>
 
-<h1>Hello</h1>
 <slot />
