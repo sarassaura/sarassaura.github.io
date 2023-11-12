@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import Logo from '$lib/Icons/logo.svelte';
+	import Name from '$lib/Icons/name.svelte';
 
 	let logoRef: HTMLAnchorElement;
 	let play = true;
@@ -22,5 +23,5 @@
 	}}
 >
 	<Logo />
-	Sarah Yukino
+	<Name />
 </a>
