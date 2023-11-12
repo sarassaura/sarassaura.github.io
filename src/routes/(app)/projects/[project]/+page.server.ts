@@ -1,7 +1,4 @@
 import { error } from '@sveltejs/kit';
-// import { compile } from 'mdsvex';
-// import rehypeSlug from 'rehype-slug';
-// import remarkUnwrapImages from 'remark-unwrap-images';
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
 import fs from 'fs';
@@ -39,18 +36,9 @@ export async function load({ params, parent }) {
 
 	fs.writeFileSync(`${__dirname}/../../../../markdown/${edges[index].node.name}.md`, mdx);
 
-	// const project = await compile(mdx, {
-	// 	// layout: { _: '/src/mdsvex.svelte' },
-	// 	rehypePlugins: [rehypeSlug],
-	// 	remarkPlugins: [remarkUnwrapImages]
-	// });
-
-	// const data = project?.code.replaceAll('{@html `', '').replaceAll('`}', '');
-
 	//const data = await import(`../../../../markdown/${params.project}.md`);
 
 	return {
-		// data: data.default,
 		next_link,
 		previous_link,
 		slug: params.project
