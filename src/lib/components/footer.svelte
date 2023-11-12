@@ -7,14 +7,14 @@
 </script>
 
 <div class="footer">
-	<div class="footer--links flex flex-col gap-y-4">
+	<div class="footer--links flex flex-col gap-y-4 card-hover">
 		<p class="h6 opacity-75">Links</p>
 		<a href="/#about">About</a>
 		<a href="/#skills">Skills</a>
 		<a href="/#projects">Projects</a>
 		<a href="/#contact-me">Contact me</a>
 	</div>
-	<div class="footer--testimonials">
+	<div class="footer--testimonials card-hover">
 		<p class="text-lg">Gabrielle Oliveira</p>
 		<p class="italic">
 			"Sarah is a person committed to solving problems and I admire this ability in her, besides
@@ -29,7 +29,7 @@
 		<iconify-icon icon="ic:baseline-whatsapp" aria-hidden="true" height="42" />
 	</a>
 	<div
-		class="footer--logo logo"
+		class="footer--logo logo card-hover"
 		bind:this={logoRef}
 		role="img"
 		on:mouseenter={() => {
@@ -64,5 +64,5 @@
 	</button>
 	<a class="footer--privacy btn rounded-container-token py-6" href="/privacy">Privacy Policy</a>
 	<a class="footer--cookie btn rounded-container-token py-6" href="/cookie">Cookie Policy</a>
-	<div class="footer--copyright">©sarassaura, 2023. All rights reserved.</div>
+	<div class="footer--copyright card-hover">©sarassaura, 2023. All rights reserved.</div>
 </div>
