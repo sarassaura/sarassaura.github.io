@@ -53,16 +53,19 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@cloudinary/url-gen": "^1.13.0",
 		"@felte/validator-zod": "^1.0.17",
 		"@floating-ui/dom": "^1.5.3",
 		"@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
 		"axios": "^1.5.1",
+		"cloudinary": "^1.41.0",
 		"felte": "^1.2.12",
 		"graphql": "^16.8.1",
 		"graphql-request": "^6.1.0",
 		"iconify-icon": "^1.0.8",
 		"rehype-slug": "^6.0.0",
 		"remark-unwrap-images": "^4.0.0",
+		"svelte-cloudinary": "^1.1.1",
 		"svelte-sitemap": "^2.6.0"
 	}
 }
