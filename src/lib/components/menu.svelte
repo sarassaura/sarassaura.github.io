@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { ListBox, ListBoxItem, getDrawerStore } from '@skeletonlabs/skeleton';
 	import { page } from '$app/stores';
-	import { goto } from '$app/navigation';
 	import Utilities from './utilities.svelte';
+	import { locale } from '$lib/i18n/i18n-svelte';
 
 	let valueSingle: string = $page.url.hash.slice(1) || 'about';
 	const links = [
@@ -26,7 +26,8 @@
 					value={link}
 					on:click={() => {
 						drawerStore.close();
-						goto(`${$page.url.origin}/#${link}`);
+						document.getElementById(link)?.scrollIntoView();
+						window.history.replaceState(null, '', `${$locale}#${link}`);
 					}}
 				>
 					<svelte:fragment slot="lead">

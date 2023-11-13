@@ -13,11 +13,11 @@
 
 	const links = ['about', 'skills', 'projects', 'contact-me'];
 	let TabList: HTMLElement | null;
-	let PageRef;
+	let PageRef: Array<HTMLElement>;
 
 	onMount(() => {
 		TabList = document.querySelector('.tab-list');
-		PageRef = document.querySelectorAll('.section');
+		PageRef = document.querySelectorAll('.section') as unknown as Array<HTMLElement>;
 
 		let observer = new IntersectionObserver(
 			(entries) => {
@@ -36,6 +36,12 @@
 		PageRef.forEach((element) => {
 			observer.observe(element);
 		});
+
+		return () => {
+			PageRef.forEach((element) => {
+				observer.unobserve(element);
+			});
+		};
 	});
 </script>
 

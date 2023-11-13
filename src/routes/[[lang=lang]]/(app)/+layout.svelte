@@ -3,6 +3,7 @@
 	import { AppShell, Drawer } from '@skeletonlabs/skeleton';
 	import { initializeStores } from '@skeletonlabs/skeleton';
 	import { onMount } from 'svelte';
+	import { locale } from '$lib/i18n/i18n-svelte';
 
 	initializeStores();
 
@@ -25,7 +26,12 @@
 <AppShell class="h-full" slotPageFooter="flex justify-center py-5" slotHeader="relative z-[8]">
 	<svelte:fragment slot="header">
 		<div class="skip-navigation">
-			<a href="#main-content">Skip navigation</a>
+			<button
+				on:click={() => {
+					document.getElementById('main-content')?.scrollIntoView();
+					window.history.replaceState(null, '', `${$locale}#main-content`);
+				}}>Skip navigation</button
+			>
 		</div>
 		<Navbar />
 	</svelte:fragment>

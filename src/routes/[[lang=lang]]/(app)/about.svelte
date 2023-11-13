@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Hero from '$lib/components/hero.svelte';
 	import { Ripple } from '$lib/functions/ripple';
-	import { LL } from '$lib/i18n/i18n-svelte';
+	import { LL, locale } from '$lib/i18n/i18n-svelte';
 </script>
 
 <div class="section about shrink-none" id="about">
@@ -18,7 +18,13 @@
 		</div>
 		<div class="flex gap-2 md:gap-3 mt-4 w-fit">
 			<a class="btn variant-filled but" href={$LL.link(`/resume`)} on:click={Ripple}>Resume</a>
-			<a class="btn variant-ghost-primary" href={`/#contact-me`}>Email me</a>
+			<button
+				class="btn variant-ghost-primary"
+				on:click={() => {
+					document.getElementById('contact-me')?.scrollIntoView();
+					window.history.replaceState(null, '', `${$locale}#contact-me`);
+				}}>Email me</button
+			>
 		</div>
 	</div>
 	<Hero />
