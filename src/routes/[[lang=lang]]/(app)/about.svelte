@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Hero from '$lib/components/hero.svelte';
 	import { Ripple } from '$lib/functions/ripple';
-	import LL from '$lib/i18n/i18n-svelte';
+	import { LL } from '$lib/i18n/i18n-svelte';
 </script>
 
 <div class="section about shrink-none" id="about">

@@ -9,6 +9,7 @@
 	import Gear from '$lib/Icons/gear.svelte';
 	import type { Locales } from '$lib/i18n/i18n-types';
 	import { locale, setLocale } from '$lib/i18n/i18n-svelte';
+	import { loadLocaleAsync } from '$lib/i18n/i18n-util.async';
 
 	let colorValue: string;
 	let root: HTMLBodyElement;
@@ -125,7 +126,8 @@
 		<div class="sub p-4 variant-glass-surface rounded-md space-y-3" data-popup="langCombobox">
 			{#each langArray as choice}
 				<button
-					on:click={() => {
+					on:click={async () => {
+						await loadLocaleAsync(choice);
 						setLocale(choice);
 					}}
 					class="capitalize btn dark:variant-ghost-primary variant-ringed w-full"
