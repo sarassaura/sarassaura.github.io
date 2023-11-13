@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { PageData } from './$types';
+	import LL from '$lib/i18n/i18n-svelte';
 
 	export let data: PageData;
 
@@ -7,6 +8,6 @@
 </script>
 
 {#each result as project}
-	<a href={`/projects/${project.node.name}`}>{project.node.name}</a>
+	<a href={$LL.link(`/projects/${project.node.name}`)}>{project.node.name}</a>
 	<br />
 {/each}

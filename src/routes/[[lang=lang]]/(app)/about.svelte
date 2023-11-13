@@ -17,7 +17,7 @@
 			currently studying computer science.
 		</div>
 		<div class="flex gap-2 md:gap-3 mt-4 w-fit">
-			<a class="btn variant-filled but" href={`/resume`} on:click={Ripple}>Resume</a>
+			<a class="btn variant-filled but" href={$LL.link(`/resume`)} on:click={Ripple}>Resume</a>
 			<a class="btn variant-ghost-primary" href={`/#contact-me`}>Email me</a>
 		</div>
 	</div>

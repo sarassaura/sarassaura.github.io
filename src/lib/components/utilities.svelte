@@ -10,6 +10,7 @@
 	import type { Locales } from '$lib/i18n/i18n-types';
 	import { locale, setLocale } from '$lib/i18n/i18n-svelte';
 	import { loadLocaleAsync } from '$lib/i18n/i18n-util.async';
+	import LL from '$lib/i18n/i18n-svelte';
 
 	let colorValue: string;
 	let root: HTMLBodyElement;
@@ -153,7 +154,7 @@
 	<div class="arrow variant-glass-primary" />
 </div>
 
-<a class="flex items-center gap-1 links justify-self-start" href="/blog">
+<a class="flex items-center gap-1 links justify-self-start" href={$LL.link('/blog')}>
 	<p>Blog</p>
 	<Out height="20" width="20" />
 </a>

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
 	import Logo from '$lib/Icons/logo.svelte';
+	import LL from '$lib/i18n/i18n-svelte';
 
 	let logoRef: HTMLElement;
 	let play = true;
@@ -62,7 +63,11 @@
 			/>
 		</div>
 	</button>
-	<a class="footer--privacy btn rounded-container-token py-6" href="/privacy">Privacy Policy</a>
-	<a class="footer--cookie btn rounded-container-token py-6" href="/cookie">Cookie Policy</a>
+	<a class="footer--privacy btn rounded-container-token py-6" href={$LL.link('/privacy')}
+		>Privacy Policy</a
+	>
+	<a class="footer--cookie btn rounded-container-token py-6" href={$LL.link('/cookie')}
+		>Cookie Policy</a
+	>
 	<div class="footer--copyright card-hover">©sarassaura, 2023. All rights reserved.</div>
 </div>

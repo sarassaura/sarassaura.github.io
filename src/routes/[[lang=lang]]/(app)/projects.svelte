@@ -2,6 +2,7 @@
 	import { popup } from '@skeletonlabs/skeleton';
 	import type { PageData } from './$types';
 	import Github from '$lib/Icons/github.svelte';
+	import LL from '$lib/i18n/i18n-svelte';
 
 	export let data: PageData['projects'];
 
@@ -18,7 +19,7 @@
 					<p>{item.node.description}</p>
 					<div class="arrow variant-glass-primary" />
 				</div>
-				<a href={`/projects/${item.node.name}`}>
+				<a href={$LL.link(`/projects/${item.node.name}`)}>
 					<img
 						class="work rounded-md [&>*]:pointer-events-none hover:grayscale grayscale-0"
 						loading="lazy"
@@ -64,6 +65,6 @@
 				</figcaption>
 			</figure>
 		{/each}
-		<a href="/projects" class="hidden">Projects</a>
+		<a href={$LL.link('/projects')} class="hidden">Projects</a>
 	</div>
 </div>

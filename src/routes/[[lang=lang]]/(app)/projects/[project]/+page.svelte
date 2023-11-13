@@ -4,6 +4,7 @@
 	import type { PageData } from './$types';
 	import { goto } from '$app/navigation';
 	import { AppShell } from '@skeletonlabs/skeleton';
+	import LL from '$lib/i18n/i18n-svelte';
 	// import type { ComponentType } from 'svelte';
 
 	export let data: PageData;
@@ -20,7 +21,7 @@
 	<div class="flex w-full justify-around py-4">
 		<a
 			class="btn variant-filled px-3 py-3 but"
-			href={`${$page.url.origin}/projects/${data.previous_link}`}
+			href={$LL.link(`/projects/${data.previous_link}`)}
 			on:click={Ripple}
 			aria-label="Previous"
 		>
@@ -29,7 +30,7 @@
 		</a>
 		<a
 			class="btn variant-filled px-3 py-3 but"
-			href={`${$page.url.origin}/#projects`}
+			href={$LL.link(`/#projects`)}
 			on:click={Ripple}
 			aria-label="Go back"
 		>
@@ -38,7 +39,7 @@
 		</a>
 		<a
 			class="btn variant-filled px-3 py-3 but"
-			href={`${$page.url.origin}/projects/${data.next_link}`}
+			href={$LL.link(`/projects/${data.next_link}`)}
 			on:click={Ripple}
 			aria-label="Next"
 		>
