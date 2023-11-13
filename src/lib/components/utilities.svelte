@@ -130,6 +130,7 @@
 					on:click={async () => {
 						await loadLocaleAsync(choice);
 						setLocale(choice);
+						window.history.replaceState(null, '', '/' + choice);
 					}}
 					class="capitalize btn dark:variant-ghost-primary variant-ringed w-full"
 				>
