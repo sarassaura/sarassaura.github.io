@@ -7,10 +7,20 @@
 	import Out from '$lib/Icons/out.svelte';
 	import Github from '$lib/Icons/github.svelte';
 	import Gear from '$lib/Icons/gear.svelte';
+	import type { Locales } from '$lib/i18n/i18n-types';
+	import { locale, setLocale } from '$lib/i18n/i18n-svelte';
 
 	let colorValue: string;
 	let root: HTMLBodyElement;
 	let theme: string;
+
+	const langChoices: Record<Locales, string> = {
+		en: 'circle-flags:uk',
+		br: 'circle-flags:br',
+		es: 'circle-flags:es'
+	};
+
+	let langArray = Object.keys(langChoices) as Array<Locales>;
 
 	const themeChoices = [
 		{ name: 'crimson', initial: '#d4163c' },
@@ -57,14 +67,14 @@
 			class="btn variant-ghost-primary p-1 px-3"
 			use:popup={{
 				event: 'click',
-				target: 'popupCombobox',
+				target: 'themeCombobox',
 				placement: 'bottom',
 				closeQuery: '#will-close'
 			}}
 		>
 			{theme}
 		</button>
-		<div class="sub p-4 variant-glass-surface rounded-md space-y-3" data-popup="popupCombobox">
+		<div class="sub p-4 variant-glass-surface rounded-md space-y-3" data-popup="themeCombobox">
 			{#each themeChoices as choice}
 				<button
 					on:click={() => {
@@ -81,9 +91,10 @@
 			{/each}
 		</div>
 	</div>
+
 	<div class="flex justify-between gap-x-5 my-3 items-center">
 		<p>Color</p>
-		<div class="rounded-full" style="background-color: {colorValue};">
+		<div class="rounded-full btn p-0" style="background-color: {colorValue};">
 			<input
 				class="input opacity-0"
 				type="color"
@@ -95,6 +106,36 @@
 			/>
 		</div>
 	</div>
+
+	<div class="flex justify-between gap-x-5 my-3 items-center">
+		<p>Lang</p>
+		<div class="rounded-full">
+			<button
+				class="btn p-0"
+				use:popup={{
+					event: 'click',
+					target: 'langCombobox',
+					placement: 'bottom',
+					closeQuery: '#will-close'
+				}}
+			>
+				<iconify-icon icon={langChoices[$locale]} aria-hidden="true" height="40" />
+			</button>
+		</div>
+		<div class="sub p-4 variant-glass-surface rounded-md space-y-3" data-popup="langCombobox">
+			{#each langArray as choice}
+				<button
+					on:click={() => {
+						setLocale(choice);
+					}}
+					class="capitalize btn dark:variant-ghost-primary variant-ringed w-full"
+				>
+					{choice}
+				</button>
+			{/each}
+		</div>
+	</div>
+
 	<div class="flex justify-center gap-x-5 my-3 items-center">
 		<button
 			class="btn variant-outline-primary"

@@ -33,7 +33,8 @@ const config = {
 		}),
 		paths: {
 			base: dev ? '' : process.env.BASE_PATH
-		}
+		},
+		prerender: { crawl: true, entries: ['/', '/en', '/es', '/br'] }
 	}
 };
 
