@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { goto } from '$app/navigation';
 	import Logo from '$lib/Icons/logo.svelte';
 	import { locale, LL } from '$lib/i18n/i18n-svelte';
 
@@ -58,7 +59,10 @@
 		class="h-full w-full flex justify-center items-center footer--back btn rounded-container-token"
 		on:click={() => {
 			document.querySelector('#page')?.scrollTo(0, 0);
-			window.history.replaceState(null, '', `${$locale}`);
+			goto('/');
+			setTimeout(() => {
+				window.history.replaceState(null, '', `${$locale}`);
+			}, 20);
 		}}
 		aria-label="To the top"
 	>
