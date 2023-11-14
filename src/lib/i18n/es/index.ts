@@ -25,7 +25,25 @@ const es = {
 	backend:
 		'El backend no es solo conectarse con la database, sino de garantizar el procesamiento y la seguridad de la data, gestionar requests y comunicarse con diferentes servicios.',
 	// Projects
-	projects: 'Proyectos'
+	projects: 'Proyectos',
+	// Contact
+	nameMin: 'El nombre es obligatorio',
+	nameMax: 'El nombre debe tener menos de 100 letras',
+	emailValid: 'El email debe ser válido',
+	emailMin: 'El email debe tener menos de 5 letras',
+	emailMax: 'El email debe tener menos de 100 letras',
+	messageMin: 'El mensaje es obligatorio',
+	messageMax: 'El mensaje debe tener menos de 1500 letras',
+	thanks: '¡Gracias, me comunicaré contigo lo antes posible!',
+	messageSuccess: 'Mensaje enviado correctamente!',
+	sorry: 'Huy! Algo salió mal',
+	messageError: 'Intenta enviarme un email at sarahyukinonakada@gmail.com',
+	sendMe: 'Envíeme un mensaje',
+	name: 'Nombre',
+	email2: 'Email',
+	message: 'Mensaje',
+	send: 'Enviar',
+	brazil: 'Brasil'
 } satisfies BaseTranslation;
 
 export default es;

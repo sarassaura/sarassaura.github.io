@@ -25,7 +25,25 @@ const br = {
 	backend:
 		'A lógica de negócios não é apenas a conexão com o banco de dados, mas de garantir o processamento, segurança dos dados, solicitações e comunicar-se com diversos serviços.',
 	// Projects
-	projects: 'Projetos'
+	projects: 'Projetos',
+	// Contact
+	nameMin: 'Nome é obrigatório',
+	nameMax: 'Nome deve ter menos que 100 letras',
+	emailValid: 'Email deve ser válido',
+	emailMin: 'Email deve ter menos que 5 letras',
+	emailMax: 'Email deve ter menos que 100 letras',
+	messageMin: 'Mensagem é obrigatória',
+	messageMax: 'Mensagem deve ter menos que 1500 letras',
+	thanks: 'Obrigada, retornarei o quanto antes!',
+	messageSuccess: 'Mensagem enviada com sucesso!',
+	sorry: 'Oops, algo deu errado',
+	messageError: 'Tente me mandar um email em sarahyukinonakada@gmail.com',
+	sendMe: 'Mande uma mensagem',
+	name: 'Nome',
+	email2: 'Email',
+	message: 'Mensagem',
+	send: 'Enviar',
+	brazil: 'Brasil'
 } satisfies BaseTranslation;
 
 export default br;

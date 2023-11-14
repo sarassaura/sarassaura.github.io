@@ -25,7 +25,25 @@ const en = {
 	backend:
 		"Business logic isn't just about connecting with the database, but about ensuring processing and data security, manage requests, and comunicate with different services.",
 	// Projects
-	projects: 'Projects'
+	projects: 'Projects',
+	// Contact
+	nameMin: 'Name is required',
+	nameMax: 'Name must have less than 100 characters',
+	emailValid: 'Email must be valid',
+	emailMin: 'Email must have more than 5 characters',
+	emailMax: 'Email must have less than 100 characters',
+	messageMin: 'Message is required',
+	messageMax: 'Message must have less than 1500 characters',
+	thanks: 'Thanks for contacting me!',
+	messageSuccess: 'Message sent successfully',
+	sorry: 'Sorry, something went wrong',
+	messageError: 'Try sending me an email at sarahyukinonakada@gmail.com',
+	sendMe: 'Send me a message',
+	name: 'Name',
+	email2: 'Email',
+	message: 'Message',
+	send: 'Send',
+	brazil: 'Brazil'
 } satisfies BaseTranslation;
 
 export default en;

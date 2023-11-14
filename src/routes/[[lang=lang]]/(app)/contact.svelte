@@ -6,26 +6,23 @@
 	import { fade } from 'svelte/transition';
 	import { Ripple } from '$lib/functions/ripple';
 	import Coil from '$lib/Icons/coil.svelte';
+	import { LL } from '$lib/i18n/i18n-svelte';
 
 	let visible: boolean = false;
 	let invisible: boolean = false;
 
-	const schema = z.object({
-		name: z
-			.string()
-			.min(1, { message: 'Name is required' })
-			.max(100, { message: 'Name must have less than 100 characters' })
-			.trim(),
+	let schema = z.object({
+		name: z.string().min(1, { message: $LL.nameMin() }).max(100, { message: $LL.nameMax() }).trim(),
 		email: z
 			.string()
-			.email({ message: 'Email must be valid' })
-			.min(5, { message: 'Email must have more than 5 characters' })
-			.max(100, { message: 'Email must have less than 100 characters' })
+			.email({ message: $LL.emailValid() })
+			.min(5, { message: $LL.emailMin() })
+			.max(100, { message: $LL.emailMax() })
 			.trim(),
 		message: z
 			.string()
-			.min(1, { message: 'Message is required' })
-			.max(1500, { message: 'Message must have less than 1500 characters' })
+			.min(1, { message: $LL.messageMin() })
+			.max(1500, { message: $LL.messageMax() })
 			.trim()
 	});
 
@@ -63,8 +60,8 @@
 	>
 		<iconify-icon icon="mingcute:check-fill" width="48" class="mr-2" />
 		<div class="alert-message m-0">
-			<h3 class="h3 italic">Thanks for contacting us!</h3>
-			<p>Message sent successfully</p>
+			<h3 class="h3">{$LL.thanks()}</h3>
+			<p>{$LL.messageSuccess()}</p>
 		</div>
 	</aside>
 {/if}
@@ -76,8 +73,8 @@
 	>
 		<iconify-icon icon="ph:x-bold" width="48" class="mr-2" />
 		<div class="alert-message m-0">
-			<h3 class="h3 italic">Sorry, something went wrong</h3>
-			<p>Try sending me an email at sarahyukinonakada@gmail.com</p>
+			<h3 class="h3">{$LL.sorry()}</h3>
+			<p>{$LL.messageError()}</p>
 		</div>
 	</aside>
 {/if}
@@ -87,10 +84,10 @@
 		use:form
 		class="space-y-4 md:px-0 flex items-center justify-center flex-col relative w-full order-2 md:order-1"
 	>
-		<p class="h3 py-4">Send me a message</p>
+		<p class="h3 py-4">{$LL.sendMe()}</p>
 		<label class="label max-w-lg">
 			<input class="input" type="text" required placeholder=" " name="name" autocomplete="name" />
-			<span>Name</span>
+			<span>{$LL.name()}</span>
 			{#if $errors.name && $errors.name[0] != null}
 				<p class="dark:text-error-300 text-error-700">{$errors.name && $errors.name[0]}</p>
 			{/if}
@@ -104,7 +101,7 @@
 				name="email"
 				autocomplete="email"
 			/>
-			<span>Email</span>
+			<span>{$LL.email2()}</span>
 			{#if $errors.email && $errors.email[0] != null}
 				<p class="dark:text-error-300 text-error-700">{$errors.email && $errors.email[0]}</p>
 			{/if}
@@ -117,14 +114,16 @@
 				placeholder=" "
 				name="message"
 			/>
-			<span>Message</span>
+			<span>{$LL.message()}</span>
 			{#if $errors.message && $errors.message[0] != null}
 				<p class="dark:text-error-300 text-error-700">
 					{$errors.message && $errors.message[0]}
 				</p>
 			{/if}
 		</label>
-		<button class="btn variant-filled but" disabled={$isSubmitting} on:click={Ripple}>Send</button>
+		<button class="btn variant-filled but" disabled={$isSubmitting} on:click={Ripple}
+			>{$LL.send()}</button
+		>
 	</form>
 	<div class="flex items-center justify-center pow order-1 md:order-2">
 		<div class="pr-5 sm:pr-8 -mr-[65px] sm:-mr-[77px]">
@@ -147,7 +146,10 @@
 			<p>
 				<iconify-icon icon="ic:baseline-phone" height="36px" aria-hidden="true" />+55 11 99146-4391
 			</p>
-			<p><iconify-icon icon="ic:baseline-place" height="36px" aria-hidden="true" />Brazil, SP/SP</p>
+			<p>
+				<iconify-icon icon="ic:baseline-place" height="36px" aria-hidden="true" />{$LL.brazil()},
+				SP/SP
+			</p>
 		</div>
 	</div>
 </div>

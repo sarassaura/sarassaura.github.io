@@ -78,6 +78,74 @@ type RootTranslation = {
 	 * P​r​o​j​e​c​t​s
 	 */
 	projects: string
+	/**
+	 * N​a​m​e​ ​i​s​ ​r​e​q​u​i​r​e​d
+	 */
+	nameMin: string
+	/**
+	 * N​a​m​e​ ​m​u​s​t​ ​h​a​v​e​ ​l​e​s​s​ ​t​h​a​n​ ​1​0​0​ ​c​h​a​r​a​c​t​e​r​s
+	 */
+	nameMax: string
+	/**
+	 * E​m​a​i​l​ ​m​u​s​t​ ​b​e​ ​v​a​l​i​d
+	 */
+	emailValid: string
+	/**
+	 * E​m​a​i​l​ ​m​u​s​t​ ​h​a​v​e​ ​m​o​r​e​ ​t​h​a​n​ ​5​ ​c​h​a​r​a​c​t​e​r​s
+	 */
+	emailMin: string
+	/**
+	 * E​m​a​i​l​ ​m​u​s​t​ ​h​a​v​e​ ​l​e​s​s​ ​t​h​a​n​ ​1​0​0​ ​c​h​a​r​a​c​t​e​r​s
+	 */
+	emailMax: string
+	/**
+	 * M​e​s​s​a​g​e​ ​i​s​ ​r​e​q​u​i​r​e​d
+	 */
+	messageMin: string
+	/**
+	 * M​e​s​s​a​g​e​ ​m​u​s​t​ ​h​a​v​e​ ​l​e​s​s​ ​t​h​a​n​ ​1​5​0​0​ ​c​h​a​r​a​c​t​e​r​s
+	 */
+	messageMax: string
+	/**
+	 * T​h​a​n​k​s​ ​f​o​r​ ​c​o​n​t​a​c​t​i​n​g​ ​m​e​!
+	 */
+	thanks: string
+	/**
+	 * M​e​s​s​a​g​e​ ​s​e​n​t​ ​s​u​c​c​e​s​s​f​u​l​l​y
+	 */
+	messageSuccess: string
+	/**
+	 * S​o​r​r​y​,​ ​s​o​m​e​t​h​i​n​g​ ​w​e​n​t​ ​w​r​o​n​g
+	 */
+	sorry: string
+	/**
+	 * T​r​y​ ​s​e​n​d​i​n​g​ ​m​e​ ​a​n​ ​e​m​a​i​l​ ​a​t​ ​s​a​r​a​h​y​u​k​i​n​o​n​a​k​a​d​a​@​g​m​a​i​l​.​c​o​m
+	 */
+	messageError: string
+	/**
+	 * S​e​n​d​ ​m​e​ ​a​ ​m​e​s​s​a​g​e
+	 */
+	sendMe: string
+	/**
+	 * N​a​m​e
+	 */
+	name: string
+	/**
+	 * E​m​a​i​l
+	 */
+	email2: string
+	/**
+	 * M​e​s​s​a​g​e
+	 */
+	message: string
+	/**
+	 * S​e​n​d
+	 */
+	send: string
+	/**
+	 * B​r​a​z​i​l
+	 */
+	brazil: string
 }
 
 export type TranslationFunctions = {
@@ -143,6 +211,74 @@ export type TranslationFunctions = {
 	 * Projects
 	 */
 	projects: () => LocalizedString
+	/**
+	 * Name is required
+	 */
+	nameMin: () => LocalizedString
+	/**
+	 * Name must have less than 100 characters
+	 */
+	nameMax: () => LocalizedString
+	/**
+	 * Email must be valid
+	 */
+	emailValid: () => LocalizedString
+	/**
+	 * Email must have more than 5 characters
+	 */
+	emailMin: () => LocalizedString
+	/**
+	 * Email must have less than 100 characters
+	 */
+	emailMax: () => LocalizedString
+	/**
+	 * Message is required
+	 */
+	messageMin: () => LocalizedString
+	/**
+	 * Message must have less than 1500 characters
+	 */
+	messageMax: () => LocalizedString
+	/**
+	 * Thanks for contacting me!
+	 */
+	thanks: () => LocalizedString
+	/**
+	 * Message sent successfully
+	 */
+	messageSuccess: () => LocalizedString
+	/**
+	 * Sorry, something went wrong
+	 */
+	sorry: () => LocalizedString
+	/**
+	 * Try sending me an email at sarahyukinonakada@gmail.com
+	 */
+	messageError: () => LocalizedString
+	/**
+	 * Send me a message
+	 */
+	sendMe: () => LocalizedString
+	/**
+	 * Name
+	 */
+	name: () => LocalizedString
+	/**
+	 * Email
+	 */
+	email2: () => LocalizedString
+	/**
+	 * Message
+	 */
+	message: () => LocalizedString
+	/**
+	 * Send
+	 */
+	send: () => LocalizedString
+	/**
+	 * Brazil
+	 */
+	brazil: () => LocalizedString
 }
 
 export type Formatters = {}
