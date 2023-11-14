@@ -58,8 +58,11 @@
 		class="h-full w-full flex justify-center items-center footer--back btn rounded-container-token"
 		on:click={() => {
 			document.querySelector('#page')?.scrollTo(0, 0);
-			document.body.focus();
 			window.history.replaceState(null, '', `${$locale}`);
+			let first = document.querySelector('[tabindex = "-1"]');
+			if (first instanceof HTMLElement) {
+				first.focus();
+			}
 		}}
 		aria-label="To the top"
 	>
