@@ -7,7 +7,8 @@ const en = {
 	presentation: "I'm Sarah,",
 	subheading:
 		"I am passionate about coding, I have a technical diploma in computing for the internet and I'm currently studying computer science.",
-	resume: 'Resume'
+	resume: 'Resume',
+	email: 'Email me'
 } satisfies BaseTranslation;
 
 export default en;

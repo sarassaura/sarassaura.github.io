@@ -36,6 +36,10 @@ type RootTranslation = {
 	 * R​e​s​u​m​e
 	 */
 	resume: string
+	/**
+	 * E​m​a​i​l​ ​m​e
+	 */
+	email: string
 }
 
 export type TranslationFunctions = {
@@ -59,6 +63,10 @@ export type TranslationFunctions = {
 	 * Resume
 	 */
 	resume: () => LocalizedString
+	/**
+	 * Email me
+	 */
+	email: () => LocalizedString
 }
 
 export type Formatters = {}

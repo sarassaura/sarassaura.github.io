@@ -7,7 +7,8 @@ const br = {
 	presentation: 'sou Sarah,',
 	subheading:
 		'Sou apaixonada por programação, tenho diploma técnico em informática para internet e atualmente estou cursando ciência da computação',
-	resume: 'Currículo'
+	resume: 'Currículo',
+	email: 'Fale Comigo'
 } satisfies BaseTranslation;
 
 export default br;

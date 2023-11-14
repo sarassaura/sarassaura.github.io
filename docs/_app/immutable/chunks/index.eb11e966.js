@@ -1,0 +1,1 @@
+const a={hi:"Hola",link:"/es{0}",presentation:"soy Sarah,",subheading:"Me apasiona la codificación, tengo un diplomado técnico en informática para internet y estoy estudiando ciencias de la computación.",resume:"Currículo",email:"Hablemos"};export{a as default};

@@ -24,7 +24,7 @@
 				on:click={() => {
 					document.getElementById('contact-me')?.scrollIntoView();
 					window.history.replaceState(null, '', `${$locale}#contact-me`);
-				}}>Email me</button
+				}}>{$LL.email()}</button
 			>
 		</div>
 	</div>
