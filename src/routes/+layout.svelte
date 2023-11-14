@@ -43,6 +43,7 @@
 		class={`w-full h-full flex-col ${mount && !wait ? 'flex' : 'hidden'}`}
 		in:fly={{ x: -100, duration: 500, delay: 500, easing: sineIn }}
 		out:fly={{ x: 100, duration: 500, easing: sineOut }}
+		tabindex="-1"
 	>
 		<slot />
 	</div>

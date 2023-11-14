@@ -75,11 +75,11 @@
 			/>
 		</div>
 	</button>
-	<a class="footer--privacy btn rounded-container-token py-6" href={$LL.link('/privacy')}
-		>Privacy Policy</a
-	>
 	<a class="footer--cookie btn rounded-container-token py-6" href={$LL.link('/cookie')}
 		>Cookie Policy</a
+	>
+	<a class="footer--privacy btn rounded-container-token py-6" href={$LL.link('/privacy')}
+		>Privacy Policy</a
 	>
 	<div class="footer--copyright card-hover">©sarassaura, 2023. All rights reserved.</div>
 </div>
