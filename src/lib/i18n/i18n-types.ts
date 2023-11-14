@@ -15,6 +15,24 @@ export type Translation = RootTranslation
 export type Translations = RootTranslation
 
 type RootTranslation = {
+	tabs: {
+		/**
+		 * A​b​o​u​t
+		 */
+		about: string
+		/**
+		 * S​k​i​l​l​s
+		 */
+		skills: string
+		/**
+		 * P​r​o​j​e​c​t​s
+		 */
+		projects: string
+		/**
+		 * C​o​n​t​a​c​t​ ​m​e
+		 */
+		'contact-me': string
+	}
 	/**
 	 * H​i​,
 	 */
@@ -43,6 +61,24 @@ type RootTranslation = {
 }
 
 export type TranslationFunctions = {
+	tabs: {
+		/**
+		 * About
+		 */
+		about: () => LocalizedString
+		/**
+		 * Skills
+		 */
+		skills: () => LocalizedString
+		/**
+		 * Projects
+		 */
+		projects: () => LocalizedString
+		/**
+		 * Contact me
+		 */
+		'contact-me': () => LocalizedString
+	}
 	/**
 	 * Hi,
 	 */

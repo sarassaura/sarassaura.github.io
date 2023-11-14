@@ -1,0 +1,1 @@
+const e={tabs:{about:"About",skills:"Skills",projects:"Projects","contact-me":"Contact me"},hi:"Hi,",link:"{0}",presentation:"I'm Sarah,",subheading:"I am passionate about coding, I have a technical diploma in computing for the internet and I'm currently studying computer science.",resume:"Resume",email:"Email me"};export{e as default};

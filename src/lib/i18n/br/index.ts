@@ -1,7 +1,14 @@
 import type { BaseTranslation } from '../i18n-types';
 
 const br = {
-	// TODO: your translations go here
+	// Menu
+	tabs: {
+		about: 'Sobre',
+		skills: 'Habilidade',
+		projects: 'Projetos',
+		'contact-me': 'Contato'
+	},
+	// About
 	hi: 'Oi,',
 	link: '/br{0}',
 	presentation: 'sou Sarah,',

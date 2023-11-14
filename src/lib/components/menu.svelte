@@ -2,7 +2,7 @@
 	import { ListBox, ListBoxItem, getDrawerStore } from '@skeletonlabs/skeleton';
 	import { page } from '$app/stores';
 	import Utilities from './utilities.svelte';
-	import { locale } from '$lib/i18n/i18n-svelte';
+	import { locale, LL } from '$lib/i18n/i18n-svelte';
 
 	let valueSingle: string = $page.url.hash.slice(1) || 'about';
 	const links = [
@@ -18,7 +18,7 @@
 <div class="flex w-full h-full p-4 md:px-16 flex-row-reverse pt-20 pb-8 h6">
 	<div class="w-full h-full flex flex-col">
 		<ListBox class="w-full">
-			{#each links as { link, icon }}
+			{#each links as { link, icon }, id}
 				<ListBoxItem
 					regionLead="flex mr-1"
 					bind:group={valueSingle}
@@ -33,7 +33,7 @@
 					<svelte:fragment slot="lead">
 						<iconify-icon {icon} height="24" />
 					</svelte:fragment>
-					{link.toUpperCase().replace('-', ' ')}
+					{Object.values($LL.tabs)[id]()}
 				</ListBoxItem>
 			{/each}
 		</ListBox>
