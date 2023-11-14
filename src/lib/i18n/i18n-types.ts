@@ -143,6 +143,10 @@ type RootTranslation = {
 	 */
 	send: string
 	/**
+	 * C​o​n​t​a​c​t​ ​I​n​f​o
+	 */
+	info: string
+	/**
 	 * B​r​a​z​i​l
 	 */
 	brazil: string
@@ -275,6 +279,10 @@ export type TranslationFunctions = {
 	 * Send
 	 */
 	send: () => LocalizedString
+	/**
+	 * Contact Info
+	 */
+	info: () => LocalizedString
 	/**
 	 * Brazil
 	 */

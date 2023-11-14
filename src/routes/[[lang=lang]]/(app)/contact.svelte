@@ -132,7 +132,7 @@
 		<div
 			class="informations relative gap-4 justify-center border border-r-none border-tertiary-500 rounded-lg px-8 py-10 pl-16"
 		>
-			<p class="h3 py-4">Contact Info</p>
+			<p class="h3 py-4">{$LL.info()}</p>
 			<p>
 				<iconify-icon icon="icon-park-outline:edit-name" height="36px" aria-hidden="true" />Sarah
 				Yukino Nakada

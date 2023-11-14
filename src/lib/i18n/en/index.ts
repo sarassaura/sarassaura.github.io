@@ -43,6 +43,7 @@ const en = {
 	email2: 'Email',
 	message: 'Message',
 	send: 'Send',
+	info: 'Contact Info',
 	brazil: 'Brazil'
 } satisfies BaseTranslation;
 
