@@ -8,6 +8,7 @@ export function unchange(TabList: HTMLElement | null, links: string[], page: str
 export function change(id: number, TabList: HTMLElement | null) {
 	if (TabList != undefined && TabList.querySelectorAll('button') != undefined) {
 		const offsetLeft = TabList.querySelectorAll('button')[id].offsetLeft;
+
 		const width = TabList.querySelectorAll('button')[id].offsetWidth / TabList.offsetWidth;
 
 		TabList.style.setProperty('--_left', offsetLeft + 'px');

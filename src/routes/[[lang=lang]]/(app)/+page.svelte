@@ -7,6 +7,7 @@
 	import { Footer, change, change_id } from '$lib';
 	import { page } from '$app/stores';
 	import type { PageData } from './$types';
+	import { locale } from '$lib/i18n/i18n-svelte';
 
 	export let data: PageData;
 	let { projects } = data;
@@ -25,9 +26,11 @@
 					if (entry.isIntersecting) {
 						change(links.indexOf(entry.target.id), TabList);
 						change_id(entry.target.id);
-						console.log(entry.target.id);
+						// console.log(entry.target.id);
+						let hash = links[links.indexOf(entry.target.id)];
 						const url = $page.url;
-						url.hash = links[links.indexOf(entry.target.id)];
+						url.hash = hash;
+						window.history.replaceState(null, '', `${$locale}#${hash}`);
 					}
 				});
 			},

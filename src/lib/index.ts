@@ -9,7 +9,7 @@ import Menu from './components/menu.svelte';
 import HamburguerIcon from './components/hamburguer_icon.svelte';
 import ShowOff from './components/showoff.svelte';
 import Utilities from './components/utilities.svelte';
-import { throttle } from './functions/throttle';
+import throttle from './functions/throttle';
 import { change_id, section } from './store/section';
 import { change, unchange } from './functions/tabs';
 
