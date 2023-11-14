@@ -58,6 +58,22 @@ type RootTranslation = {
 	 * E​m​a​i​l​ ​m​e
 	 */
 	email: string
+	/**
+	 * I​'​m​ ​a​ ​p​r​o​f​e​s​s​i​o​n​a​l​ 
+	 */
+	frontendOne: string
+	/**
+	 *  ​d​e​v​e​l​o​p​e​r​ ​w​i​t​h​ ​e​x​p​e​r​t​i​s​e​ ​a​c​r​o​s​s​ ​v​a​r​i​o​u​s​ ​f​r​a​m​e​w​o​r​k​s​,​ ​l​i​b​r​a​r​i​e​s​,​ ​a​n​d​ ​s​e​r​v​i​c​e​s​,​ ​e​s​p​e​c​i​a​l​l​y​ ​R​e​a​c​t​.​ ​I​ ​b​u​i​l​d​ ​p​e​r​f​o​r​m​i​n​g​,​ ​a​c​c​e​s​s​i​b​l​e​ ​a​n​d​ ​s​e​o​ ​f​r​i​e​n​d​l​y​ ​w​e​b​s​i​t​e​s​.
+	 */
+	frontendTwo: string
+	/**
+	 * D​e​s​i​g​n​ ​i​s​ ​t​h​e​ ​k​e​y​ ​t​o​ ​c​o​n​v​e​r​t​i​n​g​ ​u​s​e​r​s​ ​i​n​t​o​ ​c​l​i​e​n​t​s​.​ ​U​s​i​n​g​ ​w​h​i​t​e​ ​s​p​a​c​e​ ​a​n​d​ ​h​i​e​r​a​r​c​h​y​ ​i​s​ ​t​h​e​ ​d​i​f​f​e​r​e​n​c​e​ ​b​e​t​w​e​e​n​ ​o​v​e​r​w​h​e​l​m​i​n​g​ ​a​n​d​ ​a​p​p​e​a​l​i​n​g​.
+	 */
+	design: string
+	/**
+	 * B​u​s​i​n​e​s​s​ ​l​o​g​i​c​ ​i​s​n​'​t​ ​j​u​s​t​ ​a​b​o​u​t​ ​c​o​n​n​e​c​t​i​n​g​ ​w​i​t​h​ ​t​h​e​ ​d​a​t​a​b​a​s​e​,​ ​b​u​t​ ​a​b​o​u​t​ ​e​n​s​u​r​i​n​g​ ​p​r​o​c​e​s​s​i​n​g​ ​a​n​d​ ​d​a​t​a​ ​s​e​c​u​r​i​t​y​,​ ​m​a​n​a​g​e​ ​r​e​q​u​e​s​t​s​,​ ​a​n​d​ ​c​o​m​u​n​i​c​a​t​e​ ​w​i​t​h​ ​d​i​f​f​e​r​e​n​t​ ​s​e​r​v​i​c​e​s​.
+	 */
+	backend: string
 }
 
 export type TranslationFunctions = {
@@ -103,6 +119,22 @@ export type TranslationFunctions = {
 	 * Email me
 	 */
 	email: () => LocalizedString
+	/**
+	 * I'm a professional 
+	 */
+	frontendOne: () => LocalizedString
+	/**
+	 *  developer with expertise across various frameworks, libraries, and services, especially React. I build performing, accessible and seo friendly websites.
+	 */
+	frontendTwo: () => LocalizedString
+	/**
+	 * Design is the key to converting users into clients. Using white space and hierarchy is the difference between overwhelming and appealing.
+	 */
+	design: () => LocalizedString
+	/**
+	 * Business logic isn't just about connecting with the database, but about ensuring processing and data security, manage requests, and comunicate with different services.
+	 */
+	backend: () => LocalizedString
 }
 
 export type Formatters = {}

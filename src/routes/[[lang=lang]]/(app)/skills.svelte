@@ -2,6 +2,7 @@
 	import { ShowOff } from '$lib';
 	import Html from '$lib/Icons/html.svelte';
 	import Design from '$lib/Icons/design.svelte';
+	import { LL, locale } from '$lib/i18n/i18n-svelte';
 </script>
 
 <div
@@ -19,10 +20,8 @@
 			<section class="p-4">
 				<p class="h5">Frontend</p>
 			</section>
-			<p>
-				I'm a professional <span class="italic">JavaScript</span> developer with expertise across various
-				frameworks, libraries, and services, especially React. I build performing, accessible and seo
-				friendly websites.
+			<p lang={$locale}>
+				{$LL.frontendOne()}<span class="italic">JavaScript</span>{$LL.frontendTwo()}
 			</p>
 		</div>
 		<div class="module">
@@ -32,9 +31,8 @@
 			<section class="p-4">
 				<p class="h5">Design</p>
 			</section>
-			<p>
-				Design is the key to converting users into clients. Using white space and hierarchy is the
-				difference between overwhelming and appealing.
+			<p lang={$locale}>
+				{$LL.design()}
 			</p>
 		</div>
 		<div class="module">
@@ -44,9 +42,8 @@
 			<section class="p-4">
 				<p class="h5">Backend</p>
 			</section>
-			<p>
-				Business logic isn't just about connecting with the database, but about ensuring processing
-				and data security, manage requests, and comunicate with different services.
+			<p lang={$locale}>
+				{$LL.backend()}
 			</p>
 		</div>
 	</div>
