@@ -12,9 +12,8 @@
 			<br class="break" />
 			<span class="typewrite">Web Developer</span>
 		</h1>
-		<div class="subheading mb-10 lg:mb-16">
-			I am passionate about coding, I have a technical diploma in computing for the internet and I'm
-			currently studying computer science.
+		<div class="subheading mb-10 lg:mb-16" lang={$locale}>
+			{$LL.subheading()}
 		</div>
 		<div class="flex gap-2 md:gap-3 mt-4 w-fit">
 			<a class="btn variant-filled but" href={$LL.link(`/resume`)} on:click={Ripple} id="resume"
