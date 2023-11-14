@@ -2,7 +2,7 @@
 	import { popup } from '@skeletonlabs/skeleton';
 	import type { PageData } from './$types';
 	import Github from '$lib/Icons/github.svelte';
-	import LL from '$lib/i18n/i18n-svelte';
+	import { LL } from '$lib/i18n/i18n-svelte';
 
 	export let data: PageData['projects'];
 
@@ -11,7 +11,7 @@
 </script>
 
 <div class="section md:px-16 px-4 shrink-0" id="projects">
-	<h2 class="mb-8 text-center pol">Projects</h2>
+	<h2 class="mb-8 text-center pol">{$LL.projects()}</h2>
 	<div class="projects gap-4 md:gap-6">
 		{#each data.viewer.pinnedItems.edges as item, id (item)}
 			<figure class="relative mb-8">
@@ -65,6 +65,6 @@
 				</figcaption>
 			</figure>
 		{/each}
-		<a href={$LL.link('/projects')} class="hidden">Projects</a>
+		<a href={$LL.link('/projects')} class="hidden">{$LL.projects()}</a>
 	</div>
 </div>

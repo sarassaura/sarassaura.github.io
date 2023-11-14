@@ -74,6 +74,10 @@ type RootTranslation = {
 	 * B​u​s​i​n​e​s​s​ ​l​o​g​i​c​ ​i​s​n​'​t​ ​j​u​s​t​ ​a​b​o​u​t​ ​c​o​n​n​e​c​t​i​n​g​ ​w​i​t​h​ ​t​h​e​ ​d​a​t​a​b​a​s​e​,​ ​b​u​t​ ​a​b​o​u​t​ ​e​n​s​u​r​i​n​g​ ​p​r​o​c​e​s​s​i​n​g​ ​a​n​d​ ​d​a​t​a​ ​s​e​c​u​r​i​t​y​,​ ​m​a​n​a​g​e​ ​r​e​q​u​e​s​t​s​,​ ​a​n​d​ ​c​o​m​u​n​i​c​a​t​e​ ​w​i​t​h​ ​d​i​f​f​e​r​e​n​t​ ​s​e​r​v​i​c​e​s​.
 	 */
 	backend: string
+	/**
+	 * P​r​o​j​e​c​t​s
+	 */
+	projects: string
 }
 
 export type TranslationFunctions = {
@@ -135,6 +139,10 @@ export type TranslationFunctions = {
 	 * Business logic isn't just about connecting with the database, but about ensuring processing and data security, manage requests, and comunicate with different services.
 	 */
 	backend: () => LocalizedString
+	/**
+	 * Projects
+	 */
+	projects: () => LocalizedString
 }
 
 export type Formatters = {}

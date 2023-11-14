@@ -23,7 +23,9 @@ const br = {
 	design:
 		'Design é a chave para converter usuários em clientes. Usar hierarquia e espaços em branco é a diferença entre pesado e atraente.',
 	backend:
-		'A lógica de negócios não é apenas a conexão com o banco de dados, mas de garantir o processamento, segurança dos dados, solicitações e comunicar-se com diversos serviços.'
+		'A lógica de negócios não é apenas a conexão com o banco de dados, mas de garantir o processamento, segurança dos dados, solicitações e comunicar-se com diversos serviços.',
+	// Projects
+	projects: 'Projetos'
 } satisfies BaseTranslation;
 
 export default br;

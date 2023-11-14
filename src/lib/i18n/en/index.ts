@@ -23,7 +23,9 @@ const en = {
 	design:
 		'Design is the key to converting users into clients. Using white space and hierarchy is the difference between overwhelming and appealing.',
 	backend:
-		"Business logic isn't just about connecting with the database, but about ensuring processing and data security, manage requests, and comunicate with different services."
+		"Business logic isn't just about connecting with the database, but about ensuring processing and data security, manage requests, and comunicate with different services.",
+	// Projects
+	projects: 'Projects'
 } satisfies BaseTranslation;
 
 export default en;

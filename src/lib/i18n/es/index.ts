@@ -23,7 +23,9 @@ const es = {
 	design:
 		'El design es la clave para convertir usuarios en clientes. Usar espacios en blanco y jerarquía es la diferencia entre abrumador y atractivo.',
 	backend:
-		'El backend no es solo conectarse con la database, sino de garantizar el procesamiento y la seguridad de la data, gestionar requests y comunicarse con diferentes servicios.'
+		'El backend no es solo conectarse con la database, sino de garantizar el procesamiento y la seguridad de la data, gestionar requests y comunicarse con diferentes servicios.',
+	// Projects
+	projects: 'Proyectos'
 } satisfies BaseTranslation;
 
 export default es;
