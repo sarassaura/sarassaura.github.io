@@ -8,7 +8,7 @@
 	<div class="hero-body">
 		<h1 class="heading mb-5 lg:mb-8" id="main-content">
 			{$LL.hi()}
-			<span class="">I'm Sarah,</span>
+			<span class="">{$LL.presentation()}</span>
 			<br class="break" />
 			<span class="typewrite">Web Developer</span>
 		</h1>
