@@ -1,13 +1,29 @@
-let timer: unknown;
+export default function throttle<Params extends unknown[]>(
+	cb: (...args: Params) => void,
+	delay: number
+) {
+	let shouldWait = false;
+	let waitingArgs: Params | null;
 
-export const throttle = function (func: () => void, delay: number) {
-    if (timer) {
-        return;
-    }
+	const timeoutFunc = () => {
+		if (waitingArgs == null) {
+			shouldWait = false;
+		} else {
+			cb(...waitingArgs);
+			waitingArgs = null;
+			setTimeout(timeoutFunc, delay);
+		}
+	};
 
-    timer = setTimeout(function () {
-        func();
+	return (...args: Params) => {
+		if (shouldWait) {
+			waitingArgs = args;
+			return;
+		}
 
-        timer = undefined;
-    }, delay);
-};
+		cb(...args);
+		shouldWait = true;
+
+		setTimeout(timeoutFunc, delay);
+	};
+}
