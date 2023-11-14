@@ -6,7 +6,8 @@ const br = {
 	link: '/br{0}',
 	presentation: 'sou Sarah,',
 	subheading:
-		'Sou apaixonada por programação, tenho diploma técnico em informática para internet e atualmente estou cursando ciência da computação'
+		'Sou apaixonada por programação, tenho diploma técnico em informática para internet e atualmente estou cursando ciência da computação',
+	resume: 'Currículo'
 } satisfies BaseTranslation;
 
 export default br;

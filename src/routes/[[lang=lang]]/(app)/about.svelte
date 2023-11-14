@@ -17,7 +17,7 @@
 		</div>
 		<div class="flex gap-2 md:gap-3 mt-4 w-fit">
 			<a class="btn variant-filled but" href={$LL.link(`/resume`)} on:click={Ripple} id="resume"
-				>Resume</a
+				>{$LL.resume()}</a
 			>
 			<button
 				class="btn variant-ghost-primary"

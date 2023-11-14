@@ -32,6 +32,10 @@ type RootTranslation = {
 	 * I​ ​a​m​ ​p​a​s​s​i​o​n​a​t​e​ ​a​b​o​u​t​ ​c​o​d​i​n​g​,​ ​I​ ​h​a​v​e​ ​a​ ​t​e​c​h​n​i​c​a​l​ ​d​i​p​l​o​m​a​ ​i​n​ ​c​o​m​p​u​t​i​n​g​ ​f​o​r​ ​t​h​e​ ​i​n​t​e​r​n​e​t​ ​a​n​d​ ​I​'​m​ ​c​u​r​r​e​n​t​l​y​ ​s​t​u​d​y​i​n​g​ ​c​o​m​p​u​t​e​r​ ​s​c​i​e​n​c​e​.
 	 */
 	subheading: string
+	/**
+	 * R​e​s​u​m​e
+	 */
+	resume: string
 }
 
 export type TranslationFunctions = {
@@ -51,6 +55,10 @@ export type TranslationFunctions = {
 	 * I am passionate about coding, I have a technical diploma in computing for the internet and I'm currently studying computer science.
 	 */
 	subheading: () => LocalizedString
+	/**
+	 * Resume
+	 */
+	resume: () => LocalizedString
 }
 
 export type Formatters = {}
