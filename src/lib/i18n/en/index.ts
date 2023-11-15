@@ -15,7 +15,7 @@ const en = {
 	subheading:
 		"I am passionate about coding, I have a technical diploma in computing for the internet and I'm currently studying computer science.",
 	resume: 'Resume',
-	email: 'Email me',
+	cta: 'Email me',
 	// Skills
 	frontendOne: "I'm a professional ",
 	frontendTwo:
@@ -27,21 +27,28 @@ const en = {
 	// Projects
 	projects: 'Projects',
 	// Contact
-	nameMin: 'Name is required',
-	nameMax: 'Name must have less than 100 characters',
-	emailValid: 'Email must be valid',
-	emailMin: 'Email must have more than 5 characters',
-	emailMax: 'Email must have less than 100 characters',
-	messageMin: 'Message is required',
-	messageMax: 'Message must have less than 1500 characters',
+	name: {
+		min: 'Name is required',
+		max: 'Name must have less than 100 characters'
+	},
+	email: {
+		valid: 'Email must be valid',
+		min: 'Email must have more than 5 characters',
+		max: 'Email must have less than 100 characters'
+	},
+	message: {
+		min: 'Message is required',
+		max: 'Message must have less than 1500 characters'
+	},
+	// info
 	thanks: 'Thanks for contacting me!',
 	messageSuccess: 'Message sent successfully',
 	sorry: 'Sorry, something went wrong',
 	messageError: 'Try sending me an email at sarahyukinonakada@gmail.com',
 	sendMe: 'Send me a message',
-	name: 'Name',
+	name2: 'Name',
 	email2: 'Email',
-	message: 'Message',
+	message2: 'Message',
 	send: 'Send',
 	info: 'Contact Info',
 	brazil: 'Brazil'

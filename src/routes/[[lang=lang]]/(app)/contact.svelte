@@ -12,18 +12,14 @@
 	let invisible: boolean = false;
 
 	let schema = z.object({
-		name: z.string().min(1, { message: $LL.nameMin() }).max(100, { message: $LL.nameMax() }).trim(),
+		name: z.string().min(1, { message: 'min' }).max(100, { message: 'max' }).trim(),
 		email: z
 			.string()
-			.email({ message: $LL.emailValid() })
-			.min(5, { message: $LL.emailMin() })
-			.max(100, { message: $LL.emailMax() })
+			.email({ message: 'valid' })
+			.min(5, { message: 'min' })
+			.max(100, { message: 'max' })
 			.trim(),
-		message: z
-			.string()
-			.min(1, { message: $LL.messageMin() })
-			.max(1500, { message: $LL.messageMax() })
-			.trim()
+		message: z.string().min(1, { message: 'min' }).max(1500, { message: 'max' }).trim()
 	});
 
 	const { form, errors, reset, isSubmitting } = createForm<z.infer<typeof schema>>({
@@ -87,9 +83,9 @@
 		<p class="h3 py-4">{$LL.sendMe()}</p>
 		<label class="label max-w-lg">
 			<input class="input" type="text" required placeholder=" " name="name" autocomplete="name" />
-			<span>{$LL.name()}</span>
+			<span>{$LL.name2()}</span>
 			{#if $errors.name && $errors.name[0] != null}
-				<p class="dark:text-error-300 text-error-700">{$errors.name && $errors.name[0]}</p>
+				<p class="dark:text-error-300 text-error-700">{$LL.name[$errors.name[0]]()}</p>
 			{/if}
 		</label>
 		<label class="label max-w-lg">
@@ -103,7 +99,7 @@
 			/>
 			<span>{$LL.email2()}</span>
 			{#if $errors.email && $errors.email[0] != null}
-				<p class="dark:text-error-300 text-error-700">{$errors.email && $errors.email[0]}</p>
+				<p class="dark:text-error-300 text-error-700">{$LL.email[$errors.email[0]]()}</p>
 			{/if}
 		</label>
 		<label class="label max-w-lg">
@@ -114,10 +110,10 @@
 				placeholder=" "
 				name="message"
 			/>
-			<span>{$LL.message()}</span>
+			<span>{$LL.message2()}</span>
 			{#if $errors.message && $errors.message[0] != null}
 				<p class="dark:text-error-300 text-error-700">
-					{$errors.message && $errors.message[0]}
+					{$LL.message[$errors.message[0]]()}
 				</p>
 			{/if}
 		</label>

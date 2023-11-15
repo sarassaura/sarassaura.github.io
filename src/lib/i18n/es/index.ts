@@ -15,7 +15,7 @@ const es = {
 	subheading:
 		'Me apasiona la codificación, tengo un diplomado técnico en informática para internet y estoy estudiando ciencias de la computación.',
 	resume: 'Currículo',
-	email: 'Hablemos',
+	cta: 'Hablemos',
 	// Skills
 	frontendOne: 'Soy una programadora ',
 	frontendTwo:
@@ -27,21 +27,28 @@ const es = {
 	// Projects
 	projects: 'Proyectos',
 	// Contact
-	nameMin: 'El nombre es obligatorio',
-	nameMax: 'El nombre debe tener menos de 100 letras',
-	emailValid: 'El email debe ser válido',
-	emailMin: 'El email debe tener menos de 5 letras',
-	emailMax: 'El email debe tener menos de 100 letras',
-	messageMin: 'El mensaje es obligatorio',
-	messageMax: 'El mensaje debe tener menos de 1500 letras',
+	name: {
+		min: 'El nombre es obligatorio',
+		max: 'El nombre debe tener menos de 100 letras'
+	},
+	email: {
+		valid: 'El email debe ser válido',
+		min: 'El email debe tener menos de 5 letras',
+		max: 'El email debe tener menos de 100 letras'
+	},
+	message: {
+		min: 'El mensaje es obligatorio',
+		max: 'El mensaje debe tener menos de 1500 letras'
+	},
+	// info
 	thanks: '¡Gracias, me comunicaré contigo lo antes posible!',
 	messageSuccess: 'Mensaje enviado correctamente!',
 	sorry: 'Huy! Algo salió mal',
 	messageError: 'Intenta enviarme un email at sarahyukinonakada@gmail.com',
 	sendMe: 'Envíeme un mensaje',
-	name: 'Nombre',
+	name2: 'Nombre',
 	email2: 'Email',
-	message: 'Mensaje',
+	message2: 'Mensaje',
 	send: 'Enviar',
 	info: 'Contactos',
 	brazil: 'Brasil'

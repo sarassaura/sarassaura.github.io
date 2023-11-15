@@ -57,7 +57,7 @@ type RootTranslation = {
 	/**
 	 * E​m​a​i​l​ ​m​e
 	 */
-	email: string
+	cta: string
 	/**
 	 * I​'​m​ ​a​ ​p​r​o​f​e​s​s​i​o​n​a​l​ 
 	 */
@@ -78,34 +78,40 @@ type RootTranslation = {
 	 * P​r​o​j​e​c​t​s
 	 */
 	projects: string
-	/**
-	 * N​a​m​e​ ​i​s​ ​r​e​q​u​i​r​e​d
-	 */
-	nameMin: string
-	/**
-	 * N​a​m​e​ ​m​u​s​t​ ​h​a​v​e​ ​l​e​s​s​ ​t​h​a​n​ ​1​0​0​ ​c​h​a​r​a​c​t​e​r​s
-	 */
-	nameMax: string
-	/**
-	 * E​m​a​i​l​ ​m​u​s​t​ ​b​e​ ​v​a​l​i​d
-	 */
-	emailValid: string
-	/**
-	 * E​m​a​i​l​ ​m​u​s​t​ ​h​a​v​e​ ​m​o​r​e​ ​t​h​a​n​ ​5​ ​c​h​a​r​a​c​t​e​r​s
-	 */
-	emailMin: string
-	/**
-	 * E​m​a​i​l​ ​m​u​s​t​ ​h​a​v​e​ ​l​e​s​s​ ​t​h​a​n​ ​1​0​0​ ​c​h​a​r​a​c​t​e​r​s
-	 */
-	emailMax: string
-	/**
-	 * M​e​s​s​a​g​e​ ​i​s​ ​r​e​q​u​i​r​e​d
-	 */
-	messageMin: string
-	/**
-	 * M​e​s​s​a​g​e​ ​m​u​s​t​ ​h​a​v​e​ ​l​e​s​s​ ​t​h​a​n​ ​1​5​0​0​ ​c​h​a​r​a​c​t​e​r​s
-	 */
-	messageMax: string
+	name: {
+		/**
+		 * N​a​m​e​ ​i​s​ ​r​e​q​u​i​r​e​d
+		 */
+		min: string
+		/**
+		 * N​a​m​e​ ​m​u​s​t​ ​h​a​v​e​ ​l​e​s​s​ ​t​h​a​n​ ​1​0​0​ ​c​h​a​r​a​c​t​e​r​s
+		 */
+		max: string
+	}
+	email: {
+		/**
+		 * E​m​a​i​l​ ​m​u​s​t​ ​b​e​ ​v​a​l​i​d
+		 */
+		valid: string
+		/**
+		 * E​m​a​i​l​ ​m​u​s​t​ ​h​a​v​e​ ​m​o​r​e​ ​t​h​a​n​ ​5​ ​c​h​a​r​a​c​t​e​r​s
+		 */
+		min: string
+		/**
+		 * E​m​a​i​l​ ​m​u​s​t​ ​h​a​v​e​ ​l​e​s​s​ ​t​h​a​n​ ​1​0​0​ ​c​h​a​r​a​c​t​e​r​s
+		 */
+		max: string
+	}
+	message: {
+		/**
+		 * M​e​s​s​a​g​e​ ​i​s​ ​r​e​q​u​i​r​e​d
+		 */
+		min: string
+		/**
+		 * M​e​s​s​a​g​e​ ​m​u​s​t​ ​h​a​v​e​ ​l​e​s​s​ ​t​h​a​n​ ​1​5​0​0​ ​c​h​a​r​a​c​t​e​r​s
+		 */
+		max: string
+	}
 	/**
 	 * T​h​a​n​k​s​ ​f​o​r​ ​c​o​n​t​a​c​t​i​n​g​ ​m​e​!
 	 */
@@ -129,7 +135,7 @@ type RootTranslation = {
 	/**
 	 * N​a​m​e
 	 */
-	name: string
+	name2: string
 	/**
 	 * E​m​a​i​l
 	 */
@@ -137,7 +143,7 @@ type RootTranslation = {
 	/**
 	 * M​e​s​s​a​g​e
 	 */
-	message: string
+	message2: string
 	/**
 	 * S​e​n​d
 	 */
@@ -194,7 +200,7 @@ export type TranslationFunctions = {
 	/**
 	 * Email me
 	 */
-	email: () => LocalizedString
+	cta: () => LocalizedString
 	/**
 	 * I'm a professional 
 	 */
@@ -215,34 +221,40 @@ export type TranslationFunctions = {
 	 * Projects
 	 */
 	projects: () => LocalizedString
-	/**
-	 * Name is required
-	 */
-	nameMin: () => LocalizedString
-	/**
-	 * Name must have less than 100 characters
-	 */
-	nameMax: () => LocalizedString
-	/**
-	 * Email must be valid
-	 */
-	emailValid: () => LocalizedString
-	/**
-	 * Email must have more than 5 characters
-	 */
-	emailMin: () => LocalizedString
-	/**
-	 * Email must have less than 100 characters
-	 */
-	emailMax: () => LocalizedString
-	/**
-	 * Message is required
-	 */
-	messageMin: () => LocalizedString
-	/**
-	 * Message must have less than 1500 characters
-	 */
-	messageMax: () => LocalizedString
+	name: {
+		/**
+		 * Name is required
+		 */
+		min: () => LocalizedString
+		/**
+		 * Name must have less than 100 characters
+		 */
+		max: () => LocalizedString
+	}
+	email: {
+		/**
+		 * Email must be valid
+		 */
+		valid: () => LocalizedString
+		/**
+		 * Email must have more than 5 characters
+		 */
+		min: () => LocalizedString
+		/**
+		 * Email must have less than 100 characters
+		 */
+		max: () => LocalizedString
+	}
+	message: {
+		/**
+		 * Message is required
+		 */
+		min: () => LocalizedString
+		/**
+		 * Message must have less than 1500 characters
+		 */
+		max: () => LocalizedString
+	}
 	/**
 	 * Thanks for contacting me!
 	 */
@@ -266,7 +278,7 @@ export type TranslationFunctions = {
 	/**
 	 * Name
 	 */
-	name: () => LocalizedString
+	name2: () => LocalizedString
 	/**
 	 * Email
 	 */
@@ -274,7 +286,7 @@ export type TranslationFunctions = {
 	/**
 	 * Message
 	 */
-	message: () => LocalizedString
+	message2: () => LocalizedString
 	/**
 	 * Send
 	 */
