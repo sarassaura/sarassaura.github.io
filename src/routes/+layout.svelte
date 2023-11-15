@@ -8,6 +8,7 @@
 	import { onMount } from 'svelte';
 	import Roboto from '$lib/assets/fonts/static/RobotoMono-Regular.woff2';
 	import OpenSans from '$lib/assets/fonts/static/OpenSans-Regular.woff2';
+	import LL from '$lib/i18n/i18n-svelte';
 
 	storePopup.set({ computePosition, autoUpdate, offset, shift, flip, arrow });
 
@@ -36,7 +37,7 @@
 		<div class="loading" />
 		<div class="loading" />
 		<div class="loading" />
-		<span>Loading...</span>
+		<span>{$LL.loading()}...</span>
 	</div>
 
 	<div
