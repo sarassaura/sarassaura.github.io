@@ -42,7 +42,7 @@
 						<a
 							href={`https://github.com/sarassaura/${item.node.name}`}
 							class="flex items-center pulse"
-							aria-label="Code on Github"
+							aria-label={$LL.github()}
 							bind:this={gitRef[id]}
 							on:mouseenter={() => {
 								if (play[id]) {

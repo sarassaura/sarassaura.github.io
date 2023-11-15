@@ -196,6 +196,10 @@ type RootTranslation = {
 	 * L​o​a​d​i​n​g
 	 */
 	loading: string
+	/**
+	 * C​o​d​e​ ​o​n​ ​G​i​t​h​u​b
+	 */
+	github: string
 }
 
 export type TranslationFunctions = {
@@ -379,6 +383,10 @@ export type TranslationFunctions = {
 	 * Loading
 	 */
 	loading: () => LocalizedString
+	/**
+	 * Code on Github
+	 */
+	github: () => LocalizedString
 }
 
 export type Formatters = {}

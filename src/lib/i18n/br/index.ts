@@ -64,7 +64,8 @@ const br = {
 	previous: 'Anterior',
 	next: 'Próximo',
 	top: 'Voltar ao Topo',
-	loading: 'Carregando'
+	loading: 'Carregando',
+	github: 'Código no Github'
 } satisfies BaseTranslation;
 
 export default br;

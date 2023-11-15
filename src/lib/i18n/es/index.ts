@@ -64,7 +64,8 @@ const es = {
 	previous: 'Anterior',
 	next: 'Próximo',
 	top: 'Volver Arriba',
-	loading: 'Carregando'
+	loading: 'Carregando',
+	github: 'Código en Github'
 } satisfies BaseTranslation;
 
 export default es;

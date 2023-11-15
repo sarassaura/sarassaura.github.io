@@ -63,7 +63,7 @@
 				first.focus();
 			}
 		}}
-		aria-label="To the top"
+		aria-label={$LL.top()}
 	>
 		<div class="circular animate-bounce my-4">
 			<iconify-icon
