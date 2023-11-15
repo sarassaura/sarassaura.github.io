@@ -59,7 +59,12 @@ const br = {
 	copyright: '©sarassaura, 2023. Direitos reservados.',
 	privacy: 'Privacidade',
 	// Go back
-	back: 'Voltar'
+	back: 'Voltar',
+	download: 'Baixar',
+	previous: 'Anterior',
+	next: 'Próximo',
+	top: 'Voltar ao Topo',
+	loading: 'Carregando'
 } satisfies BaseTranslation;
 
 export default br;

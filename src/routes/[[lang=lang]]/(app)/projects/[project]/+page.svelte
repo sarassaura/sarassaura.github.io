@@ -16,26 +16,26 @@
 			class="btn variant-filled px-3 py-3 but"
 			href={$LL.link(`/projects/${data.previous_link}`)}
 			on:click={Ripple}
-			aria-label="Previous"
+			aria-label={$LL.previous()}
 		>
 			<iconify-icon icon="mdi:arrow-left" height="28" width="28" />
-			<span class="break !ml-0">&nbspPrevious&nbsp</span>
+			<span class="break !ml-0">&nbsp{$LL.previous()}&nbsp</span>
 		</a>
 		<Back icon="clarity:home-line" link="/#projects" />
 		<a
 			class="btn variant-filled px-3 py-3 but"
 			href={$LL.link(`/projects/${data.next_link}`)}
 			on:click={Ripple}
-			aria-label="Next"
+			aria-label={$LL.next()}
 		>
-			<span class="break">&nbspNext&nbsp</span>
+			<span class="break">&nbsp{$LL.next()}&nbsp</span>
 			<iconify-icon icon="mdi:arrow-right" height="28" width="28" class="!ml-0" />
 		</a>
 	</div>
 
 	<div class="mdx px-4 md:px-16 pb-8">
 		{#await import(`./../../../../markdown/${data.slug}.md`)}
-			Loading...
+			{$LL.loading()}...
 		{:then data}
 			<svelte:component this={data.default} />
 		{/await}
@@ -47,8 +47,8 @@
 			on:click={() => {
 				document.querySelector('#page')?.scrollTo(0, 0);
 				goto($page.url.pathname);
-			}}>Back to Top</button
+			}}>{$LL.top()}</button
 		>
-		<div>©sarassaura, 2023. All rights reserved.</div>
+		<div>{$LL.copyright()}</div>
 	</div>
 </AppShell>

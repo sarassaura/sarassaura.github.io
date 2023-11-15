@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Back from '$lib/components/back.svelte';
 	import { Ripple } from '$lib/functions/ripple';
+	import LL from '$lib/i18n/i18n-svelte';
 
 	let wrapper: HTMLDivElement;
 	let zoomer: HTMLImageElement;
@@ -43,8 +44,13 @@
 
 <div class="flex w-full justify-around py-4">
 	<Back icon="mdi:arrow-left" link="/" />
-	<a class="btn variant-filled but" href="/resume.pdf" download="sarah_nakada" on:click={Ripple}>
-		<span class="break">Download&nbsp</span>PDF
+	<a
+		class="btn variant-filled but px-3 py-3"
+		href="/resume.pdf"
+		download="sarah_nakada"
+		on:click={Ripple}
+	>
+		<span class="break !ml-0 pl-1">{$LL.download()}&nbsp</span>PDF
 		<iconify-icon icon="material-symbols:download-sharp" height="28" />
 	</a>
 </div>

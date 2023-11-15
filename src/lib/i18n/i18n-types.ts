@@ -176,6 +176,26 @@ type RootTranslation = {
 	 * G​o​ ​b​a​c​k
 	 */
 	back: string
+	/**
+	 * D​o​w​n​l​o​a​d
+	 */
+	download: string
+	/**
+	 * P​r​e​v​i​o​u​s
+	 */
+	previous: string
+	/**
+	 * N​e​x​t
+	 */
+	next: string
+	/**
+	 * B​a​c​k​ ​t​o​ ​T​o​p
+	 */
+	top: string
+	/**
+	 * L​o​a​d​i​n​g
+	 */
+	loading: string
 }
 
 export type TranslationFunctions = {
@@ -339,6 +359,26 @@ export type TranslationFunctions = {
 	 * Go back
 	 */
 	back: () => LocalizedString
+	/**
+	 * Download
+	 */
+	download: () => LocalizedString
+	/**
+	 * Previous
+	 */
+	previous: () => LocalizedString
+	/**
+	 * Next
+	 */
+	next: () => LocalizedString
+	/**
+	 * Back to Top
+	 */
+	top: () => LocalizedString
+	/**
+	 * Loading
+	 */
+	loading: () => LocalizedString
 }
 
 export type Formatters = {}
