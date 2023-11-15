@@ -85,7 +85,9 @@
 			<input class="input" type="text" required placeholder=" " name="name" autocomplete="name" />
 			<span>{$LL.name2()}</span>
 			{#if $errors.name && $errors.name[0] != null}
-				<p class="dark:text-error-300 text-error-700">{$LL.name[$errors.name[0]]()}</p>
+				<p class="dark:text-error-300 text-error-700">
+					{Object.values($LL.name)[Object.keys($LL.name).indexOf($errors.name[0])]()}
+				</p>
 			{/if}
 		</label>
 		<label class="label max-w-lg">
@@ -99,7 +101,9 @@
 			/>
 			<span>{$LL.email2()}</span>
 			{#if $errors.email && $errors.email[0] != null}
-				<p class="dark:text-error-300 text-error-700">{$LL.email[$errors.email[0]]()}</p>
+				<p class="dark:text-error-300 text-error-700">
+					{Object.values($LL.email)[Object.keys($LL.email).indexOf($errors.email[0])]()}
+				</p>
 			{/if}
 		</label>
 		<label class="label max-w-lg">
@@ -113,7 +117,7 @@
 			<span>{$LL.message2()}</span>
 			{#if $errors.message && $errors.message[0] != null}
 				<p class="dark:text-error-300 text-error-700">
-					{$LL.message[$errors.message[0]]()}
+					{Object.values($LL.message)[Object.keys($LL.message).indexOf($errors.message[0])]()}
 				</p>
 			{/if}
 		</label>
