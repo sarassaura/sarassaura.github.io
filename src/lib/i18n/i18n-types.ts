@@ -172,6 +172,10 @@ type RootTranslation = {
 	 * P​r​i​v​a​c​y​ ​P​o​l​i​c​y
 	 */
 	privacy: string
+	/**
+	 * G​o​ ​b​a​c​k
+	 */
+	back: string
 }
 
 export type TranslationFunctions = {
@@ -331,6 +335,10 @@ export type TranslationFunctions = {
 	 * Privacy Policy
 	 */
 	privacy: () => LocalizedString
+	/**
+	 * Go back
+	 */
+	back: () => LocalizedString
 }
 
 export type Formatters = {}

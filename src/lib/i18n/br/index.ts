@@ -54,10 +54,12 @@ const br = {
 	brazil: 'Brasil',
 	// Footer
 	testimonials:
-		'Sarah é uma pessoa comprometida em resolver problemas e admiro essa habilidade nela, além de tendo grande habilidade técnica, ela possui muita capacidade e profissionalismo.',
+		'Sarah é uma pessoa comprometida em resolver problemas e admiro essa habilidade nela, além de ter grande habilidade técnica, ela possui muita capacidade e profissionalismo.',
 	cookie: 'Cookies',
 	copyright: '©sarassaura, 2023. Direitos reservados.',
-	privacy: 'Privacidade'
+	privacy: 'Privacidade',
+	// Go back
+	back: 'Voltar'
 } satisfies BaseTranslation;
 
 export default br;

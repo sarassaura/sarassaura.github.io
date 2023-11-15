@@ -57,7 +57,9 @@ const es = {
 		'Sarah es una persona comprometida con la resolución de problemas y admiro esa capacidad en ella, además Al tener un alto nivel técnico, posee mucha capacidad y profesionalismo.',
 	cookie: 'Cookies',
 	copyright: '©sarassaura, 2023. Derechos reservados.',
-	privacy: 'Privacidad'
+	privacy: 'Privacidad',
+	// Go back
+	back: 'Inicio'
 } satisfies BaseTranslation;
 
 export default es;

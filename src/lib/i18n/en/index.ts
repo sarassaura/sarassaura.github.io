@@ -57,7 +57,9 @@ const en = {
 		'Sarah is a person committed to solving problems and I admire this ability in her, besides having high technical prowess, she possesses a lot of capability and professionalism.',
 	cookie: 'Cookie Policy',
 	copyright: '©sarassaura, 2023. All rights reserved.',
-	privacy: 'Privacy Policy'
+	privacy: 'Privacy Policy',
+	// Go back
+	back: 'Go back'
 } satisfies BaseTranslation;
 
 export default en;

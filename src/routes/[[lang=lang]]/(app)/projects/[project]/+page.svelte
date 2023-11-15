@@ -5,16 +5,9 @@
 	import { goto } from '$app/navigation';
 	import { AppShell } from '@skeletonlabs/skeleton';
 	import LL from '$lib/i18n/i18n-svelte';
-	// import type { ComponentType } from 'svelte';
+	import Back from '$lib/components/back.svelte';
 
 	export let data: PageData;
-
-	// const projects: Record<string, { default: ComponentType }> = import.meta.glob(
-	// 	`/src/markdown/*.md`,
-	// 	{ eager: true }
-	// );
-
-	// const mdx = projects[`/src/markdown/${data.slug}.md`];
 </script>
 
 <AppShell class="h-full" slotPageFooter="flex justify-center py-5" slotHeader="relative z-[8]">
@@ -28,15 +21,7 @@
 			<iconify-icon icon="mdi:arrow-left" height="28" width="28" />
 			<span class="break !ml-0">&nbspPrevious&nbsp</span>
 		</a>
-		<a
-			class="btn variant-filled px-3 py-3 but"
-			href={$LL.link(`/#projects`)}
-			on:click={Ripple}
-			aria-label="Go back"
-		>
-			<iconify-icon icon="clarity:home-line" height="28" width="28" />
-			<span class="break !ml-0 pl-1">&nbspGo back&nbsp</span>
-		</a>
+		<Back icon="clarity:home-line" link="/#projects" />
 		<a
 			class="btn variant-filled px-3 py-3 but"
 			href={$LL.link(`/projects/${data.next_link}`)}
