@@ -22,6 +22,12 @@
 		es: 'circle-flags:es'
 	};
 
+	const langNames: Record<Locales, string> = {
+		en: 'English',
+		br: 'Português',
+		es: 'Español'
+	};
+
 	let langArray = Object.keys(langChoices) as Array<Locales>;
 
 	const themeChoices = [
@@ -134,7 +140,7 @@
 					}}
 					class="capitalize btn dark:variant-ghost-primary variant-ringed w-full"
 				>
-					{choice}
+					{langNames[choice]}
 				</button>
 			{/each}
 		</div>
