@@ -51,7 +51,13 @@ const es = {
 	message2: 'Mensaje',
 	send: 'Enviar',
 	info: 'Contactos',
-	brazil: 'Brasil'
+	brazil: 'Brasil',
+	// Footer
+	testimonials:
+		'Sarah es una persona comprometida con la resolución de problemas y admiro esa capacidad en ella, además Al tener un alto nivel técnico, posee mucha capacidad y profesionalismo.',
+	cookie: 'Cookies',
+	copyright: '©sarassaura, 2023. Derechos reservados.',
+	privacy: 'Privacidad'
 } satisfies BaseTranslation;
 
 export default es;

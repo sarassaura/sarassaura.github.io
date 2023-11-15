@@ -11,7 +11,7 @@
 <div class="footer">
 	<div class="footer--links flex flex-col gap-y-4 card-hover">
 		<p class="h6 opacity-75">Links</p>
-		{#each links as link}
+		{#each links as link, id}
 			<button
 				class="capitalize"
 				on:click={() => {
@@ -19,15 +19,14 @@
 					window.history.replaceState(null, '', `${$locale}#${link}`);
 				}}
 			>
-				{link.replace('-', ' ')}
+				{Object.values($LL.tabs)[id]()}
 			</button>
 		{/each}
 	</div>
 	<div class="footer--testimonials card-hover">
 		<p class="text-lg">Gabrielle Oliveira</p>
 		<p class="italic">
-			"Sarah is a person committed to solving problems and I admire this ability in her, besides
-			having high technical prowess, she possesses a lot of capability and professionalism."
+			{$LL.testimonials()}
 		</p>
 	</div>
 	<a
@@ -76,10 +75,10 @@
 		</div>
 	</button>
 	<a class="footer--cookie btn rounded-container-token py-6" href={$LL.link('/cookie')}
-		>Cookie Policy</a
+		>{$LL.cookie()}</a
 	>
 	<a class="footer--privacy btn rounded-container-token py-6" href={$LL.link('/privacy')}
-		>Privacy Policy</a
+		>{$LL.privacy()}</a
 	>
-	<div class="footer--copyright card-hover">©sarassaura, 2023. All rights reserved.</div>
+	<div class="footer--copyright card-hover">{$LL.copyright()}</div>
 </div>

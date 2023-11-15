@@ -156,6 +156,22 @@ type RootTranslation = {
 	 * B​r​a​z​i​l
 	 */
 	brazil: string
+	/**
+	 * S​a​r​a​h​ ​i​s​ ​a​ ​p​e​r​s​o​n​ ​c​o​m​m​i​t​t​e​d​ ​t​o​ ​s​o​l​v​i​n​g​ ​p​r​o​b​l​e​m​s​ ​a​n​d​ ​I​ ​a​d​m​i​r​e​ ​t​h​i​s​ ​a​b​i​l​i​t​y​ ​i​n​ ​h​e​r​,​ ​b​e​s​i​d​e​s​ ​h​a​v​i​n​g​ ​h​i​g​h​ ​t​e​c​h​n​i​c​a​l​ ​p​r​o​w​e​s​s​,​ ​s​h​e​ ​p​o​s​s​e​s​s​e​s​ ​a​ ​l​o​t​ ​o​f​ ​c​a​p​a​b​i​l​i​t​y​ ​a​n​d​ ​p​r​o​f​e​s​s​i​o​n​a​l​i​s​m​.
+	 */
+	testimonials: string
+	/**
+	 * C​o​o​k​i​e​ ​P​o​l​i​c​y
+	 */
+	cookie: string
+	/**
+	 * ©​s​a​r​a​s​s​a​u​r​a​,​ ​2​0​2​3​.​ ​A​l​l​ ​r​i​g​h​t​s​ ​r​e​s​e​r​v​e​d​.
+	 */
+	copyright: string
+	/**
+	 * P​r​i​v​a​c​y​ ​P​o​l​i​c​y
+	 */
+	privacy: string
 }
 
 export type TranslationFunctions = {
@@ -299,6 +315,22 @@ export type TranslationFunctions = {
 	 * Brazil
 	 */
 	brazil: () => LocalizedString
+	/**
+	 * Sarah is a person committed to solving problems and I admire this ability in her, besides having high technical prowess, she possesses a lot of capability and professionalism.
+	 */
+	testimonials: () => LocalizedString
+	/**
+	 * Cookie Policy
+	 */
+	cookie: () => LocalizedString
+	/**
+	 * ©sarassaura, 2023. All rights reserved.
+	 */
+	copyright: () => LocalizedString
+	/**
+	 * Privacy Policy
+	 */
+	privacy: () => LocalizedString
 }
 
 export type Formatters = {}
