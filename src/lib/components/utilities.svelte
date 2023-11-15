@@ -66,11 +66,11 @@
 
 <div class="dropdown p-4 variant-ghost-surface rounded-md" data-popup="config">
 	<div class="flex justify-between gap-x-5 my-3 items-center">
-		<p>Dark Mode</p>
+		<p>{$LL.dark()}</p>
 		<LightSwitch />
 	</div>
 	<div class="flex justify-between gap-x-5 my-3 items-center">
-		<p>Theme</p>
+		<p>{$LL.theme()}</p>
 		<button
 			class="btn variant-ghost-primary p-1 px-3"
 			use:popup={{
@@ -101,7 +101,7 @@
 	</div>
 
 	<div class="flex justify-between gap-x-5 my-3 items-center">
-		<p>Color</p>
+		<p>{$LL.color()}</p>
 		<div class="rounded-full btn p-0" style="background-color: {colorValue};">
 			<input
 				class="input opacity-0"
@@ -116,7 +116,7 @@
 	</div>
 
 	<div class="flex justify-between gap-x-5 my-3 items-center">
-		<p>Lang</p>
+		<p>{$LL.lang()}</p>
 		<div class="rounded-full">
 			<button
 				class="btn p-0"
@@ -155,7 +155,7 @@
 				root.dataset.theme = 'crimson';
 				$colorStore = { color: colorValue, theme: theme };
 				root.style.setProperty('--color-primary-500', `212 22 60`);
-			}}>Reset</button
+			}}>{$LL.reset()}</button
 		>
 	</div>
 	<div class="arrow variant-glass-primary" />

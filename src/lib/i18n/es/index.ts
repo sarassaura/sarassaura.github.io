@@ -8,6 +8,12 @@ const es = {
 		projects: 'Proyectos',
 		'contact-me': 'Contáctame'
 	},
+	// Config
+	dark: 'Modo Nocturno',
+	theme: 'Tema',
+	color: 'Color',
+	lang: 'Idioma',
+	reset: 'Reajustar',
 	// About
 	hi: 'Hola',
 	link: '/es{0}',

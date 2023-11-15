@@ -8,6 +8,12 @@ const br = {
 		projects: 'Projetos',
 		'contact-me': 'Contato'
 	},
+	// Config
+	dark: 'Modo Noite',
+	theme: 'Tema',
+	color: 'Cor',
+	lang: 'Idioma',
+	reset: 'Reajustar',
 	// About
 	hi: 'Oi,',
 	link: '/br{0}',

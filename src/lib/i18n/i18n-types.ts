@@ -34,6 +34,26 @@ type RootTranslation = {
 		'contact-me': string
 	}
 	/**
+	 * D​a​r​k​ ​M​o​d​e
+	 */
+	dark: string
+	/**
+	 * T​h​e​m​e
+	 */
+	theme: string
+	/**
+	 * C​o​l​o​r
+	 */
+	color: string
+	/**
+	 * L​a​n​g
+	 */
+	lang: string
+	/**
+	 * R​e​s​e​t
+	 */
+	reset: string
+	/**
 	 * H​i​,
 	 */
 	hi: string
@@ -221,6 +241,26 @@ export type TranslationFunctions = {
 		 */
 		'contact-me': () => LocalizedString
 	}
+	/**
+	 * Dark Mode
+	 */
+	dark: () => LocalizedString
+	/**
+	 * Theme
+	 */
+	theme: () => LocalizedString
+	/**
+	 * Color
+	 */
+	color: () => LocalizedString
+	/**
+	 * Lang
+	 */
+	lang: () => LocalizedString
+	/**
+	 * Reset
+	 */
+	reset: () => LocalizedString
 	/**
 	 * Hi,
 	 */

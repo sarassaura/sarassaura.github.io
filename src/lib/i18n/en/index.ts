@@ -8,6 +8,12 @@ const en = {
 		projects: 'Projects',
 		'contact-me': 'Contact me'
 	},
+	// Config
+	dark: 'Dark Mode',
+	theme: 'Theme',
+	color: 'Color',
+	lang: 'Lang',
+	reset: 'Reset',
 	// About
 	hi: 'Hi,',
 	link: '{0}',
