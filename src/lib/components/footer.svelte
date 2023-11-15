@@ -26,7 +26,7 @@
 	<div class="footer--testimonials card-hover">
 		<p class="text-lg">Gabrielle Oliveira</p>
 		<p class="italic">
-			{$LL.testimonials()}
+			"{$LL.testimonials()}"
 		</p>
 	</div>
 	<a
