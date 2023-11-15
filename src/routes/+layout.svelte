@@ -30,7 +30,7 @@
 
 {#key data.url}
 	<div
-		class={`w-full h-full items-center justify-center relative ${
+		class={`w-full h-full items-center justify-center relative perspective ${
 			mount && !wait ? 'hidden' : 'flex'
 		}`}
 	>
@@ -51,12 +51,16 @@
 {/key}
 
 <style>
+	.perspective {
+		perspective: 1000px;
+	}
 	.loading {
 		position: absolute;
-		height: 200px;
-		width: 200px;
+		height: 250px;
+		width: 250px;
 		border-color: currentColor;
 		border-radius: 50%;
+		transform-style: preserve-3d;
 	}
 
 	.loading:nth-child(1) {
