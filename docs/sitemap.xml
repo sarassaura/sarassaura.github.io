@@ -5,9 +5,6 @@
     <loc>https://sarassaura.github.io/blog</loc>
   </url>
   <url>
-    <loc>https://sarassaura.github.io/br</loc>
-  </url>
-  <url>
     <loc>https://sarassaura.github.io/cookie</loc>
   </url>
   <url>
@@ -26,22 +23,10 @@
     <loc>https://sarassaura.github.io/projects</loc>
   </url>
   <url>
+    <loc>https://sarassaura.github.io/pt-BR</loc>
+  </url>
+  <url>
     <loc>https://sarassaura.github.io/resume</loc>
-  </url>
-  <url>
-    <loc>https://sarassaura.github.io/br/blog</loc>
-  </url>
-  <url>
-    <loc>https://sarassaura.github.io/br/cookie</loc>
-  </url>
-  <url>
-    <loc>https://sarassaura.github.io/br/privacy</loc>
-  </url>
-  <url>
-    <loc>https://sarassaura.github.io/br/projects</loc>
-  </url>
-  <url>
-    <loc>https://sarassaura.github.io/br/resume</loc>
   </url>
   <url>
     <loc>https://sarassaura.github.io/es/blog</loc>
@@ -71,16 +56,19 @@
     <loc>https://sarassaura.github.io/projects/underground</loc>
   </url>
   <url>
-    <loc>https://sarassaura.github.io/br/projects/landing</loc>
+    <loc>https://sarassaura.github.io/pt-BR/blog</loc>
   </url>
   <url>
-    <loc>https://sarassaura.github.io/br/projects/sarassaura.github.io</loc>
+    <loc>https://sarassaura.github.io/pt-BR/cookie</loc>
   </url>
   <url>
-    <loc>https://sarassaura.github.io/br/projects/tattoo</loc>
+    <loc>https://sarassaura.github.io/pt-BR/privacy</loc>
   </url>
   <url>
-    <loc>https://sarassaura.github.io/br/projects/underground</loc>
+    <loc>https://sarassaura.github.io/pt-BR/projects</loc>
+  </url>
+  <url>
+    <loc>https://sarassaura.github.io/pt-BR/resume</loc>
   </url>
   <url>
     <loc>https://sarassaura.github.io/es/projects/landing</loc>
@@ -93,5 +81,17 @@
   </url>
   <url>
     <loc>https://sarassaura.github.io/es/projects/underground</loc>
+  </url>
+  <url>
+    <loc>https://sarassaura.github.io/pt-BR/projects/landing</loc>
+  </url>
+  <url>
+    <loc>https://sarassaura.github.io/pt-BR/projects/sarassaura.github.io</loc>
+  </url>
+  <url>
+    <loc>https://sarassaura.github.io/pt-BR/projects/tattoo</loc>
+  </url>
+  <url>
+    <loc>https://sarassaura.github.io/pt-BR/projects/underground</loc>
   </url>
 </urlset>

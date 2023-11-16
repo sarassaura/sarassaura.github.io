@@ -18,13 +18,13 @@
 
 	const langChoices: Record<Locales, string> = {
 		en: 'circle-flags:uk',
-		br: 'circle-flags:br',
+		'pt-BR': 'circle-flags:br',
 		es: 'circle-flags:es'
 	};
 
 	const langNames: Record<Locales, string> = {
 		en: 'English',
-		br: 'Português',
+		'pt-BR': 'Português',
 		es: 'Español'
 	};
 
