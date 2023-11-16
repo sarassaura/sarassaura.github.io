@@ -2,7 +2,11 @@
 
 <div align="center">
 
-A `personal portfolio + blog` with svelte, github graphql api and markdown
+[🇬🇧 English](/README.md)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[🇪🇸 Español](/README.es.md)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[🇧🇷 Português](/README.pt-BR.md)
+
+<p>A `personal portfolio + blog` with svelte, github graphql api and markdown</p>
 
 </div>
 
