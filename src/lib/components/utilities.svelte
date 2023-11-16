@@ -11,6 +11,8 @@
 	import { locale, setLocale } from '$lib/i18n/i18n-svelte';
 	import { loadLocaleAsync } from '$lib/i18n/i18n-util.async';
 	import LL from '$lib/i18n/i18n-svelte';
+	import { unchange } from '$lib/functions/tabs';
+	import { page } from '$app/stores';
 
 	let colorValue: string;
 	let root: HTMLBodyElement;
@@ -134,10 +136,17 @@
 			{#each langArray as choice}
 				<button
 					on:click={async () => {
+						let links = Object.keys($LL.tabs);
+						let TabList = document.querySelector('.tab-list');
 						document.documentElement.lang = choice;
 						await loadLocaleAsync(choice);
 						setLocale(choice);
 						window.history.replaceState(null, '', '/' + choice);
+						setTimeout(() => {
+							if (TabList instanceof HTMLElement) {
+								unchange(TabList, links, $page.url.hash);
+							}
+						}, 10);
 					}}
 					class="capitalize btn dark:variant-ghost-primary variant-ringed w-full"
 				>
