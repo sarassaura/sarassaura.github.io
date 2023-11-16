@@ -9,9 +9,6 @@
 	import Roboto from '$lib/assets/fonts/static/RobotoMono-Regular.woff2';
 	import OpenSans from '$lib/assets/fonts/static/OpenSans-Regular.woff2';
 	import LL from '$lib/i18n/i18n-svelte';
-	import { change, change_id } from '$lib';
-	import { page } from '$app/stores';
-	import { locale } from '$lib/i18n/i18n-svelte';
 
 	storePopup.set({ computePosition, autoUpdate, offset, shift, flip, arrow });
 
@@ -24,40 +21,6 @@
 	setTimeout(() => {
 		wait = false;
 	}, 800);
-
-	const links = ['about', 'skills', 'projects', 'contact-me'];
-	let TabList: HTMLElement | null;
-	let PageRef: Array<HTMLElement>;
-
-	onMount(() => {
-		TabList = document.querySelector('.tab-list');
-		PageRef = document.querySelectorAll('.section') as unknown as Array<HTMLElement>;
-
-		let observer = new IntersectionObserver(
-			(entries) => {
-				entries.forEach((entry) => {
-					if (entry.isIntersecting) {
-						change(links.indexOf(entry.target.id), TabList);
-						change_id(entry.target.id);
-						let hash = links[links.indexOf(entry.target.id)];
-						const url = $page.url;
-						url.hash = hash;
-						window.history.replaceState(null, '', `${$locale}#${hash}`);
-					}
-				});
-			},
-			{ threshold: 0.3 }
-		);
-		PageRef.forEach((element) => {
-			observer.observe(element);
-		});
-
-		return () => {
-			PageRef.forEach((element) => {
-				observer.unobserve(element);
-			});
-		};
-	});
 </script>
 
 <svelte:head>
