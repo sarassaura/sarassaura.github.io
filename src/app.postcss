@@ -1054,7 +1054,6 @@
             bottom: 0px;
             left: 0px;
             right: 0px;
-            scale: var(--_width, 0) 1;
             translate: var(--_left, 0px) 0;
             transform-origin: left;
             transition: scale 200ms, translate 200ms;
@@ -1064,6 +1063,24 @@
             @media (prefers-reduced-motion) {
                 transition: scale 0ms, translate 0ms;
             }
+        }
+    }
+
+    html[lang='en'] .tab-list {
+        &::before {
+            scale: var(--_width, 0.2171848) 1;
+        }
+    }
+
+    html[lang='es'] .tab-list {
+        &::before {
+            scale: var(--_width, 0.18630773) 1;
+        }
+    }
+
+    html[lang='pt-BR'] .tab-list {
+        &::before {
+            scale: var(--_width, 0.20298552) 1;
         }
     }
 
