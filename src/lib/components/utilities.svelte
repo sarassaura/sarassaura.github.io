@@ -134,6 +134,7 @@
 			{#each langArray as choice}
 				<button
 					on:click={async () => {
+						document.documentElement.lang = choice;
 						await loadLocaleAsync(choice);
 						setLocale(choice);
 						window.history.replaceState(null, '', '/' + choice);
