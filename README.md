@@ -1,10 +1,14 @@
-# Personal Portfolio
-
 <div align="center">
 
 [🇬🇧 English](/README.md)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 [🇪🇸 Español](/README.es.md)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 [🇧🇷 Português](/README.pt-BR.md)
+
+</div>
+
+# Personal Portfolio
+
+<div align="center">
 
 <p>A `personal portfolio + blog` with svelte, github graphql api and markdown</p>
 
