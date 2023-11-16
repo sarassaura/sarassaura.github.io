@@ -4,8 +4,8 @@
 
 <p>A `personal portfolio + blog` with svelte, github graphql api and markdown</p>
 
-[🇬🇧 English](/README.md)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[🇪🇸 Español](/README.es.md)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[🇬🇧 English](/README.md)&nbsp;&nbsp; • &nbsp;&nbsp;
+[🇪🇸 Español](/README.es.md)&nbsp;&nbsp; • &nbsp;&nbsp;
 [🇧🇷 Português](/README.pt-BR.md)
 
 </div>
