@@ -12,7 +12,7 @@
 
 ## Tecnologias
 
-- Lindas UI com _tailwind_
+- Lindas Interfaces Gráficas com _tailwind_
 - Modo Noite + 3 temas com _skeleton_
 - Serviço de Email com _formspree_
 - Suporte para Markdown com _mdsvex_
