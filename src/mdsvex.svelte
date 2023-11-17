@@ -1,6 +1,6 @@
 <script context="module">
-	import { img } from '$lib/components/md';
-	export { img };
+	import { img, a } from '$lib/components/md';
+	export { img, a };
 </script>
 
 <slot />
