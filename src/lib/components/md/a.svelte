@@ -14,8 +14,19 @@
 	if (href == '/README.pt-BR.md') {
 		href = `/pt-BR${url}`;
 	}
+
+	if (href.startsWith('https://github.com/sarassaura/')) {
+		console.log('video');
+	}
 </script>
 
-<a {href} {rel}>
-	<slot />
-</a>
+{#if href.startsWith('https://github.com/sarassaura/')}
+	<video autoplay loop muted>
+		<source src={href} type="video/mp4" />
+		Your browser does not support HTML video.
+	</video>
+{:else}
+	<a {href} {rel}>
+		<slot />
+	</a>
+{/if}

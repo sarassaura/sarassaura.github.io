@@ -20,7 +20,7 @@
 	onMount(() => (mount = true));
 	setTimeout(() => {
 		wait = false;
-	}, 800);
+	}, 500);
 </script>
 
 <svelte:head>
@@ -37,7 +37,7 @@
 		<div class="loading" />
 		<div class="loading" />
 		<div class="loading" />
-		<span>{$LL.loading()}...</span>
+		<span class="waiting">{$LL.loading()}...</span>
 	</div>
 
 	<div
@@ -51,6 +51,9 @@
 {/key}
 
 <style>
+	.waiting {
+		font-size: 15px;
+	}
 	.perspective {
 		perspective: 1000px;
 	}
@@ -65,17 +68,17 @@
 
 	.loading:nth-child(1) {
 		animation: circle1 2s linear infinite;
-		border-bottom: 8px solid;
+		border-bottom: 11px solid;
 	}
 
 	.loading:nth-child(2) {
 		animation: circle2 2s linear infinite;
-		border-right: 8px solid;
+		border-right: 11px solid;
 	}
 
 	.loading:nth-child(3) {
 		animation: circle3 2s linear infinite;
-		border-top: 8px solid;
+		border-top: 11px solid;
 	}
 
 	@keyframes circle1 {
