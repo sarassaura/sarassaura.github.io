@@ -2,18 +2,22 @@
 
 <div align="center">
 
+A `Tattoo-Studio` portfolio with Cloudinary Image Gallery, On-Demand ISR, SSG, Static Paths
+
 ![Banner](/public/Banner.png?raw=true)
 
-[Features](#features) •
-[Installation](#installation) •
-[Usage](#usage) •
+[Features](#features)&nbsp;&nbsp; • &nbsp;&nbsp;
+[Installation](#installation)&nbsp;&nbsp; • &nbsp;&nbsp;
+[Usage](#usage)&nbsp;&nbsp; • &nbsp;&nbsp;
 [Environment Variables](#environment-variables)
+
+[🇬🇧 English](/README.md)&nbsp;&nbsp; • &nbsp;&nbsp;
+[🇪🇸 Español](/README.es.md)&nbsp;&nbsp; • &nbsp;&nbsp;
+[🇧🇷 Português](/README.pt-BR.md)
 
 ![Home](/public/Home.gif)
 ![Portfolio](/public/Portfolio.gif)
 ![Contact](/public/Contact.gif)
-
-A `Tattoo-Studio` portfolio with Cloudinary Image Gallery, On-Demand ISR, SSG, Static Paths
 
 </div>
 
@@ -87,5 +91,5 @@ https://<NEXT_PUBLIC_SITE_URL>/api/revalidate?secret=<SECRET_TOKEN>
 
 ## Meta
 
-Created By Florescente:
-[github.com/florescente](https://github.com/florescente)
+Created By Sarassaura:
+[github.com/sarassaura](https://github.com/sarassaura)

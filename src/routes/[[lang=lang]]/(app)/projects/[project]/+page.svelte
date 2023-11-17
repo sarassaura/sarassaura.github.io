@@ -6,8 +6,12 @@
 	import { AppShell } from '@skeletonlabs/skeleton';
 	import LL from '$lib/i18n/i18n-svelte';
 	import Back from '$lib/components/back.svelte';
+	import { isLocale } from '$lib/i18n/i18n-util';
 
 	export let data: PageData;
+
+	const fromURL = data.url.split('/')[1];
+	const isLanguage = isLocale(fromURL);
 </script>
 
 <AppShell class="h-full" slotPageFooter="flex justify-center py-5" slotHeader="relative z-[8]">
@@ -34,7 +38,7 @@
 	</div>
 
 	<div class="mdx px-4 md:px-16 pb-8">
-		{#await import(`./../../../../markdown/${data.slug}.md`)}
+		{#await import(`./../../../../markdown/${data.slug}${isLanguage ? '.' + fromURL : ''}.md`)}
 			{$LL.loading()}...
 		{:then data}
 			<svelte:component this={data.default} />

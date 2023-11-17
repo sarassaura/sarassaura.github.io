@@ -13,7 +13,17 @@ export async function load({ url }) {
 					edges {
 						node {
 							... on Repository {
-								object(expression: "main:README.md") {
+								en: object(expression: "main:README.md") {
+									... on Blob {
+										text
+									}
+								}
+								es: object(expression: "main:README.es.md") {
+									... on Blob {
+										text
+									}
+								}
+								br: object(expression: "main:README.pt-BR.md") {
 									... on Blob {
 										text
 									}
@@ -45,7 +55,13 @@ export async function load({ url }) {
 				totalCount: number;
 				edges: Array<{
 					node: {
-						object: {
+						en: {
+							text: string;
+						};
+						es: {
+							text: string;
+						};
+						br: {
 							text: string;
 						};
 						name: string;
@@ -65,8 +81,10 @@ export async function load({ url }) {
 		{ authorization: `Bearer ${GITHUB}` }
 	);
 
+	const potato: string = url.pathname;
+
 	return {
 		projects,
-		url: url.pathname
+		url: potato
 	};
 }
