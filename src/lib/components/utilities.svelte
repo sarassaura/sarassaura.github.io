@@ -195,8 +195,9 @@
 	<Github height="28" width="28" style="rounded-full" />
 </a>
 
-<div
-	class="cursor-pointer rounded-full rotate h-[36px] w-[36px] justify-self-end"
+<button
+	class="rounded-full rotate h-[36px] w-[36px] justify-self-end"
+	aria-label="Config"
 	use:popup={{
 		event: 'click',
 		target: 'config',
@@ -205,4 +206,4 @@
 	}}
 >
 	<Gear height="36" width="36" style="p-1.5" />
-</div>
+</button>

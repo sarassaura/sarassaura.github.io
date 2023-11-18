@@ -55,6 +55,11 @@
 			});
 		};
 	});
+
+	onMount(() => {
+		let page = document.querySelector('#page') as HTMLDivElement;
+		page.tabIndex = -1;
+	});
 </script>
 
 <Drawer class="lg:hidden z-[8]" zIndex="">
@@ -78,5 +83,5 @@
 		</div>
 		<Navbar />
 	</svelte:fragment>
-	<slot />
+	<slot tabindex="-1" />
 </AppShell>

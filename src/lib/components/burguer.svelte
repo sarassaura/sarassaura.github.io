@@ -24,6 +24,7 @@
 	class="btn-icon dark:fill-white lg:hidden button-burguer flex items-center"
 	on:click={toggle}
 	aria-label="hamburguer menu"
+	tabindex="0"
 >
 	<HamburguerIcon style={$drawerStore.open ? 'open' : 'closed'} />
 </button>
