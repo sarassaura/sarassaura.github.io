@@ -2,18 +2,24 @@
 
 <div align="center">
 
+A `Tattoo-Studio` portfolio with Cloudinary Image Gallery, On-Demand ISR, SSG, Static Paths
+
 ![Banner](/public/Banner.png?raw=true)
 
-[Features](#features) •
-[Installation](#installation) •
-[Usage](#usage) •
+[Features](#features)&nbsp;&nbsp; • &nbsp;&nbsp;
+[Installation](#installation)&nbsp;&nbsp; • &nbsp;&nbsp;
+[Usage](#usage)&nbsp;&nbsp; • &nbsp;&nbsp;
 [Environment Variables](#environment-variables)
 
-![Home](/public/Home.gif)
-![Portfolio](/public/Portfolio.gif)
-![Contact](/public/Contact.gif)
+[🇬🇧 English](/README.md)&nbsp;&nbsp; • &nbsp;&nbsp;
+[🇪🇸 Español](/README.es.md)&nbsp;&nbsp; • &nbsp;&nbsp;
+[🇧🇷 Português](/README.pt-BR.md)
 
-A `Tattoo-Studio` portfolio with Cloudinary Image Gallery, On-Demand ISR, SSG, Static Paths
+https://github.com/sarassaura/tattoo/assets/141577271/e63f8c83-db41-4c5a-8633-b127344e4295
+
+https://github.com/sarassaura/tattoo/assets/141577271/3ffb287c-77b6-47c0-9b9e-0f27e76350ab
+
+https://github.com/sarassaura/tattoo/assets/141577271/a6f2aad6-6090-410a-a1b6-506491dcf645
 
 </div>
 
@@ -87,5 +93,5 @@ https://<NEXT_PUBLIC_SITE_URL>/api/revalidate?secret=<SECRET_TOKEN>
 
 ## Meta
 
-Created By Florescente:
-[github.com/florescente](https://github.com/florescente)
+Created By Sarassaura:
+[github.com/sarassaura](https://github.com/sarassaura)

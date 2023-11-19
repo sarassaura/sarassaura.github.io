@@ -38,7 +38,7 @@
 	</div>
 
 	<div class="mdx px-4 md:px-16 pb-8">
-		{#await import(`./../../../../markdown/${data.slug}${isLanguage ? '.' + fromURL : ''}.md`)}
+		{#await import(`./../../../../../markdown/${data.slug}${isLanguage ? '.' + fromURL : ''}.md`)}
 			{$LL.loading()}...
 		{:then data}
 			<svelte:component this={data.default} />
