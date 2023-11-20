@@ -430,13 +430,13 @@
         @apply rounded-md [&>*]:pointer-events-none;
 
         @media (hover: none) {
-            @apply hover:grayscale-0 !important;
+            @apply hover:scale-100 !important;
         }
 
         aspect-ratio: 2 / 1;
 
         width: 100%;
-        transition: filter 500ms;
+        transition: transform 500ms;
     }
 
     .links {

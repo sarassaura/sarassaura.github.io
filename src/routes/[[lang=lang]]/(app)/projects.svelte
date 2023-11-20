@@ -14,14 +14,14 @@
 	<h2 class="mb-8 text-center pol">{$LL.projects()}</h2>
 	<div class="projects gap-4 md:gap-6">
 		{#each data.viewer.pinnedItems.edges as item, id (item)}
-			<figure class="relative mb-8">
+			<figure class="relative mb-8 rounded-md">
 				<div class="card p-4 variant-glass-primary hidy" data-popup={item.node.name}>
 					<p>{item.node.description}</p>
 					<div class="arrow variant-glass-primary" />
 				</div>
-				<a href={$LL.link(`/projects/${item.node.name}`)}>
+				<a href={$LL.link(`/projects/${item.node.name}`)} class="overflow-hidden rounded-md">
 					<img
-						class="work rounded-md [&>*]:pointer-events-none hover:grayscale grayscale-0"
+						class="work rounded-md [&>*]:pointer-events-none hover:scale-105"
 						loading="lazy"
 						use:popup={{
 							event: 'hover',
