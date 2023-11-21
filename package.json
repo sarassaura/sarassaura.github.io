@@ -15,7 +15,8 @@
 	},
 	"scripts": {
 		"dev": "npm-run-all --parallel vite typesafe-i18n",
-		"vite": "vite dev --open --host",
+		"vite": "node ./markdown.js && vite dev --open --host",
+		"prebuild": "node ./markdown.js",
 		"build": "vite build",
 		"postbuild": "npx svelte-sitemap --domain https://sarassaura.github.io/ -o docs",
 		"preview": "vite preview",
@@ -63,6 +64,7 @@
 		"@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
 		"axios": "^1.5.1",
 		"cloudinary": "^1.41.0",
+		"dotenv": "^16.3.1",
 		"felte": "^1.2.12",
 		"graphql": "^16.8.1",
 		"graphql-request": "^6.1.0",

@@ -14,10 +14,6 @@
 	if (href == '/README.pt-BR.md') {
 		href = `/pt-BR${url}`;
 	}
-
-	if (href.startsWith('https://github.com/sarassaura/')) {
-		console.log('video');
-	}
 </script>
 
 {#if href.startsWith('https://github.com/sarassaura/')}

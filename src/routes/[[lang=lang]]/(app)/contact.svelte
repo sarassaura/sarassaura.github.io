@@ -24,7 +24,6 @@
 
 	const { form, errors, reset, isSubmitting } = createForm<z.infer<typeof schema>>({
 		onSubmit: (values, { form }) => {
-			console.log(form);
 			axios({
 				method: 'POST',
 				url: 'https://formspree.io/f/xzblylrk',
