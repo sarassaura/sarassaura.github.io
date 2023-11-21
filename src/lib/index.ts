@@ -12,6 +12,7 @@ import Utilities from './components/utilities.svelte';
 import throttle from './functions/throttle';
 import { change_id, section } from './store/section';
 import { change, unchange } from './functions/tabs';
+import github from './functions/github';
 
 export {
 	Hero,
@@ -28,5 +29,6 @@ export {
 	change_id,
 	section,
 	change,
-	unchange
+	unchange,
+	github
 };
