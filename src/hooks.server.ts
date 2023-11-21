@@ -4,6 +4,8 @@ import { sequence } from '@sveltejs/kit/hooks';
 import { GITHUB } from '$env/static/private';
 import { github } from '$lib';
 
+const projects = await github(GITHUB);
+
 const i18n = (async ({ event, resolve }) => {
 	const locale = detectLocale(() => [event.params.lang ?? '']);
 
@@ -13,8 +15,6 @@ const i18n = (async ({ event, resolve }) => {
 }) satisfies Handle;
 
 const markdown = (async ({ event, resolve }) => {
-	const projects = await github(GITHUB);
-
 	event.locals.projects = projects;
 
 	return resolve(event);
