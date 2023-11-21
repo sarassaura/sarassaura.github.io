@@ -2,13 +2,14 @@
 	import Back from '$lib/components/back.svelte';
 	import { Ripple } from '$lib/functions/ripple';
 	import LL from '$lib/i18n/i18n-svelte';
+	import { throttle } from '$lib';
 
 	let wrapper: HTMLDivElement;
 	let zoomer: HTMLImageElement;
 	let eye: HTMLDivElement;
 	let rect: DOMRect;
 
-	function lens(e: PointerEvent) {
+	const change = throttle((e: PointerEvent) => {
 		zoomer = wrapper.firstElementChild as HTMLImageElement;
 		eye = wrapper.lastElementChild as HTMLDivElement;
 		rect = zoomer.getBoundingClientRect();
@@ -26,7 +27,9 @@
 		eye.style.setProperty('--_y', magic_y.toString() + 'px');
 		eye.style.setProperty('--_width', width.toString() + 'px');
 		eye.style.setProperty('--_height', height.toString() + 'px');
-	}
+
+		console.log('Hey');
+	}, 10);
 
 	function resize() {
 		let width = (wrapper.clientWidth - window.scrollX) * 2;
@@ -59,7 +62,7 @@
 		src="/resume1.webp"
 		alt="resume"
 		class="imagine"
-		on:pointermove={lens}
+		on:pointermove={change}
 		on:resize={resize}
 		on:pointerout={out}
 	/>

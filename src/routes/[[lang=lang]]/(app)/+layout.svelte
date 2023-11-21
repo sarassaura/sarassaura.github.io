@@ -53,6 +53,7 @@
 			PageRef.forEach((element) => {
 				observer.unobserve(element);
 			});
+			observer.disconnect();
 		};
 	});
 
