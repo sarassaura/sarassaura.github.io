@@ -1,14 +1,12 @@
 export const prerender = true;
 
-import { GITHUB } from '$env/static/private';
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
 import fs from 'fs';
-import { github } from '$lib';
 
 /** @type {import('./$types').PageServerLoad} */
-export async function load({ url }) {
-	const projects = await github(GITHUB);
+export async function load({ url, locals }) {
+	const projects = locals.projects;
 
 	const edges = projects.viewer.pinnedItems.edges;
 

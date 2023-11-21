@@ -1,6 +1,8 @@
 import type { Handle } from '@sveltejs/kit';
 import { detectLocale } from '$lib/i18n/i18n-util';
 import { sequence } from '@sveltejs/kit/hooks';
+import { GITHUB } from '$env/static/private';
+import { github } from '$lib';
 
 const i18n = (async ({ event, resolve }) => {
 	const locale = detectLocale(() => [event.params.lang ?? '']);
@@ -10,9 +12,12 @@ const i18n = (async ({ event, resolve }) => {
 	});
 }) satisfies Handle;
 
-const github = (async ({ event, resolve }) => {
-	console.log(event.url.pathname);
+const markdown = (async ({ event, resolve }) => {
+	const projects = await github(GITHUB);
+
+	event.locals.projects = projects;
+
 	return resolve(event);
 }) satisfies Handle;
 
-export const handle = sequence(i18n, github);
+export const handle = sequence(i18n, markdown);
