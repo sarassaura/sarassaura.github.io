@@ -292,7 +292,7 @@
             content: '';
             inset: 0;
             @apply dark:bg-surface-800 bg-surface-200;
-            animation: type 4s steps(13) forwards 200ms;
+            animation: type 3.8s steps(13) forwards 200ms;
             opacity: 0.35;
 
             @media (prefers-reduced-motion) {
@@ -307,7 +307,7 @@
             inset: 0px;
             height: 100%;
             @apply border-[rgb(var(--theme-font-color-base))] dark:border-[rgb(var(--theme-font-color-dark))];
-            animation: type 4s steps(13) forwards 200ms, blinks 1.2s steps(5, start) 4.2s infinite;
+            animation: type 3.8s steps(13) forwards 200ms, blinks 0.3s ease 4s forwards;
             border-left: solid 2px;
             background-color: transparent;
 
@@ -327,7 +327,7 @@
 
     @keyframes blinks {
         to {
-            visibility: hidden;
+            scale: 1 0;
         }
     }
 
