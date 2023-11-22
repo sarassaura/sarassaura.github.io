@@ -8,6 +8,7 @@
 	import { onMount } from 'svelte';
 	import Roboto from '$lib/assets/fonts/static/RobotoMono-Regular.woff2';
 	import OpenSans from '$lib/assets/fonts/static/OpenSans-Regular.woff2';
+	import Image from '$lib/assets/images/code.png';
 	import LL from '$lib/i18n/i18n-svelte';
 
 	storePopup.set({ computePosition, autoUpdate, offset, shift, flip, arrow });
@@ -26,6 +27,22 @@
 <svelte:head>
 	<link rel="preload" href={Roboto} as="font" type="font/woff2" crossorigin="crossorigin" />
 	<link rel="preload" href={OpenSans} as="font" type="font/woff2" crossorigin="crossorigin" />
+	<link rel="preconnect" href="https://api.iconify.design" crossorigin="crossorigin" />
+
+	<!-- Open Graph / Facebook -->
+	<meta property="og:title" content="Sarah Yukino - Web developer &amp; Software Engineer" />
+	<meta property="og:url" content="https://sarassaura.github.io/" />
+	<meta property="og:description" content="Sarah's Personal Portfolio" />
+	<meta property="og:type" content="profile" />
+	<meta property="og:image" content={Image} />
+	<meta property="og:site_name" content="Sarah Yukino" />
+
+	<!-- Twitter -->
+	<meta property="twitter:card" content={Image} />
+	<meta property="twitter:url" content="https://sarassaura.github.io/" />
+	<meta property="twitter:title" content="Sarah Yukino - Web developer &amp; Software Engineer" />
+	<meta property="twitter:description" content="Sarah's Personal Portfolio" />
+	<meta property="twitter:image" content={Image} />
 </svelte:head>
 
 {#key data.url}
@@ -42,8 +59,8 @@
 
 	<div
 		class={`w-full h-full flex-col ${mount && !wait ? 'flex' : 'hidden'}`}
-		in:fly={{ x: -100, duration: 500, delay: 500, easing: sineIn }}
-		out:fly={{ x: 100, duration: 500, easing: sineOut }}
+		in:fly={{ x: -100, duration: 800, delay: 800, easing: sineIn }}
+		out:fly={{ x: 100, duration: 800, easing: sineOut }}
 		tabindex="-1"
 	>
 		<slot />
