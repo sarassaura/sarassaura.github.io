@@ -8,7 +8,6 @@
 	import { onMount } from 'svelte';
 	import Roboto from '$lib/assets/fonts/static/RobotoMono-Regular.woff2';
 	import OpenSans from '$lib/assets/fonts/static/OpenSans-Regular.woff2';
-	import Image from '$lib/assets/images/code.png';
 	import LL from '$lib/i18n/i18n-svelte';
 
 	storePopup.set({ computePosition, autoUpdate, offset, shift, flip, arrow });
@@ -34,15 +33,15 @@
 	<meta property="og:url" content="https://sarassaura.github.io/" />
 	<meta property="og:description" content="Sarah's Personal Portfolio" />
 	<meta property="og:type" content="profile" />
-	<meta property="og:image" content={Image} />
+	<meta property="og:image" content="https://sarassaura.github.io/code.png" />
 	<meta property="og:site_name" content="Sarah Yukino" />
 
 	<!-- Twitter -->
-	<meta property="twitter:card" content={Image} />
+	<meta property="twitter:card" content="https://sarassaura.github.io/code.png" />
 	<meta property="twitter:url" content="https://sarassaura.github.io/" />
 	<meta property="twitter:title" content="Sarah Yukino - Web developer &amp; Software Engineer" />
 	<meta property="twitter:description" content="Sarah's Personal Portfolio" />
-	<meta property="twitter:image" content={Image} />
+	<meta property="twitter:image" content="https://sarassaura.github.io/code.png" />
 </svelte:head>
 
 {#key data.url}
