@@ -23,13 +23,20 @@
 			if(color) {
 				let myColor = rgb(JSON.parse(color).color);
 				let myTheme = JSON.parse(color).theme;
+				let myLang = JSON.parse(color).lang;
+
+				if(!myLang) {
+					myLang = 'en';
+				}
+
 				myColor && document.body.style.setProperty("--color-primary-500", myColor);
+
 				if(myTheme == "crimson" || myTheme == "wintry" || myTheme == "gold-nouveau") {
 					document.body.dataset.theme = myTheme;
 				} else {
 					document.body.dataset.theme = "crimson";
 					document.body.style.setProperty("--color-primary-500", rgb("#d4163c"));
-					localStorage.setItem('config', JSON.stringify({ "color": '#d4163c', "theme": 'crimson' }))
+					localStorage.setItem('config', JSON.stringify({ "color": '#d4163c', "theme": 'crimson', "lang": myLang }))
 				}
 			}
 	

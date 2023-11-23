@@ -17,6 +17,7 @@
 	let colorValue: string;
 	let root: HTMLBodyElement;
 	let theme: string;
+	let lang: string;
 
 	const langChoices: Record<Locales, string> = {
 		en: 'circle-flags:uk',
@@ -41,17 +42,20 @@
 	interface Config {
 		color: string;
 		theme: string;
+		lang: string;
 	}
 
 	const colorStore: Writable<Config> = localStorageStore('config', {
 		color: '#d4163c',
-		theme: 'crimson'
+		theme: 'crimson',
+		lang: 'en'
 	});
 
 	onMount(() => {
 		root = document.getElementsByTagName('body')[0];
 		colorValue = $colorStore.color;
 		theme = $colorStore.theme;
+		lang = $colorStore.lang;
 	});
 
 	function rgb(hex: string) {
@@ -92,7 +96,7 @@
 						root.dataset.theme = choice.name;
 						theme = choice.name;
 						colorValue = choice.initial;
-						$colorStore = { color: choice.initial, theme: choice.name };
+						$colorStore = { color: choice.initial, theme: choice.name, lang: lang };
 					}}
 					class="capitalize btn dark:variant-ghost-primary variant-ringed w-full"
 				>
@@ -111,7 +115,7 @@
 				bind:value={colorValue}
 				on:change={() => {
 					root.style.setProperty('--color-primary-500', rgb(colorValue));
-					$colorStore = { color: colorValue, theme: theme };
+					$colorStore = { color: colorValue, theme: theme, lang: lang };
 				}}
 			/>
 		</div>
@@ -147,6 +151,8 @@
 								unchange(TabList, links, $page.url.hash);
 							}
 						}, 10);
+						lang = choice;
+						$colorStore = { color: colorValue, theme: theme, lang: lang };
 					}}
 					class="capitalize btn dark:variant-ghost-primary variant-ringed w-full"
 				>
@@ -163,7 +169,7 @@
 				colorValue = '#d4163c';
 				theme = 'crimson';
 				root.dataset.theme = 'crimson';
-				$colorStore = { color: colorValue, theme: theme };
+				$colorStore = { color: colorValue, theme: theme, lang: lang };
 				root.style.setProperty('--color-primary-500', `212 22 60`);
 			}}>{$LL.reset()}</button
 		>

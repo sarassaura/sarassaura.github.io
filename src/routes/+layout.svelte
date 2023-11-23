@@ -8,7 +8,8 @@
 	import { onMount } from 'svelte';
 	import Roboto from '$lib/assets/fonts/static/RobotoMono-Regular.woff2';
 	import OpenSans from '$lib/assets/fonts/static/OpenSans-Regular.woff2';
-	import LL from '$lib/i18n/i18n-svelte';
+	import LL, { setLocale } from '$lib/i18n/i18n-svelte';
+	import { loadLocaleAsync } from '$lib/i18n/i18n-util.async';
 
 	storePopup.set({ computePosition, autoUpdate, offset, shift, flip, arrow });
 
@@ -17,8 +18,15 @@
 	let mount = false;
 	let wait = true;
 
-	onMount(() => (mount = true));
-	setTimeout(() => {
+	onMount(async () => {
+		const config = localStorage.getItem('config') as string;
+		if (JSON.parse(config).lang) {
+			await loadLocaleAsync(JSON.parse(config).lang);
+			setLocale(JSON.parse(config).lang);
+		}
+		mount = true;
+	});
+	setTimeout(async () => {
 		wait = false;
 	}, 500);
 </script>
