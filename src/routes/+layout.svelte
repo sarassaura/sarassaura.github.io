@@ -20,11 +20,23 @@
 	let wait = true;
 
 	onMount(async () => {
-		const config = localStorage.getItem('config') as string;
+		const config = localStorage.getItem('config');
 
-		if (JSON.parse(config).lang && $page.url.pathname == '/') {
-			await loadLocaleAsync(JSON.parse(config).lang);
-			setLocale(JSON.parse(config).lang);
+		if (config) {
+			if (
+				!$page.url.pathname.startsWith('/en#') &&
+				!$page.url.pathname.startsWith('/pt-BR#') &&
+				!$page.url.pathname.startsWith('/es#') &&
+				!$page.url.pathname.startsWith('/en/') &&
+				!$page.url.pathname.startsWith('/pt-BR/') &&
+				!$page.url.pathname.startsWith('/es/')
+			)
+				if (JSON.parse(config)) {
+					if (JSON.parse(config).lang) {
+						await loadLocaleAsync(JSON.parse(config).lang);
+						setLocale(JSON.parse(config).lang);
+					}
+				}
 		}
 		mount = true;
 	});
