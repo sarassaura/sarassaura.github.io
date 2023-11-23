@@ -31,17 +31,27 @@
 	<!-- Open Graph / Facebook -->
 	<meta property="og:title" content="Sarah Yukino - Web developer &amp; Software Engineer" />
 	<meta property="og:url" content="https://sarassaura.github.io/" />
-	<meta property="og:description" content="Sarah's Personal Portfolio" />
+	<meta
+		property="og:description"
+		content="Sarah's Personal Portfolio - Web developer &amp; Software Engineer"
+	/>
 	<meta property="og:type" content="profile" />
 	<meta property="og:image" content="https://sarassaura.github.io/code.png" />
 	<meta property="og:site_name" content="Sarah Yukino" />
 
 	<!-- Twitter -->
-	<meta property="twitter:card" content="https://sarassaura.github.io/code.png" />
+	<meta property="twitter:card" content="summary_large_image" />
 	<meta property="twitter:url" content="https://sarassaura.github.io/" />
 	<meta property="twitter:title" content="Sarah Yukino - Web developer &amp; Software Engineer" />
-	<meta property="twitter:description" content="Sarah's Personal Portfolio" />
+	<meta
+		property="twitter:description"
+		content="Sarah's Personal Portfolio - Web developer &amp; Software Engineer"
+	/>
 	<meta property="twitter:image" content="https://sarassaura.github.io/code.png" />
+	<meta property="twitter:image:alt" content="Sarah is a Software Engineer" />
+
+	<!-- Pinterest -->
+	<meta name="pinterest-rich-pin" content="https://sarassaura.github.io/code.png" />
 </svelte:head>
 
 {#key data.url}
