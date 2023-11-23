@@ -10,6 +10,7 @@
 	import OpenSans from '$lib/assets/fonts/static/OpenSans-Regular.woff2';
 	import LL, { setLocale } from '$lib/i18n/i18n-svelte';
 	import { loadLocaleAsync } from '$lib/i18n/i18n-util.async';
+	import { page } from '$app/stores';
 
 	storePopup.set({ computePosition, autoUpdate, offset, shift, flip, arrow });
 
@@ -20,7 +21,8 @@
 
 	onMount(async () => {
 		const config = localStorage.getItem('config') as string;
-		if (JSON.parse(config).lang) {
+
+		if (JSON.parse(config).lang && $page.url.pathname == '/') {
 			await loadLocaleAsync(JSON.parse(config).lang);
 			setLocale(JSON.parse(config).lang);
 		}
