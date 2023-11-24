@@ -48,7 +48,32 @@ const document = gql`
 	}
 `;
 
-const projects = await request(
+const projects: {
+	viewer: {
+		pinnedItems: {
+			totalCount: number;
+			edges: Array<{
+				node: {
+					en: {
+						text: string;
+					};
+					es: {
+						text: string;
+					};
+					br: {
+						text: string;
+					};
+					name: string;
+					description: string;
+					openGraphImageUrl: string;
+					createdAt: string;
+					homepageUrl: string;
+					repositoryTopics: { totalCount: number; nodes: Array<{ topic: { name: string } }> };
+				};
+			}>;
+		};
+	};
+} = await request(
 	'https://api.github.com/graphql',
 	document,
 	{},
