@@ -8,7 +8,7 @@
 	<picture>
 		<source media="(min-width: 1024px)" srcset={Desktop} width="270px" height="540px" />
 		<source media="(min-width: 640px)" srcset={Tablet} width="546px" height="326px" />
-		<source media="(min-width: 0px)" srcset={Mobile} width="237px" height="190px" />
+		<source media="(min-width: 0px)" srcset={Mobile} width="322px" height="235px" />
 		<img src={Mobile} alt="Showcase" />
 	</picture>
 </div>
