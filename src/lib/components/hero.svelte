@@ -1,7 +1,7 @@
 <script>
-	import Mobile from '$lib/assets/images/mobile.png';
-	import Tablet from '$lib/assets/images/tablet.png';
-	import Desktop from '$lib/assets/images/desktop.png';
+	import Mobile from '$lib/assets/images/mobile.webp';
+	import Tablet from '$lib/assets/images/tablet.webp';
+	import Desktop from '$lib/assets/images/desktop.webp';
 </script>
 
 <div class="img">
