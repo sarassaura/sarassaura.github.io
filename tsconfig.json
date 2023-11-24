@@ -3,7 +3,7 @@
 	"compilerOptions": {
 		"types": ["vite/client", "node"],
 		"module": "ESNext",
-		"moduleResolution": "NodeNext",
+		"moduleResolution": "Node",
 		"allowJs": true,
 		"checkJs": true,
 		"esModuleInterop": true,
