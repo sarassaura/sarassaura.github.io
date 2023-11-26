@@ -3,6 +3,7 @@
 	import type { PageData } from './$types';
 	import Github from '$lib/Icons/github.svelte';
 	import { LL } from '$lib/i18n/i18n-svelte';
+	import { CldImage } from 'svelte-cloudinary';
 
 	export let data: PageData['projects'];
 
@@ -19,16 +20,21 @@
 					<p>{item.node.description}</p>
 					<div class="arrow variant-glass-primary" />
 				</div>
-				<a href={$LL.link(`/projects/${item.node.name}`)} class="overflow-hidden rounded-md">
-					<img
+				<a
+					href={$LL.link(`/projects/${item.node.name}`)}
+					class="overflow-hidden rounded-md"
+					use:popup={{
+						event: 'hover',
+						target: item.node.name,
+						placement: 'bottom'
+					}}
+				>
+					<CldImage
 						class="work rounded-md [&>*]:pointer-events-none hover:scale-105"
+						src={'https://res.cloudinary.com/drazwv6hx/image/upload/v1700850280/' + item.node.name}
 						loading="lazy"
-						use:popup={{
-							event: 'hover',
-							target: item.node.name,
-							placement: 'bottom'
-						}}
-						src={item.node.openGraphImageUrl}
+						aspectRatio="2"
+						layout="fullWidth"
 						alt={item.node.description}
 					/>
 				</a>
