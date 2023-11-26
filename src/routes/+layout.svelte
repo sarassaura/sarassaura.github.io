@@ -58,7 +58,7 @@
 		content="Sarah's Personal Portfolio - Web developer &amp; Software Engineer"
 	/>
 	<meta property="og:type" content="profile" />
-	<meta property="og:image" content="https://sarassaura.github.io/code.png" />
+	<meta property="og:image" content="https://sarassaura.github.io/thumbnail.png" />
 	<meta property="og:site_name" content="Sarah Yukino" />
 
 	<!-- Twitter -->
@@ -69,11 +69,11 @@
 		property="twitter:description"
 		content="Sarah's Personal Portfolio - Web developer &amp; Software Engineer"
 	/>
-	<meta property="twitter:image" content="https://sarassaura.github.io/code.png" />
+	<meta property="twitter:image" content="https://sarassaura.github.io/thumbnail.png" />
 	<meta property="twitter:image:alt" content="Sarah is a Software Engineer" />
 
 	<!-- Pinterest -->
-	<meta name="pinterest-rich-pin" content="https://sarassaura.github.io/code.png" />
+	<meta name="pinterest-rich-pin" content="https://sarassaura.github.io/thumbnail.png" />
 </svelte:head>
 
 {#key data.url}
