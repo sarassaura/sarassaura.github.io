@@ -7,27 +7,27 @@
 		<source
 			media="(min-width: 1024px)"
 			srcset={'https://res.cloudinary.com/drazwv6hx/image/upload/v1701021175/' + 'desktop'}
-			width="270px"
-			height="540px"
+			width={270}
+			height={540}
 		/>
 		<source
 			media="(min-width: 640px)"
 			srcset={'https://res.cloudinary.com/drazwv6hx/image/upload/v1701021175/' + 'tablet'}
-			width="546px"
-			height="326px"
+			width={546}
+			height={326}
 		/>
 		<source
 			media="(min-width: 0px)"
 			srcset={'https://res.cloudinary.com/drazwv6hx/image/upload/v1701021175/' + 'mobile'}
-			width="322px"
-			height="235px"
+			width={322}
+			height={235}
 		/>
 		<CldImage
 			src={'https://res.cloudinary.com/drazwv6hx/image/upload/v1701021175/' + 'mobile'}
 			alt="Showcase"
-			layout="constrained"
-			width="322px"
-			height="235px"
+			layout="fullWidth"
+			height="100%"
+			priority={true}
 		/>
 	</picture>
 </div>
