@@ -17,11 +17,13 @@
 	"scripts": {
 		"dev": "npm-run-all --parallel vite typesafe-i18n",
 		"vite": "npm run prebuild && vite dev --open --host",
-		"prebuild": "node --loader ts-node/esm ./src/server/main.ts",
+		"prebuild": "node --loader ts-node/esm ./src/cli",
 		"build": "vite build",
 		"postbuild": "npx svelte-sitemap --domain https://sarassaura.github.io/ -o docs",
 		"preview": "vite preview",
-		"update": "node --loader ts-node/esm ./src/server/update.ts",
+		"update": "node --loader ts-node/esm ./src/cli/update.ts --all",
+		"update:markdown": "node --loader ts-node/esm ./src/cli/update.ts --markdown",
+		"update:projects": "node --loader ts-node/esm ./src/cli/update.ts --projects",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
@@ -35,6 +37,7 @@
 		"@sveltejs/kit": "^1.20.4",
 		"@tailwindcss/forms": "^0.5.6",
 		"@types/node": "^20.8.2",
+		"@types/yargs": "^17.0.32",
 		"@typescript-eslint/eslint-plugin": "^6.0.0",
 		"@typescript-eslint/parser": "^6.0.0",
 		"autoprefixer": "^10.4.14",
@@ -58,6 +61,7 @@
 		"typescript": "^5.0.0",
 		"vite": "^4.4.2",
 		"vite-plugin-tailwind-purgecss": "^0.1.3",
+		"yargs": "^17.7.2",
 		"zod": "^3.22.4"
 	},
 	"dependencies": {
