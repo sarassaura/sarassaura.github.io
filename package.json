@@ -24,6 +24,7 @@
 		"update": "node --loader ts-node/esm ./src/cli/update.ts --all",
 		"update:markdown": "node --loader ts-node/esm ./src/cli/update.ts --markdown",
 		"update:projects": "node --loader ts-node/esm ./src/cli/update.ts --projects",
+		"test": "node --loader ts-node/esm ./src/cli/test.ts",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",

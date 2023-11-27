@@ -31,7 +31,7 @@
 				>
 					<CldImage
 						class="work rounded-md [&>*]:pointer-events-none hover:scale-105"
-						src={'https://res.cloudinary.com/drazwv6hx/image/upload/v1700850280/' + item.node.name}
+						src={item.node.name}
 						loading="lazy"
 						aspectRatio={2}
 						height="100%"
