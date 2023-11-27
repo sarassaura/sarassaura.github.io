@@ -1,8 +1,14 @@
 <script lang="ts">
 	import Back from '$lib/components/back.svelte';
 	import { Ripple } from '$lib/functions/ripple';
-	import LL from '$lib/i18n/i18n-svelte';
+	import { LL, locale } from '$lib/i18n/i18n-svelte';
 	import { throttle } from '$lib';
+	import { CldImage } from 'svelte-cloudinary';
+	import { Cloudinary } from '@cloudinary/url-gen';
+
+	const cld = new Cloudinary({
+		cloud: { cloudName: import.meta.env.VITE_PUBLIC_CLOUDINARY_CLOUD_NAME }
+	});
 
 	let wrapper: HTMLDivElement;
 	let zoomer: HTMLImageElement;
@@ -27,8 +33,6 @@
 		eye.style.setProperty('--_y', magic_y.toString() + 'px');
 		eye.style.setProperty('--_width', width.toString() + 'px');
 		eye.style.setProperty('--_height', height.toString() + 'px');
-
-		console.log('Hey');
 	}, 10);
 
 	function resize() {
@@ -49,7 +53,7 @@
 	<Back icon="mdi:arrow-left" link="/" />
 	<a
 		class="btn variant-filled but px-3 py-3"
-		href="/resume.pdf"
+		href={cld.image(`portfolio/resume-${$locale}`).quality('auto').addFlag('attachment').toURL()}
 		download="sarah_nakada"
 		on:click={Ripple}
 	>
@@ -57,14 +61,27 @@
 		<iconify-icon icon="material-symbols:download-sharp" height="28" />
 	</a>
 </div>
-<div class="wrapper" bind:this={wrapper}>
-	<img
-		src="/resume1.webp"
+<div
+	class="wrapper"
+	bind:this={wrapper}
+	on:pointermove={change}
+	on:resize={resize}
+	on:pointerout={out}
+>
+	<CldImage
+		src={`portfolio/resume-${$locale}`}
 		alt="resume"
 		class="imagine"
-		on:pointermove={change}
-		on:resize={resize}
-		on:pointerout={out}
+		height="100%"
+		layout="fullWidth"
+		priority={true}
 	/>
-	<div class="zooming" />
+	<div
+		class="zooming"
+		style={`background-image: url("${cld
+			.image(`portfolio/resume-${$locale}`)
+			.format('auto')
+			.quality('auto')
+			.toURL()}");`}
+	/>
 </div>
