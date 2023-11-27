@@ -31,7 +31,7 @@
 				>
 					<CldImage
 						class="work rounded-md [&>*]:pointer-events-none hover:scale-105"
-						src={item.node.name}
+						src={'portfolio/' + item.node.name + '/preview'}
 						loading="lazy"
 						aspectRatio={2}
 						height="100%"

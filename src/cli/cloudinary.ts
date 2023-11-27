@@ -12,7 +12,7 @@ export default function cloudinary(edges: Projects['viewer']['pinnedItems']['edg
 
 		cloud.uploader.upload(
 			projects.node.openGraphImageUrl,
-			{ public_id: projects.node.name },
+			{ public_id: 'portfolio/' + projects.node.name + '/preview' },
 			function (error, result) {
 				if (error) {
 					console.log(error);
