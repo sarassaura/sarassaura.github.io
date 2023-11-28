@@ -17,7 +17,7 @@
 </script>
 
 {#if href.startsWith('https://github.com/sarassaura/')}
-	<video autoplay loop muted>
+	<video loop muted controls>
 		<source src={href} type="video/mp4" />
 		Your browser does not support HTML video.
 	</video>
