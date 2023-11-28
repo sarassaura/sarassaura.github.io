@@ -779,6 +779,7 @@
 	.wrapper {
 		height: calc(100% - 89px);
         width: fit-content;
+        max-width: 100%;
         align-self: center;
 		padding: 0;
         display: flex;
@@ -790,9 +791,8 @@
 
 	.imagine {
 		position: relative;
-		width: unset;
-		height: 100%;
-		object-fit: contain;
+        height: 100%;
+        object-fit: scale-down !important;
         opacity: 1;
 	}
     .zooming {
