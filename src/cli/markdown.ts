@@ -1,4 +1,4 @@
-import { dirname } from 'path';
+import path, { dirname } from 'path';
 import { fileURLToPath } from 'url';
 import fs from 'fs';
 import type { Projects } from './github';
@@ -21,6 +21,7 @@ export default function markdown(edges: Projects['viewer']['pinnedItems']['edges
 		fs.writeFileSync(`${__dirname}/../markdown/${readme.node.name}.pt-BR.md`, readme.node.br.text);
 
 		const images = [...readme.node.en.text.matchAll(/^!\[(.+)\]\((.+)\?raw=true\)/gm)];
+		const videos = [...readme.node.en.text.matchAll(/^(https:\/\/github\.com.+$)/gm)];
 
 		images.forEach((image) => {
 			const name = image[1];
@@ -28,6 +29,22 @@ export default function markdown(edges: Projects['viewer']['pinnedItems']['edges
 			cloud.uploader.upload(
 				`https://raw.githubusercontent.com/sarassaura/${readme.node.name}/main${url}`,
 				{ public_id: 'portfolio/' + readme.node.name + '/' + name },
+				function (error, result) {
+					if (error) {
+						console.log(error);
+					}
+					console.log(result);
+				}
+			);
+		});
+
+		videos.forEach((video) => {
+			cloud.uploader.upload(
+				video[1],
+				{
+					resource_type: 'video',
+					public_id: 'portfolio/' + readme.node.name + '/video-' + path.basename(video[1])
+				},
 				function (error, result) {
 					if (error) {
 						console.log(error);
