@@ -1,1 +1,0 @@
-function c(n){const s=n.currentTarget,t=document.createElement("span"),e=s.getBoundingClientRect(),i=Math.max(e.width,e.height),l=i/2;t.style.width=t.style.height=`${i}px`,t.style.left=`${n.clientX-e.x-l}px`,t.style.top=`${n.clientY-e.y-l}px`,t.classList.add("ripple");const p=s.getElementsByClassName("ripple")[0];p&&p.remove(),s.appendChild(t)}export{c as R};

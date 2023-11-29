@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://sarassaura.github.io/sitemap.xml
