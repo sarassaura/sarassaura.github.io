@@ -19,7 +19,7 @@
 		"vite": "npm run prebuild && vite dev --open --host",
 		"prebuild": "node --loader ts-node/esm ./src/cli",
 		"build": "vite build",
-		"postbuild": "npx svelte-sitemap --domain https://sarassaura.github.io/ -o docs",
+		"postbuild": "npx svelte-sitemap --domain https://sarassaura.github.io/",
 		"preview": "vite preview",
 		"update": "node --loader ts-node/esm ./src/cli/update.ts --all",
 		"update:markdown": "node --loader ts-node/esm ./src/cli/update.ts --markdown",
