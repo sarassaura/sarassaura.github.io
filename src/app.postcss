@@ -476,9 +476,19 @@
     .mdx :is(img) {
         @apply py-4;
         max-height: 1800px;
+        max-width: 100% !important;
 
         &[alt="Logo"] {
             max-height: 200px;
+            align-self: center;
+            object-fit: contain !important;
+        }
+
+        &[alt="Banner"] {
+            max-height: 250px;
+            height: "250px";
+		    width: unset !important;
+            aspect-ratio: 3.75;
             align-self: center;
             object-fit: contain !important;
         }
