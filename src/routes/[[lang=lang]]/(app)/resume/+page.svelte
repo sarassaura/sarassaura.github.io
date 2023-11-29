@@ -79,6 +79,7 @@
 		src={image}
 		alt="resume"
 		class="imagine"
+		loading="eager"
 		srcset={`${image} 640w, ${image} 750w, ${image} 828w, ${image} 960w, ${image} 1080w, ${image} 1280w, ${image} 1668w, ${image} 1920w`}
 	/>
 	<div class="zooming" style={`background-image: url("${image}");`} />
