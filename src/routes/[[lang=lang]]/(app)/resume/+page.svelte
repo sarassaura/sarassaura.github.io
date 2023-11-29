@@ -3,12 +3,19 @@
 	import { Ripple } from '$lib/functions/ripple';
 	import { LL, locale } from '$lib/i18n/i18n-svelte';
 	import { throttle } from '$lib';
-	import { CldImage } from 'svelte-cloudinary';
 	import { Cloudinary } from '@cloudinary/url-gen';
+	import { crop } from '@cloudinary/url-gen/actions/resize';
 
 	const cld = new Cloudinary({
 		cloud: { cloudName: import.meta.env.VITE_PUBLIC_CLOUDINARY_CLOUD_NAME }
 	});
+
+	const image = cld
+		.image(`portfolio/resume-${$locale}`)
+		.format('auto')
+		.quality('auto')
+		.resize(crop().height(1100).y(0).width(1500))
+		.toURL();
 
 	let wrapper: HTMLDivElement;
 	let zoomer: HTMLImageElement;
@@ -68,20 +75,11 @@
 	on:resize={resize}
 	on:pointerout={out}
 >
-	<CldImage
-		src={`portfolio/resume-${$locale}`}
+	<img
+		src={image}
 		alt="resume"
 		class="imagine"
-		height="100%"
-		layout="fullWidth"
-		priority={true}
+		srcset={`${image} 640w, ${image} 750w, ${image} 828w, ${image} 960w, ${image} 1080w, ${image} 1280w, ${image} 1668w, ${image} 1920w`}
 	/>
-	<div
-		class="zooming"
-		style={`background-image: url("${cld
-			.image(`portfolio/resume-${$locale}`)
-			.format('auto')
-			.quality('auto')
-			.toURL()}");`}
-	/>
+	<div class="zooming" style={`background-image: url("${image}");`} />
 </div>
